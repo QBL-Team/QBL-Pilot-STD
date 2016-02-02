@@ -1,0 +1,9 @@
+#include "stm32f4xx_rcc.h"
+#include "stm32f4xx_gpio.h"
+#include "QBL.h"
+
+int main(void)
+{
+    for (;;) {
+    }
+}
