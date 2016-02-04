@@ -373,7 +373,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CMSIS\Include;..\QBL;..\STD\inc;..\STD;..\User</IncludePath>
+              <IncludePath>..\CMSIS\Include;..\QBL;..\STD\inc;..\STD;..\User;..\Driver</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -615,6 +615,26 @@
               <FileName>QBL.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\QBL\QBL.c</FilePath>
+            </File>
+            <File>
+              <FileName>QBL_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\QBL\QBL_I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>QBL_SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\QBL\QBL_SPI.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\LED.c</FilePath>
             </File>
           </Files>
         </Group>

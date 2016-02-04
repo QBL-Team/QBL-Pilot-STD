@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QBL-Pilot-STD: LED 驱动</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QBL-Pilot-STD
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">LED 驱动</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bafea1b6d1e36efeb9177297ad5b634bdd">LED_COLOR_OFF</a> = 0, 
+<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bae0568a71373a19d68ac019a67fcb2c3b">LED_COLOR_WHITE</a> = 1, 
+<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20c3f7e3db2eca4ce0fe784975373384">LED_COLOR_RED</a> = 2, 
+<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba64cda76c497793915fcf24c216d0f37c">LED_COLOR_GREEN</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba457a1e8f0680efd8cf6d76d1a6465b2b">LED_COLOR_BLUE</a> = 4, 
+<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba323d8bd5ea675c6701c2945fb2e124bd">LED_COLOR_FUCHSIN</a> = 5, 
+<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bab792f0e1b8644f6f22f3f0ab799bd3a9">LED_COLOR_YELLOW</a> = 6, 
+<a class="el" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20221062a48820a1e6caabc3fe8c0723">LED_COLOR_CYAN</a> = 7
+<br />
+ }</td></tr>
+<tr class="separator:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gab3570a8c9e1266519ad1c7e00093812b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab3570a8c9e1266519ad1c7e00093812b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__led__driver.html#gab3570a8c9e1266519ad1c7e00093812b">LED_Init</a> (void)</td></tr>
+<tr class="memdesc:gab3570a8c9e1266519ad1c7e00093812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED_Init. <br /></td></tr>
+<tr class="separator:gab3570a8c9e1266519ad1c7e00093812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf96fb94f6dcac6be219eb0019fe3b4ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__led__driver.html#gaf96fb94f6dcac6be219eb0019fe3b4ae">LED_Show</a> (uint8_t LED_COLOR)</td></tr>
+<tr class="memdesc:gaf96fb94f6dcac6be219eb0019fe3b4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED_Show 驱动LED显示颜色  <a href="#gaf96fb94f6dcac6be219eb0019fe3b4ae">更多...</a><br /></td></tr>
+<tr class="separator:gaf96fb94f6dcac6be219eb0019fe3b4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="ga06fc87d81c62e9abb8790b6e5713c55b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>颜色描述符 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55bafea1b6d1e36efeb9177297ad5b634bdd"></a>LED_COLOR_OFF&#160;</td><td class="fielddoc">
+<p>关闭显示 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55bae0568a71373a19d68ac019a67fcb2c3b"></a>LED_COLOR_WHITE&#160;</td><td class="fielddoc">
+<p>显示白色 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55ba20c3f7e3db2eca4ce0fe784975373384"></a>LED_COLOR_RED&#160;</td><td class="fielddoc">
+<p>显示红色 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55ba64cda76c497793915fcf24c216d0f37c"></a>LED_COLOR_GREEN&#160;</td><td class="fielddoc">
+<p>显示绿色 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55ba457a1e8f0680efd8cf6d76d1a6465b2b"></a>LED_COLOR_BLUE&#160;</td><td class="fielddoc">
+<p>显示蓝色 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55ba323d8bd5ea675c6701c2945fb2e124bd"></a>LED_COLOR_FUCHSIN&#160;</td><td class="fielddoc">
+<p>显示品红 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55bab792f0e1b8644f6f22f3f0ab799bd3a9"></a>LED_COLOR_YELLOW&#160;</td><td class="fielddoc">
+<p>显示黄色 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga06fc87d81c62e9abb8790b6e5713c55ba20221062a48820a1e6caabc3fe8c0723"></a>LED_COLOR_CYAN&#160;</td><td class="fielddoc">
+<p>显示青色 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gaf96fb94f6dcac6be219eb0019fe3b4ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LED_Show </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>LED_COLOR</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LED_Show 驱动LED显示颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LED_COLOR</td><td>将要显示的颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>LED_COLOR </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

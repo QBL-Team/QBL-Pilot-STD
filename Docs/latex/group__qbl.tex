@@ -1,0 +1,87 @@
+\hypertarget{group__qbl}{}\section{Q\+BL Common}
+\label{group__qbl}\index{Q\+B\+L Common@{Q\+B\+L Common}}
+\subsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \{ \\*
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30bac339d014a999e1d614721110672e1ad9}{Q\+B\+L\+\_\+\+OK} = 0, 
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30ba654a5a717eb326de65c78984d2fcedb8}{Q\+B\+L\+\_\+\+T\+I\+M\+E\+O\+UT}, 
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30ba3295fefcc0c943fce64ad4d72be4edec}{Q\+B\+L\+\_\+\+B\+U\+SY}, 
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30baa1394dd50bddb4d957f937385c5f93a2}{Q\+B\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED}, 
+\\*
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30baee9299722a126dba22c76d3d9e5971e3}{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+\_\+\+F\+A\+I\+L\+ED}, 
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30ba1be03d0c1d667116cb382a49df76e223}{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+A\+I\+L\+ED}, 
+\hyperlink{group__qbl_gga41526b685f55486191108499fe91c30ba168ae4cc03a406e4ea624f38fecedbc9}{Q\+B\+L\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__qbl_ga858dcf3f31fab8564b15f7e3c6243d52}{Q\+B\+L\+\_\+\+Init} (void)\hypertarget{group__qbl_ga858dcf3f31fab8564b15f7e3c6243d52}{}\label{group__qbl_ga858dcf3f31fab8564b15f7e3c6243d52}
+
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+Init 初始化\+Q\+B\+L库底层所必须的资源 \end{DoxyCompactList}\item 
+void \hyperlink{group__qbl_gaaf84ff18d32c89b14e2656aad43782ad}{Q\+B\+L\+\_\+\+Delay} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+Delay 提供延时功能 \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__qbl_ga122e365feec2021d766484e0ba08dbb7}{Q\+B\+L\+\_\+\+Get\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+Get\+Tick 获得从\+Q\+B\+L库初始化以来经过的时间 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{枚举类型说明}
+\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+S\+T\+A\+T\+US@{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US}}
+\index{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US@{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US}!Q\+B\+L Common@{Q\+B\+L Common}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US}{QBL_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US}}\hypertarget{group__qbl_ga41526b685f55486191108499fe91c30b}{}\label{group__qbl_ga41526b685f55486191108499fe91c30b}
+状态量定义 \begin{Desc}
+\item[枚举值]\par
+\begin{description}
+\index{Q\+B\+L\+\_\+\+OK@{Q\+B\+L\+\_\+\+OK}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+OK@{Q\+B\+L\+\_\+\+OK}}\item[{\em 
+Q\+B\+L\+\_\+\+OK\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30bac339d014a999e1d614721110672e1ad9}{}\label{group__qbl_gga41526b685f55486191108499fe91c30bac339d014a999e1d614721110672e1ad9}
+}]没有错误发生 \index{Q\+B\+L\+\_\+\+T\+I\+M\+E\+O\+UT@{Q\+B\+L\+\_\+\+T\+I\+M\+E\+O\+UT}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+T\+I\+M\+E\+O\+UT@{Q\+B\+L\+\_\+\+T\+I\+M\+E\+O\+UT}}\item[{\em 
+Q\+B\+L\+\_\+\+T\+I\+M\+E\+O\+UT\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30ba654a5a717eb326de65c78984d2fcedb8}{}\label{group__qbl_gga41526b685f55486191108499fe91c30ba654a5a717eb326de65c78984d2fcedb8}
+}]超出限定的执行时间 \index{Q\+B\+L\+\_\+\+B\+U\+SY@{Q\+B\+L\+\_\+\+B\+U\+SY}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+B\+U\+SY@{Q\+B\+L\+\_\+\+B\+U\+SY}}\item[{\em 
+Q\+B\+L\+\_\+\+B\+U\+SY\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30ba3295fefcc0c943fce64ad4d72be4edec}{}\label{group__qbl_gga41526b685f55486191108499fe91c30ba3295fefcc0c943fce64ad4d72be4edec}
+}]模块正处于忙碌状态 \index{Q\+B\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED@{Q\+B\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED@{Q\+B\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+Q\+B\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30baa1394dd50bddb4d957f937385c5f93a2}{}\label{group__qbl_gga41526b685f55486191108499fe91c30baa1394dd50bddb4d957f937385c5f93a2}
+}]启动失败 \index{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+\_\+\+F\+A\+I\+L\+ED@{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+\_\+\+F\+A\+I\+L\+ED}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+\_\+\+F\+A\+I\+L\+ED@{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+\_\+\+F\+A\+I\+L\+ED\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30baee9299722a126dba22c76d3d9e5971e3}{}\label{group__qbl_gga41526b685f55486191108499fe91c30baee9299722a126dba22c76d3d9e5971e3}
+}]写地址失败 \index{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+A\+I\+L\+ED@{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+A\+I\+L\+ED}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+A\+I\+L\+ED@{Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+Q\+B\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+A\+I\+L\+ED\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30ba1be03d0c1d667116cb382a49df76e223}{}\label{group__qbl_gga41526b685f55486191108499fe91c30ba1be03d0c1d667116cb382a49df76e223}
+}]写数据失败 \index{Q\+B\+L\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH@{Q\+B\+L\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH}!Q\+B\+L Common@{Q\+B\+L Common}}\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH@{Q\+B\+L\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH}}\item[{\em 
+Q\+B\+L\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH\hypertarget{group__qbl_gga41526b685f55486191108499fe91c30ba168ae4cc03a406e4ea624f38fecedbc9}{}\label{group__qbl_gga41526b685f55486191108499fe91c30ba168ae4cc03a406e4ea624f38fecedbc9}
+}]地址不匹配 \end{description}
+\end{Desc}
+
+
+\subsection{函数说明}
+\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+Delay@{Q\+B\+L\+\_\+\+Delay}}
+\index{Q\+B\+L\+\_\+\+Delay@{Q\+B\+L\+\_\+\+Delay}!Q\+B\+L Common@{Q\+B\+L Common}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+Delay(uint32\+\_\+t ms)}{QBL_Delay(uint32_t ms)}}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+B\+L\+\_\+\+Delay (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ms}
+\end{DoxyParamCaption}
+)}\hypertarget{group__qbl_gaaf84ff18d32c89b14e2656aad43782ad}{}\label{group__qbl_gaaf84ff18d32c89b14e2656aad43782ad}
+
+
+Q\+B\+L\+\_\+\+Delay 提供延时功能 
+
+
+\begin{DoxyParams}{参数}
+{\em ms} & 延时的时间长度，单位为毫秒 \\
+\hline
+\end{DoxyParams}
+\index{Q\+B\+L Common@{Q\+B\+L Common}!Q\+B\+L\+\_\+\+Get\+Tick@{Q\+B\+L\+\_\+\+Get\+Tick}}
+\index{Q\+B\+L\+\_\+\+Get\+Tick@{Q\+B\+L\+\_\+\+Get\+Tick}!Q\+B\+L Common@{Q\+B\+L Common}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+Get\+Tick(void)}{QBL_GetTick(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Q\+B\+L\+\_\+\+Get\+Tick (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__qbl_ga122e365feec2021d766484e0ba08dbb7}{}\label{group__qbl_ga122e365feec2021d766484e0ba08dbb7}
+
+
+Q\+B\+L\+\_\+\+Get\+Tick 获得从\+Q\+B\+L库初始化以来经过的时间 
+
+\begin{DoxyReturn}{返回}
+返回时间的单位为毫秒 
+\end{DoxyReturn}

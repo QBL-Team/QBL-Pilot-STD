@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QBL-Pilot-STD: E:/Works/QBL-Pilot-STD/Driver/LED.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QBL-Pilot-STD
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7151b3cc910409bb744bd274374c738d.html">Driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LED.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_l_e_d_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef LED_H</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define LED_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">enum</span> {</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bafea1b6d1e36efeb9177297ad5b634bdd">   21</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bafea1b6d1e36efeb9177297ad5b634bdd">LED_COLOR_OFF</a> = 0, </div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bae0568a71373a19d68ac019a67fcb2c3b">   22</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bae0568a71373a19d68ac019a67fcb2c3b">LED_COLOR_WHITE</a> = 1, </div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20c3f7e3db2eca4ce0fe784975373384">   23</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20c3f7e3db2eca4ce0fe784975373384">LED_COLOR_RED</a> = 2, </div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba64cda76c497793915fcf24c216d0f37c">   24</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba64cda76c497793915fcf24c216d0f37c">LED_COLOR_GREEN</a> = 3, </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba457a1e8f0680efd8cf6d76d1a6465b2b">   25</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba457a1e8f0680efd8cf6d76d1a6465b2b">LED_COLOR_BLUE</a> = 4, </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba323d8bd5ea675c6701c2945fb2e124bd">   26</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba323d8bd5ea675c6701c2945fb2e124bd">LED_COLOR_FUCHSIN</a> = 5, </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bab792f0e1b8644f6f22f3f0ab799bd3a9">   27</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bab792f0e1b8644f6f22f3f0ab799bd3a9">LED_COLOR_YELLOW</a> = 6, </div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20221062a48820a1e6caabc3fe8c0723">   28</a></span>&#160;    <a class="code" href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20221062a48820a1e6caabc3fe8c0723">LED_COLOR_CYAN</a> = 7, </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="group__led__driver.html#gab3570a8c9e1266519ad1c7e00093812b">LED_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="group__led__driver.html#gaf96fb94f6dcac6be219eb0019fe3b4ae">LED_Show</a>(uint8_t LED_COLOR);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // LED_H</span></div><div class="ttc" id="group__led__driver_html_gaf96fb94f6dcac6be219eb0019fe3b4ae"><div class="ttname"><a href="group__led__driver.html#gaf96fb94f6dcac6be219eb0019fe3b4ae">LED_Show</a></div><div class="ttdeci">void LED_Show(uint8_t LED_COLOR)</div><div class="ttdoc">LED_Show 驱动LED显示颜色 </div><div class="ttdef"><b>Definition:</b> LED.c:44</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55ba323d8bd5ea675c6701c2945fb2e124bd"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba323d8bd5ea675c6701c2945fb2e124bd">LED_COLOR_FUCHSIN</a></div><div class="ttdef"><b>Definition:</b> LED.h:26</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55ba457a1e8f0680efd8cf6d76d1a6465b2b"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba457a1e8f0680efd8cf6d76d1a6465b2b">LED_COLOR_BLUE</a></div><div class="ttdef"><b>Definition:</b> LED.h:25</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55bafea1b6d1e36efeb9177297ad5b634bdd"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bafea1b6d1e36efeb9177297ad5b634bdd">LED_COLOR_OFF</a></div><div class="ttdef"><b>Definition:</b> LED.h:21</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55bab792f0e1b8644f6f22f3f0ab799bd3a9"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bab792f0e1b8644f6f22f3f0ab799bd3a9">LED_COLOR_YELLOW</a></div><div class="ttdef"><b>Definition:</b> LED.h:27</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55ba64cda76c497793915fcf24c216d0f37c"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba64cda76c497793915fcf24c216d0f37c">LED_COLOR_GREEN</a></div><div class="ttdef"><b>Definition:</b> LED.h:24</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55bae0568a71373a19d68ac019a67fcb2c3b"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55bae0568a71373a19d68ac019a67fcb2c3b">LED_COLOR_WHITE</a></div><div class="ttdef"><b>Definition:</b> LED.h:22</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55ba20221062a48820a1e6caabc3fe8c0723"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20221062a48820a1e6caabc3fe8c0723">LED_COLOR_CYAN</a></div><div class="ttdef"><b>Definition:</b> LED.h:28</div></div>
+<div class="ttc" id="group__led__driver_html_gga06fc87d81c62e9abb8790b6e5713c55ba20c3f7e3db2eca4ce0fe784975373384"><div class="ttname"><a href="group__led__driver.html#gga06fc87d81c62e9abb8790b6e5713c55ba20c3f7e3db2eca4ce0fe784975373384">LED_COLOR_RED</a></div><div class="ttdef"><b>Definition:</b> LED.h:23</div></div>
+<div class="ttc" id="group__led__driver_html_gab3570a8c9e1266519ad1c7e00093812b"><div class="ttname"><a href="group__led__driver.html#gab3570a8c9e1266519ad1c7e00093812b">LED_Init</a></div><div class="ttdeci">void LED_Init(void)</div><div class="ttdoc">LED_Init. </div><div class="ttdef"><b>Definition:</b> LED.c:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

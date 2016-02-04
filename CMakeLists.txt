@@ -27,11 +27,15 @@ include_directories(STD)
 include_directories(STD/inc/)
 include_directories(CMSIS/Include)
 include_directories(QBL)
+include_directories(Middleware)
+include_directories(Driver)
 
 aux_source_directory(User SourceLists)
 aux_source_directory(STD SourceLists)
 aux_source_directory(STD/src SourceLists)
 aux_source_directory(QBL SourceLists)
+aux_source_directory(Middleware SourceLists)
+aux_source_directory(Driver SourceLists)
 
 set(SourceLists
         ${SourceLists}

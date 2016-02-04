@@ -1,7 +1,17 @@
+/**
+ *\file QBL.c
+ *\author no1wudi
+ */
+
+
 #include "QBL.h"
 #include "stm32f4xx_rcc.h"
 
 static volatile uint32_t qbl_sys_ticks = 0;
+
+/**
+ * @brief SysTick_Handler 滴答定时器中断服务函数
+ */
 
 void SysTick_Handler(void)
 {

@@ -1,0 +1,45 @@
+\hypertarget{_l_e_d_8c}{}\section{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+L\+ED.c 文件参考}
+\label{_l_e_d_8c}\index{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+L\+E\+D.\+c@{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+L\+E\+D.\+c}}
+{\ttfamily \#include \char`\"{}L\+E\+D.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+rcc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+gpio.\+h\char`\"{}}\\*
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_l_e_d_8c_af720cc91cf7c541fa85d5aa75c1b0174}{R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin}~G\+P\+I\+O\+\_\+\+Pin\+\_\+3
+\item 
+\#define \hyperlink{_l_e_d_8c_add64961c0d310e748fb7261851a102e9}{G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin}~G\+P\+I\+O\+\_\+\+Pin\+\_\+4
+\item 
+\#define \hyperlink{_l_e_d_8c_a1280f56fa12e9dd7f53df5761026a50d}{B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin}~G\+P\+I\+O\+\_\+\+Pin\+\_\+5
+\item 
+\#define \hyperlink{_l_e_d_8c_a1c1a25a49bf25f7e3e32352aa712961a}{L\+E\+D\+\_\+\+Port}~G\+P\+I\+OE
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__led__driver_gab3570a8c9e1266519ad1c7e00093812b}{L\+E\+D\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em L\+E\+D\+\_\+\+Init. \end{DoxyCompactList}\item 
+void \hyperlink{group__led__driver_gaf96fb94f6dcac6be219eb0019fe3b4ae}{L\+E\+D\+\_\+\+Show} (uint8\+\_\+t L\+E\+D\+\_\+\+C\+O\+L\+OR)
+\begin{DoxyCompactList}\small\item\em L\+E\+D\+\_\+\+Show 驱动\+L\+E\+D显示颜色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyAuthor}{作者}
+no1wudi 
+\end{DoxyAuthor}
+
+
+\subsection{宏定义说明}
+\index{L\+E\+D.\+c@{L\+E\+D.\+c}!B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin@{B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin}}
+\index{B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin@{B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin}!L\+E\+D.\+c@{L\+E\+D.\+c}}
+\subsubsection[{\texorpdfstring{B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin}{BLUE_LED_Pin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+U\+E\+\_\+\+L\+E\+D\+\_\+\+Pin~G\+P\+I\+O\+\_\+\+Pin\+\_\+5}\hypertarget{_l_e_d_8c_a1280f56fa12e9dd7f53df5761026a50d}{}\label{_l_e_d_8c_a1280f56fa12e9dd7f53df5761026a50d}
+红色\+L\+E\+D连接的管脚 \index{L\+E\+D.\+c@{L\+E\+D.\+c}!G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin@{G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin}}
+\index{G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin@{G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin}!L\+E\+D.\+c@{L\+E\+D.\+c}}
+\subsubsection[{\texorpdfstring{G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin}{GREEN_LED_Pin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+R\+E\+E\+N\+\_\+\+L\+E\+D\+\_\+\+Pin~G\+P\+I\+O\+\_\+\+Pin\+\_\+4}\hypertarget{_l_e_d_8c_add64961c0d310e748fb7261851a102e9}{}\label{_l_e_d_8c_add64961c0d310e748fb7261851a102e9}
+红色\+L\+E\+D连接的管脚 \index{L\+E\+D.\+c@{L\+E\+D.\+c}!L\+E\+D\+\_\+\+Port@{L\+E\+D\+\_\+\+Port}}
+\index{L\+E\+D\+\_\+\+Port@{L\+E\+D\+\_\+\+Port}!L\+E\+D.\+c@{L\+E\+D.\+c}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+Port}{LED_Port}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+Port~G\+P\+I\+OE}\hypertarget{_l_e_d_8c_a1c1a25a49bf25f7e3e32352aa712961a}{}\label{_l_e_d_8c_a1c1a25a49bf25f7e3e32352aa712961a}
+L\+E\+D连接的端口 \index{L\+E\+D.\+c@{L\+E\+D.\+c}!R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin@{R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin}}
+\index{R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin@{R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin}!L\+E\+D.\+c@{L\+E\+D.\+c}}
+\subsubsection[{\texorpdfstring{R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin}{RED_LED_Pin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+D\+\_\+\+L\+E\+D\+\_\+\+Pin~G\+P\+I\+O\+\_\+\+Pin\+\_\+3}\hypertarget{_l_e_d_8c_af720cc91cf7c541fa85d5aa75c1b0174}{}\label{_l_e_d_8c_af720cc91cf7c541fa85d5aa75c1b0174}
+红色\+L\+E\+D连接的管脚 
