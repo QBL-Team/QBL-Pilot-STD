@@ -7,7 +7,7 @@
 #include "stm32f4xx.h"
 #include <stddef.h>
 
-#define TOINSTANCE(QBL_SPI_Base) ((SPI_TypeDef*)QBL_SPI_Base)
+#define TOINSTANCE(QBL_SPI_Base) ((SPI_TypeDef*)QBL_SPI_Base)  /**< 实例化模块 */
 
 QBL_STATUS QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uint8_t* Trans, uint8_t* Rece, uint8_t Length, uint16_t TimeOut)
 {

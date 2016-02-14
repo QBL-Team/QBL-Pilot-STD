@@ -17,7 +17,7 @@
  * 颜色描述符
  */
 
-enum {
+typedef enum {
     LED_COLOR_OFF = 0, /**< 关闭显示 */
     LED_COLOR_WHITE, /**< 显示白色 */
     LED_COLOR_RED, /**< 显示红色 */
@@ -26,7 +26,7 @@ enum {
     LED_COLOR_FUCHSIN, /**< 显示品红 */
     LED_COLOR_YELLOW, /**< 显示黄色 */
     LED_COLOR_CYAN /**< 显示青色 */
-};
+}LED_COLOR;
 
 /**
  * @brief LED_Init 初始化硬件
@@ -35,7 +35,7 @@ extern void LED_Init(void);
 
 /**
  * @brief LED_Show 驱动LED显示颜色
- * @param LED_COLOR 将要显示的颜色
+ * @param LED_Color 将要显示的颜色
  * @see LED_COLOR
  */
 

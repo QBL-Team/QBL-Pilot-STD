@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>QBL-Pilot-STD: 模块</title>
+<title>QBL-Pilot-STD: QBL SPI</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,18 +74,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
   <div class="headertitle">
-<div class="title">模块</div>  </div>
+<div class="title">QBL SPI</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">这里列出了所有模块:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__qbl.html" target="_self">QBL Common</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__qbl__i2c.html" target="_self">QBL I2C</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__qbl__spi.html" target="_self">QBL SPI</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__led__driver.html" target="_self">LED 驱动</a></td><td class="desc"></td></tr>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga967f8514084b1910cc4ae6b6e0eba925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__qbl.html#ga41526b685f55486191108499fe91c30b">QBL_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__qbl__spi.html#ga967f8514084b1910cc4ae6b6e0eba925">QBL_SPI_TransmitReceive</a> (const uint32_t QBL_SPI_Base, const uint8_t *Trans, uint8_t *Rece, uint8_t Length, uint16_t TimeOut)</td></tr>
+<tr class="memdesc:ga967f8514084b1910cc4ae6b6e0eba925"><td class="mdescLeft">&#160;</td><td class="mdescRight">QBL_SPI_TransmitReceive 通过SPI模块交换数据  <a href="#ga967f8514084b1910cc4ae6b6e0eba925">更多...</a><br /></td></tr>
+<tr class="separator:ga967f8514084b1910cc4ae6b6e0eba925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- directory -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ga967f8514084b1910cc4ae6b6e0eba925"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__qbl.html#ga41526b685f55486191108499fe91c30b">QBL_STATUS</a> QBL_SPI_TransmitReceive </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>QBL_SPI_Base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>Trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Rece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>TimeOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>QBL_SPI_TransmitReceive 通过SPI模块交换数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QBL_SPI_Base</td><td>SPI模块的地址 </td></tr>
+    <tr><td class="paramname">Trans</td><td>发送数据的缓冲，若仅接收，参数可设置为NULL </td></tr>
+    <tr><td class="paramname">Rece</td><td>接收数据的缓冲区，若仅发送数据，参数可设置为NULL </td></tr>
+    <tr><td class="paramname">Length</td><td>交换数据的长度 </td></tr>
+    <tr><td class="paramname">TimeOut</td><td>允许操作的最长时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>总线操作状态 </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

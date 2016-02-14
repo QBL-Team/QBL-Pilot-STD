@@ -22,7 +22,7 @@
  * @param Value 要写入此寄存器的值
  * @param Length  要写入的数据大小
  * @param TimeOut 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0
- * @return
+ * @return 指示操作状态
  */
 
 extern QBL_STATUS QBL_I2C_Mem_Write(const uint32_t QBL_I2C_Base,const uint8_t DevAddr,const uint8_t RegAddr,const uint8_t * Value, uint8_t Length, uint16_t TimeOut);
@@ -35,9 +35,34 @@ extern QBL_STATUS QBL_I2C_Mem_Write(const uint32_t QBL_I2C_Base,const uint8_t De
  * @param Value 读取缓冲区
  * @param Length 要读出的数据量
  * @param TimeOut 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0
- * @return
+ * @return 指示操作状态
  */
 extern QBL_STATUS QBL_I2C_Mem_Read(const uint32_t QBL_I2C_Base,const uint8_t DevAddr,const uint8_t RegAddr,uint8_t * Value,uint8_t Length,uint8_t TimeOut);
+
+
+/**
+ * @brief QBL_I2C_Write 使用I2C总线向设备写入数据
+ * @param QBL_I2C_Base 使用的I2C模块的地址
+ * @param DevAddr 设备的识别地址
+ * @param Data 要写入的数据
+ * @param Length 要写入的数据大小
+ * @param TimeOut 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0
+ * @return 指示操作状态
+ */
+extern QBL_STATUS QBL_I2C_Write(const uint32_t QBL_I2C_Base,const uint8_t DevAddr,const uint8_t * Data,uint8_t Length,uint8_t TimeOut);
+
+/**
+ * @brief QBL_I2c_Read 使用I2C总线从设备写取数据
+ * @param QBL_I2C_Base 使用的I2C模块的地址
+ * @param DevAddr 设备的识别地址
+ * @param Data 读取数据缓冲
+ * @param Length 要写入的数据大小
+ * @param TimeOut 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0
+ * @return 指示操作状态
+ */
+
+extern QBL_STATUS QBL_I2c_Read(const uint32_t QBL_I2C_Base,const uint8_t DevAddr,uint8_t * Data,uint8_t Length,uint8_t TimeOut);
+
 
 /**
  * @}

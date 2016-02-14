@@ -3,28 +3,69 @@
 \subsection*{函数}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__qbl__i2c_ga57af22ba3a6f22c3d4d6fdd7f5d4089b}{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write} (uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, uint8\+\_\+t Dev\+Addr, uint8\+\_\+t Reg\+Addr, uint8\+\_\+t Value, uint16\+\_\+t Time\+Out)
-\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write 使用\+I2\+C总线向设备的寄存器写入一个值 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__qbl__i2c_gaa439ed38b89ef802f8d2316822dd5b19}{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write} (const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, const uint8\+\_\+t Reg\+Addr, const uint8\+\_\+t $\ast$Value, uint8\+\_\+t Length, uint16\+\_\+t Time\+Out)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write 使用\+I2\+C总线向设备的寄存器写入值 \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__qbl__i2c_ga224642e3f2d1615e0b777704f9c8f222}{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read} (const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, const uint8\+\_\+t Reg\+Addr, uint8\+\_\+t $\ast$Value, uint8\+\_\+t Length, uint8\+\_\+t Time\+Out)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read 使用\+I2\+C总线从设备的寄存器读取值 \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__qbl__i2c_gac2156e0a1c570c8aa4e168c1b8e516a8}{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write} (const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, const uint8\+\_\+t $\ast$Data, uint8\+\_\+t Length, uint8\+\_\+t Time\+Out)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write 使用\+I2\+C总线向设备写入数据 \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__qbl__i2c_ga9e68862c129a8f5af02da85c0b1c2e58}{Q\+B\+L\+\_\+\+I2c\+\_\+\+Read} (const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, uint8\+\_\+t $\ast$Data, uint8\+\_\+t Length, uint8\+\_\+t Time\+Out)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+I2c\+\_\+\+Read 使用\+I2\+C总线从设备写取数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{详细描述}
 
 
 \subsection{函数说明}
+\index{Q\+B\+L I2C@{Q\+B\+L I2C}!Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read@{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read}}
+\index{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read@{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read}!Q\+B\+L I2C@{Q\+B\+L I2C}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read(const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, const uint8\+\_\+t Reg\+Addr, uint8\+\_\+t $\ast$\+Value, uint8\+\_\+t Length, uint8\+\_\+t Time\+Out)}{QBL_I2C_Mem_Read(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, const uint8_t RegAddr, uint8_t *Value, uint8_t Length, uint8_t TimeOut)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t}]{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, }
+\item[{const uint8\+\_\+t}]{Dev\+Addr, }
+\item[{const uint8\+\_\+t}]{Reg\+Addr, }
+\item[{uint8\+\_\+t $\ast$}]{Value, }
+\item[{uint8\+\_\+t}]{Length, }
+\item[{uint8\+\_\+t}]{Time\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__qbl__i2c_ga224642e3f2d1615e0b777704f9c8f222}{}\label{group__qbl__i2c_ga224642e3f2d1615e0b777704f9c8f222}
+
+
+Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read 使用\+I2\+C总线从设备的寄存器读取值 
+
+
+\begin{DoxyParams}{参数}
+{\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base} & 使用的\+I2\+C模块的地址 \\
+\hline
+{\em Dev\+Addr} & 设备的识别地址 \\
+\hline
+{\em Reg\+Addr} & 设备内寄存器的地址 \\
+\hline
+{\em Value} & 读取缓冲区 \\
+\hline
+{\em Length} & 要读出的数据量 \\
+\hline
+{\em Time\+Out} & 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+指示操作状态 
+\end{DoxyReturn}
 \index{Q\+B\+L I2C@{Q\+B\+L I2C}!Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write@{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write}}
 \index{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write@{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write}!Q\+B\+L I2C@{Q\+B\+L I2C}}
-\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write(uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, uint8\+\_\+t Dev\+Addr, uint8\+\_\+t Reg\+Addr, uint8\+\_\+t Value, uint16\+\_\+t Time\+Out)}{QBL_I2C_Mem_Write(uint32_t QBL_I2C_Base, uint8_t DevAddr, uint8_t RegAddr, uint8_t Value, uint16_t TimeOut)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write (
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write(const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, const uint8\+\_\+t Reg\+Addr, const uint8\+\_\+t $\ast$\+Value, uint8\+\_\+t Length, uint16\+\_\+t Time\+Out)}{QBL_I2C_Mem_Write(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, const uint8_t RegAddr, const uint8_t *Value, uint8_t Length, uint16_t TimeOut)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write (
 \begin{DoxyParamCaption}
-\item[{uint32\+\_\+t}]{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, }
-\item[{uint8\+\_\+t}]{Dev\+Addr, }
-\item[{uint8\+\_\+t}]{Reg\+Addr, }
-\item[{uint8\+\_\+t}]{Value, }
+\item[{const uint32\+\_\+t}]{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, }
+\item[{const uint8\+\_\+t}]{Dev\+Addr, }
+\item[{const uint8\+\_\+t}]{Reg\+Addr, }
+\item[{const uint8\+\_\+t $\ast$}]{Value, }
+\item[{uint8\+\_\+t}]{Length, }
 \item[{uint16\+\_\+t}]{Time\+Out}
 \end{DoxyParamCaption}
-)}\hypertarget{group__qbl__i2c_ga57af22ba3a6f22c3d4d6fdd7f5d4089b}{}\label{group__qbl__i2c_ga57af22ba3a6f22c3d4d6fdd7f5d4089b}
+)}\hypertarget{group__qbl__i2c_gaa439ed38b89ef802f8d2316822dd5b19}{}\label{group__qbl__i2c_gaa439ed38b89ef802f8d2316822dd5b19}
 
 
-Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write 使用\+I2\+C总线向设备的寄存器写入一个值 
+Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write 使用\+I2\+C总线向设备的寄存器写入值 
 
 
 \begin{DoxyParams}{参数}
@@ -36,9 +77,73 @@ Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write 使用\+I2\+C总线向设备的寄�
 \hline
 {\em Value} & 要写入此寄存器的值 \\
 \hline
+{\em Length} & 要写入的数据大小 \\
+\hline
 {\em Time\+Out} & 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0 \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{返回}
+指示操作状态 
+\end{DoxyReturn}
+\index{Q\+B\+L I2C@{Q\+B\+L I2C}!Q\+B\+L\+\_\+\+I2c\+\_\+\+Read@{Q\+B\+L\+\_\+\+I2c\+\_\+\+Read}}
+\index{Q\+B\+L\+\_\+\+I2c\+\_\+\+Read@{Q\+B\+L\+\_\+\+I2c\+\_\+\+Read}!Q\+B\+L I2C@{Q\+B\+L I2C}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+I2c\+\_\+\+Read(const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, uint8\+\_\+t $\ast$\+Data, uint8\+\_\+t Length, uint8\+\_\+t Time\+Out)}{QBL_I2c_Read(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, uint8_t *Data, uint8_t Length, uint8_t TimeOut)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} Q\+B\+L\+\_\+\+I2c\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t}]{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, }
+\item[{const uint8\+\_\+t}]{Dev\+Addr, }
+\item[{uint8\+\_\+t $\ast$}]{Data, }
+\item[{uint8\+\_\+t}]{Length, }
+\item[{uint8\+\_\+t}]{Time\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__qbl__i2c_ga9e68862c129a8f5af02da85c0b1c2e58}{}\label{group__qbl__i2c_ga9e68862c129a8f5af02da85c0b1c2e58}
 
+
+Q\+B\+L\+\_\+\+I2c\+\_\+\+Read 使用\+I2\+C总线从设备写取数据 
+
+
+\begin{DoxyParams}{参数}
+{\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base} & 使用的\+I2\+C模块的地址 \\
+\hline
+{\em Dev\+Addr} & 设备的识别地址 \\
+\hline
+{\em Data} & 读取数据缓冲 \\
+\hline
+{\em Length} & 要写入的数据大小 \\
+\hline
+{\em Time\+Out} & 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+指示操作状态 
+\end{DoxyReturn}
+\index{Q\+B\+L I2C@{Q\+B\+L I2C}!Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write@{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write}}
+\index{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write@{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write}!Q\+B\+L I2C@{Q\+B\+L I2C}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write(const uint32\+\_\+t Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, const uint8\+\_\+t Dev\+Addr, const uint8\+\_\+t $\ast$\+Data, uint8\+\_\+t Length, uint8\+\_\+t Time\+Out)}{QBL_I2C_Write(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, const uint8_t *Data, uint8_t Length, uint8_t TimeOut)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t}]{Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base, }
+\item[{const uint8\+\_\+t}]{Dev\+Addr, }
+\item[{const uint8\+\_\+t $\ast$}]{Data, }
+\item[{uint8\+\_\+t}]{Length, }
+\item[{uint8\+\_\+t}]{Time\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__qbl__i2c_gac2156e0a1c570c8aa4e168c1b8e516a8}{}\label{group__qbl__i2c_gac2156e0a1c570c8aa4e168c1b8e516a8}
+
+
+Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Write 使用\+I2\+C总线向设备写入数据 
+
+
+\begin{DoxyParams}{参数}
+{\em Q\+B\+L\+\_\+\+I2\+C\+\_\+\+Base} & 使用的\+I2\+C模块的地址 \\
+\hline
+{\em Dev\+Addr} & 设备的识别地址 \\
+\hline
+{\em Data} & 要写入的数据 \\
+\hline
+{\em Length} & 要写入的数据大小 \\
+\hline
+{\em Time\+Out} & 单位为毫秒，允许操作的最大用时，注意最小为1，不可为0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+指示操作状态 
 \end{DoxyReturn}

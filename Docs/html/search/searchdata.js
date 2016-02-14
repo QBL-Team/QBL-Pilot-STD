@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "bglqrst",
   1: "lq",
   2: "lqs",
-  3: "q",
+  3: "lq",
   4: "lq",
   5: "bglrt",
   6: "lq"

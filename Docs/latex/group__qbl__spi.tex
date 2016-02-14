@@ -1,0 +1,44 @@
+\hypertarget{group__qbl__spi}{}\section{Q\+BL S\+PI}
+\label{group__qbl__spi}\index{Q\+B\+L S\+PI@{Q\+B\+L S\+PI}}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__qbl__spi_ga967f8514084b1910cc4ae6b6e0eba925}{Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive} (const uint32\+\_\+t Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Base, const uint8\+\_\+t $\ast$Trans, uint8\+\_\+t $\ast$Rece, uint8\+\_\+t Length, uint16\+\_\+t Time\+Out)
+\begin{DoxyCompactList}\small\item\em Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive 通过\+S\+P\+I模块交换数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{函数说明}
+\index{Q\+B\+L S\+PI@{Q\+B\+L S\+PI}!Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive@{Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive}}
+\index{Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive@{Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive}!Q\+B\+L S\+PI@{Q\+B\+L S\+PI}}
+\subsubsection[{\texorpdfstring{Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive(const uint32\+\_\+t Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Base, const uint8\+\_\+t $\ast$\+Trans, uint8\+\_\+t $\ast$\+Rece, uint8\+\_\+t Length, uint16\+\_\+t Time\+Out)}{QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uint8_t *Trans, uint8_t *Rece, uint8_t Length, uint16_t TimeOut)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t}]{Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Base, }
+\item[{const uint8\+\_\+t $\ast$}]{Trans, }
+\item[{uint8\+\_\+t $\ast$}]{Rece, }
+\item[{uint8\+\_\+t}]{Length, }
+\item[{uint16\+\_\+t}]{Time\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__qbl__spi_ga967f8514084b1910cc4ae6b6e0eba925}{}\label{group__qbl__spi_ga967f8514084b1910cc4ae6b6e0eba925}
+
+
+Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Transmit\+Receive 通过\+S\+P\+I模块交换数据 
+
+
+\begin{DoxyParams}{参数}
+{\em Q\+B\+L\+\_\+\+S\+P\+I\+\_\+\+Base} & S\+P\+I模块的地址 \\
+\hline
+{\em Trans} & 发送数据的缓冲，若仅接收，参数可设置为\+N\+U\+LL \\
+\hline
+{\em Rece} & 接收数据的缓冲区，若仅发送数据，参数可设置为\+N\+U\+LL \\
+\hline
+{\em Length} & 交换数据的长度 \\
+\hline
+{\em Time\+Out} & 允许操作的最长时间 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+总线操作状态 
+\end{DoxyReturn}
