@@ -19,8 +19,10 @@ CortexMProduct{
         "GCC/*.c",
         "GCC/*.s",
         "STD/Src/*.c",
+        "STD/Inc/*.h",
         "STD/*.c",
-        "User/*.c",
+        "STD/*.h",
+        "User/*.*",
         "QBL/*.c"
     ]
 

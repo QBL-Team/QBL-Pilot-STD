@@ -9,6 +9,13 @@
 
 #include "QBL.h"
 
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
 /**
  * @defgroup qbl_i2c QBL I2C
  * @{
@@ -67,6 +74,13 @@ extern QBL_STATUS QBL_I2c_Read(const uint32_t QBL_I2C_Base,const uint8_t DevAddr
 /**
  * @}
  */
+
+
+#ifdef __cplusplus
+
+}
+
+#endif
 
 
 #endif // QBL_I2C_H

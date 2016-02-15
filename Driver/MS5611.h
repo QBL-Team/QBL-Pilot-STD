@@ -11,6 +11,13 @@
 #include <stddef.h>
 #include <stdint.h>
 
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
 /*!
   *
   * @defgroup ms5611_driver MS5611 驱动
@@ -37,5 +44,12 @@ extern bool MS5611_Update(float * Pressure,float * Temperature);
 /*!
  * @}
  */
+
+
+#ifdef __cplusplus
+
+}
+
+#endif
 
 #endif

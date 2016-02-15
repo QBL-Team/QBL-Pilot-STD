@@ -8,6 +8,13 @@
 
 #include "QBL.h"
 
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
 /**
  * @defgroup qbl_spi QBL SPI
  * @{
@@ -28,5 +35,11 @@ extern QBL_STATUS QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uin
 /**
  * @}
  */
+
+#ifdef __cplusplus
+
+}
+
+#endif
 
 #endif // QBL_SPI_H

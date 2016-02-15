@@ -12,6 +12,13 @@
 #include <stddef.h>
 #include <stdint.h>
 
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
 /*!
   *
   * @defgroup hmc5883_driver HMC5883 驱动
@@ -37,5 +44,12 @@ extern QBL_STATUS HMC5883_Update(float axis[3]);
 /*!
  * @}
  */
+
+
+#ifdef __cplusplus
+
+}
+
+#endif
 
 #endif

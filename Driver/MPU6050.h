@@ -13,6 +13,13 @@
 #include <stdint.h>
 
 
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+
 /*!
   *
   * @defgroup mpu6050_driver MPU6050 驱动
@@ -43,5 +50,12 @@ extern QBL_STATUS MPU6050_Update(float axis[6],float * temp);
 /*!
  * @}
  */
+
+
+#ifdef __cplusplus
+
+}
+
+#endif
 
 #endif

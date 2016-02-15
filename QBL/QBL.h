@@ -6,6 +6,14 @@
 #ifndef QBL_H
 #define QBL_H
 
+
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
 /**
  *
  * @defgroup qbl QBL Common
@@ -52,5 +60,12 @@ extern uint32_t QBL_GetTick(void);
 /**
  * @}
  */
+
+
+#ifdef __cplusplus
+
+}
+
+#endif
 
 #endif // QBL_H

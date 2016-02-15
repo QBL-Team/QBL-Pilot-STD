@@ -6,6 +6,13 @@
 #ifndef LED_H
 #define LED_H
 
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
 /**
  * @defgroup led_driver LED 驱动
  * @{
@@ -44,4 +51,11 @@ extern void LED_Show(uint8_t LED_Color);
 /**
  * @}
  */
+
+#ifdef __cplusplus
+
+}
+
+#endif
+
 #endif // LED_H
