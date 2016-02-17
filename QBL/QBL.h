@@ -6,8 +6,6 @@
 #ifndef QBL_H
 #define QBL_H
 
-
-
 #ifdef __cplusplus
 
 extern "C" {

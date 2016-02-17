@@ -28,18 +28,6 @@
 
 void LED_Init(void)
 {
-    GPIO_InitTypeDef led;
-    GPIO_DeInit(GPIOE);
-
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
-
-    led.GPIO_Mode = GPIO_Mode_OUT;
-    led.GPIO_OType = GPIO_OType_PP;
-    led.GPIO_Pin = BLUE_LED_Pin | GREEN_LED_Pin | RED_LED_Pin;
-    led.GPIO_PuPd = GPIO_PuPd_NOPULL;
-    led.GPIO_Speed = GPIO_Speed_100MHz;
-    GPIO_Init(LED_Port, &led);
-
     LED_Show(LED_COLOR_OFF);
 }
 
