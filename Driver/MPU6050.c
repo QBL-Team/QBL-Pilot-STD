@@ -88,7 +88,7 @@ QBL_STATUS MPU6050_Update(float axis[6], float* temp)
     axis[4] /= MPU6050_GYRO_SCALE;
     axis[5] /= MPU6050_GYRO_SCALE;
 
-    return true;
+    return QBL_OK;
 }
 
 /*!

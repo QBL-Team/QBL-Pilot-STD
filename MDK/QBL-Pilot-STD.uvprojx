@@ -636,6 +636,26 @@
               <FileType>1</FileType>
               <FilePath>..\Driver\LED.c</FilePath>
             </File>
+            <File>
+              <FileName>HMC5883.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\HMC5883.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>MS5611.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\MS5611.c</FilePath>
+            </File>
+            <File>
+              <FileName>SD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\SD.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

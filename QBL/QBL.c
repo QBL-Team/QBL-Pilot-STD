@@ -4,6 +4,7 @@
  */
 
 #include "QBL.h"
+#include "SD.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_i2c.h"
@@ -70,6 +71,8 @@ static void QBL_IO_Init(void)
     GPIO_InitTypeDef io;
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
 
     {
@@ -113,6 +116,26 @@ static void QBL_IO_Init(void)
         io.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2;
         GPIO_Init(GPIOE, &io);
     }
+
+    {
+        //SDIO
+        io.GPIO_Mode = GPIO_Mode_AF;
+        io.GPIO_OType = GPIO_OType_PP;
+        io.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12;
+        io.GPIO_PuPd = GPIO_PuPd_NOPULL;
+        io.GPIO_Speed = GPIO_Speed_100MHz;
+        GPIO_Init(GPIOC, &io);
+
+        io.GPIO_Pin = GPIO_Pin_2;
+        GPIO_Init(GPIOD, &io);
+
+        GPIO_PinAFConfig(GPIOC, GPIO_PinSource8, GPIO_AF_SDIO);
+        GPIO_PinAFConfig(GPIOC, GPIO_PinSource9, GPIO_AF_SDIO);
+        GPIO_PinAFConfig(GPIOC, GPIO_PinSource10, GPIO_AF_SDIO);
+        GPIO_PinAFConfig(GPIOC, GPIO_PinSource11, GPIO_AF_SDIO);
+        GPIO_PinAFConfig(GPIOC, GPIO_PinSource12, GPIO_AF_SDIO);
+        GPIO_PinAFConfig(GPIOD, GPIO_PinSource2, GPIO_AF_SDIO);
+    }
 }
 
 /**
@@ -139,6 +162,7 @@ void QBL_Init(void)
     QBL_Clock_Init();
     QBL_IO_Init();
     QBL_Periph_Init();
+    SD_Init();
     SysTick_Config(SystemCoreClock / 1000);
 }
 

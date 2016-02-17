@@ -23,7 +23,7 @@ CortexMProduct{
         "STD/*.c",
         "STD/*.h",
         "User/*.*",
-        "QBL/*.c"
+        "QBL/*.c",
     ]
 
     cpp.defines :[

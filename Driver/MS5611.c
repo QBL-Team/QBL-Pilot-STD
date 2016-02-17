@@ -157,7 +157,7 @@ QBL_STATUS MS5611_Init(void)
     c5 = MS5611_ReadPROM(MS5611_CMD_READ_C5);
     c6 = MS5611_ReadPROM(MS5611_CMD_READ_C6);
 
-    return true;
+    return QBL_OK;
 }
 
 bool MS5611_Update(float* Pressure, float* Temperature)
