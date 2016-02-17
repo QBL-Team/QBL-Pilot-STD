@@ -371,7 +371,7 @@
             <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx</Define>
+              <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx,ARM_MATH_CM4,__FPU_PRESENT=1</Define>
               <Undefine></Undefine>
               <IncludePath>..\CMSIS\Include;..\QBL;..\STD\inc;..\STD;..\User;..\Driver</IncludePath>
             </VariousControls>
@@ -605,6 +605,11 @@
               <FileName>startup_stm32f40_41xxx.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\startup_stm32f40_41xxx.s</FilePath>
+            </File>
+            <File>
+              <FileName>arm_cortexM4lf_math.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Middleware\DSP\arm_cortexM4lf_math.lib</FilePath>
             </File>
           </Files>
         </Group>

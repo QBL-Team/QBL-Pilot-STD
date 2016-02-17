@@ -37,9 +37,9 @@ Product {
             "-flto",
             "-mabi=aapcs",
             "--specs=nano.specs",
-            "--specs=nosys.specs",
             "-fdata-sections",
-            "-ffunction-sections"
+            "-ffunction-sections",
+            "-lm",
         ]
     }
 
@@ -53,7 +53,7 @@ Product {
             "-mthumb",
             "-flto",
             "-mfpu=fpv4-sp-d16",
-            "-mfloat-abi=hard"
+            "-mfloat-abi=hard",
         ]
 
         cpp.linkerFlags: [
@@ -63,11 +63,11 @@ Product {
             "-flto",
             "-mabi=aapcs",
             "--specs=nano.specs",
-            "--specs=nosys.specs",
             "-fdata-sections",
             "-ffunction-sections",
             "-mfpu=fpv4-sp-d16",
-            "-mfloat-abi=hard"
+            "-mfloat-abi=hard",
+            "-lm",
         ]
     }
 

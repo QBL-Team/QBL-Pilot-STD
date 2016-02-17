@@ -1029,7 +1029,7 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_sai.o(i.SAI_GetITStatus), (22 bytes).
     Removing stm32f4xx_sai.o(i.SAI_ITConfig), (16 bytes).
     Removing stm32f4xx_sai.o(i.SAI_Init), (68 bytes).
-    Removing stm32f4xx_sai.o(i.SAI_MonoModeConfig), (18 bytes).
+    Removing stm32f4xx_sai.o(i.SAI_MonoModeConfig), (16 bytes).
     Removing stm32f4xx_sai.o(i.SAI_MuteFrameCounterConfig), (18 bytes).
     Removing stm32f4xx_sai.o(i.SAI_MuteModeCmd), (20 bytes).
     Removing stm32f4xx_sai.o(i.SAI_MuteValueConfig), (16 bytes).
@@ -1307,7 +1307,7 @@ Removing Unused input sections from the image.
     Removing ffltl.o(.text), (44 bytes).
     Removing fepilogue.o(.text), (110 bytes).
 
-818 unused section(s) (total 33236 bytes) removed from the image.
+818 unused section(s) (total 33234 bytes) removed from the image.
 
 ==============================================================================
 
