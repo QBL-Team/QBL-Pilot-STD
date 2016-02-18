@@ -2,8 +2,12 @@
 #include "stm32f4xx_gpio.h"
 #include "QBL.h"
 #include "LED.h"
+#include <stdio.h>
 #include "QBL_I2C.h"
 #include "stm32f4xx_i2c.h"
+#include <stdio.h>
+#include "stm32f4xx_usart.h"
+
 
 int main(void)
 {

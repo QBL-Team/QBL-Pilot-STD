@@ -9,8 +9,23 @@
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_i2c.h"
 #include "stm32f4xx_spi.h"
+#include "stm32f4xx_usart.h"
+#include <stdio.h>
 
 static volatile uint32_t qbl_sys_ticks = 0; //系统上电计时器，单位为ms
+
+#if __GNUC__
+
+#else
+
+int fputc(int ch, FILE* f)
+{
+    USART1->DR = ch & 0x1FF;
+    while(RESET == USART_GetFlagStatus(USART1,USART_FLAG_TC));
+    return ch;
+}
+
+#endif
 
 static void QBL_Clock_Init(void)
 {
@@ -32,6 +47,7 @@ static void QBL_Periph_Init(void)
 {
     I2C_InitTypeDef ii;
     SPI_InitTypeDef sp;
+    USART_InitTypeDef ua;
 
     //I2C 1
     {
@@ -63,6 +79,21 @@ static void QBL_Periph_Init(void)
 
         SPI_Init(SPI1, &sp);
         SPI_Cmd(SPI1, ENABLE);
+    }
+
+    {
+        //USART1
+
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+        USART_DeInit(USART1);
+        ua.USART_BaudRate = 115200;
+        ua.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+        ua.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+        ua.USART_Parity = USART_Parity_No;
+        ua.USART_StopBits = USART_StopBits_1;
+        ua.USART_WordLength = USART_WordLength_8b;
+        USART_Init(USART1, &ua);
+        USART_Cmd(USART1, ENABLE);
     }
 }
 
@@ -135,6 +166,15 @@ static void QBL_IO_Init(void)
         GPIO_PinAFConfig(GPIOC, GPIO_PinSource11, GPIO_AF_SDIO);
         GPIO_PinAFConfig(GPIOC, GPIO_PinSource12, GPIO_AF_SDIO);
         GPIO_PinAFConfig(GPIOD, GPIO_PinSource2, GPIO_AF_SDIO);
+    }
+
+    {
+        //USART
+        io.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+        GPIO_Init(GPIOB, &io);
+
+        GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_USART1);
+        GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_USART1);
     }
 }
 

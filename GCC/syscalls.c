@@ -7,6 +7,7 @@
 #include <stdarg.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include "stm32f4xx_usart.h"
 
 #undef errno
 extern int errno;
@@ -77,8 +78,14 @@ __attribute__((used)) int _read(int file, char* ptr, int len)
 /*Low layer write(output) function*/
 __attribute__((used)) int _write(int file, char* ptr, int len)
 {
+    int cnt = len;
     UNUSED(file);
-    UNUSED(ptr);
+
+    while (cnt--) {
+        USART1->DR = 0x1FF & (*ptr++);
+        while(RESET == USART_GetFlagStatus(USART1,USART_FLAG_TC));
+    }
+
     return len;
 }
 
