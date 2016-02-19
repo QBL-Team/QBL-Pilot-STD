@@ -41,14 +41,13 @@ QBL_STATUS MPU6050_Init(void)
     uint8_t tmp = 0; //temp variable
     QBL_STATUS status;
 
-    status = QBL_I2C_Mem_Read(I2C1_BASE, MPU6050_IIC_ADDRESS, MPU6050_REG_ID_ADDR, &tmp, 1, 1);
-
+    status = QBL_I2C_Mem_Read(I2C1_BASE, MPU6050_IIC_ADDRESS, MPU6050_REG_ID_ADDR, &tmp, 1, 2);
     if (QBL_OK != status) {
         return status;
     }
 
     for (cnts = 0; cnts < sizeof(MPU_CONFIG_TABLE); cnts += 2) {
-        status = QBL_I2C_Mem_Write(I2C1_BASE, MPU6050_IIC_ADDRESS, MPU_CONFIG_TABLE[cnts], (uint8_t*)(MPU_CONFIG_TABLE + 1 + cnts), 1, 1);
+        status = QBL_I2C_Mem_Write(I2C1_BASE, MPU6050_IIC_ADDRESS, MPU_CONFIG_TABLE[cnts], (uint8_t*)(MPU_CONFIG_TABLE + 1 + cnts), 1, 2);
         if (QBL_OK != status) {
             return status;
         }

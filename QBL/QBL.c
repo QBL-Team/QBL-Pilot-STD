@@ -21,7 +21,8 @@ static volatile uint32_t qbl_sys_ticks = 0; //系统上电计时器，单位为m
 int fputc(int ch, FILE* f)
 {
     USART1->DR = ch & 0x1FF;
-    while(RESET == USART_GetFlagStatus(USART1,USART_FLAG_TC));
+    while (RESET == USART_GetFlagStatus(USART1, USART_FLAG_TC))
+        ;
     return ch;
 }
 
@@ -52,13 +53,13 @@ static void QBL_Periph_Init(void)
     //I2C 1
     {
         RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
-        I2C_DeInit(I2C1);
+
         ii.I2C_Ack = I2C_Ack_Enable;
         ii.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
         ii.I2C_ClockSpeed = 400000;
         ii.I2C_DutyCycle = I2C_DutyCycle_2;
         ii.I2C_Mode = I2C_Mode_I2C;
-        ii.I2C_OwnAddress1 = 0x00;
+        ii.I2C_OwnAddress1 = 0xAA;
         I2C_Init(I2C1, &ii);
         I2C_Cmd(I2C1, ENABLE);
     }
@@ -66,7 +67,7 @@ static void QBL_Periph_Init(void)
     {
         //SPI1
         RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
-        SPI_DeInit(SPI1);
+
         sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;
         sp.SPI_CPHA = SPI_CPHA_1Edge;
         sp.SPI_CPOL = SPI_CPOL_Low;
@@ -85,7 +86,7 @@ static void QBL_Periph_Init(void)
         //USART1
 
         RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-        USART_DeInit(USART1);
+
         ua.USART_BaudRate = 115200;
         ua.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
         ua.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;

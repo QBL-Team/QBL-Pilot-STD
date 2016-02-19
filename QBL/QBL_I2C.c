@@ -113,6 +113,13 @@ QBL_STATUS QBL_I2C_Mem_Read(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, 
     }
 
     while (Length) {
+
+        if (Length == 1) {
+            I2C_AcknowledgeConfig(TOINSTANCE(QBL_I2C_Base), DISABLE);
+            I2C_GenerateSTOP(TOINSTANCE(QBL_I2C_Base), ENABLE);
+
+        }
+
         while (ERROR == I2C_CheckEvent(TOINSTANCE(QBL_I2C_Base), I2C_EVENT_MASTER_BYTE_RECEIVED)) {
             if (QBL_GetTick() >= max_time) {
                 return QBL_RECEIVE_FAILED;
@@ -121,15 +128,10 @@ QBL_STATUS QBL_I2C_Mem_Read(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, 
 
         *Value++ = I2C_ReceiveData(TOINSTANCE(QBL_I2C_Base));
 
-        if (Length == 1) {
-            I2C_AcknowledgeConfig(TOINSTANCE(QBL_I2C_Base), DISABLE);
-        }
+
         Length--;
     }
-
-    I2C_GenerateSTOP(TOINSTANCE(QBL_I2C_Base), ENABLE);
     I2C_AcknowledgeConfig(TOINSTANCE(QBL_I2C_Base), ENABLE);
-
     return QBL_OK;
 }
 
