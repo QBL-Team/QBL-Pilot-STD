@@ -10,7 +10,8 @@ CortexMProduct{
         "CMSIS/Include",
         "STD/Inc",
         "STD",
-        "QBL"
+        "QBL",
+        "Middleware/FatFS",
     ]
 
 
@@ -34,6 +35,7 @@ CortexMProduct{
         "Middleware/DSP/StatisticsFunctions/*.*",
         "Middleware/DSP/SupportFunctions/*.*",
         "Middleware/DSP/TransformFunctions/*.*",
+        "Middleware/FatFS/*.*",
     ]
 
     cpp.defines :[

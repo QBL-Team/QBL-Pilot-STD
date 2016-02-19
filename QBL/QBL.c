@@ -202,7 +202,6 @@ void QBL_Init(void)
     QBL_Clock_Init();
     QBL_IO_Init();
     QBL_Periph_Init();
-    SD_Init();
     SysTick_Config(SystemCoreClock / 1000);
 }
 
