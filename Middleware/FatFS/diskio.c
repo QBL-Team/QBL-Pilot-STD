@@ -10,14 +10,15 @@
 #include "diskio.h" /* FatFs lower layer API */
 //#include "usbdisk.h"	/* Example: Header file of existing USB MSD control module */
 //#include "atadrive.h"	/* Example: Header file of existing ATA harddisk control module */
-#include "SD.h" /* Example: Header file of existing MMC/SDC contorl module */
+//#include "sdcard.h"		/* Example: Header file of existing MMC/SDC contorl module */
+
+#include "SD.h"
+#include "stm32f4xx_sdio.h"
 
 /* Definitions of physical drive number for each drive */
-#define ATA 0 /* Example: Map ATA harddisk to physical drive 0 */
-#define MMC 1 /* Example: Map MMC/SD card to physical drive 1 */
+#define ATA 1 /* Example: Map ATA harddisk to physical drive 0 */
+#define MMC 0 /* Example: Map MMC/SD card to physical drive 1 */
 #define USB 2 /* Example: Map USB MSD to physical drive 2 */
-
-static SD_CardInfo Info;
 
 /*-----------------------------------------------------------------------*/
 /* Get Drive Status                                                      */
@@ -27,7 +28,7 @@ DSTATUS disk_status(
     BYTE pdrv /* Physical drive nmuber to identify the drive */
     )
 {
-    DSTATUS stat = RES_NOTRDY;
+    DSTATUS stat = RES_ERROR;
 
     switch (pdrv) {
     case ATA:
@@ -37,24 +38,8 @@ DSTATUS disk_status(
         return stat;
 
     case MMC:
-        switch (SD_GetState()) {
 
-        case SD_CARD_READY:
-            stat = RES_OK;
-            break;
-
-        case SD_CARD_SENDING:
-            stat = RES_NOTRDY;
-            break;
-
-        case SD_CARD_RECEIVING:
-            stat = RES_NOTRDY;
-            break;
-
-        default:
-            stat = RES_ERROR;
-            break;
-        }
+        stat = RES_OK;
 
         // translate the reslut code here
 
@@ -77,7 +62,7 @@ DSTATUS disk_initialize(
     BYTE pdrv /* Physical drive nmuber to identify the drive */
     )
 {
-    DSTATUS stat = RES_NOTRDY;
+    DSTATUS stat = RES_ERROR;
 
     switch (pdrv) {
     case ATA:
@@ -88,13 +73,11 @@ DSTATUS disk_initialize(
 
     case MMC:
 
-        // translate the reslut code here
+        SD_Init();
+        SD_EnableWideBusOperation(SDIO_BusWide_4b);
+        stat = RES_OK;
 
-        if (SD_OK == SD_Init()) {
-            if (SD_OK == SD_GetCardInfo(&Info)) {
-                stat = RES_OK;
-            }
-        }
+        // translate the reslut code here
 
         return stat;
 
@@ -118,7 +101,7 @@ DRESULT disk_read(
     UINT count /* Number of sectors to read */
     )
 {
-    DRESULT res = RES_NOTRDY;
+    DRESULT res = RES_ERROR;
 
     switch (pdrv) {
     case ATA:
@@ -131,9 +114,16 @@ DRESULT disk_read(
     case MMC:
         // translate the arguments here
 
-        if(SD_OK == SD_ReadMultiBlocks(buff,sector,Info.CardBlockSize,count)){
-            res = RES_OK;
+        sector *= 512;
+
+        while (count--) {
+            SD_ReadBlock((uint8_t*)buff, sector, 512);
+            while (SD_TRANSFER_OK != SD_GetStatus())
+                ;
+            sector += 512;
         }
+
+        res = RES_OK;
 
         // translate the reslut code here
 
@@ -162,7 +152,7 @@ DRESULT disk_write(
     UINT count /* Number of sectors to write */
     )
 {
-    DRESULT res = RES_NOTRDY;
+    DRESULT res = RES_ERROR;
 
     switch (pdrv) {
     case ATA:
@@ -175,10 +165,15 @@ DRESULT disk_write(
     case MMC:
         // translate the arguments here
 
-        if(SD_OK == SD_WriteMultiBlocks((uint8_t *)buff,sector,Info.CardBlockSize,count)){
-            res = RES_OK;
-        }
+        sector *= 512;
 
+        while (count--) {
+            SD_WriteBlock((uint8_t*)buff, sector, 512);
+            while (SD_TRANSFER_OK != SD_GetStatus())
+                ;
+            sector += 512;
+        }
+        res = RES_OK;
         // translate the reslut code here
 
         return res;
@@ -206,7 +201,8 @@ DRESULT disk_ioctl(
     void* buff /* Buffer to send/receive control data */
     )
 {
-    DRESULT res;
+    DRESULT res = RES_ERROR;
+    SD_CardInfo info;
 
     switch (pdrv) {
     case ATA:
@@ -216,8 +212,33 @@ DRESULT disk_ioctl(
         return res;
 
     case MMC:
-
         // Process of the command for the MMC/SD card
+
+        switch (cmd) {
+
+        case GET_BLOCK_SIZE:
+            *(DWORD*)buff = 512;
+            res = RES_OK;
+            break;
+
+        case GET_SECTOR_SIZE:
+            *(DWORD*)buff = 512;
+            res = RES_OK;
+            break;
+
+        case GET_SECTOR_COUNT:
+            SD_GetCardInfo(&info);
+            *(DWORD*)buff = info.CardCapacity / 512;
+            res = RES_OK;
+            break;
+
+        case CTRL_SYNC:
+            res = RES_OK;
+            break;
+
+        default:
+            break;
+        }
 
         return res;
 

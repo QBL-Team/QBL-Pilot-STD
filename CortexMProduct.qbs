@@ -14,7 +14,7 @@ Product {
 
     cpp.cxxFlags:["-std=c++11"]
 
-    cpp.cFlags:["-std=c11"]
+    cpp.cFlags:["-std=c99"]
 
 
     cpp.warningLevel:"all"

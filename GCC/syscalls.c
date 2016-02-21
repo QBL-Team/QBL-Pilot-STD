@@ -82,7 +82,7 @@ __attribute__((used)) int _write(int file, char* ptr, int len)
     UNUSED(file);
 
     while (cnt--) {
-        USART1->DR = 0x1FF & (*ptr++);
+        USART_SendData(USART1,*ptr++);
         while(RESET == USART_GetFlagStatus(USART1,USART_FLAG_TC));
     }
 

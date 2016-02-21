@@ -1,11 +1,11 @@
 #include "QBL.h"
 #include "LED.h"
-#include "MPU6050.h"
-#include <stdio.h>
 
 int main(void)
 {
+
     QBL_Init();
+    LED_Show(LED_COLOR_OFF);
 
     for (;;) {
         LED_Show(LED_COLOR_RED);

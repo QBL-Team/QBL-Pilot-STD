@@ -96,6 +96,9 @@ static void QBL_Periph_Init(void)
         USART_Init(USART1, &ua);
         USART_Cmd(USART1, ENABLE);
     }
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_SDIO, ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);
 }
 
 static void QBL_IO_Init(void)
