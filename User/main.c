@@ -3,7 +3,6 @@
 
 int main(void)
 {
-
     QBL_Init();
     LED_Show(LED_COLOR_OFF);
 

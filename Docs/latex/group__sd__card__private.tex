@@ -1,0 +1,1027 @@
+\hypertarget{group__sd__card__private}{}\section{S\+D卡驱动私有数据}
+\label{group__sd__card__private}\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+F\+L\+A\+GS}~((uint32\+\_\+t)0x000005\+F\+F)\hypertarget{group__sd__card__private_gab07b969cd21592c74e8ad5d929e97055}{}\label{group__sd__card__private_gab07b969cd21592c74e8ad5d929e97055}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+C\+M\+D0\+T\+I\+M\+E\+O\+UT}~((uint32\+\_\+t)0x00010000)\hypertarget{group__sd__card__private_ga451e336c7bc16567a28475fcb75c9828}{}\label{group__sd__card__private_ga451e336c7bc16567a28475fcb75c9828}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+F\+I\+F\+O\+\_\+\+A\+D\+D\+R\+E\+SS}~((uint32\+\_\+t)0x40012\+C80)\hypertarget{group__sd__card__private_ga50b379bbcb59f027be37e9e787d3aa94}{}\label{group__sd__card__private_ga50b379bbcb59f027be37e9e787d3aa94}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+L\+K\+\_\+\+D\+IV}~0\hypertarget{group__sd__card__private_gad37fe2cf88496122b5fdf14ae7f529b5}{}\label{group__sd__card__private_gad37fe2cf88496122b5fdf14ae7f529b5}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+S\+T\+R\+E\+AM}~D\+M\+A2\+\_\+\+Stream3\hypertarget{group__sd__card__private_ga144c171660990547b329e9cc8d80cfcd}{}\label{group__sd__card__private_ga144c171660990547b329e9cc8d80cfcd}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+EL}~D\+M\+A\+\_\+\+Channel\+\_\+4\hypertarget{group__sd__card__private_ga6f2bf8fb56b3b16c624945f5143f7c61}{}\label{group__sd__card__private_ga6f2bf8fb56b3b16c624945f5143f7c61}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+F\+E\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+F\+E\+I\+F3\hypertarget{group__sd__card__private_ga48a2a089882dbc382f2cc4dc59a81439}{}\label{group__sd__card__private_ga48a2a089882dbc382f2cc4dc59a81439}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+D\+M\+E\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+D\+M\+E\+I\+F3\hypertarget{group__sd__card__private_gad2ec52face7ffdaf2e9b51841460e4b3}{}\label{group__sd__card__private_gad2ec52face7ffdaf2e9b51841460e4b3}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+I\+F3\hypertarget{group__sd__card__private_ga6e9973b4f4efb4592fe0f280f67ee27b}{}\label{group__sd__card__private_ga6e9973b4f4efb4592fe0f280f67ee27b}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+T\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+T\+I\+F3\hypertarget{group__sd__card__private_ga0ce367af65ca9d6740bcc2b8345f0a31}{}\label{group__sd__card__private_ga0ce367af65ca9d6740bcc2b8345f0a31}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+I\+F3\hypertarget{group__sd__card__private_ga5e166e41de170efcc2d85edff3ddbee1}{}\label{group__sd__card__private_ga5e166e41de170efcc2d85edff3ddbee1}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Qn}~D\+M\+A2\+\_\+\+Stream3\+\_\+\+I\+R\+Qn\hypertarget{group__sd__card__private_gad126831b065276eed5e2e2260446fc2f}{}\label{group__sd__card__private_gad126831b065276eed5e2e2260446fc2f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+H\+A\+N\+D\+L\+ER}~D\+M\+A2\+\_\+\+Stream3\+\_\+\+I\+R\+Q\+Handler\hypertarget{group__sd__card__private_ga0d033e4a3e615dcdfc30596e347ad3ea}{}\label{group__sd__card__private_ga0d033e4a3e615dcdfc30596e347ad3ea}
+
+\item 
+\#define \hyperlink{group__sd__card__private_ga69314e11291e427652a4f6a3a5b1c439}{S\+D\+\_\+\+O\+C\+R\+\_\+\+A\+D\+D\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}~((uint32\+\_\+t)0x80000000)\hypertarget{group__sd__card__private_ga69314e11291e427652a4f6a3a5b1c439}{}\label{group__sd__card__private_ga69314e11291e427652a4f6a3a5b1c439}
+
+\begin{DoxyCompactList}\small\item\em R1 响应位定义 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED}~((uint32\+\_\+t)0x40000000)\hypertarget{group__sd__card__private_ga540633bf8f3289c628063e2c1bd5f9ab}{}\label{group__sd__card__private_ga540633bf8f3289c628063e2c1bd5f9ab}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR}~((uint32\+\_\+t)0x20000000)\hypertarget{group__sd__card__private_gad528da3ef5cf61ecf6d500a9b527c3e9}{}\label{group__sd__card__private_gad528da3ef5cf61ecf6d500a9b527c3e9}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR}~((uint32\+\_\+t)0x10000000)\hypertarget{group__sd__card__private_ga749b810615490fcf173d5355a6f42075}{}\label{group__sd__card__private_ga749b810615490fcf173d5355a6f42075}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM}~((uint32\+\_\+t)0x08000000)\hypertarget{group__sd__card__private_gadbeb08085e7282275fd5684b5d59d5aa}{}\label{group__sd__card__private_gadbeb08085e7282275fd5684b5d59d5aa}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON}~((uint32\+\_\+t)0x04000000)\hypertarget{group__sd__card__private_gabe0162775c8357aa31263ec2225bd123}{}\label{group__sd__card__private_gabe0162775c8357aa31263ec2225bd123}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x01000000)\hypertarget{group__sd__card__private_gac9a82e52cc83dd23035bc0fdd9a88cf4}{}\label{group__sd__card__private_gac9a82e52cc83dd23035bc0fdd9a88cf4}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x00800000)\hypertarget{group__sd__card__private_ga75c4da9e9ca6b935c3afb213dda9c7d0}{}\label{group__sd__card__private_ga75c4da9e9ca6b935c3afb213dda9c7d0}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD}~((uint32\+\_\+t)0x00400000)\hypertarget{group__sd__card__private_gaacbea47f6b504f11a696e9164d4eb7cd}{}\label{group__sd__card__private_gaacbea47f6b504f11a696e9164d4eb7cd}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x00200000)\hypertarget{group__sd__card__private_ga1631f9e745f1f6c1ded6fba841a05a3d}{}\label{group__sd__card__private_ga1631f9e745f1f6c1ded6fba841a05a3d}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00100000)\hypertarget{group__sd__card__private_ga3530c6edf8d326b2d72a8a7fb488957b}{}\label{group__sd__card__private_ga3530c6edf8d326b2d72a8a7fb488957b}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00080000)\hypertarget{group__sd__card__private_ga11edb9b3be6266ffb00b9a507e3b9fff}{}\label{group__sd__card__private_ga11edb9b3be6266ffb00b9a507e3b9fff}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+A\+D\+\_\+\+U\+N\+D\+E\+R\+R\+UN}~((uint32\+\_\+t)0x00040000)\hypertarget{group__sd__card__private_ga26270305d70e7d17a8bde14c15378bfd}{}\label{group__sd__card__private_ga26270305d70e7d17a8bde14c15378bfd}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN}~((uint32\+\_\+t)0x00020000)\hypertarget{group__sd__card__private_ga3b9973ae82de6ca9acb76444a9204407}{}\label{group__sd__card__private_ga3b9973ae82de6ca9acb76444a9204407}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+I\+D\+\_\+\+C\+S\+D\+\_\+\+O\+V\+E\+R\+W\+R\+I\+E\+TE}~((uint32\+\_\+t)0x00010000)\hypertarget{group__sd__card__private_ga5a2a4ac30f0b473c87f283c9b25508c7}{}\label{group__sd__card__private_ga5a2a4ac30f0b473c87f283c9b25508c7}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+W\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+K\+IP}~((uint32\+\_\+t)0x00008000)\hypertarget{group__sd__card__private_gafe54250dcb2461950611828b409b8c42}{}\label{group__sd__card__private_gafe54250dcb2461950611828b409b8c42}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~((uint32\+\_\+t)0x00004000)\hypertarget{group__sd__card__private_ga4e3e8df5237733fa61ced5304d6e25b8}{}\label{group__sd__card__private_ga4e3e8df5237733fa61ced5304d6e25b8}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+E\+R\+A\+S\+E\+\_\+\+R\+E\+S\+ET}~((uint32\+\_\+t)0x00002000)\hypertarget{group__sd__card__private_ga67cbe1781e4db67d3b2fe422ba63de09}{}\label{group__sd__card__private_ga67cbe1781e4db67d3b2fe422ba63de09}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+A\+K\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00000008)\hypertarget{group__sd__card__private_ga2b6aa7c64b853586d3eecfd251d7709f}{}\label{group__sd__card__private_ga2b6aa7c64b853586d3eecfd251d7709f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+E\+R\+R\+O\+R\+B\+I\+TS}~((uint32\+\_\+t)0x\+F\+D\+F\+F\+E008)\hypertarget{group__sd__card__private_gace772bc4b0b2fdf6488e308afe8f29d1}{}\label{group__sd__card__private_gace772bc4b0b2fdf6488e308afe8f29d1}
+
+\item 
+\#define \hyperlink{group__sd__card__private_ga77d65e0cdecf792a2928b61cc85ed687}{S\+D\+\_\+\+R6\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00002000)\hypertarget{group__sd__card__private_ga77d65e0cdecf792a2928b61cc85ed687}{}\label{group__sd__card__private_ga77d65e0cdecf792a2928b61cc85ed687}
+
+\begin{DoxyCompactList}\small\item\em R6响应位定义 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+R6\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD}~((uint32\+\_\+t)0x00004000)\hypertarget{group__sd__card__private_ga4f58bfcb28f68b87113fea12b172a247}{}\label{group__sd__card__private_ga4f58bfcb28f68b87113fea12b172a247}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+R6\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x00008000)\hypertarget{group__sd__card__private_gad4677c73c4e8e7e1ec2161554cfdfeeb}{}\label{group__sd__card__private_gad4677c73c4e8e7e1ec2161554cfdfeeb}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+SD}~((uint32\+\_\+t)0x80100000)\hypertarget{group__sd__card__private_ga0c04dbb0a43806365bea64893961079e}{}\label{group__sd__card__private_ga0c04dbb0a43806365bea64893961079e}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+H\+I\+G\+H\+\_\+\+C\+A\+P\+A\+C\+I\+TY}~((uint32\+\_\+t)0x40000000)\hypertarget{group__sd__card__private_gad5a86eaeba6869b6b2139b92ddfb3a1f}{}\label{group__sd__card__private_gad5a86eaeba6869b6b2139b92ddfb3a1f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+T\+D\+\_\+\+C\+A\+P\+A\+C\+I\+TY}~((uint32\+\_\+t)0x00000000)\hypertarget{group__sd__card__private_ga3cb5fdbf46102857a99b044415873f14}{}\label{group__sd__card__private_ga3cb5fdbf46102857a99b044415873f14}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+T\+T\+E\+RN}~((uint32\+\_\+t)0x000001\+A\+A)\hypertarget{group__sd__card__private_gac37389a0323f1a04aec2b59c905f0f6a}{}\label{group__sd__card__private_gac37389a0323f1a04aec2b59c905f0f6a}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+T\+\_\+\+T\+R\+I\+AL}~((uint32\+\_\+t)0x0000\+F\+F\+F\+F)\hypertarget{group__sd__card__private_ga8166660dfea1f2a865e30a8f86269b7f}{}\label{group__sd__card__private_ga8166660dfea1f2a865e30a8f86269b7f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+A\+L\+L\+Z\+E\+RO}~((uint32\+\_\+t)0x00000000)\hypertarget{group__sd__card__private_gaa989d106109048a2fb453928325d1f7d}{}\label{group__sd__card__private_gaa989d106109048a2fb453928325d1f7d}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+W\+I\+D\+E\+\_\+\+B\+U\+S\+\_\+\+S\+U\+P\+P\+O\+RT}~((uint32\+\_\+t)0x00040000)\hypertarget{group__sd__card__private_ga6877313126588b7f2ce96f9b4d9a59b1}{}\label{group__sd__card__private_ga6877313126588b7f2ce96f9b4d9a59b1}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+U\+S\+\_\+\+S\+U\+P\+P\+O\+RT}~((uint32\+\_\+t)0x00010000)\hypertarget{group__sd__card__private_gadfcb6043212373c69f3f740732f5d2b2}{}\label{group__sd__card__private_gadfcb6043212373c69f3f740732f5d2b2}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+L\+O\+C\+K\+ED}~((uint32\+\_\+t)0x02000000)\hypertarget{group__sd__card__private_ga0560d0e5f15b8c676bd1c53bf0ac381f}{}\label{group__sd__card__private_ga0560d0e5f15b8c676bd1c53bf0ac381f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+D\+A\+T\+A\+T\+I\+M\+E\+O\+UT}~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F\+F\+F)\hypertarget{group__sd__card__private_ga9ca34cf6f4e38835347bc2dc29f9469e}{}\label{group__sd__card__private_ga9ca34cf6f4e38835347bc2dc29f9469e}
+
+\item 
+\#define {\bfseries S\+D\+\_\+0\+T\+O7\+B\+I\+TS}~((uint32\+\_\+t)0x000000\+F\+F)\hypertarget{group__sd__card__private_ga37de3e6a7edfd787d09efddc589120ae}{}\label{group__sd__card__private_ga37de3e6a7edfd787d09efddc589120ae}
+
+\item 
+\#define {\bfseries S\+D\+\_\+8\+T\+O15\+B\+I\+TS}~((uint32\+\_\+t)0x0000\+F\+F00)\hypertarget{group__sd__card__private_ga2057731e114d40de0d0d6d2ff74f1501}{}\label{group__sd__card__private_ga2057731e114d40de0d0d6d2ff74f1501}
+
+\item 
+\#define {\bfseries S\+D\+\_\+16\+T\+O23\+B\+I\+TS}~((uint32\+\_\+t)0x00\+F\+F0000)\hypertarget{group__sd__card__private_ga177a89af799d66f7782e6e8dd4e1438f}{}\label{group__sd__card__private_ga177a89af799d66f7782e6e8dd4e1438f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+24\+T\+O31\+B\+I\+TS}~((uint32\+\_\+t)0x\+F\+F000000)\hypertarget{group__sd__card__private_ga3d61f23b4fcf1efb4a16b26bd1f54550}{}\label{group__sd__card__private_ga3d61f23b4fcf1efb4a16b26bd1f54550}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~((uint32\+\_\+t)0x01\+F\+F\+F\+F\+F\+F)\hypertarget{group__sd__card__private_ga3be502d718368f47d02b554e863f30b1}{}\label{group__sd__card__private_ga3be502d718368f47d02b554e863f30b1}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+H\+A\+L\+F\+F\+I\+FO}~((uint32\+\_\+t)0x00000008)\hypertarget{group__sd__card__private_ga96eec3ea095e393f51ab2686d928908c}{}\label{group__sd__card__private_ga96eec3ea095e393f51ab2686d928908c}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+H\+A\+L\+F\+F\+I\+F\+O\+B\+Y\+T\+ES}~((uint32\+\_\+t)0x00000020)\hypertarget{group__sd__card__private_ga95cd045964036c67c40103ab6aa504b7}{}\label{group__sd__card__private_ga95cd045964036c67c40103ab6aa504b7}
+
+\item 
+\#define \hyperlink{group__sd__card__private_gac93a99c6a0f8999f37e690d6955872ac}{S\+D\+\_\+\+C\+C\+C\+C\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+CK}~((uint32\+\_\+t)0x00000080)\hypertarget{group__sd__card__private_gac93a99c6a0f8999f37e690d6955872ac}{}\label{group__sd__card__private_gac93a99c6a0f8999f37e690d6955872ac}
+
+\begin{DoxyCompactList}\small\item\em 支持的命令类型 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+C\+C\+C\+C\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+OT}~((uint32\+\_\+t)0x00000040)\hypertarget{group__sd__card__private_gad8cbc04a4adf7c5588ddeb8e29f391f2}{}\label{group__sd__card__private_gad8cbc04a4adf7c5588ddeb8e29f391f2}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+C\+C\+C\+\_\+\+E\+R\+A\+SE}~((uint32\+\_\+t)0x00000020)\hypertarget{group__sd__card__private_gaf8f161db032555d848d233e6883e1ddf}{}\label{group__sd__card__private_gaf8f161db032555d848d233e6883e1ddf}
+
+\item 
+\#define \hyperlink{group__sd__card__private_gafe1c9bdbdccf901be62203bf5547147e}{S\+D\+I\+O\+\_\+\+S\+E\+N\+D\+\_\+\+I\+F\+\_\+\+C\+O\+ND}~((uint32\+\_\+t)0x00000008)\hypertarget{group__sd__card__private_gafe1c9bdbdccf901be62203bf5547147e}{}\label{group__sd__card__private_gafe1c9bdbdccf901be62203bf5547147e}
+
+\begin{DoxyCompactList}\small\item\em 下列命令为\+S\+D卡的特定命令 在使用这些命令之前，请先发送命令 S\+D\+I\+O\+\_\+\+A\+P\+P\+\_\+\+C\+MD \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent sd card data transfer status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+State} \hyperlink{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}{S\+D\+\_\+\+Get\+State} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}{S\+D\+\_\+\+Detect} (void)
+\begin{DoxyCompactList}\small\item\em Detect if SD card is correctly plugged in the memory slot. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}{S\+D\+\_\+\+Power\+ON} (void)
+\begin{DoxyCompactList}\small\item\em Enquires cards about their operating voltage and configures clock controls. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga9f053c27018521095d7333e7df238764}{S\+D\+\_\+\+Power\+O\+FF} (void)
+\begin{DoxyCompactList}\small\item\em Turns the S\+D\+IO output signals off. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}{S\+D\+\_\+\+Initialize\+Cards} (void)
+\begin{DoxyCompactList}\small\item\em Intialises all cards or single card as the case may be Card(s) come into standby state. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}{S\+D\+\_\+\+Get\+Card\+Info} (\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} $\ast$cardinfo)
+\begin{DoxyCompactList}\small\item\em Returns information about specific card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}{S\+D\+\_\+\+Get\+Card\+Status} (\hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status} $\ast$cardstatus)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation} (uint32\+\_\+t Wide\+Mode)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}{S\+D\+\_\+\+Select\+Deselect} (uint64\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Selects od Deselects the corresponding card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}{S\+D\+\_\+\+Read\+Block} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}{S\+D\+\_\+\+Read\+Multi\+Blocks} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}{S\+D\+\_\+\+Wait\+Read\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}{S\+D\+\_\+\+Write\+Block} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}{S\+D\+\_\+\+Write\+Multi\+Blocks} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}{S\+D\+\_\+\+Wait\+Write\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}{S\+D\+\_\+\+Get\+Transfer\+State} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent data transfer state. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}{S\+D\+\_\+\+Stop\+Transfer} (void)
+\begin{DoxyCompactList}\small\item\em Aborts an ongoing data transfer. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}{S\+D\+\_\+\+Erase} (uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)
+\begin{DoxyCompactList}\small\item\em Allows to erase memory area specified for the given card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}{S\+D\+\_\+\+Send\+Status} (uint32\+\_\+t $\ast$pcardstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}{S\+D\+\_\+\+Send\+S\+D\+Status} (uint32\+\_\+t $\ast$psdstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current SD card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}{S\+D\+\_\+\+Process\+I\+R\+Q\+Src} (void)
+\begin{DoxyCompactList}\small\item\em Allows to process all the interrupts that are high. \end{DoxyCompactList}\item 
+void \hyperlink{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}{S\+D\+\_\+\+High\+Speed} (void)
+\begin{DoxyCompactList}\small\item\em Switch mode High-\/\+Speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint32\+\_\+t {\bfseries Stop\+Condition} = 0\hypertarget{group__sd__card__private_gaca9d38169402effc401361f52be012b7}{}\label{group__sd__card__private_gaca9d38169402effc401361f52be012b7}
+
+\item 
+volatile \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} {\bfseries Transfer\+Error} = S\+D\+\_\+\+OK\hypertarget{group__sd__card__private_ga693e3b9d09509f9fd42386a5fc31bd0d}{}\label{group__sd__card__private_ga693e3b9d09509f9fd42386a5fc31bd0d}
+
+\item 
+volatile uint32\+\_\+t {\bfseries Transfer\+End} = 0\hypertarget{group__sd__card__private_ga2504eb031f79ab67e7b175815ea10cfc}{}\label{group__sd__card__private_ga2504eb031f79ab67e7b175815ea10cfc}
+
+\item 
+volatile uint32\+\_\+t {\bfseries D\+M\+A\+End\+Of\+Transfer} = 0\hypertarget{group__sd__card__private_gab4965c9dd85c339abfefd3fa9bf30bf4}{}\label{group__sd__card__private_gab4965c9dd85c339abfefd3fa9bf30bf4}
+
+\item 
+\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} {\bfseries S\+D\+Card\+Info}\hypertarget{group__sd__card__private_gad9b4efaae93cd75532b18c0528a4ca3d}{}\label{group__sd__card__private_gad9b4efaae93cd75532b18c0528a4ca3d}
+
+\item 
+S\+D\+I\+O\+\_\+\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Init\+Structure}\hypertarget{group__sd__card__private_gad17d379a81412a4e045414fc358ec459}{}\label{group__sd__card__private_gad17d379a81412a4e045414fc358ec459}
+
+\item 
+S\+D\+I\+O\+\_\+\+Cmd\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Cmd\+Init\+Structure}\hypertarget{group__sd__card__private_gab48ffe3f6c5fdd6b06605dd4d99d5523}{}\label{group__sd__card__private_gab48ffe3f6c5fdd6b06605dd4d99d5523}
+
+\item 
+S\+D\+I\+O\+\_\+\+Data\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Data\+Init\+Structure}\hypertarget{group__sd__card__private_ga113c3ce26c1cd49c8b13fc1c9650f675}{}\label{group__sd__card__private_ga113c3ce26c1cd49c8b13fc1c9650f675}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{函数说明}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Detect@{S\+D\+\_\+\+Detect}}
+\index{S\+D\+\_\+\+Detect@{S\+D\+\_\+\+Detect}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Detect(void)}{SD_Detect(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+D\+\_\+\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}{}\label{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}
+
+
+Detect if SD card is correctly plugged in the memory slot. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em Return} & if SD is detected or not \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}}
+\index{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation(uint32\+\_\+t Wide\+Mode)}{SD_EnableWideBusOperation(uint32_t WideMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{Wide\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}{}\label{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}
+
+
+Enables wide bus opeartion for the requeseted card if supported by card. 
+
+
+\begin{DoxyParams}{参数}
+{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ M\+MC Card doesn\textquotesingle{}t support this feature
+
+$<$ Configure the S\+D\+IO peripheral
+
+$<$ Configure the S\+D\+IO peripheral \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}}
+\index{S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Erase(uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)}{SD_Erase(uint64_t startaddr, uint64_t endaddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Erase (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{startaddr, }
+\item[{uint64\+\_\+t}]{endaddr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}{}\label{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}
+
+
+Allows to erase memory area specified for the given card. 
+
+
+\begin{DoxyParams}{参数}
+{\em startaddr} & the start address. \\
+\hline
+{\em endaddr} & the end address. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Check if the card coomnd class supports erase command
+
+$<$ Send C\+M\+D32 S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT with argument as addr \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}}
+\index{S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Info(\+S\+D\+\_\+\+Card\+Info $\ast$cardinfo)}{SD_GetCardInfo(SD_CardInfo *cardinfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Get\+Card\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+\_\+\+Card\+Info} $\ast$}]{cardinfo}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}{}\label{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}
+
+
+Returns information about specific card. 
+
+
+\begin{DoxyParams}{参数}
+{\em cardinfo} & pointer to a \hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} structure that contains all SD card information. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Byte 0
+
+$<$ Byte 1
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Reserved
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 14
+
+$<$ Byte 15
+
+$<$ Byte 0
+
+$<$ Byte 1
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 14
+
+$<$ Byte 15 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}}
+\index{S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Status(\+S\+D\+\_\+\+Card\+Status $\ast$cardstatus)}{SD_GetCardStatus(SD_CardStatus *cardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Get\+Card\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+\_\+\+Card\+Status} $\ast$}]{cardstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}{}\label{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}
+
+
+Enables wide bus opeartion for the requeseted card if supported by card. 
+
+
+\begin{DoxyParams}{参数}
+{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Byte 0
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 13 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}}
+\index{S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+State(void)}{SD_GetState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Card\+State} S\+D\+\_\+\+Get\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}{}\label{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}
+
+
+Returns the current card\textquotesingle{}s state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Card\+State} & SD Card Error or SD Card Current State. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}}
+\index{S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Status(void)}{SD_GetStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Transfer\+State} S\+D\+\_\+\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{}\label{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}
+
+
+Gets the cuurent sd card data transfer status. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Transfer\+State@{S\+D\+\_\+\+Get\+Transfer\+State}}
+\index{S\+D\+\_\+\+Get\+Transfer\+State@{S\+D\+\_\+\+Get\+Transfer\+State}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Transfer\+State(void)}{SD_GetTransferState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Transfer\+State} S\+D\+\_\+\+Get\+Transfer\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}{}\label{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}
+
+
+Gets the cuurent data transfer state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+High\+Speed@{S\+D\+\_\+\+High\+Speed}}
+\index{S\+D\+\_\+\+High\+Speed@{S\+D\+\_\+\+High\+Speed}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+High\+Speed(void)}{SD_HighSpeed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+High\+Speed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}{}\label{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}
+
+
+Switch mode High-\/\+Speed. 
+
+\begin{DoxyNote}{注解}
+This function must be used after \char`\"{}\+Transfer State\char`\"{} 
+
+This operation should be followed by the configuration of P\+LL to have S\+D\+I\+O\+CK clock between 67 and 75 M\+Hz 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Get S\+CR Register
+
+$<$ Send C\+M\+D6 switch mode \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}}
+\index{S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Init(void)}{SD_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}{}\label{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}
+
+
+Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
+
+$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}}
+\index{S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Initialize\+Cards(void)}{SD_InitializeCards(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Initialize\+Cards (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}{}\label{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}
+
+
+Intialises all cards or single card as the case may be Card(s) come into standby state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D2 A\+L\+L\+\_\+\+S\+E\+N\+D\+\_\+\+C\+ID
+
+$<$ Send C\+M\+D3 S\+E\+T\+\_\+\+R\+E\+L\+\_\+\+A\+D\+DR with argument 0
+
+$<$ SD Card publishes its R\+CA.
+
+$<$ Send C\+M\+D9 S\+E\+N\+D\+\_\+\+C\+SD with argument as card\textquotesingle{}s R\+CA
+
+$<$ All cards get intialized \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}}
+\index{S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+F\+F(void)}{SD_PowerOFF(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Power\+O\+FF (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga9f053c27018521095d7333e7df238764}{}\label{group__sd__card__private_ga9f053c27018521095d7333e7df238764}
+
+
+Turns the S\+D\+IO output signals off. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Set Power State to O\+FF \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}}
+\index{S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+N(void)}{SD_PowerON(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Power\+ON (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}{}\label{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}
+
+
+Enquires cards about their operating voltage and configures clock controls. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Power ON Sequence -----------------------------------------------------
+
+$<$ Configure the S\+D\+IO peripheral
+
+$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+I\+N\+I\+T\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
+
+$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz
+
+$<$ S\+D\+I\+O\+\_\+\+CK for initialization should not exceed 400 K\+Hz
+
+$<$ Set Power State to ON
+
+$<$ Enable S\+D\+IO Clock
+
+$<$ C\+M\+D0\+: G\+O\+\_\+\+I\+D\+L\+E\+\_\+\+S\+T\+A\+TE -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---------------------------------------
+
+$<$ No C\+MD response required
+
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ Send C\+M\+D8 to verify SD card interface operating condition
+
+$<$ Argument\+: -\/ \mbox{[}31\+:12\mbox{]}\+: Reserved (shall be set to \textquotesingle{}0\textquotesingle{})
+\begin{DoxyItemize}
+\item \mbox{[}11\+:8\mbox{]}\+: Supply Voltage (V\+HS) 0x1 (Range\+: 2.\+7-\/3.\+6 V)
+\item \mbox{[}7\+:0\mbox{]}\+: Check Pattern (recommended 0x\+AA)
+\end{DoxyItemize}
+
+$<$ C\+MD Response\+: R7
+
+$<$ SD Card 2.\+0
+
+$<$ C\+M\+D55
+
+$<$ If errorstatus is Command Time\+Out, it is a M\+MC card
+
+$<$ If errorstatus is S\+D\+\_\+\+OK it is a SD card\+: SD card 2.\+0 (voltage range mismatch) or SD card 1.\+x
+
+$<$ SD C\+A\+RD
+
+$<$ Send A\+C\+M\+D41 S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND with Argument 0x80100000
+
+$<$ S\+E\+ND C\+M\+D55 A\+P\+P\+\_\+\+C\+MD with R\+CA as 0 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}}
+\index{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+D\+M\+A\+I\+R\+Q(void)}{SD_ProcessDMAIRQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{}\label{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}}
+\index{S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+I\+R\+Q\+Src(void)}{SD_ProcessIRQSrc(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Process\+I\+R\+Q\+Src (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}{}\label{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}
+
+
+Allows to process all the interrupts that are high. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}}
+\index{S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Block(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)}{SD_ReadBlock(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Read\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{readbuff, }
+\item[{uint64\+\_\+t}]{Read\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}{}\label{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}
+
+
+Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em readbuff} & pointer to the buffer that will contain the received data \\
+\hline
+{\em Read\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D17 R\+E\+A\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}}
+\index{S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Multi\+Blocks(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_ReadMultiBlocks(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Read\+Multi\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{readbuff, }
+\item[{uint64\+\_\+t}]{Read\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size, }
+\item[{uint32\+\_\+t}]{Number\+Of\+Blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}{}\label{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}
+
+
+Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em readbuff} & pointer to the buffer that will contain the received data. \\
+\hline
+{\em Read\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+{\em Number\+Of\+Blocks} & number of blocks to be read. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D18 R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK with argument data address \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}}
+\index{S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Select\+Deselect(uint64\+\_\+t addr)}{SD_SelectDeselect(uint64_t addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Select\+Deselect (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}{}\label{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}
+
+
+Selects od Deselects the corresponding card. 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & Address of the Card to be selected. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D7 S\+D\+I\+O\+\_\+\+S\+E\+L\+\_\+\+D\+E\+S\+E\+L\+\_\+\+C\+A\+RD \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}}
+\index{S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+S\+D\+Status(uint32\+\_\+t $\ast$psdstatus)}{SD_SendSDStatus(uint32_t *psdstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Send\+S\+D\+Status (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t $\ast$}]{psdstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}{}\label{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}
+
+
+Returns the current SD card\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{参数}
+{\em psdstatus} & pointer to the buffer that will contain the SD card status (SD Status register). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send A\+C\+M\+D13 S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US with argument as card\textquotesingle{}s R\+CA. \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}}
+\index{S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+Status(uint32\+\_\+t $\ast$pcardstatus)}{SD_SendStatus(uint32_t *pcardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Send\+Status (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t $\ast$}]{pcardstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}{}\label{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}
+
+
+Returns the current card\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{参数}
+{\em pcardstatus} & pointer to the buffer that will contain the SD card status (Card Status register). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}}
+\index{S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Stop\+Transfer(void)}{SD_StopTransfer(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Stop\+Transfer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}{}\label{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}
+
+
+Aborts an ongoing data transfer. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D12 S\+T\+O\+P\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}}
+\index{S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Read\+Operation(void)}{SD_WaitReadOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Wait\+Read\+Operation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}{}\label{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}}
+\index{S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Write\+Operation(void)}{SD_WaitWriteOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Wait\+Write\+Operation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}{}\label{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}}
+\index{S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Block(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)}{SD_WriteBlock(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Write\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{writebuff, }
+\item[{uint64\+\_\+t}]{Write\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}{}\label{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}
+
+
+Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+\hline
+{\em Write\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ In case of single data block transfer no need of stop command at all \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}}
+\index{S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Multi\+Blocks(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_WriteMultiBlocks(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Write\+Multi\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{writebuff, }
+\item[{uint64\+\_\+t}]{Write\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size, }
+\item[{uint32\+\_\+t}]{Number\+Of\+Blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}{}\label{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}
+
+
+Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Write\+Addr} & Address from where data are to be read. \\
+\hline
+{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+{\em Number\+Of\+Blocks} & number of blocks to be written. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}

@@ -53,7 +53,7 @@ static void QBL_Periph_Init(void)
     //I2C 1
     {
         RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
-
+        I2C_DeInit(I2C1);
         ii.I2C_Ack = I2C_Ack_Enable;
         ii.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
         ii.I2C_ClockSpeed = 400000;
@@ -67,7 +67,7 @@ static void QBL_Periph_Init(void)
     {
         //SPI1
         RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
-
+        SPI_DeInit(SPI1);
         sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;
         sp.SPI_CPHA = SPI_CPHA_1Edge;
         sp.SPI_CPOL = SPI_CPOL_Low;
@@ -83,10 +83,19 @@ static void QBL_Periph_Init(void)
     }
 
     {
+        //SPI2
+        RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
+        SPI_DeInit(SPI2);
+        sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4;
+        SPI_Init(SPI2, &sp);
+        SPI_Cmd(SPI2, ENABLE);
+    }
+
+    {
         //USART1
 
         RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-
+        USART_DeInit(USART1);
         ua.USART_BaudRate = 115200;
         ua.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
         ua.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
@@ -136,10 +145,20 @@ static void QBL_IO_Init(void)
     }
 
     {
+        //SPI2
+        io.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+        GPIO_Init(GPIOB, &io);
+
+        GPIO_PinAFConfig(GPIOB, GPIO_PinSource13, GPIO_AF_SPI2);
+        GPIO_PinAFConfig(GPIOB, GPIO_PinSource14, GPIO_AF_SPI2);
+        GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
+    }
+
+    {
         //LED和SPI片选信号
         io.GPIO_Mode = GPIO_Mode_OUT;
-        io.GPIO_OType = GPIO_OType_PP; //MS5611       //W25Q16
-        io.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_9 | GPIO_Pin_10;
+        io.GPIO_OType = GPIO_OType_PP;
+        io.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_9 /*MS5611*/ | GPIO_Pin_10 /*W25Q16*/;
         io.GPIO_PuPd = GPIO_PuPd_NOPULL;
         io.GPIO_Speed = GPIO_Speed_100MHz;
         GPIO_Init(GPIOE, &io);

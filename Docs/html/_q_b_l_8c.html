@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
     <ul class="tablist">
       <li><a href="index.html"><span>首页</span></a></li>
       <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
       <li class="current"><a href="files.html"><span>文件</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -91,10 +92,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_q_b_l_8h_source.html">QBL.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_s_d_8h_source.html">SD.h</a>&quot;</code><br />
 <code>#include &quot;stm32f4xx_rcc.h&quot;</code><br />
+<code>#include &quot;stm32f4xx_gpio.h&quot;</code><br />
+<code>#include &quot;stm32f4xx_i2c.h&quot;</code><br />
+<code>#include &quot;stm32f4xx_spi.h&quot;</code><br />
+<code>#include &quot;stm32f4xx_usart.h&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
+<tr class="memitem:abac7707b6be5733e890091048fcb99a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abac7707b6be5733e890091048fcb99a2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>fputc</b> (int ch, FILE *f)</td></tr>
+<tr class="separator:abac7707b6be5733e890091048fcb99a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5e09814056d617c521549e542639b7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e09814056d617c521549e542639b7e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q_b_l_8c.html#ab5e09814056d617c521549e542639b7e">SysTick_Handler</a> (void)</td></tr>
 <tr class="memdesc:ab5e09814056d617c521549e542639b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysTick_Handler 滴答定时器中断服务函数 <br /></td></tr>

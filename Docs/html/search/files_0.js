@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['led_2ec',['LED.c',['../_l_e_d_8c.html',1,'']]],
-  ['led_2eh',['LED.h',['../_l_e_d_8h.html',1,'']]]
+  ['hmc5883_2ec',['HMC5883.c',['../_h_m_c5883_8c.html',1,'']]],
+  ['hmc5883_2eh',['HMC5883.h',['../_h_m_c5883_8h.html',1,'']]]
 ];

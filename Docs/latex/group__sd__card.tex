@@ -1,0 +1,1470 @@
+\hypertarget{group__sd__card}{}\section{S\+D卡驱动}
+\label{group__sd__card}\index{S\+D卡驱动@{S\+D卡驱动}}
+\subsection*{模块}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__sd__card__private}{S\+D卡驱动私有数据}
+\end{DoxyCompactItemize}
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_d___c_s_d}{S\+D\+\_\+\+C\+SD}
+\begin{DoxyCompactList}\small\item\em 存储卡专有数据\+C\+SD \end{DoxyCompactList}\item 
+struct \hyperlink{struct_s_d___c_i_d}{S\+D\+\_\+\+C\+ID}
+\begin{DoxyCompactList}\small\item\em 存储卡识别数据 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status}
+\begin{DoxyCompactList}\small\item\em S\+D卡状态 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info}
+\begin{DoxyCompactList}\small\item\em S\+D卡信息 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__sd__card_ga9d34df51b7f169e0be94fea97d0c1639}{S\+D\+\_\+\+C\+M\+D\+\_\+\+G\+O\+\_\+\+I\+D\+L\+E\+\_\+\+S\+T\+A\+TE}~((uint8\+\_\+t)0)\hypertarget{group__sd__card_ga9d34df51b7f169e0be94fea97d0c1639}{}\label{group__sd__card_ga9d34df51b7f169e0be94fea97d0c1639}
+
+\begin{DoxyCompactList}\small\item\em S\+D\+IO 命令索引 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+O\+P\+\_\+\+C\+O\+ND}~((uint8\+\_\+t)1)\hypertarget{group__sd__card_ga74eabc4acadc80ad0242d52942c8d76a}{}\label{group__sd__card_ga74eabc4acadc80ad0242d52942c8d76a}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+L\+L\+\_\+\+S\+E\+N\+D\+\_\+\+C\+ID}~((uint8\+\_\+t)2)\hypertarget{group__sd__card_ga3d9d3a1da54a30d81e1d2a9c6a2d9b4f}{}\label{group__sd__card_ga3d9d3a1da54a30d81e1d2a9c6a2d9b4f}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+R\+E\+L\+\_\+\+A\+D\+DR}~((uint8\+\_\+t)3)\hypertarget{group__sd__card_gaa7e0f4e84001656eac62b41179376a25}{}\label{group__sd__card_gaa7e0f4e84001656eac62b41179376a25}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+D\+SR}~((uint8\+\_\+t)4)\hypertarget{group__sd__card_ga89e890726a09716bb1a5c6ef6d0d3d90}{}\label{group__sd__card_ga89e890726a09716bb1a5c6ef6d0d3d90}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+S\+E\+N\+\_\+\+O\+P\+\_\+\+C\+O\+ND}~((uint8\+\_\+t)5)\hypertarget{group__sd__card_ga5f4e5909200ef9eb61ac2252f4099360}{}\label{group__sd__card_ga5f4e5909200ef9eb61ac2252f4099360}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+H\+S\+\_\+\+S\+W\+I\+T\+CH}~((uint8\+\_\+t)6)\hypertarget{group__sd__card_ga88fb9fd3b2c9fea10b79da9a569d4471}{}\label{group__sd__card_ga88fb9fd3b2c9fea10b79da9a569d4471}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+L\+\_\+\+D\+E\+S\+E\+L\+\_\+\+C\+A\+RD}~((uint8\+\_\+t)7)\hypertarget{group__sd__card_gaf049767ff08cf35fcddef8f413964050}{}\label{group__sd__card_gaf049767ff08cf35fcddef8f413964050}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+H\+S\+\_\+\+S\+E\+N\+D\+\_\+\+E\+X\+T\+\_\+\+C\+SD}~((uint8\+\_\+t)8)\hypertarget{group__sd__card_gaeea3a373a0065cab0080a56395bc5a19}{}\label{group__sd__card_gaeea3a373a0065cab0080a56395bc5a19}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+C\+SD}~((uint8\+\_\+t)9)\hypertarget{group__sd__card_gaffe6f096eefb62711d4ba298c4598e2e}{}\label{group__sd__card_gaffe6f096eefb62711d4ba298c4598e2e}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+C\+ID}~((uint8\+\_\+t)10)\hypertarget{group__sd__card_gad0df99cd4f523813b603109db94f07c6}{}\label{group__sd__card_gad0df99cd4f523813b603109db94f07c6}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+D\+A\+T\+\_\+\+U\+N\+T\+I\+L\+\_\+\+S\+T\+OP}~((uint8\+\_\+t)11)\hypertarget{group__sd__card_gacf2a1a56e95b0b5ebeca09a38c9538e7}{}\label{group__sd__card_gacf2a1a56e95b0b5ebeca09a38c9538e7}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+T\+O\+P\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON}~((uint8\+\_\+t)12)\hypertarget{group__sd__card_ga45a924a12fc702bebac386ed429a60ff}{}\label{group__sd__card_ga45a924a12fc702bebac386ed429a60ff}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+T\+US}~((uint8\+\_\+t)13)\hypertarget{group__sd__card_ga4d58ed74fb20e34fb557fa97c1935fe3}{}\label{group__sd__card_ga4d58ed74fb20e34fb557fa97c1935fe3}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+H\+S\+\_\+\+B\+U\+S\+T\+E\+S\+T\+\_\+\+R\+E\+AD}~((uint8\+\_\+t)14)\hypertarget{group__sd__card_ga4dbc2cc034c8f582602063be358ad160}{}\label{group__sd__card_ga4dbc2cc034c8f582602063be358ad160}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+G\+O\+\_\+\+I\+N\+A\+C\+T\+I\+V\+E\+\_\+\+S\+T\+A\+TE}~((uint8\+\_\+t)15)\hypertarget{group__sd__card_gab8adaf3188d195b83ba32a9e72863072}{}\label{group__sd__card_gab8adaf3188d195b83ba32a9e72863072}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+L\+EN}~((uint8\+\_\+t)16)\hypertarget{group__sd__card_ga77edc6b67b0921f4473adc7b95039de3}{}\label{group__sd__card_ga77edc6b67b0921f4473adc7b95039de3}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK}~((uint8\+\_\+t)17)\hypertarget{group__sd__card_ga8a0361bd4864fe9368ba54bc9b2bda24}{}\label{group__sd__card_ga8a0361bd4864fe9368ba54bc9b2bda24}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK}~((uint8\+\_\+t)18)\hypertarget{group__sd__card_gafedc6b182681752a4299dffdd1ce74da}{}\label{group__sd__card_gafedc6b182681752a4299dffdd1ce74da}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+H\+S\+\_\+\+B\+U\+S\+T\+E\+S\+T\+\_\+\+W\+R\+I\+TE}~((uint8\+\_\+t)19)\hypertarget{group__sd__card_ga2bc9f60a2cc409365a49862d8551349e}{}\label{group__sd__card_ga2bc9f60a2cc409365a49862d8551349e}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+D\+A\+T\+\_\+\+U\+N\+T\+I\+L\+\_\+\+S\+T\+OP}~((uint8\+\_\+t)20)\hypertarget{group__sd__card_ga6478634540db1fa3fcd044315d1238b5}{}\label{group__sd__card_ga6478634540db1fa3fcd044315d1238b5}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+O\+U\+NT}~((uint8\+\_\+t)23)\hypertarget{group__sd__card_ga5dd52de3e95163402a5cd995620d4d01}{}\label{group__sd__card_ga5dd52de3e95163402a5cd995620d4d01}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK}~((uint8\+\_\+t)24)\hypertarget{group__sd__card_ga20a1c8427ec19835fe2782ec8febd5ca}{}\label{group__sd__card_ga20a1c8427ec19835fe2782ec8febd5ca}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK}~((uint8\+\_\+t)25)\hypertarget{group__sd__card_gafe82a884b2692654c9862bb25b8706ce}{}\label{group__sd__card_gafe82a884b2692654c9862bb25b8706ce}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+P\+R\+O\+G\+\_\+\+C\+ID}~((uint8\+\_\+t)26)\hypertarget{group__sd__card_gae4c3d35575ecc87fb571f2bfb80f3847}{}\label{group__sd__card_gae4c3d35575ecc87fb571f2bfb80f3847}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+P\+R\+O\+G\+\_\+\+C\+SD}~((uint8\+\_\+t)27)\hypertarget{group__sd__card_gaf911e3c602583e43e3bc16def5feebfc}{}\label{group__sd__card_gaf911e3c602583e43e3bc16def5feebfc}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+OT}~((uint8\+\_\+t)28)\hypertarget{group__sd__card_ga7a35e2c3f9d6237bf7a3577225d077d8}{}\label{group__sd__card_ga7a35e2c3f9d6237bf7a3577225d077d8}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+L\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+OT}~((uint8\+\_\+t)29)\hypertarget{group__sd__card_gac1c159cda7e89dfc085ac66e90790a56}{}\label{group__sd__card_gac1c159cda7e89dfc085ac66e90790a56}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+OT}~((uint8\+\_\+t)30)\hypertarget{group__sd__card_gabeb680262be8cc173543ae8b1874c83d}{}\label{group__sd__card_gabeb680262be8cc173543ae8b1874c83d}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT}~((uint8\+\_\+t)32)\hypertarget{group__sd__card_ga34496e2b57973936b853bb1d20dc277d}{}\label{group__sd__card_ga34496e2b57973936b853bb1d20dc277d}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+E\+ND}~((uint8\+\_\+t)33)\hypertarget{group__sd__card_gae3118ae546ea7ba60735b866552047ac}{}\label{group__sd__card_gae3118ae546ea7ba60735b866552047ac}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT}~((uint8\+\_\+t)35)\hypertarget{group__sd__card_gae91f1c058f4b0aace233e0e4866fa1d3}{}\label{group__sd__card_gae91f1c058f4b0aace233e0e4866fa1d3}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+E\+ND}~((uint8\+\_\+t)36)\hypertarget{group__sd__card_gabd1685e886f2b4cdeed5813d430a9bf3}{}\label{group__sd__card_gabd1685e886f2b4cdeed5813d430a9bf3}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+SE}~((uint8\+\_\+t)38)\hypertarget{group__sd__card_ga16f4d3918ba7fb538f8d1f3fb8bb0bd1}{}\label{group__sd__card_ga16f4d3918ba7fb538f8d1f3fb8bb0bd1}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+F\+A\+S\+T\+\_\+\+IO}~((uint8\+\_\+t)39)\hypertarget{group__sd__card_gac8319cdb71748237d00c937f0fa47fda}{}\label{group__sd__card_gac8319cdb71748237d00c937f0fa47fda}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+G\+O\+\_\+\+I\+R\+Q\+\_\+\+S\+T\+A\+TE}~((uint8\+\_\+t)40)\hypertarget{group__sd__card_gac71656d887c8fad884e95ec525a0a8af}{}\label{group__sd__card_gac71656d887c8fad884e95ec525a0a8af}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+CK}~((uint8\+\_\+t)42)\hypertarget{group__sd__card_gac89f6043b27673973f4a2b7e106a5f63}{}\label{group__sd__card_gac89f6043b27673973f4a2b7e106a5f63}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+C\+MD}~((uint8\+\_\+t)55)\hypertarget{group__sd__card_ga389f949c4ceace711f57dd00f71a8760}{}\label{group__sd__card_ga389f949c4ceace711f57dd00f71a8760}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+G\+E\+N\+\_\+\+C\+MD}~((uint8\+\_\+t)56)\hypertarget{group__sd__card_ga201db10c31dd8f6e30d99ca58dd291e6}{}\label{group__sd__card_ga201db10c31dd8f6e30d99ca58dd291e6}
+
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+M\+D\+\_\+\+N\+O\+\_\+\+C\+MD}~((uint8\+\_\+t)64)\hypertarget{group__sd__card_gab88d7dbeaf38955b1c7d2806f6b446c2}{}\label{group__sd__card_gab88d7dbeaf38955b1c7d2806f6b446c2}
+
+\item 
+\#define \hyperlink{group__sd__card_ga1b28ab176d0d05d7f971809aeb07b758}{S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH}~((uint8\+\_\+t)6)
+\item 
+\#define \hyperlink{group__sd__card_ga2984265566ee729869324cf5b842a601}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US}~((uint8\+\_\+t)13)
+\item 
+\#define \hyperlink{group__sd__card_gae38cb2fd8f0e7cb42c76e3b11055c424}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS}~((uint8\+\_\+t)22)
+\item 
+\#define \hyperlink{group__sd__card_ga980954ae3a961028fd59f67a1a30a7de}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND}~((uint8\+\_\+t)41)
+\item 
+\#define \hyperlink{group__sd__card_ga713f0d9a7c99b7becea80f232c024b59}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT}~((uint8\+\_\+t)42)
+\item 
+\#define \hyperlink{group__sd__card_ga11c23db52041ccaca4a2dbcafca62c88}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR}~((uint8\+\_\+t)51)
+\item 
+\#define \hyperlink{group__sd__card_ga09d3d2d61d003d6bf75c3fb128e86dbb}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT}~((uint8\+\_\+t)52)
+\item 
+\#define \hyperlink{group__sd__card_gaf40f42039cf756a3805800b48e2790ed}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED}~((uint8\+\_\+t)53)
+\item 
+\#define \hyperlink{group__sd__card_ga4f8828be53bb69d6436c03c9c2f427c6}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB}~((uint8\+\_\+t)43)
+\item 
+\#define \hyperlink{group__sd__card_gaf2e3bf3ef0ee9a3cbb20d43700521ea7}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID}~((uint8\+\_\+t)44)
+\item 
+\#define \hyperlink{group__sd__card_ga120a1adc8c10961c831b197f0fd51f76}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1}~((uint8\+\_\+t)45)
+\item 
+\#define \hyperlink{group__sd__card_gab8fbec70c55b91b2227dd592b7257eae}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2}~((uint8\+\_\+t)46)
+\item 
+\#define \hyperlink{group__sd__card_ga6775fd69fe0e739c7464951bd6aacdf1}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2}~((uint8\+\_\+t)47)
+\item 
+\#define \hyperlink{group__sd__card_ga0f39072d4c981331dfc1956c09d8a72c}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1}~((uint8\+\_\+t)48)
+\item 
+\#define \hyperlink{group__sd__card_ga7f4041b0d212f2d5d3f725b0beb97f0e}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}~((uint8\+\_\+t)18)
+\item 
+\#define \hyperlink{group__sd__card_ga97cfaea6d5d8646eda4e40b5e0bcbf94}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}~((uint8\+\_\+t)25)
+\item 
+\#define \hyperlink{group__sd__card_ga60d30f8255fe89e8d1c4aaabb4f3a60f}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE}~((uint8\+\_\+t)38)
+\item 
+\#define \hyperlink{group__sd__card_ga15e57ba63b8da2bf43d0205efd532b89}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA}~((uint8\+\_\+t)49)
+\item 
+\#define \hyperlink{group__sd__card_ga025052e51318ae13855774c1acf04ee2}{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB}~((uint8\+\_\+t)48)
+\item 
+\#define {\bfseries S\+D\+\_\+\+D\+M\+A\+\_\+\+M\+O\+DE}~((uint32\+\_\+t)0x00000000)\hypertarget{group__sd__card_gad3f9516a5e6764baf2083f76f4bc0eea}{}\label{group__sd__card_gad3f9516a5e6764baf2083f76f4bc0eea}
+
+\item 
+\#define \hyperlink{group__sd__card_ga44beec2a536fb750d2401d7bb7c227b6}{S\+D\+\_\+\+P\+R\+E\+S\+E\+NT}~((uint8\+\_\+t)0x01)\hypertarget{group__sd__card_ga44beec2a536fb750d2401d7bb7c227b6}{}\label{group__sd__card_ga44beec2a536fb750d2401d7bb7c227b6}
+
+\begin{DoxyCompactList}\small\item\em 是否在\+S\+D卡槽中检测到\+S\+D卡 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+S\+E\+NT}~((uint8\+\_\+t)0x00)\hypertarget{group__sd__card_ga342b72a630b1c5c90e2fd95c93dd686b}{}\label{group__sd__card_ga342b72a630b1c5c90e2fd95c93dd686b}
+
+\item 
+\#define \hyperlink{group__sd__card_gaa713e311ddfaf2265d1ba673543a32b2}{S\+D\+I\+O\+\_\+\+S\+T\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+V1\+\_\+1}~((uint32\+\_\+t)0x00000000)\hypertarget{group__sd__card_gaa713e311ddfaf2265d1ba673543a32b2}{}\label{group__sd__card_gaa713e311ddfaf2265d1ba673543a32b2}
+
+\begin{DoxyCompactList}\small\item\em 支持的存储卡类型 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+S\+T\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+V2\+\_\+0}~((uint32\+\_\+t)0x00000001)\hypertarget{group__sd__card_ga9e67ed9afb202bc0d2993e17ce940b0d}{}\label{group__sd__card_ga9e67ed9afb202bc0d2993e17ce940b0d}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+H\+I\+G\+H\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+S\+D\+\_\+\+C\+A\+RD}~((uint32\+\_\+t)0x00000002)\hypertarget{group__sd__card_gac99ee44931ecbf64e04623c442c00916}{}\label{group__sd__card_gac99ee44931ecbf64e04623c442c00916}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+M\+U\+L\+T\+I\+M\+E\+D\+I\+A\+\_\+\+C\+A\+RD}~((uint32\+\_\+t)0x00000003)\hypertarget{group__sd__card_ga857bc50f4f97f7f5f525da94db9b2774}{}\label{group__sd__card_ga857bc50f4f97f7f5f525da94db9b2774}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+C\+A\+RD}~((uint32\+\_\+t)0x00000004)\hypertarget{group__sd__card_ga2a0f3bb0a673de7c62c071865307a36e}{}\label{group__sd__card_ga2a0f3bb0a673de7c62c071865307a36e}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+H\+I\+G\+H\+\_\+\+S\+P\+E\+E\+D\+\_\+\+M\+U\+L\+T\+I\+M\+E\+D\+I\+A\+\_\+\+C\+A\+RD}~((uint32\+\_\+t)0x00000005)\hypertarget{group__sd__card_ga202a3247319d79b72bd2968761b75144}{}\label{group__sd__card_ga202a3247319d79b72bd2968761b75144}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+C\+O\+M\+B\+O\+\_\+\+C\+A\+RD}~((uint32\+\_\+t)0x00000006)\hypertarget{group__sd__card_ga63b1da6dd1a51131f3b53f1fbfb41ae3}{}\label{group__sd__card_ga63b1da6dd1a51131f3b53f1fbfb41ae3}
+
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+H\+I\+G\+H\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+M\+M\+C\+\_\+\+C\+A\+RD}~((uint32\+\_\+t)0x00000007)\hypertarget{group__sd__card_ga1551b2950a3d0c5fa148957b4f169d0d}{}\label{group__sd__card_ga1551b2950a3d0c5fa148957b4f169d0d}
+
+\end{DoxyCompactItemize}
+\subsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \{ \\*
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca6dfaca7c6ace1889e0294f4ec3ec535c}{S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL} = (1), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cad99fcef385ca3270d3bce97ed972ff1c}{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL} = (2), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cae1c1b2d0962bd3f40490b15aed01c8ff}{S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+S\+P\+\_\+\+T\+I\+M\+E\+O\+UT} = (3), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac5f321853ccd7c8aaa571afab467dddd}{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E\+O\+UT} = (4), 
+\\*
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7b3c2c028697b45c7e4ab738dfb32732}{S\+D\+\_\+\+T\+X\+\_\+\+U\+N\+D\+E\+R\+R\+UN} = (5), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca8536106ed9ebb00c16d0f42d78f31e37}{S\+D\+\_\+\+R\+X\+\_\+\+O\+V\+E\+R\+R\+UN} = (6), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cacc0291fc528b2bb330ca1487a8a3f3cd}{S\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+E\+RR} = (7), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2435ce658dcb58fc0970c9750fecbf10}{S\+D\+\_\+\+C\+M\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE} = (8), 
+\\*
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac862cc999fa6648eeb631ea82a07a51e}{S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED} = (9), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cadd08e6cdc391423ee7c1ba246faf42c3}{S\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR} = (10), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cae83866c46e2c68646ce05ff3707b042e}{S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR} = (11), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac52c7addfcb59055f5701898c3484d06}{S\+D\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM} = (12), 
+\\*
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca4e295d82b6481694f927367f35aa182d}{S\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON} = (13), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca093949ff310e17d6596e686804cd0e1e}{S\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED} = (14), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca01a35bd6664353a1af3b9ac093acdf94}{S\+D\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED} = (15), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7fefea39264d07dd179b12be8bf2e51c}{S\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD} = (16), 
+\\*
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca283091b73f40d5c229c2c3f3d0f4cb74}{S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED} = (17), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2c6401e2495de3d9fd3b41c273fda150}{S\+D\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR} = (18), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca46c693b1502d9e2137ead7857cfe5f9b}{S\+D\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR} = (19), 
+{\bfseries S\+D\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+A\+D\+\_\+\+U\+N\+D\+E\+R\+R\+UN} = (20), 
+\\*
+{\bfseries S\+D\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN} = (21), 
+{\bfseries S\+D\+\_\+\+C\+I\+D\+\_\+\+C\+S\+D\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE} = (22), 
+{\bfseries S\+D\+\_\+\+W\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+K\+IP} = (23), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+D\+I\+S\+A\+B\+L\+ED} = (24), 
+\\*
+{\bfseries S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+R\+E\+S\+ET} = (25), 
+{\bfseries S\+D\+\_\+\+A\+K\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+R\+R\+OR} = (26), 
+{\bfseries S\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+O\+L\+T\+R\+A\+N\+GE} = (27), 
+{\bfseries S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE} = (28), 
+\\*
+{\bfseries S\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+E\+R\+R\+OR} = (29), 
+{\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+I\+S\+A\+B\+L\+ED} = (30), 
+{\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+B\+U\+SY} = (31), 
+{\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED} = (32), 
+\\*
+{\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+U\+N\+C\+T\+I\+ON} = (33), 
+\hyperlink{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca3edc8995af0f0ca919abd400d01d235d}{S\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR}, 
+{\bfseries S\+D\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+ED}, 
+{\bfseries S\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+E\+N\+D\+I\+NG}, 
+\\*
+{\bfseries S\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+N\+O\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+B\+LE}, 
+{\bfseries S\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}, 
+{\bfseries S\+D\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+F\+E\+A\+T\+U\+RE}, 
+{\bfseries S\+D\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+HW}, 
+\\*
+{\bfseries S\+D\+\_\+\+E\+R\+R\+OR}, 
+{\bfseries S\+D\+\_\+\+OK} = 0
+ \}
+\item 
+enum \hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \{ {\bfseries S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK} = 0, 
+{\bfseries S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY} = 1, 
+{\bfseries S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+R\+R\+OR}
+ \}\hypertarget{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{}\label{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}
+\begin{DoxyCompactList}\small\item\em S\+D\+IO 传输状态 \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+State} \{ \\*
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+A\+DY} = ((uint32\+\_\+t)0x00000001), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+ON} = ((uint32\+\_\+t)0x00000002), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+S\+T\+A\+N\+D\+BY} = ((uint32\+\_\+t)0x00000003), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+T\+R\+A\+N\+S\+F\+ER} = ((uint32\+\_\+t)0x00000004), 
+\\*
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+S\+E\+N\+D\+I\+NG} = ((uint32\+\_\+t)0x00000005), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+C\+E\+I\+V\+I\+NG} = ((uint32\+\_\+t)0x00000006), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+P\+R\+O\+G\+R\+A\+M\+M\+I\+NG} = ((uint32\+\_\+t)0x00000007), 
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = ((uint32\+\_\+t)0x00000008), 
+\\*
+{\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+R\+R\+OR} = ((uint32\+\_\+t)0x000000\+FF)
+ \}\hypertarget{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{}\label{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}
+\begin{DoxyCompactList}\small\item\em S\+D卡状态 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent sd card data transfer status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+State} \hyperlink{group__sd__card_ga1c49d266e4f9ba33b7a425361a30d227}{S\+D\+\_\+\+Get\+State} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__sd__card_gacb7415873dffa26068c5e46025efebfa}{S\+D\+\_\+\+Detect} (void)
+\begin{DoxyCompactList}\small\item\em Detect if SD card is correctly plugged in the memory slot. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga9fbd4dd6187701cbe286ddb163e9c312}{S\+D\+\_\+\+Power\+ON} (void)
+\begin{DoxyCompactList}\small\item\em Enquires cards about their operating voltage and configures clock controls. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga9f053c27018521095d7333e7df238764}{S\+D\+\_\+\+Power\+O\+FF} (void)
+\begin{DoxyCompactList}\small\item\em Turns the S\+D\+IO output signals off. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab39f671413ee824a13bf1bd833f724e9}{S\+D\+\_\+\+Initialize\+Cards} (void)
+\begin{DoxyCompactList}\small\item\em Intialises all cards or single card as the case may be Card(s) come into standby state. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga5348c3c8f17f8c704bf00f1c5e21549d}{S\+D\+\_\+\+Get\+Card\+Info} (\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} $\ast$cardinfo)
+\begin{DoxyCompactList}\small\item\em Returns information about specific card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga858e0742dd01b2e2f6f397d30de6428f}{S\+D\+\_\+\+Get\+Card\+Status} (\hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status} $\ast$cardstatus)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga6569e73a229e639d2043549942d58d11}{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation} (uint32\+\_\+t Wide\+Mode)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga849eb0b385337453139a7567898dacb7}{S\+D\+\_\+\+Select\+Deselect} (uint64\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Selects od Deselects the corresponding card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga1b2b4c1bf25da0771325b00cd638129d}{S\+D\+\_\+\+Read\+Block} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga56b7336165f2631d9142a513ea2d0d17}{S\+D\+\_\+\+Read\+Multi\+Blocks} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab1eef7c1ff23ea746db504463d301a8b}{S\+D\+\_\+\+Write\+Block} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga64baac72a75a2c522e837935009cbe93}{S\+D\+\_\+\+Write\+Multi\+Blocks} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card_ga2dd79455185c28bd21964d113a38d110}{S\+D\+\_\+\+Get\+Transfer\+State} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent data transfer state. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gad3dc52f076ae8145e105cb4d8a37b043}{S\+D\+\_\+\+Stop\+Transfer} (void)
+\begin{DoxyCompactList}\small\item\em Aborts an ongoing data transfer. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gaca2450c63f52cd6c1d50f6de33ecfdf8}{S\+D\+\_\+\+Erase} (uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)
+\begin{DoxyCompactList}\small\item\em Allows to erase memory area specified for the given card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga7de24baeb4c6a7c9e5668630b8797888}{S\+D\+\_\+\+Send\+Status} (uint32\+\_\+t $\ast$pcardstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab573516bdaa3054877172415e66d0e57}{S\+D\+\_\+\+Send\+S\+D\+Status} (uint32\+\_\+t $\ast$psdstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current SD card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab21b0412e865d8cabc915dc840fa1ccc}{S\+D\+\_\+\+Process\+I\+R\+Q\+Src} (void)
+\begin{DoxyCompactList}\small\item\em Allows to process all the interrupts that are high. \end{DoxyCompactList}\item 
+void \hyperlink{group__sd__card_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga42ab410b834d74d7f3ee757dc888b8cc}{S\+D\+\_\+\+Wait\+Read\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gad55967ea67075f01671fb2144c7f7b0d}{S\+D\+\_\+\+Wait\+Write\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga2457c748cf09c7ad5d3c9211d11e3fab}{S\+D\+\_\+\+High\+Speed} (void)
+\begin{DoxyCompactList}\small\item\em Switch mode High-\/\+Speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_ga700c48bc2c031e2b002dd551a1af154c}{S\+D\+\_\+\+C\+S\+D\+::\+C\+S\+D\+Struct}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gae42076ec74babfee72c7a3705d13461a}{S\+D\+\_\+\+C\+S\+D\+::\+Sys\+Spec\+Version}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gab7c521a48dcc810a5b1b76278d5bebb2}{S\+D\+\_\+\+C\+S\+D\+::\+Reserved1}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gac3a3b789a57530a170119a3459571632}{S\+D\+\_\+\+C\+S\+D\+::\+T\+A\+AC}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gaf243b37ec081b6ef479a3d2d50668543}{S\+D\+\_\+\+C\+S\+D\+::\+N\+S\+AC}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gab044e6cb2434800c2dd10fbd71519a64}{S\+D\+\_\+\+C\+S\+D\+::\+Max\+Bus\+Clk\+Frec}
+\item 
+volatile uint16\+\_\+t \hyperlink{group__sd__card_ga2777d2837a2db0a106ce0a915253f24d}{S\+D\+\_\+\+C\+S\+D\+::\+Card\+Comd\+Classes}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_ga03458802593a7d3eeffa8518b204ba73}{S\+D\+\_\+\+C\+S\+D\+::\+Rd\+Block\+Len}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gad1480fb0cce305cbec05307b277fe9e6}{S\+D\+\_\+\+C\+S\+D\+::\+Part\+Block\+Read}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gac92bbdc65323bdaa2738ba34fb801694}{S\+D\+\_\+\+C\+S\+D\+::\+Wr\+Block\+Misalign}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_ga897fc62e6505259c20ac4490a589a09c}{S\+D\+\_\+\+C\+S\+D\+::\+Rd\+Block\+Misalign}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_ga96e5ee8c184999bd5f2b007015e2a7a9}{S\+D\+\_\+\+C\+S\+D\+::\+D\+S\+R\+Impl}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gae550128917d915a10d07cc6bab428d4a}{S\+D\+\_\+\+C\+S\+D\+::\+Reserved2}
+\item 
+volatile uint32\+\_\+t \hyperlink{group__sd__card_ga3ef41bf634f8340f737de91de78e33f8}{S\+D\+\_\+\+C\+S\+D\+::\+Device\+Size}
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Max\+Rd\+Current\+V\+D\+D\+Min}\hypertarget{group__sd__card_gaa2cbdc29ba8b93b465f9ec426eca68c3}{}\label{group__sd__card_gaa2cbdc29ba8b93b465f9ec426eca68c3}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Max\+Rd\+Current\+V\+D\+D\+Max}\hypertarget{group__sd__card_ga234f8b4a3cfc3b7315f868b6db662c9d}{}\label{group__sd__card_ga234f8b4a3cfc3b7315f868b6db662c9d}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Max\+Wr\+Current\+V\+D\+D\+Min}\hypertarget{group__sd__card_ga73ca31a038188d40d21a17bd8df2a537}{}\label{group__sd__card_ga73ca31a038188d40d21a17bd8df2a537}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Max\+Wr\+Current\+V\+D\+D\+Max}\hypertarget{group__sd__card_ga5b8dc6523a12e769b3ae39414be1def9}{}\label{group__sd__card_ga5b8dc6523a12e769b3ae39414be1def9}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Device\+Size\+Mul}\hypertarget{group__sd__card_gaca482f63045f066d6fb9ac446a5610d3}{}\label{group__sd__card_gaca482f63045f066d6fb9ac446a5610d3}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Erase\+Gr\+Size}\hypertarget{group__sd__card_gabb7b59f21356b037b182c3821c965dab}{}\label{group__sd__card_gabb7b59f21356b037b182c3821c965dab}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Erase\+Gr\+Mul}\hypertarget{group__sd__card_gab9143690c3d9259dce81738b55ceb9a0}{}\label{group__sd__card_gab9143690c3d9259dce81738b55ceb9a0}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Wr\+Protect\+Gr\+Size}\hypertarget{group__sd__card_ga7e57d5b444f210a4309508f01711e8bd}{}\label{group__sd__card_ga7e57d5b444f210a4309508f01711e8bd}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Wr\+Protect\+Gr\+Enable}\hypertarget{group__sd__card_ga1707098ad23967eec09ad50271182237}{}\label{group__sd__card_ga1707098ad23967eec09ad50271182237}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Man\+Defl\+E\+CC}\hypertarget{group__sd__card_ga146f7fcc6a8f7d0171437bfca8620d03}{}\label{group__sd__card_ga146f7fcc6a8f7d0171437bfca8620d03}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Wr\+Speed\+Fact}\hypertarget{group__sd__card_gafddd7e2be79a4b5386434b912bd0f825}{}\label{group__sd__card_gafddd7e2be79a4b5386434b912bd0f825}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Max\+Wr\+Block\+Len}\hypertarget{group__sd__card_gaa9386e7249e876d1ce6c3cbfe605e93c}{}\label{group__sd__card_gaa9386e7249e876d1ce6c3cbfe605e93c}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Write\+Block\+Pa\+Partial}\hypertarget{group__sd__card_gae4e1e8b0ab14e493939f879297ffdbbe}{}\label{group__sd__card_gae4e1e8b0ab14e493939f879297ffdbbe}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Reserved3}\hypertarget{group__sd__card_gafe043702fb9818d6f24d34371fda3025}{}\label{group__sd__card_gafe043702fb9818d6f24d34371fda3025}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Content\+Protect\+Appli}\hypertarget{group__sd__card_gab02312218dcd28a42708b8cff49f7f0e}{}\label{group__sd__card_gab02312218dcd28a42708b8cff49f7f0e}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+File\+Format\+Grouop}\hypertarget{group__sd__card_gafb2d5906780ba444ca5a6eb75eeb8fee}{}\label{group__sd__card_gafb2d5906780ba444ca5a6eb75eeb8fee}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Copy\+Flag}\hypertarget{group__sd__card_ga2930a617ae6630850ec062a2ceaf8762}{}\label{group__sd__card_ga2930a617ae6630850ec062a2ceaf8762}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Perm\+Wr\+Protect}\hypertarget{group__sd__card_gab31b083f7a756112fae67db27d15f82a}{}\label{group__sd__card_gab31b083f7a756112fae67db27d15f82a}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Temp\+Wr\+Protect}\hypertarget{group__sd__card_ga0134cfdb7840adaa39b9ca23c491ea84}{}\label{group__sd__card_ga0134cfdb7840adaa39b9ca23c491ea84}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+File\+Format}\hypertarget{group__sd__card_ga3435892f554d46b7bc17aa658031945b}{}\label{group__sd__card_ga3435892f554d46b7bc17aa658031945b}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+E\+CC}\hypertarget{group__sd__card_gaa348f5bef86a7a8723bb0281b8e8551d}{}\label{group__sd__card_gaa348f5bef86a7a8723bb0281b8e8551d}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+C\+S\+D\+\_\+\+C\+RC}\hypertarget{group__sd__card_ga43450c04007ddabe115972b6dd9d4f3e}{}\label{group__sd__card_ga43450c04007ddabe115972b6dd9d4f3e}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+S\+D\+::\+Reserved4}\hypertarget{group__sd__card_ga25a315f2dadfbed5ad39898ce0ae25cc}{}\label{group__sd__card_ga25a315f2dadfbed5ad39898ce0ae25cc}
+
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gac16d38fcef6d661738d8f880f899a5ee}{S\+D\+\_\+\+C\+I\+D\+::\+Manufacturer\+ID}
+\item 
+volatile uint16\+\_\+t \hyperlink{group__sd__card_gae715248acd4c86ce3b821759bef6f1e1}{S\+D\+\_\+\+C\+I\+D\+::\+O\+E\+M\+\_\+\+Appli\+ID}
+\item 
+volatile uint32\+\_\+t \hyperlink{group__sd__card_gab707dc163bd2cb8fc8d98643ea797585}{S\+D\+\_\+\+C\+I\+D\+::\+Prod\+Name1}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_gaaa6e8c0191c67b8692c0dc8dfccff76d}{S\+D\+\_\+\+C\+I\+D\+::\+Prod\+Name2}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_ga3c9906d1956b15f7e333323af56fe052}{S\+D\+\_\+\+C\+I\+D\+::\+Prod\+Rev}
+\item 
+volatile uint32\+\_\+t \hyperlink{group__sd__card_gadc2afe7dd7073a844eaebb4bd4449abb}{S\+D\+\_\+\+C\+I\+D\+::\+Prod\+SN}
+\item 
+volatile uint8\+\_\+t \hyperlink{group__sd__card_ga1d5599017d56204e4fe5b0aa7dd32294}{S\+D\+\_\+\+C\+I\+D\+::\+Reserved1}
+\item 
+volatile uint16\+\_\+t \hyperlink{group__sd__card_ga6fa8e16f55984066e24cf2503477dfcd}{S\+D\+\_\+\+C\+I\+D\+::\+Manufact\+Date}
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+I\+D\+::\+C\+I\+D\+\_\+\+C\+RC}\hypertarget{group__sd__card_gaab5a4086870be0b9255ee6350789d970}{}\label{group__sd__card_gaab5a4086870be0b9255ee6350789d970}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+C\+I\+D\+::\+Reserved2}\hypertarget{group__sd__card_ga7e3ba2aaed5d569ac75fd24ddb6d73d5}{}\label{group__sd__card_ga7e3ba2aaed5d569ac75fd24ddb6d73d5}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+D\+A\+T\+\_\+\+B\+U\+S\+\_\+\+W\+I\+D\+TH}\hypertarget{group__sd__card_gac3c5d7c0938feed59e8e79f2a694b9dc}{}\label{group__sd__card_gac3c5d7c0938feed59e8e79f2a694b9dc}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+S\+E\+C\+U\+R\+E\+D\+\_\+\+M\+O\+DE}\hypertarget{group__sd__card_ga3d68bc70456708b430a7eaae97fda0d9}{}\label{group__sd__card_ga3d68bc70456708b430a7eaae97fda0d9}
+
+\item 
+volatile uint16\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+T\+Y\+PE}\hypertarget{group__sd__card_ga400d54eab48ecfef2d8dc7a3b6271976}{}\label{group__sd__card_ga400d54eab48ecfef2d8dc7a3b6271976}
+
+\item 
+volatile uint32\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+S\+I\+Z\+E\+\_\+\+O\+F\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+A\+R\+EA}\hypertarget{group__sd__card_gae9ef610dc047b17a4b6da4309e2163a1}{}\label{group__sd__card_gae9ef610dc047b17a4b6da4309e2163a1}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+S\+P\+E\+E\+D\+\_\+\+C\+L\+A\+SS}\hypertarget{group__sd__card_gaefcdb19028ffb65e00489c6943c043e4}{}\label{group__sd__card_gaefcdb19028ffb65e00489c6943c043e4}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+M\+O\+VE}\hypertarget{group__sd__card_ga07235226d6db22e24c4d32c4125b8e7a}{}\label{group__sd__card_ga07235226d6db22e24c4d32c4125b8e7a}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+A\+U\+\_\+\+S\+I\+ZE}\hypertarget{group__sd__card_ga29ae9bd3d8353e0df873e24adebddc9d}{}\label{group__sd__card_ga29ae9bd3d8353e0df873e24adebddc9d}
+
+\item 
+volatile uint16\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+E\+R\+A\+S\+E\+\_\+\+S\+I\+ZE}\hypertarget{group__sd__card_ga868572db9f24ce2075e65357e056e3d4}{}\label{group__sd__card_ga868572db9f24ce2075e65357e056e3d4}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+E\+R\+A\+S\+E\+\_\+\+T\+I\+M\+E\+O\+UT}\hypertarget{group__sd__card_ga30eed54506e6f25578ed44ea73d9e960}{}\label{group__sd__card_ga30eed54506e6f25578ed44ea73d9e960}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Status\+::\+E\+R\+A\+S\+E\+\_\+\+O\+F\+F\+S\+ET}\hypertarget{group__sd__card_gafb6673a89a3f6112ff752c2fef0002df}{}\label{group__sd__card_gafb6673a89a3f6112ff752c2fef0002df}
+
+\item 
+\hyperlink{struct_s_d___c_s_d}{S\+D\+\_\+\+C\+SD} {\bfseries S\+D\+\_\+\+Card\+Info\+::\+S\+D\+\_\+csd}\hypertarget{group__sd__card_ga03390f9fae0ea5c3bd57194272d565db}{}\label{group__sd__card_ga03390f9fae0ea5c3bd57194272d565db}
+
+\item 
+\hyperlink{struct_s_d___c_i_d}{S\+D\+\_\+\+C\+ID} {\bfseries S\+D\+\_\+\+Card\+Info\+::\+S\+D\+\_\+cid}\hypertarget{group__sd__card_gae8074beb30b2ce80f4f24fb9c2895329}{}\label{group__sd__card_gae8074beb30b2ce80f4f24fb9c2895329}
+
+\item 
+uint64\+\_\+t \hyperlink{group__sd__card_ga536fbe580a6c824e73a2c3c4cf5b40c6}{S\+D\+\_\+\+Card\+Info\+::\+Card\+Capacity}
+\item 
+uint32\+\_\+t \hyperlink{group__sd__card_ga610fdab86929f0fc26881d564b19d609}{S\+D\+\_\+\+Card\+Info\+::\+Card\+Block\+Size}
+\item 
+uint16\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Info\+::\+R\+CA}\hypertarget{group__sd__card_gabfc547297bf8e2b1713dc3072300b7e0}{}\label{group__sd__card_gabfc547297bf8e2b1713dc3072300b7e0}
+
+\item 
+uint8\+\_\+t {\bfseries S\+D\+\_\+\+Card\+Info\+::\+Card\+Type}\hypertarget{group__sd__card_ga4e81c89d9a913a4dd5e81b9f8856ea96}{}\label{group__sd__card_ga4e81c89d9a913a4dd5e81b9f8856ea96}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{宏定义说明}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH@{S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH@{S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH}{SD_CMD_APP_SD_SET_BUSWIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+A\+P\+P\+\_\+\+S\+D\+\_\+\+S\+E\+T\+\_\+\+B\+U\+S\+W\+I\+D\+TH~((uint8\+\_\+t)6)}\hypertarget{group__sd__card_ga1b28ab176d0d05d7f971809aeb07b758}{}\label{group__sd__card_ga1b28ab176d0d05d7f971809aeb07b758}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA}{SD_CMD_SD_APP_CHANGE_SECURE_AREA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+R\+EA~((uint8\+\_\+t)49)}\hypertarget{group__sd__card_ga15e57ba63b8da2bf43d0205efd532b89}{}\label{group__sd__card_ga15e57ba63b8da2bf43d0205efd532b89}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1}{SD_CMD_SD_APP_GET_CER_RES1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S1~((uint8\+\_\+t)48)}\hypertarget{group__sd__card_ga0f39072d4c981331dfc1956c09d8a72c}{}\label{group__sd__card_ga0f39072d4c981331dfc1956c09d8a72c}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2}{SD_CMD_SD_APP_GET_CER_RN2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N2~((uint8\+\_\+t)46)}\hypertarget{group__sd__card_gab8fbec70c55b91b2227dd592b7257eae}{}\label{group__sd__card_gab8fbec70c55b91b2227dd592b7257eae}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID}{SD_CMD_SD_APP_GET_MID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+ID~((uint8\+\_\+t)44)}\hypertarget{group__sd__card_gaf2e3bf3ef0ee9a3cbb20d43700521ea7}{}\label{group__sd__card_gaf2e3bf3ef0ee9a3cbb20d43700521ea7}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB}{SD_CMD_SD_APP_GET_MKB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+G\+E\+T\+\_\+\+M\+KB~((uint8\+\_\+t)43)}\hypertarget{group__sd__card_ga4f8828be53bb69d6436c03c9c2f427c6}{}\label{group__sd__card_ga4f8828be53bb69d6436c03c9c2f427c6}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND}{SD_CMD_SD_APP_OP_COND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND~((uint8\+\_\+t)41)}\hypertarget{group__sd__card_ga980954ae3a961028fd59f67a1a30a7de}{}\label{group__sd__card_ga980954ae3a961028fd59f67a1a30a7de}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE}{SD_CMD_SD_APP_SECURE_ERASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+E\+R\+A\+SE~((uint8\+\_\+t)38)}\hypertarget{group__sd__card_ga60d30f8255fe89e8d1c4aaabb4f3a60f}{}\label{group__sd__card_ga60d30f8255fe89e8d1c4aaabb4f3a60f}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}{SD_CMD_SD_APP_SECURE_READ_MULTIPLE_BLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK~((uint8\+\_\+t)18)}\hypertarget{group__sd__card_ga7f4041b0d212f2d5d3f725b0beb97f0e}{}\label{group__sd__card_ga7f4041b0d212f2d5d3f725b0beb97f0e}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB}{SD_CMD_SD_APP_SECURE_WRITE_MKB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+KB~((uint8\+\_\+t)48)}\hypertarget{group__sd__card_ga025052e51318ae13855774c1acf04ee2}{}\label{group__sd__card_ga025052e51318ae13855774c1acf04ee2}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK}{SD_CMD_SD_APP_SECURE_WRITE_MULTIPLE_BLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+B\+L\+O\+CK~((uint8\+\_\+t)25)}\hypertarget{group__sd__card_ga97cfaea6d5d8646eda4e40b5e0bcbf94}{}\label{group__sd__card_ga97cfaea6d5d8646eda4e40b5e0bcbf94}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS}{SD_CMD_SD_APP_SEND_NUM_WRITE_BLOCKS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+KS~((uint8\+\_\+t)22)}\hypertarget{group__sd__card_gae38cb2fd8f0e7cb42c76e3b11055c424}{}\label{group__sd__card_gae38cb2fd8f0e7cb42c76e3b11055c424}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR}{SD_CMD_SD_APP_SEND_SCR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+N\+D\+\_\+\+S\+CR~((uint8\+\_\+t)51)}\hypertarget{group__sd__card_ga11c23db52041ccaca4a2dbcafca62c88}{}\label{group__sd__card_ga11c23db52041ccaca4a2dbcafca62c88}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2}{SD_CMD_SD_APP_SET_CER_RES2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+E\+S2~((uint8\+\_\+t)47)}\hypertarget{group__sd__card_ga6775fd69fe0e739c7464951bd6aacdf1}{}\label{group__sd__card_ga6775fd69fe0e739c7464951bd6aacdf1}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1}{SD_CMD_SD_APP_SET_CER_RN1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+E\+R\+\_\+\+R\+N1~((uint8\+\_\+t)45)}\hypertarget{group__sd__card_ga120a1adc8c10961c831b197f0fd51f76}{}\label{group__sd__card_ga120a1adc8c10961c831b197f0fd51f76}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT}{SD_CMD_SD_APP_SET_CLR_CARD_DETECT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+E\+T\+\_\+\+C\+L\+R\+\_\+\+C\+A\+R\+D\+\_\+\+D\+E\+T\+E\+CT~((uint8\+\_\+t)42)}\hypertarget{group__sd__card_ga713f0d9a7c99b7becea80f232c024b59}{}\label{group__sd__card_ga713f0d9a7c99b7becea80f232c024b59}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US}{SD_CMD_SD_APP_STAUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US~((uint8\+\_\+t)13)}\hypertarget{group__sd__card_ga2984265566ee729869324cf5b842a601}{}\label{group__sd__card_ga2984265566ee729869324cf5b842a601}
+For SD Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT}{SD_CMD_SDIO_RW_DIRECT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+D\+I\+R\+E\+CT~((uint8\+\_\+t)52)}\hypertarget{group__sd__card_ga09d3d2d61d003d6bf75c3fb128e86dbb}{}\label{group__sd__card_ga09d3d2d61d003d6bf75c3fb128e86dbb}
+For SD I/O Card only \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED}}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED@{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED}{SD_CMD_SDIO_RW_EXTENDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+\_\+\+C\+M\+D\+\_\+\+S\+D\+I\+O\+\_\+\+R\+W\+\_\+\+E\+X\+T\+E\+N\+D\+ED~((uint8\+\_\+t)53)}\hypertarget{group__sd__card_gaf40f42039cf756a3805800b48e2790ed}{}\label{group__sd__card_gaf40f42039cf756a3805800b48e2790ed}
+For SD I/O Card only 
+
+\subsection{枚举类型说明}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Error@{S\+D\+\_\+\+Error}}
+\index{S\+D\+\_\+\+Error@{S\+D\+\_\+\+Error}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Error}{SD_Error}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+D\+\_\+\+Error}}\hypertarget{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{}\label{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}
+\begin{Desc}
+\item[枚举值]\par
+\begin{description}
+\index{S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL@{S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL@{S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL}}\item[{\em 
+S\+D\+\_\+\+C\+M\+D\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca6dfaca7c6ace1889e0294f4ec3ec535c}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca6dfaca7c6ace1889e0294f4ec3ec535c}
+}]S\+D\+I\+O错误类型定义 接收到了命令响应，但是\+C\+R\+C校验失败 \index{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL@{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL@{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL}}\item[{\em 
+S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+R\+C\+\_\+\+F\+A\+IL\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cad99fcef385ca3270d3bce97ed972ff1c}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cad99fcef385ca3270d3bce97ed972ff1c}
+}]数据块发送/接收成功，但是\+C\+R\+C校验失败 \index{S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+S\+P\+\_\+\+T\+I\+M\+E\+O\+UT@{S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+S\+P\+\_\+\+T\+I\+M\+E\+O\+UT}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+S\+P\+\_\+\+T\+I\+M\+E\+O\+UT@{S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+S\+P\+\_\+\+T\+I\+M\+E\+O\+UT}}\item[{\em 
+S\+D\+\_\+\+C\+M\+D\+\_\+\+R\+S\+P\+\_\+\+T\+I\+M\+E\+O\+UT\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cae1c1b2d0962bd3f40490b15aed01c8ff}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cae1c1b2d0962bd3f40490b15aed01c8ff}
+}]命令响应超时 \index{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E\+O\+UT@{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E\+O\+UT}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E\+O\+UT@{S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E\+O\+UT}}\item[{\em 
+S\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E\+O\+UT\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac5f321853ccd7c8aaa571afab467dddd}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac5f321853ccd7c8aaa571afab467dddd}
+}]数据超时 \index{S\+D\+\_\+\+T\+X\+\_\+\+U\+N\+D\+E\+R\+R\+UN@{S\+D\+\_\+\+T\+X\+\_\+\+U\+N\+D\+E\+R\+R\+UN}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+T\+X\+\_\+\+U\+N\+D\+E\+R\+R\+UN@{S\+D\+\_\+\+T\+X\+\_\+\+U\+N\+D\+E\+R\+R\+UN}}\item[{\em 
+S\+D\+\_\+\+T\+X\+\_\+\+U\+N\+D\+E\+R\+R\+UN\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7b3c2c028697b45c7e4ab738dfb32732}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7b3c2c028697b45c7e4ab738dfb32732}
+}]发送\+F\+I\+F\+O尚未清空 \index{S\+D\+\_\+\+R\+X\+\_\+\+O\+V\+E\+R\+R\+UN@{S\+D\+\_\+\+R\+X\+\_\+\+O\+V\+E\+R\+R\+UN}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+R\+X\+\_\+\+O\+V\+E\+R\+R\+UN@{S\+D\+\_\+\+R\+X\+\_\+\+O\+V\+E\+R\+R\+UN}}\item[{\em 
+S\+D\+\_\+\+R\+X\+\_\+\+O\+V\+E\+R\+R\+UN\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca8536106ed9ebb00c16d0f42d78f31e37}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca8536106ed9ebb00c16d0f42d78f31e37}
+}]接收\+F\+I\+F\+O溢出 \index{S\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+E\+RR@{S\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+E\+RR}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+E\+RR@{S\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+E\+RR}}\item[{\em 
+S\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+E\+RR\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cacc0291fc528b2bb330ca1487a8a3f3cd}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cacc0291fc528b2bb330ca1487a8a3f3cd}
+}]宽总线模式下未在数据信号上检测到起始位 \index{S\+D\+\_\+\+C\+M\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE@{S\+D\+\_\+\+C\+M\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+M\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE@{S\+D\+\_\+\+C\+M\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}}\item[{\em 
+S\+D\+\_\+\+C\+M\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2435ce658dcb58fc0970c9750fecbf10}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2435ce658dcb58fc0970c9750fecbf10}
+}]命令的参数超出范围 \index{S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED@{S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED@{S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED}}\item[{\em 
+S\+D\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac862cc999fa6648eeb631ea82a07a51e}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac862cc999fa6648eeb631ea82a07a51e}
+}]地址没有对齐 \index{S\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR@{S\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR@{S\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR}}\item[{\em 
+S\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cadd08e6cdc391423ee7c1ba246faf42c3}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cadd08e6cdc391423ee7c1ba246faf42c3}
+}]发送的数据块的长度不能被用于本\+S\+D卡，或者发送的数据长度与块的长度不匹配 \index{S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR@{S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR@{S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR}}\item[{\em 
+S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cae83866c46e2c68646ce05ff3707b042e}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cae83866c46e2c68646ce05ff3707b042e}
+}]擦除指令执行过程中发生了一个错误 \index{S\+D\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM@{S\+D\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM@{S\+D\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM}}\item[{\em 
+S\+D\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac52c7addfcb59055f5701898c3484d06}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8cac52c7addfcb59055f5701898c3484d06}
+}]擦除组选择非法 \index{S\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON@{S\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON@{S\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON}}\item[{\em 
+S\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca4e295d82b6481694f927367f35aa182d}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca4e295d82b6481694f927367f35aa182d}
+}]试图写入一个受保护的块 \index{S\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED@{S\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED@{S\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+S\+D\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca093949ff310e17d6596e686804cd0e1e}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca093949ff310e17d6596e686804cd0e1e}
+}]试图访问一个锁定的卡，或者检测到序列或密码错误 \index{S\+D\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED@{S\+D\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED@{S\+D\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+S\+D\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca01a35bd6664353a1af3b9ac093acdf94}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca01a35bd6664353a1af3b9ac093acdf94}
+}]前一条指令的\+C\+R\+C校验出错 \index{S\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD@{S\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD@{S\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD}}\item[{\em 
+S\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7fefea39264d07dd179b12be8bf2e51c}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7fefea39264d07dd179b12be8bf2e51c}
+}]当前卡的状态下此指令非法 \index{S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED@{S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED@{S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca283091b73f40d5c229c2c3f3d0f4cb74}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca283091b73f40d5c229c2c3f3d0f4cb74}
+}]存储卡尝试执行了\+E\+C\+C校验，但数据没有被纠正 \index{S\+D\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR@{S\+D\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR@{S\+D\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+S\+D\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2c6401e2495de3d9fd3b41c273fda150}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2c6401e2495de3d9fd3b41c273fda150}
+}]存储卡内部控制器错误 \index{S\+D\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR@{S\+D\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR@{S\+D\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+S\+D\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca46c693b1502d9e2137ead7857cfe5f9b}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca46c693b1502d9e2137ead7857cfe5f9b}
+}]未知错误 \index{S\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR@{S\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR}!S\+D卡驱动@{S\+D卡驱动}}\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR@{S\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+S\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR\hypertarget{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca3edc8995af0f0ca919abd400d01d235d}{}\label{group__sd__card_ggacff91fa68daa1d1ee967b5b3fb3dbd8ca3edc8995af0f0ca919abd400d01d235d}
+}]标准错误定义 \end{description}
+\end{Desc}
+
+
+\subsection{函数说明}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Detect@{S\+D\+\_\+\+Detect}}
+\index{S\+D\+\_\+\+Detect@{S\+D\+\_\+\+Detect}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Detect(void)}{SD_Detect(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+D\+\_\+\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gacb7415873dffa26068c5e46025efebfa}{}\label{group__sd__card_gacb7415873dffa26068c5e46025efebfa}
+
+
+Detect if SD card is correctly plugged in the memory slot. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em Return} & if SD is detected or not \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}}
+\index{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation(uint32\+\_\+t Wide\+Mode)}{SD_EnableWideBusOperation(uint32_t WideMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{Wide\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga6569e73a229e639d2043549942d58d11}{}\label{group__sd__card_ga6569e73a229e639d2043549942d58d11}
+
+
+Enables wide bus opeartion for the requeseted card if supported by card. 
+
+
+\begin{DoxyParams}{参数}
+{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ M\+MC Card doesn\textquotesingle{}t support this feature
+
+$<$ Configure the S\+D\+IO peripheral
+
+$<$ Configure the S\+D\+IO peripheral \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}}
+\index{S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Erase(uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)}{SD_Erase(uint64_t startaddr, uint64_t endaddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Erase (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{startaddr, }
+\item[{uint64\+\_\+t}]{endaddr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gaca2450c63f52cd6c1d50f6de33ecfdf8}{}\label{group__sd__card_gaca2450c63f52cd6c1d50f6de33ecfdf8}
+
+
+Allows to erase memory area specified for the given card. 
+
+
+\begin{DoxyParams}{参数}
+{\em startaddr} & the start address. \\
+\hline
+{\em endaddr} & the end address. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Check if the card coomnd class supports erase command
+
+$<$ Send C\+M\+D32 S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT with argument as addr \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}}
+\index{S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Info(\+S\+D\+\_\+\+Card\+Info $\ast$cardinfo)}{SD_GetCardInfo(SD_CardInfo *cardinfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Get\+Card\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+\_\+\+Card\+Info} $\ast$}]{cardinfo}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga5348c3c8f17f8c704bf00f1c5e21549d}{}\label{group__sd__card_ga5348c3c8f17f8c704bf00f1c5e21549d}
+
+
+Returns information about specific card. 
+
+
+\begin{DoxyParams}{参数}
+{\em cardinfo} & pointer to a \hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} structure that contains all SD card information. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Byte 0
+
+$<$ Byte 1
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Reserved
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 14
+
+$<$ Byte 15
+
+$<$ Byte 0
+
+$<$ Byte 1
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 14
+
+$<$ Byte 15 \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}}
+\index{S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Status(\+S\+D\+\_\+\+Card\+Status $\ast$cardstatus)}{SD_GetCardStatus(SD_CardStatus *cardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Get\+Card\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+\_\+\+Card\+Status} $\ast$}]{cardstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga858e0742dd01b2e2f6f397d30de6428f}{}\label{group__sd__card_ga858e0742dd01b2e2f6f397d30de6428f}
+
+
+Enables wide bus opeartion for the requeseted card if supported by card. 
+
+
+\begin{DoxyParams}{参数}
+{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Byte 0
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 13 \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}}
+\index{S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+State(void)}{SD_GetState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Card\+State} S\+D\+\_\+\+Get\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga1c49d266e4f9ba33b7a425361a30d227}{}\label{group__sd__card_ga1c49d266e4f9ba33b7a425361a30d227}
+
+
+Returns the current card\textquotesingle{}s state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Card\+State} & SD Card Error or SD Card Current State. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}}
+\index{S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Status(void)}{SD_GetStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Transfer\+State} S\+D\+\_\+\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{}\label{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}
+
+
+Gets the cuurent sd card data transfer status. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Get\+Transfer\+State@{S\+D\+\_\+\+Get\+Transfer\+State}}
+\index{S\+D\+\_\+\+Get\+Transfer\+State@{S\+D\+\_\+\+Get\+Transfer\+State}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Transfer\+State(void)}{SD_GetTransferState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Transfer\+State} S\+D\+\_\+\+Get\+Transfer\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga2dd79455185c28bd21964d113a38d110}{}\label{group__sd__card_ga2dd79455185c28bd21964d113a38d110}
+
+
+Gets the cuurent data transfer state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+High\+Speed@{S\+D\+\_\+\+High\+Speed}}
+\index{S\+D\+\_\+\+High\+Speed@{S\+D\+\_\+\+High\+Speed}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+High\+Speed(void)}{SD_HighSpeed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+High\+Speed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga2457c748cf09c7ad5d3c9211d11e3fab}{}\label{group__sd__card_ga2457c748cf09c7ad5d3c9211d11e3fab}
+
+
+Switch mode High-\/\+Speed. 
+
+\begin{DoxyNote}{注解}
+This function must be used after \char`\"{}\+Transfer State\char`\"{} 
+
+This operation should be followed by the configuration of P\+LL to have S\+D\+I\+O\+CK clock between 67 and 75 M\+Hz 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Get S\+CR Register
+
+$<$ Send C\+M\+D6 switch mode \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}}
+\index{S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Init(void)}{SD_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}{}\label{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}
+
+
+Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
+
+$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}}
+\index{S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Initialize\+Cards(void)}{SD_InitializeCards(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Initialize\+Cards (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gab39f671413ee824a13bf1bd833f724e9}{}\label{group__sd__card_gab39f671413ee824a13bf1bd833f724e9}
+
+
+Intialises all cards or single card as the case may be Card(s) come into standby state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D2 A\+L\+L\+\_\+\+S\+E\+N\+D\+\_\+\+C\+ID
+
+$<$ Send C\+M\+D3 S\+E\+T\+\_\+\+R\+E\+L\+\_\+\+A\+D\+DR with argument 0
+
+$<$ SD Card publishes its R\+CA.
+
+$<$ Send C\+M\+D9 S\+E\+N\+D\+\_\+\+C\+SD with argument as card\textquotesingle{}s R\+CA
+
+$<$ All cards get intialized \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}}
+\index{S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+F\+F(void)}{SD_PowerOFF(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Power\+O\+FF (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga9f053c27018521095d7333e7df238764}{}\label{group__sd__card_ga9f053c27018521095d7333e7df238764}
+
+
+Turns the S\+D\+IO output signals off. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Set Power State to O\+FF \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}}
+\index{S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+N(void)}{SD_PowerON(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Power\+ON (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga9fbd4dd6187701cbe286ddb163e9c312}{}\label{group__sd__card_ga9fbd4dd6187701cbe286ddb163e9c312}
+
+
+Enquires cards about their operating voltage and configures clock controls. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Power ON Sequence -----------------------------------------------------
+
+$<$ Configure the S\+D\+IO peripheral
+
+$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+I\+N\+I\+T\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
+
+$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz
+
+$<$ S\+D\+I\+O\+\_\+\+CK for initialization should not exceed 400 K\+Hz
+
+$<$ Set Power State to ON
+
+$<$ Enable S\+D\+IO Clock
+
+$<$ C\+M\+D0\+: G\+O\+\_\+\+I\+D\+L\+E\+\_\+\+S\+T\+A\+TE -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---------------------------------------
+
+$<$ No C\+MD response required
+
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ Send C\+M\+D8 to verify SD card interface operating condition
+
+$<$ Argument\+: -\/ \mbox{[}31\+:12\mbox{]}\+: Reserved (shall be set to \textquotesingle{}0\textquotesingle{})
+\begin{DoxyItemize}
+\item \mbox{[}11\+:8\mbox{]}\+: Supply Voltage (V\+HS) 0x1 (Range\+: 2.\+7-\/3.\+6 V)
+\item \mbox{[}7\+:0\mbox{]}\+: Check Pattern (recommended 0x\+AA)
+\end{DoxyItemize}
+
+$<$ C\+MD Response\+: R7
+
+$<$ SD Card 2.\+0
+
+$<$ C\+M\+D55
+
+$<$ If errorstatus is Command Time\+Out, it is a M\+MC card
+
+$<$ If errorstatus is S\+D\+\_\+\+OK it is a SD card\+: SD card 2.\+0 (voltage range mismatch) or SD card 1.\+x
+
+$<$ SD C\+A\+RD
+
+$<$ Send A\+C\+M\+D41 S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND with Argument 0x80100000
+
+$<$ S\+E\+ND C\+M\+D55 A\+P\+P\+\_\+\+C\+MD with R\+CA as 0 \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}}
+\index{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+D\+M\+A\+I\+R\+Q(void)}{SD_ProcessDMAIRQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga52ec18498c19918549142f6680a7b21e}{}\label{group__sd__card_ga52ec18498c19918549142f6680a7b21e}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}}
+\index{S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+I\+R\+Q\+Src(void)}{SD_ProcessIRQSrc(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Process\+I\+R\+Q\+Src (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gab21b0412e865d8cabc915dc840fa1ccc}{}\label{group__sd__card_gab21b0412e865d8cabc915dc840fa1ccc}
+
+
+Allows to process all the interrupts that are high. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}}
+\index{S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Block(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)}{SD_ReadBlock(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Read\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{readbuff, }
+\item[{uint64\+\_\+t}]{Read\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga1b2b4c1bf25da0771325b00cd638129d}{}\label{group__sd__card_ga1b2b4c1bf25da0771325b00cd638129d}
+
+
+Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em readbuff} & pointer to the buffer that will contain the received data \\
+\hline
+{\em Read\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D17 R\+E\+A\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}}
+\index{S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Multi\+Blocks(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_ReadMultiBlocks(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Read\+Multi\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{readbuff, }
+\item[{uint64\+\_\+t}]{Read\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size, }
+\item[{uint32\+\_\+t}]{Number\+Of\+Blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga56b7336165f2631d9142a513ea2d0d17}{}\label{group__sd__card_ga56b7336165f2631d9142a513ea2d0d17}
+
+
+Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em readbuff} & pointer to the buffer that will contain the received data. \\
+\hline
+{\em Read\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+{\em Number\+Of\+Blocks} & number of blocks to be read. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D18 R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK with argument data address \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}}
+\index{S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Select\+Deselect(uint64\+\_\+t addr)}{SD_SelectDeselect(uint64_t addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Select\+Deselect (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga849eb0b385337453139a7567898dacb7}{}\label{group__sd__card_ga849eb0b385337453139a7567898dacb7}
+
+
+Selects od Deselects the corresponding card. 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & Address of the Card to be selected. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D7 S\+D\+I\+O\+\_\+\+S\+E\+L\+\_\+\+D\+E\+S\+E\+L\+\_\+\+C\+A\+RD \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}}
+\index{S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+S\+D\+Status(uint32\+\_\+t $\ast$psdstatus)}{SD_SendSDStatus(uint32_t *psdstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Send\+S\+D\+Status (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t $\ast$}]{psdstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gab573516bdaa3054877172415e66d0e57}{}\label{group__sd__card_gab573516bdaa3054877172415e66d0e57}
+
+
+Returns the current SD card\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{参数}
+{\em psdstatus} & pointer to the buffer that will contain the SD card status (SD Status register). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send A\+C\+M\+D13 S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US with argument as card\textquotesingle{}s R\+CA. \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}}
+\index{S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+Status(uint32\+\_\+t $\ast$pcardstatus)}{SD_SendStatus(uint32_t *pcardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Send\+Status (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t $\ast$}]{pcardstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga7de24baeb4c6a7c9e5668630b8797888}{}\label{group__sd__card_ga7de24baeb4c6a7c9e5668630b8797888}
+
+
+Returns the current card\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{参数}
+{\em pcardstatus} & pointer to the buffer that will contain the SD card status (Card Status register). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}}
+\index{S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Stop\+Transfer(void)}{SD_StopTransfer(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Stop\+Transfer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gad3dc52f076ae8145e105cb4d8a37b043}{}\label{group__sd__card_gad3dc52f076ae8145e105cb4d8a37b043}
+
+
+Aborts an ongoing data transfer. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D12 S\+T\+O\+P\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}}
+\index{S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Read\+Operation(void)}{SD_WaitReadOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Wait\+Read\+Operation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga42ab410b834d74d7f3ee757dc888b8cc}{}\label{group__sd__card_ga42ab410b834d74d7f3ee757dc888b8cc}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}}
+\index{S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Write\+Operation(void)}{SD_WaitWriteOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Wait\+Write\+Operation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gad55967ea67075f01671fb2144c7f7b0d}{}\label{group__sd__card_gad55967ea67075f01671fb2144c7f7b0d}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}}
+\index{S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Block(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)}{SD_WriteBlock(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Write\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{writebuff, }
+\item[{uint64\+\_\+t}]{Write\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_gab1eef7c1ff23ea746db504463d301a8b}{}\label{group__sd__card_gab1eef7c1ff23ea746db504463d301a8b}
+
+
+Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+\hline
+{\em Write\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ In case of single data block transfer no need of stop command at all \index{S\+D卡驱动@{S\+D卡驱动}!S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}}
+\index{S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Multi\+Blocks(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_WriteMultiBlocks(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Write\+Multi\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{writebuff, }
+\item[{uint64\+\_\+t}]{Write\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size, }
+\item[{uint32\+\_\+t}]{Number\+Of\+Blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sd__card_ga64baac72a75a2c522e837935009cbe93}{}\label{group__sd__card_ga64baac72a75a2c522e837935009cbe93}
+
+
+Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Write\+Addr} & Address from where data are to be read. \\
+\hline
+{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+{\em Number\+Of\+Blocks} & number of blocks to be written. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{变量说明}
+\index{S\+D卡驱动@{S\+D卡驱动}!Card\+Block\+Size@{Card\+Block\+Size}}
+\index{Card\+Block\+Size@{Card\+Block\+Size}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Card\+Block\+Size}{CardBlockSize}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t S\+D\+\_\+\+Card\+Info\+::\+Card\+Block\+Size}\hypertarget{group__sd__card_ga610fdab86929f0fc26881d564b19d609}{}\label{group__sd__card_ga610fdab86929f0fc26881d564b19d609}
+S\+D卡块大小 \index{S\+D卡驱动@{S\+D卡驱动}!Card\+Capacity@{Card\+Capacity}}
+\index{Card\+Capacity@{Card\+Capacity}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Card\+Capacity}{CardCapacity}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t S\+D\+\_\+\+Card\+Info\+::\+Card\+Capacity}\hypertarget{group__sd__card_ga536fbe580a6c824e73a2c3c4cf5b40c6}{}\label{group__sd__card_ga536fbe580a6c824e73a2c3c4cf5b40c6}
+S\+D卡容量 \index{S\+D卡驱动@{S\+D卡驱动}!Card\+Comd\+Classes@{Card\+Comd\+Classes}}
+\index{Card\+Comd\+Classes@{Card\+Comd\+Classes}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Card\+Comd\+Classes}{CardComdClasses}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Card\+Comd\+Classes}\hypertarget{group__sd__card_ga2777d2837a2db0a106ce0a915253f24d}{}\label{group__sd__card_ga2777d2837a2db0a106ce0a915253f24d}
+卡命令级别 \index{S\+D卡驱动@{S\+D卡驱动}!C\+S\+D\+Struct@{C\+S\+D\+Struct}}
+\index{C\+S\+D\+Struct@{C\+S\+D\+Struct}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{C\+S\+D\+Struct}{CSDStruct}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+C\+S\+D\+Struct}\hypertarget{group__sd__card_ga700c48bc2c031e2b002dd551a1af154c}{}\label{group__sd__card_ga700c48bc2c031e2b002dd551a1af154c}
+专有数据结构体 \index{S\+D卡驱动@{S\+D卡驱动}!Device\+Size@{Device\+Size}}
+\index{Device\+Size@{Device\+Size}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Device\+Size}{DeviceSize}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Device\+Size}\hypertarget{group__sd__card_ga3ef41bf634f8340f737de91de78e33f8}{}\label{group__sd__card_ga3ef41bf634f8340f737de91de78e33f8}
+设备大小 \index{S\+D卡驱动@{S\+D卡驱动}!D\+S\+R\+Impl@{D\+S\+R\+Impl}}
+\index{D\+S\+R\+Impl@{D\+S\+R\+Impl}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{D\+S\+R\+Impl}{DSRImpl}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+D\+S\+R\+Impl}\hypertarget{group__sd__card_ga96e5ee8c184999bd5f2b007015e2a7a9}{}\label{group__sd__card_ga96e5ee8c184999bd5f2b007015e2a7a9}
+D\+SR 实现 \index{S\+D卡驱动@{S\+D卡驱动}!Manufact\+Date@{Manufact\+Date}}
+\index{Manufact\+Date@{Manufact\+Date}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Manufact\+Date}{ManufactDate}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Manufact\+Date}\hypertarget{group__sd__card_ga6fa8e16f55984066e24cf2503477dfcd}{}\label{group__sd__card_ga6fa8e16f55984066e24cf2503477dfcd}
+生产数据 \index{S\+D卡驱动@{S\+D卡驱动}!Manufacturer\+ID@{Manufacturer\+ID}}
+\index{Manufacturer\+ID@{Manufacturer\+ID}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Manufacturer\+ID}{ManufacturerID}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Manufacturer\+ID}\hypertarget{group__sd__card_gac16d38fcef6d661738d8f880f899a5ee}{}\label{group__sd__card_gac16d38fcef6d661738d8f880f899a5ee}
+制造商识别码 \index{S\+D卡驱动@{S\+D卡驱动}!Max\+Bus\+Clk\+Frec@{Max\+Bus\+Clk\+Frec}}
+\index{Max\+Bus\+Clk\+Frec@{Max\+Bus\+Clk\+Frec}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Max\+Bus\+Clk\+Frec}{MaxBusClkFrec}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Max\+Bus\+Clk\+Frec}\hypertarget{group__sd__card_gab044e6cb2434800c2dd10fbd71519a64}{}\label{group__sd__card_gab044e6cb2434800c2dd10fbd71519a64}
+最大总线频率 \index{S\+D卡驱动@{S\+D卡驱动}!N\+S\+AC@{N\+S\+AC}}
+\index{N\+S\+AC@{N\+S\+AC}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{N\+S\+AC}{NSAC}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+N\+S\+AC}\hypertarget{group__sd__card_gaf243b37ec081b6ef479a3d2d50668543}{}\label{group__sd__card_gaf243b37ec081b6ef479a3d2d50668543}
+数据读取访问时间2，单位为时钟周期 \index{S\+D卡驱动@{S\+D卡驱动}!O\+E\+M\+\_\+\+Appli\+ID@{O\+E\+M\+\_\+\+Appli\+ID}}
+\index{O\+E\+M\+\_\+\+Appli\+ID@{O\+E\+M\+\_\+\+Appli\+ID}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{O\+E\+M\+\_\+\+Appli\+ID}{OEM_AppliID}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+O\+E\+M\+\_\+\+Appli\+ID}\hypertarget{group__sd__card_gae715248acd4c86ce3b821759bef6f1e1}{}\label{group__sd__card_gae715248acd4c86ce3b821759bef6f1e1}
+产品识别码 \index{S\+D卡驱动@{S\+D卡驱动}!Part\+Block\+Read@{Part\+Block\+Read}}
+\index{Part\+Block\+Read@{Part\+Block\+Read}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Part\+Block\+Read}{PartBlockRead}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Part\+Block\+Read}\hypertarget{group__sd__card_gad1480fb0cce305cbec05307b277fe9e6}{}\label{group__sd__card_gad1480fb0cce305cbec05307b277fe9e6}
+部分块允许读取 \index{S\+D卡驱动@{S\+D卡驱动}!Prod\+Name1@{Prod\+Name1}}
+\index{Prod\+Name1@{Prod\+Name1}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Prod\+Name1}{ProdName1}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Prod\+Name1}\hypertarget{group__sd__card_gab707dc163bd2cb8fc8d98643ea797585}{}\label{group__sd__card_gab707dc163bd2cb8fc8d98643ea797585}
+产品名称（1） \index{S\+D卡驱动@{S\+D卡驱动}!Prod\+Name2@{Prod\+Name2}}
+\index{Prod\+Name2@{Prod\+Name2}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Prod\+Name2}{ProdName2}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Prod\+Name2}\hypertarget{group__sd__card_gaaa6e8c0191c67b8692c0dc8dfccff76d}{}\label{group__sd__card_gaaa6e8c0191c67b8692c0dc8dfccff76d}
+产品名称（2） \index{S\+D卡驱动@{S\+D卡驱动}!Prod\+Rev@{Prod\+Rev}}
+\index{Prod\+Rev@{Prod\+Rev}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Prod\+Rev}{ProdRev}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Prod\+Rev}\hypertarget{group__sd__card_ga3c9906d1956b15f7e333323af56fe052}{}\label{group__sd__card_ga3c9906d1956b15f7e333323af56fe052}
+产品版本 \index{S\+D卡驱动@{S\+D卡驱动}!Prod\+SN@{Prod\+SN}}
+\index{Prod\+SN@{Prod\+SN}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Prod\+SN}{ProdSN}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Prod\+SN}\hypertarget{group__sd__card_gadc2afe7dd7073a844eaebb4bd4449abb}{}\label{group__sd__card_gadc2afe7dd7073a844eaebb4bd4449abb}
+产品序列号 \index{S\+D卡驱动@{S\+D卡驱动}!Rd\+Block\+Len@{Rd\+Block\+Len}}
+\index{Rd\+Block\+Len@{Rd\+Block\+Len}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Rd\+Block\+Len}{RdBlockLen}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Rd\+Block\+Len}\hypertarget{group__sd__card_ga03458802593a7d3eeffa8518b204ba73}{}\label{group__sd__card_ga03458802593a7d3eeffa8518b204ba73}
+读取块的最大长度 \index{S\+D卡驱动@{S\+D卡驱动}!Rd\+Block\+Misalign@{Rd\+Block\+Misalign}}
+\index{Rd\+Block\+Misalign@{Rd\+Block\+Misalign}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Rd\+Block\+Misalign}{RdBlockMisalign}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Rd\+Block\+Misalign}\hypertarget{group__sd__card_ga897fc62e6505259c20ac4490a589a09c}{}\label{group__sd__card_ga897fc62e6505259c20ac4490a589a09c}
+读取块没有对齐 \index{S\+D卡驱动@{S\+D卡驱动}!Reserved1@{Reserved1}}
+\index{Reserved1@{Reserved1}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Reserved1}{Reserved1}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Reserved1}\hypertarget{group__sd__card_gab7c521a48dcc810a5b1b76278d5bebb2}{}\label{group__sd__card_gab7c521a48dcc810a5b1b76278d5bebb2}
+保留 \index{S\+D卡驱动@{S\+D卡驱动}!Reserved1@{Reserved1}}
+\index{Reserved1@{Reserved1}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Reserved1}{Reserved1}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+I\+D\+::\+Reserved1}\hypertarget{group__sd__card_ga1d5599017d56204e4fe5b0aa7dd32294}{}\label{group__sd__card_ga1d5599017d56204e4fe5b0aa7dd32294}
+保留 \index{S\+D卡驱动@{S\+D卡驱动}!Reserved2@{Reserved2}}
+\index{Reserved2@{Reserved2}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Reserved2}{Reserved2}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Reserved2}\hypertarget{group__sd__card_gae550128917d915a10d07cc6bab428d4a}{}\label{group__sd__card_gae550128917d915a10d07cc6bab428d4a}
+保留 \index{S\+D卡驱动@{S\+D卡驱动}!Sys\+Spec\+Version@{Sys\+Spec\+Version}}
+\index{Sys\+Spec\+Version@{Sys\+Spec\+Version}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Sys\+Spec\+Version}{SysSpecVersion}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Sys\+Spec\+Version}\hypertarget{group__sd__card_gae42076ec74babfee72c7a3705d13461a}{}\label{group__sd__card_gae42076ec74babfee72c7a3705d13461a}
+系统识别号 \index{S\+D卡驱动@{S\+D卡驱动}!T\+A\+AC@{T\+A\+AC}}
+\index{T\+A\+AC@{T\+A\+AC}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{T\+A\+AC}{TAAC}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+T\+A\+AC}\hypertarget{group__sd__card_gac3a3b789a57530a170119a3459571632}{}\label{group__sd__card_gac3a3b789a57530a170119a3459571632}
+数据读取访问时间1 \index{S\+D卡驱动@{S\+D卡驱动}!Wr\+Block\+Misalign@{Wr\+Block\+Misalign}}
+\index{Wr\+Block\+Misalign@{Wr\+Block\+Misalign}!S\+D卡驱动@{S\+D卡驱动}}
+\subsubsection[{\texorpdfstring{Wr\+Block\+Misalign}{WrBlockMisalign}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t S\+D\+\_\+\+C\+S\+D\+::\+Wr\+Block\+Misalign}\hypertarget{group__sd__card_gac92bbdc65323bdaa2738ba34fb801694}{}\label{group__sd__card_gac92bbdc65323bdaa2738ba34fb801694}
+写入块没有对齐 

@@ -1,0 +1,2267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QBL-Pilot-STD: SD卡驱动</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QBL-Pilot-STD
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">模块</a> &#124;
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#enumval-members">枚举值</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">SD卡驱动</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+模块</h2></td></tr>
+<tr class="memitem:group__sd__card__private"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card__private.html">SD卡驱动私有数据</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d___c_s_d.html">SD_CSD</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储卡专有数据CSD  <a href="struct_s_d___c_s_d.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d___c_i_d.html">SD_CID</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储卡识别数据  <a href="struct_s_d___c_i_d.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d___card_status.html">SD_CardStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SD卡状态  <a href="struct_s_d___card_status.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d___card_info.html">SD_CardInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SD卡信息  <a href="struct_s_d___card_info.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga9d34df51b7f169e0be94fea97d0c1639"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9d34df51b7f169e0be94fea97d0c1639"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga9d34df51b7f169e0be94fea97d0c1639">SD_CMD_GO_IDLE_STATE</a>&#160;&#160;&#160;((uint8_t)0)</td></tr>
+<tr class="memdesc:ga9d34df51b7f169e0be94fea97d0c1639"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDIO 命令索引 <br /></td></tr>
+<tr class="separator:ga9d34df51b7f169e0be94fea97d0c1639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74eabc4acadc80ad0242d52942c8d76a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga74eabc4acadc80ad0242d52942c8d76a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SEND_OP_COND</b>&#160;&#160;&#160;((uint8_t)1)</td></tr>
+<tr class="separator:ga74eabc4acadc80ad0242d52942c8d76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d9d3a1da54a30d81e1d2a9c6a2d9b4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3d9d3a1da54a30d81e1d2a9c6a2d9b4f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_ALL_SEND_CID</b>&#160;&#160;&#160;((uint8_t)2)</td></tr>
+<tr class="separator:ga3d9d3a1da54a30d81e1d2a9c6a2d9b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7e0f4e84001656eac62b41179376a25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa7e0f4e84001656eac62b41179376a25"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SET_REL_ADDR</b>&#160;&#160;&#160;((uint8_t)3)</td></tr>
+<tr class="separator:gaa7e0f4e84001656eac62b41179376a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89e890726a09716bb1a5c6ef6d0d3d90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga89e890726a09716bb1a5c6ef6d0d3d90"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SET_DSR</b>&#160;&#160;&#160;((uint8_t)4)</td></tr>
+<tr class="separator:ga89e890726a09716bb1a5c6ef6d0d3d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f4e5909200ef9eb61ac2252f4099360"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5f4e5909200ef9eb61ac2252f4099360"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SDIO_SEN_OP_COND</b>&#160;&#160;&#160;((uint8_t)5)</td></tr>
+<tr class="separator:ga5f4e5909200ef9eb61ac2252f4099360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88fb9fd3b2c9fea10b79da9a569d4471"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga88fb9fd3b2c9fea10b79da9a569d4471"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_HS_SWITCH</b>&#160;&#160;&#160;((uint8_t)6)</td></tr>
+<tr class="separator:ga88fb9fd3b2c9fea10b79da9a569d4471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf049767ff08cf35fcddef8f413964050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf049767ff08cf35fcddef8f413964050"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SEL_DESEL_CARD</b>&#160;&#160;&#160;((uint8_t)7)</td></tr>
+<tr class="separator:gaf049767ff08cf35fcddef8f413964050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeea3a373a0065cab0080a56395bc5a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaeea3a373a0065cab0080a56395bc5a19"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_HS_SEND_EXT_CSD</b>&#160;&#160;&#160;((uint8_t)8)</td></tr>
+<tr class="separator:gaeea3a373a0065cab0080a56395bc5a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaffe6f096eefb62711d4ba298c4598e2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaffe6f096eefb62711d4ba298c4598e2e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SEND_CSD</b>&#160;&#160;&#160;((uint8_t)9)</td></tr>
+<tr class="separator:gaffe6f096eefb62711d4ba298c4598e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0df99cd4f523813b603109db94f07c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad0df99cd4f523813b603109db94f07c6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SEND_CID</b>&#160;&#160;&#160;((uint8_t)10)</td></tr>
+<tr class="separator:gad0df99cd4f523813b603109db94f07c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf2a1a56e95b0b5ebeca09a38c9538e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacf2a1a56e95b0b5ebeca09a38c9538e7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_READ_DAT_UNTIL_STOP</b>&#160;&#160;&#160;((uint8_t)11)</td></tr>
+<tr class="separator:gacf2a1a56e95b0b5ebeca09a38c9538e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45a924a12fc702bebac386ed429a60ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga45a924a12fc702bebac386ed429a60ff"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_STOP_TRANSMISSION</b>&#160;&#160;&#160;((uint8_t)12)</td></tr>
+<tr class="separator:ga45a924a12fc702bebac386ed429a60ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d58ed74fb20e34fb557fa97c1935fe3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4d58ed74fb20e34fb557fa97c1935fe3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SEND_STATUS</b>&#160;&#160;&#160;((uint8_t)13)</td></tr>
+<tr class="separator:ga4d58ed74fb20e34fb557fa97c1935fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4dbc2cc034c8f582602063be358ad160"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4dbc2cc034c8f582602063be358ad160"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_HS_BUSTEST_READ</b>&#160;&#160;&#160;((uint8_t)14)</td></tr>
+<tr class="separator:ga4dbc2cc034c8f582602063be358ad160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8adaf3188d195b83ba32a9e72863072"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab8adaf3188d195b83ba32a9e72863072"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_GO_INACTIVE_STATE</b>&#160;&#160;&#160;((uint8_t)15)</td></tr>
+<tr class="separator:gab8adaf3188d195b83ba32a9e72863072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77edc6b67b0921f4473adc7b95039de3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga77edc6b67b0921f4473adc7b95039de3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SET_BLOCKLEN</b>&#160;&#160;&#160;((uint8_t)16)</td></tr>
+<tr class="separator:ga77edc6b67b0921f4473adc7b95039de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a0361bd4864fe9368ba54bc9b2bda24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8a0361bd4864fe9368ba54bc9b2bda24"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_READ_SINGLE_BLOCK</b>&#160;&#160;&#160;((uint8_t)17)</td></tr>
+<tr class="separator:ga8a0361bd4864fe9368ba54bc9b2bda24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafedc6b182681752a4299dffdd1ce74da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafedc6b182681752a4299dffdd1ce74da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_READ_MULT_BLOCK</b>&#160;&#160;&#160;((uint8_t)18)</td></tr>
+<tr class="separator:gafedc6b182681752a4299dffdd1ce74da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bc9f60a2cc409365a49862d8551349e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2bc9f60a2cc409365a49862d8551349e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_HS_BUSTEST_WRITE</b>&#160;&#160;&#160;((uint8_t)19)</td></tr>
+<tr class="separator:ga2bc9f60a2cc409365a49862d8551349e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6478634540db1fa3fcd044315d1238b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6478634540db1fa3fcd044315d1238b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_WRITE_DAT_UNTIL_STOP</b>&#160;&#160;&#160;((uint8_t)20)</td></tr>
+<tr class="separator:ga6478634540db1fa3fcd044315d1238b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5dd52de3e95163402a5cd995620d4d01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5dd52de3e95163402a5cd995620d4d01"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SET_BLOCK_COUNT</b>&#160;&#160;&#160;((uint8_t)23)</td></tr>
+<tr class="separator:ga5dd52de3e95163402a5cd995620d4d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20a1c8427ec19835fe2782ec8febd5ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga20a1c8427ec19835fe2782ec8febd5ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_WRITE_SINGLE_BLOCK</b>&#160;&#160;&#160;((uint8_t)24)</td></tr>
+<tr class="separator:ga20a1c8427ec19835fe2782ec8febd5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe82a884b2692654c9862bb25b8706ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafe82a884b2692654c9862bb25b8706ce"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_WRITE_MULT_BLOCK</b>&#160;&#160;&#160;((uint8_t)25)</td></tr>
+<tr class="separator:gafe82a884b2692654c9862bb25b8706ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4c3d35575ecc87fb571f2bfb80f3847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae4c3d35575ecc87fb571f2bfb80f3847"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_PROG_CID</b>&#160;&#160;&#160;((uint8_t)26)</td></tr>
+<tr class="separator:gae4c3d35575ecc87fb571f2bfb80f3847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf911e3c602583e43e3bc16def5feebfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf911e3c602583e43e3bc16def5feebfc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_PROG_CSD</b>&#160;&#160;&#160;((uint8_t)27)</td></tr>
+<tr class="separator:gaf911e3c602583e43e3bc16def5feebfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a35e2c3f9d6237bf7a3577225d077d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7a35e2c3f9d6237bf7a3577225d077d8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SET_WRITE_PROT</b>&#160;&#160;&#160;((uint8_t)28)</td></tr>
+<tr class="separator:ga7a35e2c3f9d6237bf7a3577225d077d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1c159cda7e89dfc085ac66e90790a56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac1c159cda7e89dfc085ac66e90790a56"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_CLR_WRITE_PROT</b>&#160;&#160;&#160;((uint8_t)29)</td></tr>
+<tr class="separator:gac1c159cda7e89dfc085ac66e90790a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabeb680262be8cc173543ae8b1874c83d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabeb680262be8cc173543ae8b1874c83d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SEND_WRITE_PROT</b>&#160;&#160;&#160;((uint8_t)30)</td></tr>
+<tr class="separator:gabeb680262be8cc173543ae8b1874c83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34496e2b57973936b853bb1d20dc277d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga34496e2b57973936b853bb1d20dc277d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SD_ERASE_GRP_START</b>&#160;&#160;&#160;((uint8_t)32)</td></tr>
+<tr class="separator:ga34496e2b57973936b853bb1d20dc277d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3118ae546ea7ba60735b866552047ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae3118ae546ea7ba60735b866552047ac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_SD_ERASE_GRP_END</b>&#160;&#160;&#160;((uint8_t)33)</td></tr>
+<tr class="separator:gae3118ae546ea7ba60735b866552047ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae91f1c058f4b0aace233e0e4866fa1d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae91f1c058f4b0aace233e0e4866fa1d3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_ERASE_GRP_START</b>&#160;&#160;&#160;((uint8_t)35)</td></tr>
+<tr class="separator:gae91f1c058f4b0aace233e0e4866fa1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd1685e886f2b4cdeed5813d430a9bf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabd1685e886f2b4cdeed5813d430a9bf3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_ERASE_GRP_END</b>&#160;&#160;&#160;((uint8_t)36)</td></tr>
+<tr class="separator:gabd1685e886f2b4cdeed5813d430a9bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16f4d3918ba7fb538f8d1f3fb8bb0bd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga16f4d3918ba7fb538f8d1f3fb8bb0bd1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_ERASE</b>&#160;&#160;&#160;((uint8_t)38)</td></tr>
+<tr class="separator:ga16f4d3918ba7fb538f8d1f3fb8bb0bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8319cdb71748237d00c937f0fa47fda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac8319cdb71748237d00c937f0fa47fda"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_FAST_IO</b>&#160;&#160;&#160;((uint8_t)39)</td></tr>
+<tr class="separator:gac8319cdb71748237d00c937f0fa47fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac71656d887c8fad884e95ec525a0a8af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac71656d887c8fad884e95ec525a0a8af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_GO_IRQ_STATE</b>&#160;&#160;&#160;((uint8_t)40)</td></tr>
+<tr class="separator:gac71656d887c8fad884e95ec525a0a8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac89f6043b27673973f4a2b7e106a5f63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac89f6043b27673973f4a2b7e106a5f63"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_LOCK_UNLOCK</b>&#160;&#160;&#160;((uint8_t)42)</td></tr>
+<tr class="separator:gac89f6043b27673973f4a2b7e106a5f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga389f949c4ceace711f57dd00f71a8760"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga389f949c4ceace711f57dd00f71a8760"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_APP_CMD</b>&#160;&#160;&#160;((uint8_t)55)</td></tr>
+<tr class="separator:ga389f949c4ceace711f57dd00f71a8760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga201db10c31dd8f6e30d99ca58dd291e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga201db10c31dd8f6e30d99ca58dd291e6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_GEN_CMD</b>&#160;&#160;&#160;((uint8_t)56)</td></tr>
+<tr class="separator:ga201db10c31dd8f6e30d99ca58dd291e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab88d7dbeaf38955b1c7d2806f6b446c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab88d7dbeaf38955b1c7d2806f6b446c2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CMD_NO_CMD</b>&#160;&#160;&#160;((uint8_t)64)</td></tr>
+<tr class="separator:gab88d7dbeaf38955b1c7d2806f6b446c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b28ab176d0d05d7f971809aeb07b758"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga1b28ab176d0d05d7f971809aeb07b758">SD_CMD_APP_SD_SET_BUSWIDTH</a>&#160;&#160;&#160;((uint8_t)6)</td></tr>
+<tr class="separator:ga1b28ab176d0d05d7f971809aeb07b758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2984265566ee729869324cf5b842a601"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga2984265566ee729869324cf5b842a601">SD_CMD_SD_APP_STAUS</a>&#160;&#160;&#160;((uint8_t)13)</td></tr>
+<tr class="separator:ga2984265566ee729869324cf5b842a601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae38cb2fd8f0e7cb42c76e3b11055c424"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gae38cb2fd8f0e7cb42c76e3b11055c424">SD_CMD_SD_APP_SEND_NUM_WRITE_BLOCKS</a>&#160;&#160;&#160;((uint8_t)22)</td></tr>
+<tr class="separator:gae38cb2fd8f0e7cb42c76e3b11055c424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga980954ae3a961028fd59f67a1a30a7de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga980954ae3a961028fd59f67a1a30a7de">SD_CMD_SD_APP_OP_COND</a>&#160;&#160;&#160;((uint8_t)41)</td></tr>
+<tr class="separator:ga980954ae3a961028fd59f67a1a30a7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga713f0d9a7c99b7becea80f232c024b59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga713f0d9a7c99b7becea80f232c024b59">SD_CMD_SD_APP_SET_CLR_CARD_DETECT</a>&#160;&#160;&#160;((uint8_t)42)</td></tr>
+<tr class="separator:ga713f0d9a7c99b7becea80f232c024b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11c23db52041ccaca4a2dbcafca62c88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga11c23db52041ccaca4a2dbcafca62c88">SD_CMD_SD_APP_SEND_SCR</a>&#160;&#160;&#160;((uint8_t)51)</td></tr>
+<tr class="separator:ga11c23db52041ccaca4a2dbcafca62c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09d3d2d61d003d6bf75c3fb128e86dbb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga09d3d2d61d003d6bf75c3fb128e86dbb">SD_CMD_SDIO_RW_DIRECT</a>&#160;&#160;&#160;((uint8_t)52)</td></tr>
+<tr class="separator:ga09d3d2d61d003d6bf75c3fb128e86dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf40f42039cf756a3805800b48e2790ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaf40f42039cf756a3805800b48e2790ed">SD_CMD_SDIO_RW_EXTENDED</a>&#160;&#160;&#160;((uint8_t)53)</td></tr>
+<tr class="separator:gaf40f42039cf756a3805800b48e2790ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f8828be53bb69d6436c03c9c2f427c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga4f8828be53bb69d6436c03c9c2f427c6">SD_CMD_SD_APP_GET_MKB</a>&#160;&#160;&#160;((uint8_t)43)</td></tr>
+<tr class="separator:ga4f8828be53bb69d6436c03c9c2f427c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2e3bf3ef0ee9a3cbb20d43700521ea7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaf2e3bf3ef0ee9a3cbb20d43700521ea7">SD_CMD_SD_APP_GET_MID</a>&#160;&#160;&#160;((uint8_t)44)</td></tr>
+<tr class="separator:gaf2e3bf3ef0ee9a3cbb20d43700521ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga120a1adc8c10961c831b197f0fd51f76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga120a1adc8c10961c831b197f0fd51f76">SD_CMD_SD_APP_SET_CER_RN1</a>&#160;&#160;&#160;((uint8_t)45)</td></tr>
+<tr class="separator:ga120a1adc8c10961c831b197f0fd51f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8fbec70c55b91b2227dd592b7257eae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab8fbec70c55b91b2227dd592b7257eae">SD_CMD_SD_APP_GET_CER_RN2</a>&#160;&#160;&#160;((uint8_t)46)</td></tr>
+<tr class="separator:gab8fbec70c55b91b2227dd592b7257eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6775fd69fe0e739c7464951bd6aacdf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga6775fd69fe0e739c7464951bd6aacdf1">SD_CMD_SD_APP_SET_CER_RES2</a>&#160;&#160;&#160;((uint8_t)47)</td></tr>
+<tr class="separator:ga6775fd69fe0e739c7464951bd6aacdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f39072d4c981331dfc1956c09d8a72c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga0f39072d4c981331dfc1956c09d8a72c">SD_CMD_SD_APP_GET_CER_RES1</a>&#160;&#160;&#160;((uint8_t)48)</td></tr>
+<tr class="separator:ga0f39072d4c981331dfc1956c09d8a72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f4041b0d212f2d5d3f725b0beb97f0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga7f4041b0d212f2d5d3f725b0beb97f0e">SD_CMD_SD_APP_SECURE_READ_MULTIPLE_BLOCK</a>&#160;&#160;&#160;((uint8_t)18)</td></tr>
+<tr class="separator:ga7f4041b0d212f2d5d3f725b0beb97f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97cfaea6d5d8646eda4e40b5e0bcbf94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga97cfaea6d5d8646eda4e40b5e0bcbf94">SD_CMD_SD_APP_SECURE_WRITE_MULTIPLE_BLOCK</a>&#160;&#160;&#160;((uint8_t)25)</td></tr>
+<tr class="separator:ga97cfaea6d5d8646eda4e40b5e0bcbf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60d30f8255fe89e8d1c4aaabb4f3a60f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga60d30f8255fe89e8d1c4aaabb4f3a60f">SD_CMD_SD_APP_SECURE_ERASE</a>&#160;&#160;&#160;((uint8_t)38)</td></tr>
+<tr class="separator:ga60d30f8255fe89e8d1c4aaabb4f3a60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15e57ba63b8da2bf43d0205efd532b89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga15e57ba63b8da2bf43d0205efd532b89">SD_CMD_SD_APP_CHANGE_SECURE_AREA</a>&#160;&#160;&#160;((uint8_t)49)</td></tr>
+<tr class="separator:ga15e57ba63b8da2bf43d0205efd532b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga025052e51318ae13855774c1acf04ee2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga025052e51318ae13855774c1acf04ee2">SD_CMD_SD_APP_SECURE_WRITE_MKB</a>&#160;&#160;&#160;((uint8_t)48)</td></tr>
+<tr class="separator:ga025052e51318ae13855774c1acf04ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3f9516a5e6764baf2083f76f4bc0eea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad3f9516a5e6764baf2083f76f4bc0eea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_DMA_MODE</b>&#160;&#160;&#160;((uint32_t)0x00000000)</td></tr>
+<tr class="separator:gad3f9516a5e6764baf2083f76f4bc0eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44beec2a536fb750d2401d7bb7c227b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga44beec2a536fb750d2401d7bb7c227b6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga44beec2a536fb750d2401d7bb7c227b6">SD_PRESENT</a>&#160;&#160;&#160;((uint8_t)0x01)</td></tr>
+<tr class="memdesc:ga44beec2a536fb750d2401d7bb7c227b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否在SD卡槽中检测到SD卡 <br /></td></tr>
+<tr class="separator:ga44beec2a536fb750d2401d7bb7c227b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga342b72a630b1c5c90e2fd95c93dd686b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga342b72a630b1c5c90e2fd95c93dd686b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SD_NOT_PRESENT</b>&#160;&#160;&#160;((uint8_t)0x00)</td></tr>
+<tr class="separator:ga342b72a630b1c5c90e2fd95c93dd686b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa713e311ddfaf2265d1ba673543a32b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa713e311ddfaf2265d1ba673543a32b2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaa713e311ddfaf2265d1ba673543a32b2">SDIO_STD_CAPACITY_SD_CARD_V1_1</a>&#160;&#160;&#160;((uint32_t)0x00000000)</td></tr>
+<tr class="memdesc:gaa713e311ddfaf2265d1ba673543a32b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">支持的存储卡类型 <br /></td></tr>
+<tr class="separator:gaa713e311ddfaf2265d1ba673543a32b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e67ed9afb202bc0d2993e17ce940b0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9e67ed9afb202bc0d2993e17ce940b0d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_STD_CAPACITY_SD_CARD_V2_0</b>&#160;&#160;&#160;((uint32_t)0x00000001)</td></tr>
+<tr class="separator:ga9e67ed9afb202bc0d2993e17ce940b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac99ee44931ecbf64e04623c442c00916"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac99ee44931ecbf64e04623c442c00916"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_HIGH_CAPACITY_SD_CARD</b>&#160;&#160;&#160;((uint32_t)0x00000002)</td></tr>
+<tr class="separator:gac99ee44931ecbf64e04623c442c00916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga857bc50f4f97f7f5f525da94db9b2774"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga857bc50f4f97f7f5f525da94db9b2774"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_MULTIMEDIA_CARD</b>&#160;&#160;&#160;((uint32_t)0x00000003)</td></tr>
+<tr class="separator:ga857bc50f4f97f7f5f525da94db9b2774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a0f3bb0a673de7c62c071865307a36e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2a0f3bb0a673de7c62c071865307a36e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_SECURE_DIGITAL_IO_CARD</b>&#160;&#160;&#160;((uint32_t)0x00000004)</td></tr>
+<tr class="separator:ga2a0f3bb0a673de7c62c071865307a36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga202a3247319d79b72bd2968761b75144"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga202a3247319d79b72bd2968761b75144"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_HIGH_SPEED_MULTIMEDIA_CARD</b>&#160;&#160;&#160;((uint32_t)0x00000005)</td></tr>
+<tr class="separator:ga202a3247319d79b72bd2968761b75144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63b1da6dd1a51131f3b53f1fbfb41ae3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga63b1da6dd1a51131f3b53f1fbfb41ae3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_SECURE_DIGITAL_IO_COMBO_CARD</b>&#160;&#160;&#160;((uint32_t)0x00000006)</td></tr>
+<tr class="separator:ga63b1da6dd1a51131f3b53f1fbfb41ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1551b2950a3d0c5fa148957b4f169d0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1551b2950a3d0c5fa148957b4f169d0d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIO_HIGH_CAPACITY_MMC_CARD</b>&#160;&#160;&#160;((uint32_t)0x00000007)</td></tr>
+<tr class="separator:ga1551b2950a3d0c5fa148957b4f169d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gacff91fa68daa1d1ee967b5b3fb3dbd8c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> { <br />
+&#160;&#160;<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca6dfaca7c6ace1889e0294f4ec3ec535c">SD_CMD_CRC_FAIL</a> = (1), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cad99fcef385ca3270d3bce97ed972ff1c">SD_DATA_CRC_FAIL</a> = (2), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cae1c1b2d0962bd3f40490b15aed01c8ff">SD_CMD_RSP_TIMEOUT</a> = (3), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cac5f321853ccd7c8aaa571afab467dddd">SD_DATA_TIMEOUT</a> = (4), 
+<br />
+&#160;&#160;<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7b3c2c028697b45c7e4ab738dfb32732">SD_TX_UNDERRUN</a> = (5), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca8536106ed9ebb00c16d0f42d78f31e37">SD_RX_OVERRUN</a> = (6), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cacc0291fc528b2bb330ca1487a8a3f3cd">SD_START_BIT_ERR</a> = (7), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2435ce658dcb58fc0970c9750fecbf10">SD_CMD_OUT_OF_RANGE</a> = (8), 
+<br />
+&#160;&#160;<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cac862cc999fa6648eeb631ea82a07a51e">SD_ADDR_MISALIGNED</a> = (9), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cadd08e6cdc391423ee7c1ba246faf42c3">SD_BLOCK_LEN_ERR</a> = (10), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cae83866c46e2c68646ce05ff3707b042e">SD_ERASE_SEQ_ERR</a> = (11), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8cac52c7addfcb59055f5701898c3484d06">SD_BAD_ERASE_PARAM</a> = (12), 
+<br />
+&#160;&#160;<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca4e295d82b6481694f927367f35aa182d">SD_WRITE_PROT_VIOLATION</a> = (13), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca093949ff310e17d6596e686804cd0e1e">SD_LOCK_UNLOCK_FAILED</a> = (14), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca01a35bd6664353a1af3b9ac093acdf94">SD_COM_CRC_FAILED</a> = (15), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7fefea39264d07dd179b12be8bf2e51c">SD_ILLEGAL_CMD</a> = (16), 
+<br />
+&#160;&#160;<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca283091b73f40d5c229c2c3f3d0f4cb74">SD_CARD_ECC_FAILED</a> = (17), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2c6401e2495de3d9fd3b41c273fda150">SD_CC_ERROR</a> = (18), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca46c693b1502d9e2137ead7857cfe5f9b">SD_GENERAL_UNKNOWN_ERROR</a> = (19), 
+<b>SD_STREAM_READ_UNDERRUN</b> = (20), 
+<br />
+&#160;&#160;<b>SD_STREAM_WRITE_OVERRUN</b> = (21), 
+<b>SD_CID_CSD_OVERWRITE</b> = (22), 
+<b>SD_WP_ERASE_SKIP</b> = (23), 
+<b>SD_CARD_ECC_DISABLED</b> = (24), 
+<br />
+&#160;&#160;<b>SD_ERASE_RESET</b> = (25), 
+<b>SD_AKE_SEQ_ERROR</b> = (26), 
+<b>SD_INVALID_VOLTRANGE</b> = (27), 
+<b>SD_ADDR_OUT_OF_RANGE</b> = (28), 
+<br />
+&#160;&#160;<b>SD_SWITCH_ERROR</b> = (29), 
+<b>SD_SDIO_DISABLED</b> = (30), 
+<b>SD_SDIO_FUNCTION_BUSY</b> = (31), 
+<b>SD_SDIO_FUNCTION_FAILED</b> = (32), 
+<br />
+&#160;&#160;<b>SD_SDIO_UNKNOWN_FUNCTION</b> = (33), 
+<a class="el" href="group__sd__card.html#ggacff91fa68daa1d1ee967b5b3fb3dbd8ca3edc8995af0f0ca919abd400d01d235d">SD_INTERNAL_ERROR</a>, 
+<b>SD_NOT_CONFIGURED</b>, 
+<b>SD_REQUEST_PENDING</b>, 
+<br />
+&#160;&#160;<b>SD_REQUEST_NOT_APPLICABLE</b>, 
+<b>SD_INVALID_PARAMETER</b>, 
+<b>SD_UNSUPPORTED_FEATURE</b>, 
+<b>SD_UNSUPPORTED_HW</b>, 
+<br />
+&#160;&#160;<b>SD_ERROR</b>, 
+<b>SD_OK</b> = 0
+<br />
+ }</td></tr>
+<tr class="separator:gacff91fa68daa1d1ee967b5b3fb3dbd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace0484a459648257c3eae8ea60f64fbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gace0484a459648257c3eae8ea60f64fbf"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gace0484a459648257c3eae8ea60f64fbf">SDTransferState</a> { <b>SD_TRANSFER_OK</b> = 0, 
+<b>SD_TRANSFER_BUSY</b> = 1, 
+<b>SD_TRANSFER_ERROR</b>
+ }<tr class="memdesc:gace0484a459648257c3eae8ea60f64fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDIO 传输状态 <br /></td></tr>
+</td></tr>
+<tr class="separator:gace0484a459648257c3eae8ea60f64fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdc2533a9bff7dc10def0945f5915398"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacdc2533a9bff7dc10def0945f5915398"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gacdc2533a9bff7dc10def0945f5915398">SDCardState</a> { <br />
+&#160;&#160;<b>SD_CARD_READY</b> = ((uint32_t)0x00000001), 
+<b>SD_CARD_IDENTIFICATION</b> = ((uint32_t)0x00000002), 
+<b>SD_CARD_STANDBY</b> = ((uint32_t)0x00000003), 
+<b>SD_CARD_TRANSFER</b> = ((uint32_t)0x00000004), 
+<br />
+&#160;&#160;<b>SD_CARD_SENDING</b> = ((uint32_t)0x00000005), 
+<b>SD_CARD_RECEIVING</b> = ((uint32_t)0x00000006), 
+<b>SD_CARD_PROGRAMMING</b> = ((uint32_t)0x00000007), 
+<b>SD_CARD_DISCONNECTED</b> = ((uint32_t)0x00000008), 
+<br />
+&#160;&#160;<b>SD_CARD_ERROR</b> = ((uint32_t)0x000000FF)
+<br />
+ }<tr class="memdesc:gacdc2533a9bff7dc10def0945f5915398"><td class="mdescLeft">&#160;</td><td class="mdescRight">SD卡状态 <br /></td></tr>
+</td></tr>
+<tr class="separator:gacdc2533a9bff7dc10def0945f5915398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga3c927d4d98ffb6f3cc2442b09c19926c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga3c927d4d98ffb6f3cc2442b09c19926c">SD_Init</a> (void)</td></tr>
+<tr class="memdesc:ga3c927d4d98ffb6f3cc2442b09c19926c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SD Card and put it into StandBy State (Ready for data transfer).  <a href="#ga3c927d4d98ffb6f3cc2442b09c19926c">更多...</a><br /></td></tr>
+<tr class="separator:ga3c927d4d98ffb6f3cc2442b09c19926c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3f228aaee7b2b18acc056b2f27ca3f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gace0484a459648257c3eae8ea60f64fbf">SDTransferState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaf3f228aaee7b2b18acc056b2f27ca3f7">SD_GetStatus</a> (void)</td></tr>
+<tr class="memdesc:gaf3f228aaee7b2b18acc056b2f27ca3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cuurent sd card data transfer status.  <a href="#gaf3f228aaee7b2b18acc056b2f27ca3f7">更多...</a><br /></td></tr>
+<tr class="separator:gaf3f228aaee7b2b18acc056b2f27ca3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c49d266e4f9ba33b7a425361a30d227"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacdc2533a9bff7dc10def0945f5915398">SDCardState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga1c49d266e4f9ba33b7a425361a30d227">SD_GetState</a> (void)</td></tr>
+<tr class="memdesc:ga1c49d266e4f9ba33b7a425361a30d227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current card's state.  <a href="#ga1c49d266e4f9ba33b7a425361a30d227">更多...</a><br /></td></tr>
+<tr class="separator:ga1c49d266e4f9ba33b7a425361a30d227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb7415873dffa26068c5e46025efebfa"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gacb7415873dffa26068c5e46025efebfa">SD_Detect</a> (void)</td></tr>
+<tr class="memdesc:gacb7415873dffa26068c5e46025efebfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect if SD card is correctly plugged in the memory slot.  <a href="#gacb7415873dffa26068c5e46025efebfa">更多...</a><br /></td></tr>
+<tr class="separator:gacb7415873dffa26068c5e46025efebfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fbd4dd6187701cbe286ddb163e9c312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga9fbd4dd6187701cbe286ddb163e9c312">SD_PowerON</a> (void)</td></tr>
+<tr class="memdesc:ga9fbd4dd6187701cbe286ddb163e9c312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enquires cards about their operating voltage and configures clock controls.  <a href="#ga9fbd4dd6187701cbe286ddb163e9c312">更多...</a><br /></td></tr>
+<tr class="separator:ga9fbd4dd6187701cbe286ddb163e9c312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f053c27018521095d7333e7df238764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga9f053c27018521095d7333e7df238764">SD_PowerOFF</a> (void)</td></tr>
+<tr class="memdesc:ga9f053c27018521095d7333e7df238764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns the SDIO output signals off.  <a href="#ga9f053c27018521095d7333e7df238764">更多...</a><br /></td></tr>
+<tr class="separator:ga9f053c27018521095d7333e7df238764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab39f671413ee824a13bf1bd833f724e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab39f671413ee824a13bf1bd833f724e9">SD_InitializeCards</a> (void)</td></tr>
+<tr class="memdesc:gab39f671413ee824a13bf1bd833f724e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intialises all cards or single card as the case may be Card(s) come into standby state.  <a href="#gab39f671413ee824a13bf1bd833f724e9">更多...</a><br /></td></tr>
+<tr class="separator:gab39f671413ee824a13bf1bd833f724e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5348c3c8f17f8c704bf00f1c5e21549d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga5348c3c8f17f8c704bf00f1c5e21549d">SD_GetCardInfo</a> (<a class="el" href="struct_s_d___card_info.html">SD_CardInfo</a> *cardinfo)</td></tr>
+<tr class="memdesc:ga5348c3c8f17f8c704bf00f1c5e21549d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns information about specific card.  <a href="#ga5348c3c8f17f8c704bf00f1c5e21549d">更多...</a><br /></td></tr>
+<tr class="separator:ga5348c3c8f17f8c704bf00f1c5e21549d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga858e0742dd01b2e2f6f397d30de6428f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga858e0742dd01b2e2f6f397d30de6428f">SD_GetCardStatus</a> (<a class="el" href="struct_s_d___card_status.html">SD_CardStatus</a> *cardstatus)</td></tr>
+<tr class="memdesc:ga858e0742dd01b2e2f6f397d30de6428f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables wide bus opeartion for the requeseted card if supported by card.  <a href="#ga858e0742dd01b2e2f6f397d30de6428f">更多...</a><br /></td></tr>
+<tr class="separator:ga858e0742dd01b2e2f6f397d30de6428f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6569e73a229e639d2043549942d58d11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga6569e73a229e639d2043549942d58d11">SD_EnableWideBusOperation</a> (uint32_t WideMode)</td></tr>
+<tr class="memdesc:ga6569e73a229e639d2043549942d58d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables wide bus opeartion for the requeseted card if supported by card.  <a href="#ga6569e73a229e639d2043549942d58d11">更多...</a><br /></td></tr>
+<tr class="separator:ga6569e73a229e639d2043549942d58d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849eb0b385337453139a7567898dacb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga849eb0b385337453139a7567898dacb7">SD_SelectDeselect</a> (uint64_t addr)</td></tr>
+<tr class="memdesc:ga849eb0b385337453139a7567898dacb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects od Deselects the corresponding card.  <a href="#ga849eb0b385337453139a7567898dacb7">更多...</a><br /></td></tr>
+<tr class="separator:ga849eb0b385337453139a7567898dacb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b2b4c1bf25da0771325b00cd638129d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga1b2b4c1bf25da0771325b00cd638129d">SD_ReadBlock</a> (uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize)</td></tr>
+<tr class="memdesc:ga1b2b4c1bf25da0771325b00cd638129d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to read one block from a specified address in a card. The Data transfer can be managed by DMA mode or Polling mode.  <a href="#ga1b2b4c1bf25da0771325b00cd638129d">更多...</a><br /></td></tr>
+<tr class="separator:ga1b2b4c1bf25da0771325b00cd638129d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56b7336165f2631d9142a513ea2d0d17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga56b7336165f2631d9142a513ea2d0d17">SD_ReadMultiBlocks</a> (uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)</td></tr>
+<tr class="memdesc:ga56b7336165f2631d9142a513ea2d0d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to read blocks from a specified address in a card. The Data transfer can be managed by DMA mode or Polling mode.  <a href="#ga56b7336165f2631d9142a513ea2d0d17">更多...</a><br /></td></tr>
+<tr class="separator:ga56b7336165f2631d9142a513ea2d0d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1eef7c1ff23ea746db504463d301a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab1eef7c1ff23ea746db504463d301a8b">SD_WriteBlock</a> (uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize)</td></tr>
+<tr class="memdesc:gab1eef7c1ff23ea746db504463d301a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to write one block starting from a specified address in a card. The Data transfer can be managed by DMA mode or Polling mode.  <a href="#gab1eef7c1ff23ea746db504463d301a8b">更多...</a><br /></td></tr>
+<tr class="separator:gab1eef7c1ff23ea746db504463d301a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64baac72a75a2c522e837935009cbe93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga64baac72a75a2c522e837935009cbe93">SD_WriteMultiBlocks</a> (uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)</td></tr>
+<tr class="memdesc:ga64baac72a75a2c522e837935009cbe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by DMA mode only.  <a href="#ga64baac72a75a2c522e837935009cbe93">更多...</a><br /></td></tr>
+<tr class="separator:ga64baac72a75a2c522e837935009cbe93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2dd79455185c28bd21964d113a38d110"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gace0484a459648257c3eae8ea60f64fbf">SDTransferState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga2dd79455185c28bd21964d113a38d110">SD_GetTransferState</a> (void)</td></tr>
+<tr class="memdesc:ga2dd79455185c28bd21964d113a38d110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cuurent data transfer state.  <a href="#ga2dd79455185c28bd21964d113a38d110">更多...</a><br /></td></tr>
+<tr class="separator:ga2dd79455185c28bd21964d113a38d110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3dc52f076ae8145e105cb4d8a37b043"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gad3dc52f076ae8145e105cb4d8a37b043">SD_StopTransfer</a> (void)</td></tr>
+<tr class="memdesc:gad3dc52f076ae8145e105cb4d8a37b043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aborts an ongoing data transfer.  <a href="#gad3dc52f076ae8145e105cb4d8a37b043">更多...</a><br /></td></tr>
+<tr class="separator:gad3dc52f076ae8145e105cb4d8a37b043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca2450c63f52cd6c1d50f6de33ecfdf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaca2450c63f52cd6c1d50f6de33ecfdf8">SD_Erase</a> (uint64_t startaddr, uint64_t endaddr)</td></tr>
+<tr class="memdesc:gaca2450c63f52cd6c1d50f6de33ecfdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to erase memory area specified for the given card.  <a href="#gaca2450c63f52cd6c1d50f6de33ecfdf8">更多...</a><br /></td></tr>
+<tr class="separator:gaca2450c63f52cd6c1d50f6de33ecfdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7de24baeb4c6a7c9e5668630b8797888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga7de24baeb4c6a7c9e5668630b8797888">SD_SendStatus</a> (uint32_t *pcardstatus)</td></tr>
+<tr class="memdesc:ga7de24baeb4c6a7c9e5668630b8797888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current card's status.  <a href="#ga7de24baeb4c6a7c9e5668630b8797888">更多...</a><br /></td></tr>
+<tr class="separator:ga7de24baeb4c6a7c9e5668630b8797888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab573516bdaa3054877172415e66d0e57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab573516bdaa3054877172415e66d0e57">SD_SendSDStatus</a> (uint32_t *psdstatus)</td></tr>
+<tr class="memdesc:gab573516bdaa3054877172415e66d0e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current SD card's status.  <a href="#gab573516bdaa3054877172415e66d0e57">更多...</a><br /></td></tr>
+<tr class="separator:gab573516bdaa3054877172415e66d0e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab21b0412e865d8cabc915dc840fa1ccc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab21b0412e865d8cabc915dc840fa1ccc">SD_ProcessIRQSrc</a> (void)</td></tr>
+<tr class="memdesc:gab21b0412e865d8cabc915dc840fa1ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to process all the interrupts that are high.  <a href="#gab21b0412e865d8cabc915dc840fa1ccc">更多...</a><br /></td></tr>
+<tr class="separator:gab21b0412e865d8cabc915dc840fa1ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52ec18498c19918549142f6680a7b21e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga52ec18498c19918549142f6680a7b21e">SD_ProcessDMAIRQ</a> (void)</td></tr>
+<tr class="memdesc:ga52ec18498c19918549142f6680a7b21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function waits until the SDIO DMA data transfer is finished.  <a href="#ga52ec18498c19918549142f6680a7b21e">更多...</a><br /></td></tr>
+<tr class="separator:ga52ec18498c19918549142f6680a7b21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42ab410b834d74d7f3ee757dc888b8cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga42ab410b834d74d7f3ee757dc888b8cc">SD_WaitReadOperation</a> (void)</td></tr>
+<tr class="memdesc:ga42ab410b834d74d7f3ee757dc888b8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function waits until the SDIO DMA data transfer is finished. This function should be called after SDIO_ReadMultiBlocks() function to insure that all data sent by the card are already transferred by the DMA controller.  <a href="#ga42ab410b834d74d7f3ee757dc888b8cc">更多...</a><br /></td></tr>
+<tr class="separator:ga42ab410b834d74d7f3ee757dc888b8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad55967ea67075f01671fb2144c7f7b0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gad55967ea67075f01671fb2144c7f7b0d">SD_WaitWriteOperation</a> (void)</td></tr>
+<tr class="memdesc:gad55967ea67075f01671fb2144c7f7b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function waits until the SDIO DMA data transfer is finished. This function should be called after SDIO_WriteBlock() and SDIO_WriteMultiBlocks() function to insure that all data sent by the card are already transferred by the DMA controller.  <a href="#gad55967ea67075f01671fb2144c7f7b0d">更多...</a><br /></td></tr>
+<tr class="separator:gad55967ea67075f01671fb2144c7f7b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2457c748cf09c7ad5d3c9211d11e3fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga2457c748cf09c7ad5d3c9211d11e3fab">SD_HighSpeed</a> (void)</td></tr>
+<tr class="memdesc:ga2457c748cf09c7ad5d3c9211d11e3fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch mode High-Speed.  <a href="#ga2457c748cf09c7ad5d3c9211d11e3fab">更多...</a><br /></td></tr>
+<tr class="separator:ga2457c748cf09c7ad5d3c9211d11e3fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ga700c48bc2c031e2b002dd551a1af154c"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga700c48bc2c031e2b002dd551a1af154c">SD_CSD::CSDStruct</a></td></tr>
+<tr class="separator:ga700c48bc2c031e2b002dd551a1af154c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae42076ec74babfee72c7a3705d13461a"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gae42076ec74babfee72c7a3705d13461a">SD_CSD::SysSpecVersion</a></td></tr>
+<tr class="separator:gae42076ec74babfee72c7a3705d13461a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7c521a48dcc810a5b1b76278d5bebb2"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab7c521a48dcc810a5b1b76278d5bebb2">SD_CSD::Reserved1</a></td></tr>
+<tr class="separator:gab7c521a48dcc810a5b1b76278d5bebb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3a3b789a57530a170119a3459571632"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gac3a3b789a57530a170119a3459571632">SD_CSD::TAAC</a></td></tr>
+<tr class="separator:gac3a3b789a57530a170119a3459571632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf243b37ec081b6ef479a3d2d50668543"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaf243b37ec081b6ef479a3d2d50668543">SD_CSD::NSAC</a></td></tr>
+<tr class="separator:gaf243b37ec081b6ef479a3d2d50668543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab044e6cb2434800c2dd10fbd71519a64"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab044e6cb2434800c2dd10fbd71519a64">SD_CSD::MaxBusClkFrec</a></td></tr>
+<tr class="separator:gab044e6cb2434800c2dd10fbd71519a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2777d2837a2db0a106ce0a915253f24d"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga2777d2837a2db0a106ce0a915253f24d">SD_CSD::CardComdClasses</a></td></tr>
+<tr class="separator:ga2777d2837a2db0a106ce0a915253f24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03458802593a7d3eeffa8518b204ba73"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga03458802593a7d3eeffa8518b204ba73">SD_CSD::RdBlockLen</a></td></tr>
+<tr class="separator:ga03458802593a7d3eeffa8518b204ba73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1480fb0cce305cbec05307b277fe9e6"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gad1480fb0cce305cbec05307b277fe9e6">SD_CSD::PartBlockRead</a></td></tr>
+<tr class="separator:gad1480fb0cce305cbec05307b277fe9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac92bbdc65323bdaa2738ba34fb801694"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gac92bbdc65323bdaa2738ba34fb801694">SD_CSD::WrBlockMisalign</a></td></tr>
+<tr class="separator:gac92bbdc65323bdaa2738ba34fb801694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga897fc62e6505259c20ac4490a589a09c"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga897fc62e6505259c20ac4490a589a09c">SD_CSD::RdBlockMisalign</a></td></tr>
+<tr class="separator:ga897fc62e6505259c20ac4490a589a09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96e5ee8c184999bd5f2b007015e2a7a9"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga96e5ee8c184999bd5f2b007015e2a7a9">SD_CSD::DSRImpl</a></td></tr>
+<tr class="separator:ga96e5ee8c184999bd5f2b007015e2a7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae550128917d915a10d07cc6bab428d4a"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gae550128917d915a10d07cc6bab428d4a">SD_CSD::Reserved2</a></td></tr>
+<tr class="separator:gae550128917d915a10d07cc6bab428d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ef41bf634f8340f737de91de78e33f8"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga3ef41bf634f8340f737de91de78e33f8">SD_CSD::DeviceSize</a></td></tr>
+<tr class="separator:ga3ef41bf634f8340f737de91de78e33f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2cbdc29ba8b93b465f9ec426eca68c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa2cbdc29ba8b93b465f9ec426eca68c3"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::MaxRdCurrentVDDMin</b></td></tr>
+<tr class="separator:gaa2cbdc29ba8b93b465f9ec426eca68c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga234f8b4a3cfc3b7315f868b6db662c9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga234f8b4a3cfc3b7315f868b6db662c9d"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::MaxRdCurrentVDDMax</b></td></tr>
+<tr class="separator:ga234f8b4a3cfc3b7315f868b6db662c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73ca31a038188d40d21a17bd8df2a537"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga73ca31a038188d40d21a17bd8df2a537"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::MaxWrCurrentVDDMin</b></td></tr>
+<tr class="separator:ga73ca31a038188d40d21a17bd8df2a537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b8dc6523a12e769b3ae39414be1def9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5b8dc6523a12e769b3ae39414be1def9"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::MaxWrCurrentVDDMax</b></td></tr>
+<tr class="separator:ga5b8dc6523a12e769b3ae39414be1def9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca482f63045f066d6fb9ac446a5610d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaca482f63045f066d6fb9ac446a5610d3"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::DeviceSizeMul</b></td></tr>
+<tr class="separator:gaca482f63045f066d6fb9ac446a5610d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb7b59f21356b037b182c3821c965dab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabb7b59f21356b037b182c3821c965dab"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::EraseGrSize</b></td></tr>
+<tr class="separator:gabb7b59f21356b037b182c3821c965dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9143690c3d9259dce81738b55ceb9a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab9143690c3d9259dce81738b55ceb9a0"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::EraseGrMul</b></td></tr>
+<tr class="separator:gab9143690c3d9259dce81738b55ceb9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e57d5b444f210a4309508f01711e8bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7e57d5b444f210a4309508f01711e8bd"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::WrProtectGrSize</b></td></tr>
+<tr class="separator:ga7e57d5b444f210a4309508f01711e8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1707098ad23967eec09ad50271182237"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1707098ad23967eec09ad50271182237"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::WrProtectGrEnable</b></td></tr>
+<tr class="separator:ga1707098ad23967eec09ad50271182237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga146f7fcc6a8f7d0171437bfca8620d03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga146f7fcc6a8f7d0171437bfca8620d03"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::ManDeflECC</b></td></tr>
+<tr class="separator:ga146f7fcc6a8f7d0171437bfca8620d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafddd7e2be79a4b5386434b912bd0f825"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafddd7e2be79a4b5386434b912bd0f825"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::WrSpeedFact</b></td></tr>
+<tr class="separator:gafddd7e2be79a4b5386434b912bd0f825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9386e7249e876d1ce6c3cbfe605e93c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa9386e7249e876d1ce6c3cbfe605e93c"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::MaxWrBlockLen</b></td></tr>
+<tr class="separator:gaa9386e7249e876d1ce6c3cbfe605e93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4e1e8b0ab14e493939f879297ffdbbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae4e1e8b0ab14e493939f879297ffdbbe"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::WriteBlockPaPartial</b></td></tr>
+<tr class="separator:gae4e1e8b0ab14e493939f879297ffdbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe043702fb9818d6f24d34371fda3025"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafe043702fb9818d6f24d34371fda3025"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::Reserved3</b></td></tr>
+<tr class="separator:gafe043702fb9818d6f24d34371fda3025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab02312218dcd28a42708b8cff49f7f0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab02312218dcd28a42708b8cff49f7f0e"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::ContentProtectAppli</b></td></tr>
+<tr class="separator:gab02312218dcd28a42708b8cff49f7f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb2d5906780ba444ca5a6eb75eeb8fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafb2d5906780ba444ca5a6eb75eeb8fee"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::FileFormatGrouop</b></td></tr>
+<tr class="separator:gafb2d5906780ba444ca5a6eb75eeb8fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2930a617ae6630850ec062a2ceaf8762"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2930a617ae6630850ec062a2ceaf8762"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::CopyFlag</b></td></tr>
+<tr class="separator:ga2930a617ae6630850ec062a2ceaf8762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab31b083f7a756112fae67db27d15f82a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab31b083f7a756112fae67db27d15f82a"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::PermWrProtect</b></td></tr>
+<tr class="separator:gab31b083f7a756112fae67db27d15f82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0134cfdb7840adaa39b9ca23c491ea84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0134cfdb7840adaa39b9ca23c491ea84"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::TempWrProtect</b></td></tr>
+<tr class="separator:ga0134cfdb7840adaa39b9ca23c491ea84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3435892f554d46b7bc17aa658031945b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3435892f554d46b7bc17aa658031945b"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::FileFormat</b></td></tr>
+<tr class="separator:ga3435892f554d46b7bc17aa658031945b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa348f5bef86a7a8723bb0281b8e8551d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa348f5bef86a7a8723bb0281b8e8551d"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::ECC</b></td></tr>
+<tr class="separator:gaa348f5bef86a7a8723bb0281b8e8551d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43450c04007ddabe115972b6dd9d4f3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga43450c04007ddabe115972b6dd9d4f3e"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::CSD_CRC</b></td></tr>
+<tr class="separator:ga43450c04007ddabe115972b6dd9d4f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25a315f2dadfbed5ad39898ce0ae25cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga25a315f2dadfbed5ad39898ce0ae25cc"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CSD::Reserved4</b></td></tr>
+<tr class="separator:ga25a315f2dadfbed5ad39898ce0ae25cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac16d38fcef6d661738d8f880f899a5ee"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gac16d38fcef6d661738d8f880f899a5ee">SD_CID::ManufacturerID</a></td></tr>
+<tr class="separator:gac16d38fcef6d661738d8f880f899a5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae715248acd4c86ce3b821759bef6f1e1"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gae715248acd4c86ce3b821759bef6f1e1">SD_CID::OEM_AppliID</a></td></tr>
+<tr class="separator:gae715248acd4c86ce3b821759bef6f1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab707dc163bd2cb8fc8d98643ea797585"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gab707dc163bd2cb8fc8d98643ea797585">SD_CID::ProdName1</a></td></tr>
+<tr class="separator:gab707dc163bd2cb8fc8d98643ea797585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa6e8c0191c67b8692c0dc8dfccff76d"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gaaa6e8c0191c67b8692c0dc8dfccff76d">SD_CID::ProdName2</a></td></tr>
+<tr class="separator:gaaa6e8c0191c67b8692c0dc8dfccff76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c9906d1956b15f7e333323af56fe052"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga3c9906d1956b15f7e333323af56fe052">SD_CID::ProdRev</a></td></tr>
+<tr class="separator:ga3c9906d1956b15f7e333323af56fe052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc2afe7dd7073a844eaebb4bd4449abb"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#gadc2afe7dd7073a844eaebb4bd4449abb">SD_CID::ProdSN</a></td></tr>
+<tr class="separator:gadc2afe7dd7073a844eaebb4bd4449abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d5599017d56204e4fe5b0aa7dd32294"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga1d5599017d56204e4fe5b0aa7dd32294">SD_CID::Reserved1</a></td></tr>
+<tr class="separator:ga1d5599017d56204e4fe5b0aa7dd32294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fa8e16f55984066e24cf2503477dfcd"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga6fa8e16f55984066e24cf2503477dfcd">SD_CID::ManufactDate</a></td></tr>
+<tr class="separator:ga6fa8e16f55984066e24cf2503477dfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab5a4086870be0b9255ee6350789d970"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaab5a4086870be0b9255ee6350789d970"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CID::CID_CRC</b></td></tr>
+<tr class="separator:gaab5a4086870be0b9255ee6350789d970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e3ba2aaed5d569ac75fd24ddb6d73d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7e3ba2aaed5d569ac75fd24ddb6d73d5"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CID::Reserved2</b></td></tr>
+<tr class="separator:ga7e3ba2aaed5d569ac75fd24ddb6d73d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3c5d7c0938feed59e8e79f2a694b9dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac3c5d7c0938feed59e8e79f2a694b9dc"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::DAT_BUS_WIDTH</b></td></tr>
+<tr class="separator:gac3c5d7c0938feed59e8e79f2a694b9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d68bc70456708b430a7eaae97fda0d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3d68bc70456708b430a7eaae97fda0d9"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::SECURED_MODE</b></td></tr>
+<tr class="separator:ga3d68bc70456708b430a7eaae97fda0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga400d54eab48ecfef2d8dc7a3b6271976"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga400d54eab48ecfef2d8dc7a3b6271976"></a>
+volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::SD_CARD_TYPE</b></td></tr>
+<tr class="separator:ga400d54eab48ecfef2d8dc7a3b6271976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9ef610dc047b17a4b6da4309e2163a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae9ef610dc047b17a4b6da4309e2163a1"></a>
+volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::SIZE_OF_PROTECTED_AREA</b></td></tr>
+<tr class="separator:gae9ef610dc047b17a4b6da4309e2163a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefcdb19028ffb65e00489c6943c043e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaefcdb19028ffb65e00489c6943c043e4"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::SPEED_CLASS</b></td></tr>
+<tr class="separator:gaefcdb19028ffb65e00489c6943c043e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07235226d6db22e24c4d32c4125b8e7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga07235226d6db22e24c4d32c4125b8e7a"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::PERFORMANCE_MOVE</b></td></tr>
+<tr class="separator:ga07235226d6db22e24c4d32c4125b8e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29ae9bd3d8353e0df873e24adebddc9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga29ae9bd3d8353e0df873e24adebddc9d"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::AU_SIZE</b></td></tr>
+<tr class="separator:ga29ae9bd3d8353e0df873e24adebddc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga868572db9f24ce2075e65357e056e3d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga868572db9f24ce2075e65357e056e3d4"></a>
+volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::ERASE_SIZE</b></td></tr>
+<tr class="separator:ga868572db9f24ce2075e65357e056e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30eed54506e6f25578ed44ea73d9e960"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga30eed54506e6f25578ed44ea73d9e960"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::ERASE_TIMEOUT</b></td></tr>
+<tr class="separator:ga30eed54506e6f25578ed44ea73d9e960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb6673a89a3f6112ff752c2fef0002df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafb6673a89a3f6112ff752c2fef0002df"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardStatus::ERASE_OFFSET</b></td></tr>
+<tr class="separator:gafb6673a89a3f6112ff752c2fef0002df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03390f9fae0ea5c3bd57194272d565db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga03390f9fae0ea5c3bd57194272d565db"></a>
+<a class="el" href="struct_s_d___c_s_d.html">SD_CSD</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardInfo::SD_csd</b></td></tr>
+<tr class="separator:ga03390f9fae0ea5c3bd57194272d565db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8074beb30b2ce80f4f24fb9c2895329"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae8074beb30b2ce80f4f24fb9c2895329"></a>
+<a class="el" href="struct_s_d___c_i_d.html">SD_CID</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardInfo::SD_cid</b></td></tr>
+<tr class="separator:gae8074beb30b2ce80f4f24fb9c2895329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga536fbe580a6c824e73a2c3c4cf5b40c6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga536fbe580a6c824e73a2c3c4cf5b40c6">SD_CardInfo::CardCapacity</a></td></tr>
+<tr class="separator:ga536fbe580a6c824e73a2c3c4cf5b40c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga610fdab86929f0fc26881d564b19d609"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sd__card.html#ga610fdab86929f0fc26881d564b19d609">SD_CardInfo::CardBlockSize</a></td></tr>
+<tr class="separator:ga610fdab86929f0fc26881d564b19d609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabfc547297bf8e2b1713dc3072300b7e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabfc547297bf8e2b1713dc3072300b7e0"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardInfo::RCA</b></td></tr>
+<tr class="separator:gabfc547297bf8e2b1713dc3072300b7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e81c89d9a913a4dd5e81b9f8856ea96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4e81c89d9a913a4dd5e81b9f8856ea96"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>SD_CardInfo::CardType</b></td></tr>
+<tr class="separator:ga4e81c89d9a913a4dd5e81b9f8856ea96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="ga1b28ab176d0d05d7f971809aeb07b758"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_APP_SD_SET_BUSWIDTH&#160;&#160;&#160;((uint8_t)6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga15e57ba63b8da2bf43d0205efd532b89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_CHANGE_SECURE_AREA&#160;&#160;&#160;((uint8_t)49)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0f39072d4c981331dfc1956c09d8a72c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_GET_CER_RES1&#160;&#160;&#160;((uint8_t)48)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="gab8fbec70c55b91b2227dd592b7257eae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_GET_CER_RN2&#160;&#160;&#160;((uint8_t)46)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf2e3bf3ef0ee9a3cbb20d43700521ea7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_GET_MID&#160;&#160;&#160;((uint8_t)44)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga4f8828be53bb69d6436c03c9c2f427c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_GET_MKB&#160;&#160;&#160;((uint8_t)43)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga980954ae3a961028fd59f67a1a30a7de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_OP_COND&#160;&#160;&#160;((uint8_t)41)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga60d30f8255fe89e8d1c4aaabb4f3a60f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SECURE_ERASE&#160;&#160;&#160;((uint8_t)38)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7f4041b0d212f2d5d3f725b0beb97f0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SECURE_READ_MULTIPLE_BLOCK&#160;&#160;&#160;((uint8_t)18)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga025052e51318ae13855774c1acf04ee2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SECURE_WRITE_MKB&#160;&#160;&#160;((uint8_t)48)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga97cfaea6d5d8646eda4e40b5e0bcbf94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SECURE_WRITE_MULTIPLE_BLOCK&#160;&#160;&#160;((uint8_t)25)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="gae38cb2fd8f0e7cb42c76e3b11055c424"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SEND_NUM_WRITE_BLOCKS&#160;&#160;&#160;((uint8_t)22)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga11c23db52041ccaca4a2dbcafca62c88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SEND_SCR&#160;&#160;&#160;((uint8_t)51)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga6775fd69fe0e739c7464951bd6aacdf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SET_CER_RES2&#160;&#160;&#160;((uint8_t)47)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga120a1adc8c10961c831b197f0fd51f76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SET_CER_RN1&#160;&#160;&#160;((uint8_t)45)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga713f0d9a7c99b7becea80f232c024b59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_SET_CLR_CARD_DETECT&#160;&#160;&#160;((uint8_t)42)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga2984265566ee729869324cf5b842a601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SD_APP_STAUS&#160;&#160;&#160;((uint8_t)13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="ga09d3d2d61d003d6bf75c3fb128e86dbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SDIO_RW_DIRECT&#160;&#160;&#160;((uint8_t)52)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD I/O Card only </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf40f42039cf756a3805800b48e2790ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CMD_SDIO_RW_EXTENDED&#160;&#160;&#160;((uint8_t)53)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For SD I/O Card only </p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="gacff91fa68daa1d1ee967b5b3fb3dbd8c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca6dfaca7c6ace1889e0294f4ec3ec535c"></a>SD_CMD_CRC_FAIL&#160;</td><td class="fielddoc">
+<p>SDIO错误类型定义 </p>
+<p>接收到了命令响应，但是CRC校验失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cad99fcef385ca3270d3bce97ed972ff1c"></a>SD_DATA_CRC_FAIL&#160;</td><td class="fielddoc">
+<p>数据块发送/接收成功，但是CRC校验失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cae1c1b2d0962bd3f40490b15aed01c8ff"></a>SD_CMD_RSP_TIMEOUT&#160;</td><td class="fielddoc">
+<p>命令响应超时 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cac5f321853ccd7c8aaa571afab467dddd"></a>SD_DATA_TIMEOUT&#160;</td><td class="fielddoc">
+<p>数据超时 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7b3c2c028697b45c7e4ab738dfb32732"></a>SD_TX_UNDERRUN&#160;</td><td class="fielddoc">
+<p>发送FIFO尚未清空 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca8536106ed9ebb00c16d0f42d78f31e37"></a>SD_RX_OVERRUN&#160;</td><td class="fielddoc">
+<p>接收FIFO溢出 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cacc0291fc528b2bb330ca1487a8a3f3cd"></a>SD_START_BIT_ERR&#160;</td><td class="fielddoc">
+<p>宽总线模式下未在数据信号上检测到起始位 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2435ce658dcb58fc0970c9750fecbf10"></a>SD_CMD_OUT_OF_RANGE&#160;</td><td class="fielddoc">
+<p>命令的参数超出范围 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cac862cc999fa6648eeb631ea82a07a51e"></a>SD_ADDR_MISALIGNED&#160;</td><td class="fielddoc">
+<p>地址没有对齐 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cadd08e6cdc391423ee7c1ba246faf42c3"></a>SD_BLOCK_LEN_ERR&#160;</td><td class="fielddoc">
+<p>发送的数据块的长度不能被用于本SD卡，或者发送的数据长度与块的长度不匹配 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cae83866c46e2c68646ce05ff3707b042e"></a>SD_ERASE_SEQ_ERR&#160;</td><td class="fielddoc">
+<p>擦除指令执行过程中发生了一个错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8cac52c7addfcb59055f5701898c3484d06"></a>SD_BAD_ERASE_PARAM&#160;</td><td class="fielddoc">
+<p>擦除组选择非法 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca4e295d82b6481694f927367f35aa182d"></a>SD_WRITE_PROT_VIOLATION&#160;</td><td class="fielddoc">
+<p>试图写入一个受保护的块 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca093949ff310e17d6596e686804cd0e1e"></a>SD_LOCK_UNLOCK_FAILED&#160;</td><td class="fielddoc">
+<p>试图访问一个锁定的卡，或者检测到序列或密码错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca01a35bd6664353a1af3b9ac093acdf94"></a>SD_COM_CRC_FAILED&#160;</td><td class="fielddoc">
+<p>前一条指令的CRC校验出错 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca7fefea39264d07dd179b12be8bf2e51c"></a>SD_ILLEGAL_CMD&#160;</td><td class="fielddoc">
+<p>当前卡的状态下此指令非法 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca283091b73f40d5c229c2c3f3d0f4cb74"></a>SD_CARD_ECC_FAILED&#160;</td><td class="fielddoc">
+<p>存储卡尝试执行了ECC校验，但数据没有被纠正 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca2c6401e2495de3d9fd3b41c273fda150"></a>SD_CC_ERROR&#160;</td><td class="fielddoc">
+<p>存储卡内部控制器错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca46c693b1502d9e2137ead7857cfe5f9b"></a>SD_GENERAL_UNKNOWN_ERROR&#160;</td><td class="fielddoc">
+<p>未知错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacff91fa68daa1d1ee967b5b3fb3dbd8ca3edc8995af0f0ca919abd400d01d235d"></a>SD_INTERNAL_ERROR&#160;</td><td class="fielddoc">
+<p>标准错误定义 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gacb7415873dffa26068c5e46025efebfa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SD_Detect </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detect if SD card is correctly plugged in the memory slot. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Return</td><td>if SD is detected or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6569e73a229e639d2043549942d58d11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_EnableWideBusOperation </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>WideMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables wide bus opeartion for the requeseted card if supported by card. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">WideMode</td><td>Specifies the SD card wide bus mode. This parameter can be one of the following values: <ul>
+<li>SDIO_BusWide_8b: 8-bit data transfer (Only for MMC) </li>
+<li>SDIO_BusWide_4b: 4-bit data transfer </li>
+<li>SDIO_BusWide_1b: 1-bit data transfer </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; MMC Card doesn't support this feature</p>
+<p>&lt; Configure the SDIO peripheral</p>
+<p>&lt; Configure the SDIO peripheral </p>
+
+</div>
+</div>
+<a class="anchor" id="gaca2450c63f52cd6c1d50f6de33ecfdf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_Erase </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>startaddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>endaddr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows to erase memory area specified for the given card. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startaddr</td><td>the start address. </td></tr>
+    <tr><td class="paramname">endaddr</td><td>the end address. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Check if the card coomnd class supports erase command</p>
+<p>&lt; Send CMD32 SD_ERASE_GRP_START with argument as addr </p>
+
+</div>
+</div>
+<a class="anchor" id="ga5348c3c8f17f8c704bf00f1c5e21549d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_GetCardInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s_d___card_info.html">SD_CardInfo</a> *&#160;</td>
+          <td class="paramname"><em>cardinfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns information about specific card. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardinfo</td><td>pointer to a <a class="el" href="struct_s_d___card_info.html" title="SD卡信息 ">SD_CardInfo</a> structure that contains all SD card information. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Byte 0</p>
+<p>&lt; Byte 1</p>
+<p>&lt; Byte 2</p>
+<p>&lt; Byte 3</p>
+<p>&lt; Byte 4</p>
+<p>&lt; Byte 5</p>
+<p>&lt; Byte 6</p>
+<p>&lt; Reserved</p>
+<p>&lt; Byte 7</p>
+<p>&lt; Byte 8</p>
+<p>&lt; Byte 9</p>
+<p>&lt; Byte 10</p>
+<p>&lt; Byte 7</p>
+<p>&lt; Byte 8</p>
+<p>&lt; Byte 9</p>
+<p>&lt; Byte 10</p>
+<p>&lt; Byte 11</p>
+<p>&lt; Byte 12</p>
+<p>&lt; Byte 13</p>
+<p>&lt; Byte 14</p>
+<p>&lt; Byte 15</p>
+<p>&lt; Byte 0</p>
+<p>&lt; Byte 1</p>
+<p>&lt; Byte 2</p>
+<p>&lt; Byte 3</p>
+<p>&lt; Byte 4</p>
+<p>&lt; Byte 5</p>
+<p>&lt; Byte 6</p>
+<p>&lt; Byte 7</p>
+<p>&lt; Byte 8</p>
+<p>&lt; Byte 9</p>
+<p>&lt; Byte 10</p>
+<p>&lt; Byte 11</p>
+<p>&lt; Byte 12</p>
+<p>&lt; Byte 13</p>
+<p>&lt; Byte 14</p>
+<p>&lt; Byte 15 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga858e0742dd01b2e2f6f397d30de6428f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_GetCardStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s_d___card_status.html">SD_CardStatus</a> *&#160;</td>
+          <td class="paramname"><em>cardstatus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables wide bus opeartion for the requeseted card if supported by card. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">WideMode</td><td>Specifies the SD card wide bus mode. This parameter can be one of the following values: <ul>
+<li>SDIO_BusWide_8b: 8-bit data transfer (Only for MMC) </li>
+<li>SDIO_BusWide_4b: 4-bit data transfer </li>
+<li>SDIO_BusWide_1b: 1-bit data transfer </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Byte 0</p>
+<p>&lt; Byte 2</p>
+<p>&lt; Byte 3</p>
+<p>&lt; Byte 4</p>
+<p>&lt; Byte 5</p>
+<p>&lt; Byte 6</p>
+<p>&lt; Byte 7</p>
+<p>&lt; Byte 8</p>
+<p>&lt; Byte 9</p>
+<p>&lt; Byte 10</p>
+<p>&lt; Byte 11</p>
+<p>&lt; Byte 12</p>
+<p>&lt; Byte 13</p>
+<p>&lt; Byte 13 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga1c49d266e4f9ba33b7a425361a30d227"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacdc2533a9bff7dc10def0945f5915398">SDCardState</a> SD_GetState </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current card's state. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SDCardState</td><td>SD Card Error or SD Card Current State. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf3f228aaee7b2b18acc056b2f27ca3f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gace0484a459648257c3eae8ea60f64fbf">SDTransferState</a> SD_GetStatus </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the cuurent sd card data transfer status. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SDTransferState</td><td>Data Transfer state. This value can be:<ul>
+<li>SD_TRANSFER_OK: No data transfer is acting</li>
+<li>SD_TRANSFER_BUSY: Data transfer is acting </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2dd79455185c28bd21964d113a38d110"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gace0484a459648257c3eae8ea60f64fbf">SDTransferState</a> SD_GetTransferState </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the cuurent data transfer state. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SDTransferState</td><td>Data Transfer state. This value can be:<ul>
+<li>SD_TRANSFER_OK: No data transfer is acting</li>
+<li>SD_TRANSFER_BUSY: Data transfer is acting </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2457c748cf09c7ad5d3c9211d11e3fab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_HighSpeed </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Switch mode High-Speed. </p>
+<dl class="section note"><dt>注解</dt><dd>This function must be used after "Transfer State" </dd>
+<dd>
+This operation should be followed by the configuration of PLL to have SDIOCK clock between 67 and 75 MHz </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Get SCR Register</p>
+<p>&lt; Send CMD6 switch mode </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3c927d4d98ffb6f3cc2442b09c19926c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the SD Card and put it into StandBy State (Ready for data transfer). </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; CMD Response TimeOut (wait for CMDSENT flag)</p>
+<p>&lt; CMD Response TimeOut (wait for CMDSENT flag)</p>
+<p>&lt; SDIO_CK = SDIOCLK / (SDIO_TRANSFER_CLK_DIV + 2)</p>
+<p>&lt; on STM32F4xx devices, SDIOCLK is fixed to 48MHz </p>
+
+</div>
+</div>
+<a class="anchor" id="gab39f671413ee824a13bf1bd833f724e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_InitializeCards </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Intialises all cards or single card as the case may be Card(s) come into standby state. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Send CMD2 ALL_SEND_CID</p>
+<p>&lt; Send CMD3 SET_REL_ADDR with argument 0</p>
+<p>&lt; SD Card publishes its RCA.</p>
+<p>&lt; Send CMD9 SEND_CSD with argument as card's RCA</p>
+<p>&lt; All cards get intialized </p>
+
+</div>
+</div>
+<a class="anchor" id="ga9f053c27018521095d7333e7df238764"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_PowerOFF </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Turns the SDIO output signals off. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Set Power State to OFF </p>
+
+</div>
+</div>
+<a class="anchor" id="ga9fbd4dd6187701cbe286ddb163e9c312"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_PowerON </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enquires cards about their operating voltage and configures clock controls. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Power ON Sequence &ndash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>&lt; Configure the SDIO peripheral</p>
+<p>&lt; SDIO_CK = SDIOCLK / (SDIO_INIT_CLK_DIV + 2)</p>
+<p>&lt; on STM32F4xx devices, SDIOCLK is fixed to 48MHz</p>
+<p>&lt; SDIO_CK for initialization should not exceed 400 KHz</p>
+<p>&lt; Set Power State to ON</p>
+<p>&lt; Enable SDIO Clock</p>
+<p>&lt; CMD0: GO_IDLE_STATE ------------&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>&lt; No CMD response required</p>
+<p>&lt; CMD Response TimeOut (wait for CMDSENT flag)</p>
+<p>&lt; Send CMD8 to verify SD card interface operating condition</p>
+<p>&lt; Argument: - [31:12]: Reserved (shall be set to '0')</p><ul>
+<li>[11:8]: Supply Voltage (VHS) 0x1 (Range: 2.7-3.6 V)</li>
+<li>[7:0]: Check Pattern (recommended 0xAA)</li>
+</ul>
+<p>&lt; CMD Response: R7</p>
+<p>&lt; SD Card 2.0</p>
+<p>&lt; CMD55</p>
+<p>&lt; If errorstatus is Command TimeOut, it is a MMC card</p>
+<p>&lt; If errorstatus is SD_OK it is a SD card: SD card 2.0 (voltage range mismatch) or SD card 1.x</p>
+<p>&lt; SD CARD</p>
+<p>&lt; Send ACMD41 SD_APP_OP_COND with Argument 0x80100000</p>
+<p>&lt; SEND CMD55 APP_CMD with RCA as 0 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga52ec18498c19918549142f6680a7b21e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SD_ProcessDMAIRQ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function waits until the SDIO DMA data transfer is finished. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab21b0412e865d8cabc915dc840fa1ccc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_ProcessIRQSrc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows to process all the interrupts that are high. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1b2b4c1bf25da0771325b00cd638129d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_ReadBlock </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>readbuff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>ReadAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>BlockSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows to read one block from a specified address in a card. The Data transfer can be managed by DMA mode or Polling mode. </p>
+<dl class="section note"><dt>注解</dt><dd>This operation should be followed by two functions to check if the DMA Controller and SD Card status.<ul>
+<li>SD_ReadWaitOperation(): this function insure that the DMA controller has finished all data transfer.</li>
+<li><a class="el" href="group__sd__card__private.html#gaf3f228aaee7b2b18acc056b2f27ca3f7" title="Gets the cuurent sd card data transfer status. ">SD_GetStatus()</a>: to check that the SD Card has finished the data transfer and it is ready for data. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">readbuff</td><td>pointer to the buffer that will contain the received data </td></tr>
+    <tr><td class="paramname">ReadAddr</td><td>Address from where data are to be read. </td></tr>
+    <tr><td class="paramname">BlockSize</td><td>the SD card Data block size. The Block size should be 512. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Send CMD17 READ_SINGLE_BLOCK </p>
+
+</div>
+</div>
+<a class="anchor" id="ga56b7336165f2631d9142a513ea2d0d17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_ReadMultiBlocks </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>readbuff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>ReadAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>BlockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NumberOfBlocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows to read blocks from a specified address in a card. The Data transfer can be managed by DMA mode or Polling mode. </p>
+<dl class="section note"><dt>注解</dt><dd>This operation should be followed by two functions to check if the DMA Controller and SD Card status.<ul>
+<li>SD_ReadWaitOperation(): this function insure that the DMA controller has finished all data transfer.</li>
+<li><a class="el" href="group__sd__card__private.html#gaf3f228aaee7b2b18acc056b2f27ca3f7" title="Gets the cuurent sd card data transfer status. ">SD_GetStatus()</a>: to check that the SD Card has finished the data transfer and it is ready for data. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">readbuff</td><td>pointer to the buffer that will contain the received data. </td></tr>
+    <tr><td class="paramname">ReadAddr</td><td>Address from where data are to be read. </td></tr>
+    <tr><td class="paramname">BlockSize</td><td>the SD card Data block size. The Block size should be 512. </td></tr>
+    <tr><td class="paramname">NumberOfBlocks</td><td>number of blocks to be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Send CMD18 READ_MULT_BLOCK with argument data address </p>
+
+</div>
+</div>
+<a class="anchor" id="ga849eb0b385337453139a7567898dacb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_SelectDeselect </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Selects od Deselects the corresponding card. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>Address of the Card to be selected. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Send CMD7 SDIO_SEL_DESEL_CARD </p>
+
+</div>
+</div>
+<a class="anchor" id="gab573516bdaa3054877172415e66d0e57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_SendSDStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>psdstatus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current SD card's status. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psdstatus</td><td>pointer to the buffer that will contain the SD card status (SD Status register). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Send ACMD13 SD_APP_STAUS with argument as card's RCA. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7de24baeb4c6a7c9e5668630b8797888"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_SendStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pcardstatus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current card's status. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pcardstatus</td><td>pointer to the buffer that will contain the SD card status (Card Status register). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad3dc52f076ae8145e105cb4d8a37b043"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_StopTransfer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aborts an ongoing data transfer. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Send CMD12 STOP_TRANSMISSION </p>
+
+</div>
+</div>
+<a class="anchor" id="ga42ab410b834d74d7f3ee757dc888b8cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_WaitReadOperation </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function waits until the SDIO DMA data transfer is finished. This function should be called after SDIO_ReadMultiBlocks() function to insure that all data sent by the card are already transferred by the DMA controller. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad55967ea67075f01671fb2144c7f7b0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_WaitWriteOperation </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function waits until the SDIO DMA data transfer is finished. This function should be called after SDIO_WriteBlock() and SDIO_WriteMultiBlocks() function to insure that all data sent by the card are already transferred by the DMA controller. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab1eef7c1ff23ea746db504463d301a8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_WriteBlock </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>writebuff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>WriteAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>BlockSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows to write one block starting from a specified address in a card. The Data transfer can be managed by DMA mode or Polling mode. </p>
+<dl class="section note"><dt>注解</dt><dd>This operation should be followed by two functions to check if the DMA Controller and SD Card status.<ul>
+<li>SD_ReadWaitOperation(): this function insure that the DMA controller has finished all data transfer.</li>
+<li><a class="el" href="group__sd__card__private.html#gaf3f228aaee7b2b18acc056b2f27ca3f7" title="Gets the cuurent sd card data transfer status. ">SD_GetStatus()</a>: to check that the SD Card has finished the data transfer and it is ready for data. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writebuff</td><td>pointer to the buffer that contain the data to be transferred. </td></tr>
+    <tr><td class="paramname">WriteAddr</td><td>Address from where data are to be read. </td></tr>
+    <tr><td class="paramname">BlockSize</td><td>the SD card Data block size. The Block size should be 512. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; In case of single data block transfer no need of stop command at all </p>
+
+</div>
+</div>
+<a class="anchor" id="ga64baac72a75a2c522e837935009cbe93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__sd__card.html#gacff91fa68daa1d1ee967b5b3fb3dbd8c">SD_Error</a> SD_WriteMultiBlocks </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>writebuff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>WriteAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>BlockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NumberOfBlocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by DMA mode only. </p>
+<dl class="section note"><dt>注解</dt><dd>This operation should be followed by two functions to check if the DMA Controller and SD Card status.<ul>
+<li>SD_ReadWaitOperation(): this function insure that the DMA controller has finished all data transfer.</li>
+<li><a class="el" href="group__sd__card__private.html#gaf3f228aaee7b2b18acc056b2f27ca3f7" title="Gets the cuurent sd card data transfer status. ">SD_GetStatus()</a>: to check that the SD Card has finished the data transfer and it is ready for data. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">WriteAddr</td><td>Address from where data are to be read. </td></tr>
+    <tr><td class="paramname">writebuff</td><td>pointer to the buffer that contain the data to be transferred. </td></tr>
+    <tr><td class="paramname">BlockSize</td><td>the SD card Data block size. The Block size should be 512. </td></tr>
+    <tr><td class="paramname">NumberOfBlocks</td><td>number of blocks to be written. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD_Error</td><td>SD Card Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="ga610fdab86929f0fc26881d564b19d609"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t SD_CardInfo::CardBlockSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SD卡块大小 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga536fbe580a6c824e73a2c3c4cf5b40c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t SD_CardInfo::CardCapacity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SD卡容量 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga2777d2837a2db0a106ce0a915253f24d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint16_t SD_CSD::CardComdClasses</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>卡命令级别 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga700c48bc2c031e2b002dd551a1af154c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::CSDStruct</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>专有数据结构体 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3ef41bf634f8340f737de91de78e33f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t SD_CSD::DeviceSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设备大小 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga96e5ee8c184999bd5f2b007015e2a7a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::DSRImpl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DSR 实现 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga6fa8e16f55984066e24cf2503477dfcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint16_t SD_CID::ManufactDate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>生产数据 </p>
+
+</div>
+</div>
+<a class="anchor" id="gac16d38fcef6d661738d8f880f899a5ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CID::ManufacturerID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>制造商识别码 </p>
+
+</div>
+</div>
+<a class="anchor" id="gab044e6cb2434800c2dd10fbd71519a64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::MaxBusClkFrec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最大总线频率 </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf243b37ec081b6ef479a3d2d50668543"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::NSAC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>数据读取访问时间2，单位为时钟周期 </p>
+
+</div>
+</div>
+<a class="anchor" id="gae715248acd4c86ce3b821759bef6f1e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint16_t SD_CID::OEM_AppliID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>产品识别码 </p>
+
+</div>
+</div>
+<a class="anchor" id="gad1480fb0cce305cbec05307b277fe9e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::PartBlockRead</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>部分块允许读取 </p>
+
+</div>
+</div>
+<a class="anchor" id="gab707dc163bd2cb8fc8d98643ea797585"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t SD_CID::ProdName1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>产品名称（1） </p>
+
+</div>
+</div>
+<a class="anchor" id="gaaa6e8c0191c67b8692c0dc8dfccff76d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CID::ProdName2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>产品名称（2） </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3c9906d1956b15f7e333323af56fe052"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CID::ProdRev</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>产品版本 </p>
+
+</div>
+</div>
+<a class="anchor" id="gadc2afe7dd7073a844eaebb4bd4449abb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t SD_CID::ProdSN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>产品序列号 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga03458802593a7d3eeffa8518b204ba73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::RdBlockLen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>读取块的最大长度 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga897fc62e6505259c20ac4490a589a09c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::RdBlockMisalign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>读取块没有对齐 </p>
+
+</div>
+</div>
+<a class="anchor" id="gab7c521a48dcc810a5b1b76278d5bebb2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::Reserved1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>保留 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga1d5599017d56204e4fe5b0aa7dd32294"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CID::Reserved1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>保留 </p>
+
+</div>
+</div>
+<a class="anchor" id="gae550128917d915a10d07cc6bab428d4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::Reserved2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>保留 </p>
+
+</div>
+</div>
+<a class="anchor" id="gae42076ec74babfee72c7a3705d13461a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::SysSpecVersion</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>系统识别号 </p>
+
+</div>
+</div>
+<a class="anchor" id="gac3a3b789a57530a170119a3459571632"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::TAAC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>数据读取访问时间1 </p>
+
+</div>
+</div>
+<a class="anchor" id="gac92bbdc65323bdaa2738ba34fb801694"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t SD_CSD::WrBlockMisalign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>写入块没有对齐 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

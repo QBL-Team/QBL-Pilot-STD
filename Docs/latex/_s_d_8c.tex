@@ -1,0 +1,200 @@
+\hypertarget{_s_d_8c}{}\section{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+SD.c 文件参考}
+\label{_s_d_8c}\index{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+S\+D.\+c@{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+S\+D.\+c}}
+{\ttfamily \#include \char`\"{}S\+D.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+sdio.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+F\+L\+A\+GS}~((uint32\+\_\+t)0x000005\+F\+F)
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+C\+M\+D0\+T\+I\+M\+E\+O\+UT}~((uint32\+\_\+t)0x00010000)
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+F\+I\+F\+O\+\_\+\+A\+D\+D\+R\+E\+SS}~((uint32\+\_\+t)0x40012\+C80)
+\item 
+\#define {\bfseries S\+D\+I\+O\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+L\+K\+\_\+\+D\+IV}~0
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+S\+T\+R\+E\+AM}~D\+M\+A2\+\_\+\+Stream3
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+EL}~D\+M\+A\+\_\+\+Channel\+\_\+4
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+F\+E\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+F\+E\+I\+F3
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+D\+M\+E\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+D\+M\+E\+I\+F3
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+I\+F3
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+T\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+T\+I\+F3
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+IF}~D\+M\+A\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+I\+F3
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Qn}~D\+M\+A2\+\_\+\+Stream3\+\_\+\+I\+R\+Qn
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+D\+I\+O\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+H\+A\+N\+D\+L\+ER}~D\+M\+A2\+\_\+\+Stream3\+\_\+\+I\+R\+Q\+Handler
+\item 
+\#define \hyperlink{group__sd__card__private_ga69314e11291e427652a4f6a3a5b1c439}{S\+D\+\_\+\+O\+C\+R\+\_\+\+A\+D\+D\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}~((uint32\+\_\+t)0x80000000)
+\begin{DoxyCompactList}\small\item\em R1 响应位定义 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+A\+D\+D\+R\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+ED}~((uint32\+\_\+t)0x40000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+\_\+\+E\+RR}~((uint32\+\_\+t)0x20000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+RR}~((uint32\+\_\+t)0x10000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+B\+A\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+R\+AM}~((uint32\+\_\+t)0x08000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+O\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON}~((uint32\+\_\+t)0x04000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x01000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x00800000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD}~((uint32\+\_\+t)0x00400000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x00200000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+C\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00100000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00080000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+A\+D\+\_\+\+U\+N\+D\+E\+R\+R\+UN}~((uint32\+\_\+t)0x00040000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+W\+R\+I\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN}~((uint32\+\_\+t)0x00020000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+I\+D\+\_\+\+C\+S\+D\+\_\+\+O\+V\+E\+R\+W\+R\+I\+E\+TE}~((uint32\+\_\+t)0x00010000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+W\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+S\+K\+IP}~((uint32\+\_\+t)0x00008000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+C\+A\+R\+D\+\_\+\+E\+C\+C\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~((uint32\+\_\+t)0x00004000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+E\+R\+A\+S\+E\+\_\+\+R\+E\+S\+ET}~((uint32\+\_\+t)0x00002000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+A\+K\+E\+\_\+\+S\+E\+Q\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00000008)
+\item 
+\#define {\bfseries S\+D\+\_\+\+O\+C\+R\+\_\+\+E\+R\+R\+O\+R\+B\+I\+TS}~((uint32\+\_\+t)0x\+F\+D\+F\+F\+E008)
+\item 
+\#define \hyperlink{group__sd__card__private_ga77d65e0cdecf792a2928b61cc85ed687}{S\+D\+\_\+\+R6\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}~((uint32\+\_\+t)0x00002000)
+\begin{DoxyCompactList}\small\item\em R6响应位定义 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+R6\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+C\+MD}~((uint32\+\_\+t)0x00004000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+R6\+\_\+\+C\+O\+M\+\_\+\+C\+R\+C\+\_\+\+F\+A\+I\+L\+ED}~((uint32\+\_\+t)0x00008000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+SD}~((uint32\+\_\+t)0x80100000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+H\+I\+G\+H\+\_\+\+C\+A\+P\+A\+C\+I\+TY}~((uint32\+\_\+t)0x40000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+T\+D\+\_\+\+C\+A\+P\+A\+C\+I\+TY}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+T\+T\+E\+RN}~((uint32\+\_\+t)0x000001\+A\+A)
+\item 
+\#define {\bfseries S\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+T\+\_\+\+T\+R\+I\+AL}~((uint32\+\_\+t)0x0000\+F\+F\+F\+F)
+\item 
+\#define {\bfseries S\+D\+\_\+\+A\+L\+L\+Z\+E\+RO}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+W\+I\+D\+E\+\_\+\+B\+U\+S\+\_\+\+S\+U\+P\+P\+O\+RT}~((uint32\+\_\+t)0x00040000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+U\+S\+\_\+\+S\+U\+P\+P\+O\+RT}~((uint32\+\_\+t)0x00010000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+A\+R\+D\+\_\+\+L\+O\+C\+K\+ED}~((uint32\+\_\+t)0x02000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+D\+A\+T\+A\+T\+I\+M\+E\+O\+UT}~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F\+F\+F)
+\item 
+\#define {\bfseries S\+D\+\_\+0\+T\+O7\+B\+I\+TS}~((uint32\+\_\+t)0x000000\+F\+F)
+\item 
+\#define {\bfseries S\+D\+\_\+8\+T\+O15\+B\+I\+TS}~((uint32\+\_\+t)0x0000\+F\+F00)
+\item 
+\#define {\bfseries S\+D\+\_\+16\+T\+O23\+B\+I\+TS}~((uint32\+\_\+t)0x00\+F\+F0000)
+\item 
+\#define {\bfseries S\+D\+\_\+24\+T\+O31\+B\+I\+TS}~((uint32\+\_\+t)0x\+F\+F000000)
+\item 
+\#define {\bfseries S\+D\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~((uint32\+\_\+t)0x01\+F\+F\+F\+F\+F\+F)
+\item 
+\#define {\bfseries S\+D\+\_\+\+H\+A\+L\+F\+F\+I\+FO}~((uint32\+\_\+t)0x00000008)
+\item 
+\#define {\bfseries S\+D\+\_\+\+H\+A\+L\+F\+F\+I\+F\+O\+B\+Y\+T\+ES}~((uint32\+\_\+t)0x00000020)
+\item 
+\#define \hyperlink{group__sd__card__private_gac93a99c6a0f8999f37e690d6955872ac}{S\+D\+\_\+\+C\+C\+C\+C\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+CK}~((uint32\+\_\+t)0x00000080)
+\begin{DoxyCompactList}\small\item\em 支持的命令类型 \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+\_\+\+C\+C\+C\+C\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+R\+OT}~((uint32\+\_\+t)0x00000040)
+\item 
+\#define {\bfseries S\+D\+\_\+\+C\+C\+C\+C\+\_\+\+E\+R\+A\+SE}~((uint32\+\_\+t)0x00000020)
+\item 
+\#define \hyperlink{group__sd__card__private_gafe1c9bdbdccf901be62203bf5547147e}{S\+D\+I\+O\+\_\+\+S\+E\+N\+D\+\_\+\+I\+F\+\_\+\+C\+O\+ND}~((uint32\+\_\+t)0x00000008)
+\begin{DoxyCompactList}\small\item\em 下列命令为\+S\+D卡的特定命令 在使用这些命令之前，请先发送命令 S\+D\+I\+O\+\_\+\+A\+P\+P\+\_\+\+C\+MD \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent sd card data transfer status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+State} \hyperlink{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}{S\+D\+\_\+\+Get\+State} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}{S\+D\+\_\+\+Detect} (void)
+\begin{DoxyCompactList}\small\item\em Detect if SD card is correctly plugged in the memory slot. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}{S\+D\+\_\+\+Power\+ON} (void)
+\begin{DoxyCompactList}\small\item\em Enquires cards about their operating voltage and configures clock controls. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga9f053c27018521095d7333e7df238764}{S\+D\+\_\+\+Power\+O\+FF} (void)
+\begin{DoxyCompactList}\small\item\em Turns the S\+D\+IO output signals off. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}{S\+D\+\_\+\+Initialize\+Cards} (void)
+\begin{DoxyCompactList}\small\item\em Intialises all cards or single card as the case may be Card(s) come into standby state. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}{S\+D\+\_\+\+Get\+Card\+Info} (\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} $\ast$cardinfo)
+\begin{DoxyCompactList}\small\item\em Returns information about specific card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}{S\+D\+\_\+\+Get\+Card\+Status} (\hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status} $\ast$cardstatus)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation} (uint32\+\_\+t Wide\+Mode)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}{S\+D\+\_\+\+Select\+Deselect} (uint64\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Selects od Deselects the corresponding card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}{S\+D\+\_\+\+Read\+Block} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}{S\+D\+\_\+\+Read\+Multi\+Blocks} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}{S\+D\+\_\+\+Wait\+Read\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}{S\+D\+\_\+\+Write\+Block} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}{S\+D\+\_\+\+Write\+Multi\+Blocks} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}{S\+D\+\_\+\+Wait\+Write\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}{S\+D\+\_\+\+Get\+Transfer\+State} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent data transfer state. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}{S\+D\+\_\+\+Stop\+Transfer} (void)
+\begin{DoxyCompactList}\small\item\em Aborts an ongoing data transfer. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}{S\+D\+\_\+\+Erase} (uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)
+\begin{DoxyCompactList}\small\item\em Allows to erase memory area specified for the given card. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}{S\+D\+\_\+\+Send\+Status} (uint32\+\_\+t $\ast$pcardstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}{S\+D\+\_\+\+Send\+S\+D\+Status} (uint32\+\_\+t $\ast$psdstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current SD card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}{S\+D\+\_\+\+Process\+I\+R\+Q\+Src} (void)
+\begin{DoxyCompactList}\small\item\em Allows to process all the interrupts that are high. \end{DoxyCompactList}\item 
+void \hyperlink{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. \end{DoxyCompactList}\item 
+\hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}{S\+D\+\_\+\+High\+Speed} (void)
+\begin{DoxyCompactList}\small\item\em Switch mode High-\/\+Speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint32\+\_\+t {\bfseries Stop\+Condition} = 0
+\item 
+volatile \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} {\bfseries Transfer\+Error} = S\+D\+\_\+\+OK
+\item 
+volatile uint32\+\_\+t {\bfseries Transfer\+End} = 0
+\item 
+volatile uint32\+\_\+t {\bfseries D\+M\+A\+End\+Of\+Transfer} = 0
+\item 
+\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} {\bfseries S\+D\+Card\+Info}
+\item 
+S\+D\+I\+O\+\_\+\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Init\+Structure}
+\item 
+S\+D\+I\+O\+\_\+\+Cmd\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Cmd\+Init\+Structure}
+\item 
+S\+D\+I\+O\+\_\+\+Data\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Data\+Init\+Structure}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyAuthor}{作者}
+no1wudi 
+\end{DoxyAuthor}

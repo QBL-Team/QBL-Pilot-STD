@@ -1,0 +1,27 @@
+\hypertarget{_h_m_c5883_8c}{}\section{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+H\+M\+C5883.c 文件参考}
+\label{_h_m_c5883_8c}\index{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+H\+M\+C5883.\+c@{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+H\+M\+C5883.\+c}}
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Q\+B\+L\+\_\+\+I2\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}H\+M\+C5883.\+h\char`\"{}}\\*
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga6887196e8734d548ab7410e96ef5aed4}{H\+M\+C5883\+\_\+\+I\+I\+C\+\_\+\+A\+D\+D\+R\+E\+SS}~0x3C
+\begin{DoxyCompactList}\small\item\em 芯片的\+I\+I\+C地址，参见其数据手册 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga9c9589bb19e67395e4148d33fcb160e6}{H\+M\+C5883\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+NS}~440.\+0f
+\begin{DoxyCompactList}\small\item\em 原始数据到真实数据的缩放比例，参见其数据手册 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga5af6f3e1f8cb12a7d074b60f6653ee24}{H\+M\+C5883\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+A\+D\+DR}~0x03
+\begin{DoxyCompactList}\small\item\em 数据寄存器起始地址 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga8480f1a530d25b8e4996d376d51a86d7}{H\+M\+C5883\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~6
+\begin{DoxyCompactList}\small\item\em 读取的数据量，单位为byte \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga3cc59a009a054a25e6b13ccaa227b4ea}{H\+M\+C5883\+\_\+\+R\+E\+G\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}~1
+\begin{DoxyCompactList}\small\item\em 寄存器地址的宽度，单位为byte \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__hmc5883__driver__private_ga23d45753863d03d2e20ad4175965cb75}{H\+M\+C5883\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em H\+M\+C5883\+\_\+\+Init 初始化\+H\+M\+C5883L. \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__hmc5883__driver__private_gab380fb39719ca6cd76c4277cd0a8e1c8}{H\+M\+C5883\+\_\+\+Update} (float axis\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em H\+M\+C5883\+\_\+\+Update 读取最新的传感器数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyAuthor}{作者}
+no1wudi 
+\end{DoxyAuthor}

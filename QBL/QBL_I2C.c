@@ -127,8 +127,6 @@ QBL_STATUS QBL_I2C_Mem_Read(const uint32_t QBL_I2C_Base, const uint8_t DevAddr, 
         }
 
         *Value++ = I2C_ReceiveData(TOINSTANCE(QBL_I2C_Base));
-
-
         Length--;
     }
     I2C_AcknowledgeConfig(TOINSTANCE(QBL_I2C_Base), ENABLE);

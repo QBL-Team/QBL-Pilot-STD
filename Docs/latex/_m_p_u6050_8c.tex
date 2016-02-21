@@ -1,0 +1,33 @@
+\hypertarget{_m_p_u6050_8c}{}\section{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+M\+P\+U6050.c 文件参考}
+\label{_m_p_u6050_8c}\index{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+M\+P\+U6050.\+c@{E\+:/\+Works/\+Q\+B\+L-\/\+Pilot-\/\+S\+T\+D/\+Driver/\+M\+P\+U6050.\+c}}
+{\ttfamily \#include \char`\"{}M\+P\+U6050.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Q\+B\+L\+\_\+\+I2\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\\*
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__mpu6050__driver_ga4a9abee2bb288d66f5252cbf247ef439}{M\+P\+U6050\+\_\+\+I\+I\+C\+\_\+\+A\+D\+D\+R\+E\+SS}~0x\+D0
+\begin{DoxyCompactList}\small\item\em 芯片的\+I\+I\+C地址，参见其数据手册 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_ga733d4101fbe427bedb2f15ca20b71bac}{M\+P\+U6050\+\_\+\+G\+Y\+R\+O\+\_\+\+S\+C\+A\+LE}~32.\+8f
+\begin{DoxyCompactList}\small\item\em 陀螺仪的数据缩放比例 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_ga669a13ba6d055905339a57b50ecd8b3a}{M\+P\+U6050\+\_\+\+A\+C\+C\+E\+\_\+\+S\+C\+A\+LE}~4096.\+0f
+\begin{DoxyCompactList}\small\item\em 加速度计的数据缩放比例 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_gac9f31f774cd2699e69ae7e7b7f224483}{M\+P\+U6050\+\_\+\+C\+H\+I\+P\+\_\+\+ID}~0x68
+\begin{DoxyCompactList}\small\item\em 芯片的\+ID \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_gacb2b34ee8979b3165680de2313fe7f7f}{M\+P\+U6050\+\_\+\+R\+E\+G\+\_\+\+I\+D\+\_\+\+A\+D\+DR}~0x75
+\begin{DoxyCompactList}\small\item\em 芯片\+I\+D寄存器的地址 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_ga0cb210a5e35606d81cbe9ac18fc58c66}{M\+P\+U6050\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+A\+D\+DR}~0x3B
+\begin{DoxyCompactList}\small\item\em 数据寄存器的起始地址 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_gabc34a5f0aa7ab3953ed9879d9583aa3b}{M\+P\+U6050\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~14
+\begin{DoxyCompactList}\small\item\em 将要读取的数据的长度，单位为byte \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mpu6050__driver_ga158691fc91945a8fe2f198653e0b4c28}{M\+P\+U6050\+\_\+\+R\+E\+G\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}~1
+\begin{DoxyCompactList}\small\item\em 寄存器地址的宽度，单位为byte \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__mpu6050__driver_gaf1d66f5d0c588885b5a2df608d00e606}{M\+P\+U6050\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em M\+P\+U6050\+\_\+\+Init 初始化传感器 \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__mpu6050__driver_ga658b9fde24666130e85df9a7ff7836f0}{M\+P\+U6050\+\_\+\+Update} (float axis\mbox{[}6\mbox{]}, float $\ast$temp)
+\begin{DoxyCompactList}\small\item\em M\+P\+U6050\+\_\+\+Update 从传感器中读取最新的数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyAuthor}{作者}
+no1wudi 
+\end{DoxyAuthor}

@@ -14,7 +14,7 @@
   */
 
 /*!
- * @defgroup hmc5883_driver_private HMC5883驱动内部数据
+ * @defgroup hmc5883_driver_private HMC5883驱动内部私有数据
  * @{
  */
 

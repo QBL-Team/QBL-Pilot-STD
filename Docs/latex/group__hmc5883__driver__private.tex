@@ -1,0 +1,62 @@
+\hypertarget{group__hmc5883__driver__private}{}\section{H\+M\+C5883驱动内部私有数据}
+\label{group__hmc5883__driver__private}\index{H\+M\+C5883驱动内部私有数据@{H\+M\+C5883驱动内部私有数据}}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__hmc5883__driver__private_ga23d45753863d03d2e20ad4175965cb75}{H\+M\+C5883\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em H\+M\+C5883\+\_\+\+Init 初始化\+H\+M\+C5883L. \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__hmc5883__driver__private_gab380fb39719ca6cd76c4277cd0a8e1c8}{H\+M\+C5883\+\_\+\+Update} (float axis\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em H\+M\+C5883\+\_\+\+Update 读取最新的传感器数据 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga6887196e8734d548ab7410e96ef5aed4}{H\+M\+C5883\+\_\+\+I\+I\+C\+\_\+\+A\+D\+D\+R\+E\+SS}~0x3C\hypertarget{group__hmc5883__driver__private_ga6887196e8734d548ab7410e96ef5aed4}{}\label{group__hmc5883__driver__private_ga6887196e8734d548ab7410e96ef5aed4}
+
+\begin{DoxyCompactList}\small\item\em 芯片的\+I\+I\+C地址，参见其数据手册 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga9c9589bb19e67395e4148d33fcb160e6}{H\+M\+C5883\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+NS}~440.\+0f\hypertarget{group__hmc5883__driver__private_ga9c9589bb19e67395e4148d33fcb160e6}{}\label{group__hmc5883__driver__private_ga9c9589bb19e67395e4148d33fcb160e6}
+
+\begin{DoxyCompactList}\small\item\em 原始数据到真实数据的缩放比例，参见其数据手册 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga5af6f3e1f8cb12a7d074b60f6653ee24}{H\+M\+C5883\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+A\+D\+DR}~0x03\hypertarget{group__hmc5883__driver__private_ga5af6f3e1f8cb12a7d074b60f6653ee24}{}\label{group__hmc5883__driver__private_ga5af6f3e1f8cb12a7d074b60f6653ee24}
+
+\begin{DoxyCompactList}\small\item\em 数据寄存器起始地址 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga8480f1a530d25b8e4996d376d51a86d7}{H\+M\+C5883\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~6\hypertarget{group__hmc5883__driver__private_ga8480f1a530d25b8e4996d376d51a86d7}{}\label{group__hmc5883__driver__private_ga8480f1a530d25b8e4996d376d51a86d7}
+
+\begin{DoxyCompactList}\small\item\em 读取的数据量，单位为byte \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hmc5883__driver__private_ga3cc59a009a054a25e6b13ccaa227b4ea}{H\+M\+C5883\+\_\+\+R\+E\+G\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}~1\hypertarget{group__hmc5883__driver__private_ga3cc59a009a054a25e6b13ccaa227b4ea}{}\label{group__hmc5883__driver__private_ga3cc59a009a054a25e6b13ccaa227b4ea}
+
+\begin{DoxyCompactList}\small\item\em 寄存器地址的宽度，单位为byte \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{函数说明}
+\index{H\+M\+C5883驱动内部私有数据@{H\+M\+C5883驱动内部私有数据}!H\+M\+C5883\+\_\+\+Init@{H\+M\+C5883\+\_\+\+Init}}
+\index{H\+M\+C5883\+\_\+\+Init@{H\+M\+C5883\+\_\+\+Init}!H\+M\+C5883驱动内部私有数据@{H\+M\+C5883驱动内部私有数据}}
+\subsubsection[{\texorpdfstring{H\+M\+C5883\+\_\+\+Init(void)}{HMC5883_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} H\+M\+C5883\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__hmc5883__driver__private_ga23d45753863d03d2e20ad4175965cb75}{}\label{group__hmc5883__driver__private_ga23d45753863d03d2e20ad4175965cb75}
+
+
+H\+M\+C5883\+\_\+\+Init 初始化\+H\+M\+C5883L. 
+
+\begin{DoxyReturn}{返回}
+如果初始化成功，返回true 
+\end{DoxyReturn}
+\index{H\+M\+C5883驱动内部私有数据@{H\+M\+C5883驱动内部私有数据}!H\+M\+C5883\+\_\+\+Update@{H\+M\+C5883\+\_\+\+Update}}
+\index{H\+M\+C5883\+\_\+\+Update@{H\+M\+C5883\+\_\+\+Update}!H\+M\+C5883驱动内部私有数据@{H\+M\+C5883驱动内部私有数据}}
+\subsubsection[{\texorpdfstring{H\+M\+C5883\+\_\+\+Update(float axis[3])}{HMC5883_Update(float axis[3])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} H\+M\+C5883\+\_\+\+Update (
+\begin{DoxyParamCaption}
+\item[{float}]{axis\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__hmc5883__driver__private_gab380fb39719ca6cd76c4277cd0a8e1c8}{}\label{group__hmc5883__driver__private_gab380fb39719ca6cd76c4277cd0a8e1c8}
+
+
+H\+M\+C5883\+\_\+\+Update 读取最新的传感器数据 
+
+
+\begin{DoxyParams}{参数}
+{\em axis} & 数组的长度为3，数组的元素0$\sim$2分别对应X,Y,Z三个轴 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果读取成功，返回true 
+\end{DoxyReturn}

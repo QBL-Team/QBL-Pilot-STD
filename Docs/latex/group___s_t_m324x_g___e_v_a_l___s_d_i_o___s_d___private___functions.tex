@@ -1,0 +1,826 @@
+\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions}{}\section{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}
+\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions}\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). \end{DoxyCompactList}\item 
+S\+D\+Transfer\+State \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent sd card data transfer status. \end{DoxyCompactList}\item 
+S\+D\+Card\+State \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga1c49d266e4f9ba33b7a425361a30d227}{S\+D\+\_\+\+Get\+State} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gacb7415873dffa26068c5e46025efebfa}{S\+D\+\_\+\+Detect} (void)
+\begin{DoxyCompactList}\small\item\em Detect if SD card is correctly plugged in the memory slot. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga9fbd4dd6187701cbe286ddb163e9c312}{S\+D\+\_\+\+Power\+ON} (void)
+\begin{DoxyCompactList}\small\item\em Enquires cards about their operating voltage and configures clock controls. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga9f053c27018521095d7333e7df238764}{S\+D\+\_\+\+Power\+O\+FF} (void)
+\begin{DoxyCompactList}\small\item\em Turns the S\+D\+IO output signals off. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab39f671413ee824a13bf1bd833f724e9}{S\+D\+\_\+\+Initialize\+Cards} (void)
+\begin{DoxyCompactList}\small\item\em Intialises all cards or single card as the case may be Card(s) come into standby state. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga5348c3c8f17f8c704bf00f1c5e21549d}{S\+D\+\_\+\+Get\+Card\+Info} (\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} $\ast$cardinfo)
+\begin{DoxyCompactList}\small\item\em Returns information about specific card. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga858e0742dd01b2e2f6f397d30de6428f}{S\+D\+\_\+\+Get\+Card\+Status} (\hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status} $\ast$cardstatus)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga6569e73a229e639d2043549942d58d11}{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation} (uint32\+\_\+t Wide\+Mode)
+\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga849eb0b385337453139a7567898dacb7}{S\+D\+\_\+\+Select\+Deselect} (uint64\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Selects od Deselects the corresponding card. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga1b2b4c1bf25da0771325b00cd638129d}{S\+D\+\_\+\+Read\+Block} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga56b7336165f2631d9142a513ea2d0d17}{S\+D\+\_\+\+Read\+Multi\+Blocks} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga42ab410b834d74d7f3ee757dc888b8cc}{S\+D\+\_\+\+Wait\+Read\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab1eef7c1ff23ea746db504463d301a8b}{S\+D\+\_\+\+Write\+Block} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)
+\begin{DoxyCompactList}\small\item\em Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga64baac72a75a2c522e837935009cbe93}{S\+D\+\_\+\+Write\+Multi\+Blocks} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gad55967ea67075f01671fb2144c7f7b0d}{S\+D\+\_\+\+Wait\+Write\+Operation} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+S\+D\+Transfer\+State \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga2dd79455185c28bd21964d113a38d110}{S\+D\+\_\+\+Get\+Transfer\+State} (void)
+\begin{DoxyCompactList}\small\item\em Gets the cuurent data transfer state. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gad3dc52f076ae8145e105cb4d8a37b043}{S\+D\+\_\+\+Stop\+Transfer} (void)
+\begin{DoxyCompactList}\small\item\em Aborts an ongoing data transfer. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaca2450c63f52cd6c1d50f6de33ecfdf8}{S\+D\+\_\+\+Erase} (uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)
+\begin{DoxyCompactList}\small\item\em Allows to erase memory area specified for the given card. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga7de24baeb4c6a7c9e5668630b8797888}{S\+D\+\_\+\+Send\+Status} (uint32\+\_\+t $\ast$pcardstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab573516bdaa3054877172415e66d0e57}{S\+D\+\_\+\+Send\+S\+D\+Status} (uint32\+\_\+t $\ast$psdstatus)
+\begin{DoxyCompactList}\small\item\em Returns the current SD card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab21b0412e865d8cabc915dc840fa1ccc}{S\+D\+\_\+\+Process\+I\+R\+Q\+Src} (void)
+\begin{DoxyCompactList}\small\item\em Allows to process all the interrupts that are high. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)
+\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. \end{DoxyCompactList}\item 
+S\+D\+\_\+\+Error \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga2457c748cf09c7ad5d3c9211d11e3fab}{S\+D\+\_\+\+High\+Speed} (void)
+\begin{DoxyCompactList}\small\item\em Switch mode High-\/\+Speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{函数说明}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Detect@{S\+D\+\_\+\+Detect}}
+\index{S\+D\+\_\+\+Detect@{S\+D\+\_\+\+Detect}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Detect(void)}{SD_Detect(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+D\+\_\+\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gacb7415873dffa26068c5e46025efebfa}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gacb7415873dffa26068c5e46025efebfa}
+
+
+Detect if SD card is correctly plugged in the memory slot. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em Return} & if SD is detected or not \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}}
+\index{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation(uint32\+\_\+t Wide\+Mode)}{SD_EnableWideBusOperation(uint32_t WideMode)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{Wide\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga6569e73a229e639d2043549942d58d11}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga6569e73a229e639d2043549942d58d11}
+
+
+Enables wide bus opeartion for the requeseted card if supported by card. 
+
+
+\begin{DoxyParams}{参数}
+{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ M\+MC Card doesn\textquotesingle{}t support this feature
+
+$<$ Configure the S\+D\+IO peripheral
+
+$<$ Configure the S\+D\+IO peripheral \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}}
+\index{S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Erase(uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)}{SD_Erase(uint64_t startaddr, uint64_t endaddr)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Erase (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{startaddr, }
+\item[{uint64\+\_\+t}]{endaddr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaca2450c63f52cd6c1d50f6de33ecfdf8}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaca2450c63f52cd6c1d50f6de33ecfdf8}
+
+
+Allows to erase memory area specified for the given card. 
+
+
+\begin{DoxyParams}{参数}
+{\em startaddr} & the start address. \\
+\hline
+{\em endaddr} & the end address. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Check if the card coomnd class supports erase command
+
+$<$ Send C\+M\+D32 S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT with argument as addr \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}}
+\index{S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Info(\+S\+D\+\_\+\+Card\+Info $\ast$cardinfo)}{SD_GetCardInfo(SD_CardInfo *cardinfo)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Get\+Card\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+\_\+\+Card\+Info} $\ast$}]{cardinfo}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga5348c3c8f17f8c704bf00f1c5e21549d}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga5348c3c8f17f8c704bf00f1c5e21549d}
+
+
+Returns information about specific card. 
+
+
+\begin{DoxyParams}{参数}
+{\em cardinfo} & pointer to a \hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} structure that contains all SD card information. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Byte 0
+
+$<$ Byte 1
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Reserved
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 14
+
+$<$ Byte 15
+
+$<$ Byte 0
+
+$<$ Byte 1
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 14
+
+$<$ Byte 15 \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}}
+\index{S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Status(\+S\+D\+\_\+\+Card\+Status $\ast$cardstatus)}{SD_GetCardStatus(SD_CardStatus *cardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Get\+Card\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+\_\+\+Card\+Status} $\ast$}]{cardstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga858e0742dd01b2e2f6f397d30de6428f}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga858e0742dd01b2e2f6f397d30de6428f}
+
+
+Enables wide bus opeartion for the requeseted card if supported by card. 
+
+
+\begin{DoxyParams}{参数}
+{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Byte 0
+
+$<$ Byte 2
+
+$<$ Byte 3
+
+$<$ Byte 4
+
+$<$ Byte 5
+
+$<$ Byte 6
+
+$<$ Byte 7
+
+$<$ Byte 8
+
+$<$ Byte 9
+
+$<$ Byte 10
+
+$<$ Byte 11
+
+$<$ Byte 12
+
+$<$ Byte 13
+
+$<$ Byte 13 \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}}
+\index{S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+State(void)}{SD_GetState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+Card\+State S\+D\+\_\+\+Get\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga1c49d266e4f9ba33b7a425361a30d227}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga1c49d266e4f9ba33b7a425361a30d227}
+
+
+Returns the current card\textquotesingle{}s state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Card\+State} & SD Card Error or SD Card Current State. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}}
+\index{S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Status(void)}{SD_GetStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+Transfer\+State S\+D\+\_\+\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}
+
+
+Gets the cuurent sd card data transfer status. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Get\+Transfer\+State@{S\+D\+\_\+\+Get\+Transfer\+State}}
+\index{S\+D\+\_\+\+Get\+Transfer\+State@{S\+D\+\_\+\+Get\+Transfer\+State}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Transfer\+State(void)}{SD_GetTransferState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+Transfer\+State S\+D\+\_\+\+Get\+Transfer\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga2dd79455185c28bd21964d113a38d110}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga2dd79455185c28bd21964d113a38d110}
+
+
+Gets the cuurent data transfer state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+High\+Speed@{S\+D\+\_\+\+High\+Speed}}
+\index{S\+D\+\_\+\+High\+Speed@{S\+D\+\_\+\+High\+Speed}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+High\+Speed(void)}{SD_HighSpeed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+High\+Speed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga2457c748cf09c7ad5d3c9211d11e3fab}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga2457c748cf09c7ad5d3c9211d11e3fab}
+
+
+Switch mode High-\/\+Speed. 
+
+\begin{DoxyNote}{注解}
+This function must be used after \char`\"{}\+Transfer State\char`\"{} 
+
+This operation should be followed by the configuration of P\+LL to have S\+D\+I\+O\+CK clock between 67 and 75 M\+Hz 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Get S\+CR Register
+
+$<$ Send C\+M\+D6 switch mode \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}}
+\index{S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Init(void)}{SD_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga3c927d4d98ffb6f3cc2442b09c19926c}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga3c927d4d98ffb6f3cc2442b09c19926c}
+
+
+Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
+
+$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}}
+\index{S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Initialize\+Cards(void)}{SD_InitializeCards(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Initialize\+Cards (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab39f671413ee824a13bf1bd833f724e9}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab39f671413ee824a13bf1bd833f724e9}
+
+
+Intialises all cards or single card as the case may be Card(s) come into standby state. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D2 A\+L\+L\+\_\+\+S\+E\+N\+D\+\_\+\+C\+ID
+
+$<$ Send C\+M\+D3 S\+E\+T\+\_\+\+R\+E\+L\+\_\+\+A\+D\+DR with argument 0
+
+$<$ SD Card publishes its R\+CA.
+
+$<$ Send C\+M\+D9 S\+E\+N\+D\+\_\+\+C\+SD with argument as card\textquotesingle{}s R\+CA
+
+$<$ All cards get intialized \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}}
+\index{S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+F\+F(void)}{SD_PowerOFF(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Power\+O\+FF (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga9f053c27018521095d7333e7df238764}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga9f053c27018521095d7333e7df238764}
+
+
+Turns the S\+D\+IO output signals off. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Set Power State to O\+FF \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}}
+\index{S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+N(void)}{SD_PowerON(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Power\+ON (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga9fbd4dd6187701cbe286ddb163e9c312}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga9fbd4dd6187701cbe286ddb163e9c312}
+
+
+Enquires cards about their operating voltage and configures clock controls. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Power ON Sequence -----------------------------------------------------
+
+$<$ Configure the S\+D\+IO peripheral
+
+$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+I\+N\+I\+T\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
+
+$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz
+
+$<$ S\+D\+I\+O\+\_\+\+CK for initialization should not exceed 400 K\+Hz
+
+$<$ Set Power State to ON
+
+$<$ Enable S\+D\+IO Clock
+
+$<$ C\+M\+D0\+: G\+O\+\_\+\+I\+D\+L\+E\+\_\+\+S\+T\+A\+TE -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---------------------------------------
+
+$<$ No C\+MD response required
+
+$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
+
+$<$ Send C\+M\+D8 to verify SD card interface operating condition
+
+$<$ Argument\+: -\/ \mbox{[}31\+:12\mbox{]}\+: Reserved (shall be set to \textquotesingle{}0\textquotesingle{})
+\begin{DoxyItemize}
+\item \mbox{[}11\+:8\mbox{]}\+: Supply Voltage (V\+HS) 0x1 (Range\+: 2.\+7-\/3.\+6 V)
+\item \mbox{[}7\+:0\mbox{]}\+: Check Pattern (recommended 0x\+AA)
+\end{DoxyItemize}
+
+$<$ C\+MD Response\+: R7
+
+$<$ SD Card 2.\+0
+
+$<$ C\+M\+D55
+
+$<$ If errorstatus is Command Time\+Out, it is a M\+MC card
+
+$<$ If errorstatus is S\+D\+\_\+\+OK it is a SD card\+: SD card 2.\+0 (voltage range mismatch) or SD card 1.\+x
+
+$<$ SD C\+A\+RD
+
+$<$ Send A\+C\+M\+D41 S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND with Argument 0x80100000
+
+$<$ S\+E\+ND C\+M\+D55 A\+P\+P\+\_\+\+C\+MD with R\+CA as 0 \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}}
+\index{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+D\+M\+A\+I\+R\+Q(void)}{SD_ProcessDMAIRQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga52ec18498c19918549142f6680a7b21e}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga52ec18498c19918549142f6680a7b21e}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}}
+\index{S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+I\+R\+Q\+Src(void)}{SD_ProcessIRQSrc(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Process\+I\+R\+Q\+Src (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab21b0412e865d8cabc915dc840fa1ccc}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab21b0412e865d8cabc915dc840fa1ccc}
+
+
+Allows to process all the interrupts that are high. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}}
+\index{S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Block(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)}{SD_ReadBlock(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Read\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{readbuff, }
+\item[{uint64\+\_\+t}]{Read\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga1b2b4c1bf25da0771325b00cd638129d}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga1b2b4c1bf25da0771325b00cd638129d}
+
+
+Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em readbuff} & pointer to the buffer that will contain the received data \\
+\hline
+{\em Read\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D17 R\+E\+A\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}}
+\index{S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Multi\+Blocks(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_ReadMultiBlocks(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Read\+Multi\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{readbuff, }
+\item[{uint64\+\_\+t}]{Read\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size, }
+\item[{uint32\+\_\+t}]{Number\+Of\+Blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga56b7336165f2631d9142a513ea2d0d17}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga56b7336165f2631d9142a513ea2d0d17}
+
+
+Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em readbuff} & pointer to the buffer that will contain the received data. \\
+\hline
+{\em Read\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+{\em Number\+Of\+Blocks} & number of blocks to be read. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D18 R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK with argument data address \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}}
+\index{S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Select\+Deselect(uint64\+\_\+t addr)}{SD_SelectDeselect(uint64_t addr)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Select\+Deselect (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga849eb0b385337453139a7567898dacb7}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga849eb0b385337453139a7567898dacb7}
+
+
+Selects od Deselects the corresponding card. 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & Address of the Card to be selected. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D7 S\+D\+I\+O\+\_\+\+S\+E\+L\+\_\+\+D\+E\+S\+E\+L\+\_\+\+C\+A\+RD \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}}
+\index{S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+S\+D\+Status(uint32\+\_\+t $\ast$psdstatus)}{SD_SendSDStatus(uint32_t *psdstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Send\+S\+D\+Status (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t $\ast$}]{psdstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab573516bdaa3054877172415e66d0e57}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab573516bdaa3054877172415e66d0e57}
+
+
+Returns the current SD card\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{参数}
+{\em psdstatus} & pointer to the buffer that will contain the SD card status (SD Status register). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send A\+C\+M\+D13 S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US with argument as card\textquotesingle{}s R\+CA. \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}}
+\index{S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+Status(uint32\+\_\+t $\ast$pcardstatus)}{SD_SendStatus(uint32_t *pcardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Send\+Status (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t $\ast$}]{pcardstatus}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga7de24baeb4c6a7c9e5668630b8797888}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga7de24baeb4c6a7c9e5668630b8797888}
+
+
+Returns the current card\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{参数}
+{\em pcardstatus} & pointer to the buffer that will contain the SD card status (Card Status register). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}}
+\index{S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Stop\+Transfer(void)}{SD_StopTransfer(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Stop\+Transfer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gad3dc52f076ae8145e105cb4d8a37b043}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gad3dc52f076ae8145e105cb4d8a37b043}
+
+
+Aborts an ongoing data transfer. 
+
+
+\begin{DoxyParams}{参数}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ Send C\+M\+D12 S\+T\+O\+P\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}}
+\index{S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Read\+Operation(void)}{SD_WaitReadOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Wait\+Read\+Operation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga42ab410b834d74d7f3ee757dc888b8cc}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga42ab410b834d74d7f3ee757dc888b8cc}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}}
+\index{S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Write\+Operation(void)}{SD_WaitWriteOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Wait\+Write\+Operation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gad55967ea67075f01671fb2144c7f7b0d}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gad55967ea67075f01671fb2144c7f7b0d}
+
+
+This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+
+
+\begin{DoxyParams}{参数}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+\index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}}
+\index{S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Block(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)}{SD_WriteBlock(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Write\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{writebuff, }
+\item[{uint64\+\_\+t}]{Write\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab1eef7c1ff23ea746db504463d301a8b}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gab1eef7c1ff23ea746db504463d301a8b}
+
+
+Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+\hline
+{\em Write\+Addr} & Address from where data are to be read. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}
+$<$ In case of single data block transfer no need of stop command at all \index{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}!S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}}
+\index{S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}!S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions@{S\+T\+M324x\+G\+\_\+\+E\+V\+A\+L\+\_\+\+S\+D\+I\+O\+\_\+\+S\+D\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Multi\+Blocks(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_WriteMultiBlocks(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+\_\+\+Error S\+D\+\_\+\+Write\+Multi\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{writebuff, }
+\item[{uint64\+\_\+t}]{Write\+Addr, }
+\item[{uint16\+\_\+t}]{Block\+Size, }
+\item[{uint32\+\_\+t}]{Number\+Of\+Blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga64baac72a75a2c522e837935009cbe93}{}\label{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_ga64baac72a75a2c522e837935009cbe93}
+
+
+Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. 
+
+\begin{DoxyNote}{注解}
+This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+\begin{DoxyItemize}
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
+\item \hyperlink{group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___functions_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Write\+Addr} & Address from where data are to be read. \\
+\hline
+{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+\hline
+{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+\hline
+{\em Number\+Of\+Blocks} & number of blocks to be written. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+\hline
+\end{DoxyRetVals}

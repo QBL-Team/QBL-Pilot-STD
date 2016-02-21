@@ -1,0 +1,114 @@
+\hypertarget{group__ms5611__driver__internal}{}\section{M\+S5611 驱动内部私有数据}
+\label{group__ms5611__driver__internal}\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__ms5611__driver__internal_gad95cb9e2dfcda543ebc7ea207c652517}{M\+S5611\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em M\+S5611\+\_\+\+Init 初始化传感器，并读取出厂预设值，为计算做准备 \end{DoxyCompactList}\item 
+bool \hyperlink{group__ms5611__driver__internal_ga776a0112261b15cd6d234c77152b384a}{M\+S5611\+\_\+\+Update} (float $\ast$Pressure, float $\ast$Temperature)
+\begin{DoxyCompactList}\small\item\em M\+S5611\+\_\+\+Update 尝试读取最新的气压和温度数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ms5611__driver__internal_ga87a0c5ca64ec1e29ddc31ab17c5f5022}{M\+S5611\+\_\+\+S\+T\+A\+TE} \{ \hyperlink{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a6d4551647d3829b1242a8969b23fb734}{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE} = 0, 
+\hyperlink{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a4db01813fd057df7b345979e2edc8065}{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D1}, 
+\hyperlink{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a570e87eedddd77822a83145040fc920c}{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D2}
+ \}
+\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_gafa5b8ac64374d19d8f1e5d8e2b94b73c}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+ST} \mbox{[}$\,$\mbox{]} = \{ 0x1\+E \}\hypertarget{group__ms5611__driver__internal_gafa5b8ac64374d19d8f1e5d8e2b94b73c}{}\label{group__ms5611__driver__internal_gafa5b8ac64374d19d8f1e5d8e2b94b73c}
+
+\begin{DoxyCompactList}\small\item\em 重置芯片 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_gab1acc41277710ab70dc70946ca8e1819}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+\_\+\+D1} \mbox{[}$\,$\mbox{]} = \{ 0x48 \}\hypertarget{group__ms5611__driver__internal_gab1acc41277710ab70dc70946ca8e1819}{}\label{group__ms5611__driver__internal_gab1acc41277710ab70dc70946ca8e1819}
+
+\begin{DoxyCompactList}\small\item\em 设置过采样率为4096转换气压值 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_gae1a9a783b78f3d8b8ab20357243b1d2f}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+\_\+\+D2} \mbox{[}$\,$\mbox{]} = \{ 0x58 \}\hypertarget{group__ms5611__driver__internal_gae1a9a783b78f3d8b8ab20357243b1d2f}{}\label{group__ms5611__driver__internal_gae1a9a783b78f3d8b8ab20357243b1d2f}
+
+\begin{DoxyCompactList}\small\item\em 设置过采样率为4096转换温度值 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_ga12183abd8008830f5d763fc8400d414c}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+DC} \mbox{[}$\,$\mbox{]} = \{ 0x00 \}\hypertarget{group__ms5611__driver__internal_ga12183abd8008830f5d763fc8400d414c}{}\label{group__ms5611__driver__internal_ga12183abd8008830f5d763fc8400d414c}
+
+\begin{DoxyCompactList}\small\item\em 读取模数转换器转换结果 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_ga6555aca305c73b423aec8ad7ff75e063}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+C1} \mbox{[}$\,$\mbox{]} = \{ 0x\+A2 \}\hypertarget{group__ms5611__driver__internal_ga6555aca305c73b423aec8ad7ff75e063}{}\label{group__ms5611__driver__internal_ga6555aca305c73b423aec8ad7ff75e063}
+
+\begin{DoxyCompactList}\small\item\em 读取出厂预设值\+C1 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_ga433d78a7f1e4e7c6bea1d15c551f6273}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+C2} \mbox{[}$\,$\mbox{]} = \{ 0x\+A4 \}\hypertarget{group__ms5611__driver__internal_ga433d78a7f1e4e7c6bea1d15c551f6273}{}\label{group__ms5611__driver__internal_ga433d78a7f1e4e7c6bea1d15c551f6273}
+
+\begin{DoxyCompactList}\small\item\em 读取出厂预设值\+C2 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_ga2fffdcd4e827763dc9344b49a1833f69}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+C3} \mbox{[}$\,$\mbox{]} = \{ 0x\+A6 \}\hypertarget{group__ms5611__driver__internal_ga2fffdcd4e827763dc9344b49a1833f69}{}\label{group__ms5611__driver__internal_ga2fffdcd4e827763dc9344b49a1833f69}
+
+\begin{DoxyCompactList}\small\item\em 读取出厂预设值\+C3 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_ga90b99ee2918d8d5163654e78ab25738c}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+C4} \mbox{[}$\,$\mbox{]} = \{ 0x\+A8 \}\hypertarget{group__ms5611__driver__internal_ga90b99ee2918d8d5163654e78ab25738c}{}\label{group__ms5611__driver__internal_ga90b99ee2918d8d5163654e78ab25738c}
+
+\begin{DoxyCompactList}\small\item\em 读取出厂预设值\+C4 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_gafd13f5a06daa45df48f2c61a2f747fb3}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+C5} \mbox{[}$\,$\mbox{]} = \{ 0x\+A\+A \}\hypertarget{group__ms5611__driver__internal_gafd13f5a06daa45df48f2c61a2f747fb3}{}\label{group__ms5611__driver__internal_gafd13f5a06daa45df48f2c61a2f747fb3}
+
+\begin{DoxyCompactList}\small\item\em 读取出厂预设值\+C5 \end{DoxyCompactList}\item 
+const uint8\+\_\+t \hyperlink{group__ms5611__driver__internal_ga27544c59b693ee1160b49dd80577fedb}{M\+S5611\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+C6} \mbox{[}$\,$\mbox{]} = \{ 0x\+A\+C \}\hypertarget{group__ms5611__driver__internal_ga27544c59b693ee1160b49dd80577fedb}{}\label{group__ms5611__driver__internal_ga27544c59b693ee1160b49dd80577fedb}
+
+\begin{DoxyCompactList}\small\item\em 读取出厂预设值\+C6 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ms5611__driver__internal_ga290d6db5c529c90aa2dc855623f55b78}{M\+S5611\+\_\+\+C\+S\+\_\+\+On}()~G\+P\+I\+O\+\_\+\+Write\+Bit(G\+P\+I\+OE, G\+P\+I\+O\+\_\+\+Pin\+\_\+9, Bit\+\_\+\+R\+E\+S\+ET)\hypertarget{group__ms5611__driver__internal_ga290d6db5c529c90aa2dc855623f55b78}{}\label{group__ms5611__driver__internal_ga290d6db5c529c90aa2dc855623f55b78}
+
+\begin{DoxyCompactList}\small\item\em 开启芯片片选 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ms5611__driver__internal_ga132d44bdafc80a7ef5259734dc4547c2}{M\+S5611\+\_\+\+C\+S\+\_\+\+Off}()~G\+P\+I\+O\+\_\+\+Write\+Bit(G\+P\+I\+OE, G\+P\+I\+O\+\_\+\+Pin\+\_\+9, Bit\+\_\+\+S\+ET)\hypertarget{group__ms5611__driver__internal_ga132d44bdafc80a7ef5259734dc4547c2}{}\label{group__ms5611__driver__internal_ga132d44bdafc80a7ef5259734dc4547c2}
+
+\begin{DoxyCompactList}\small\item\em 关闭芯片片选 \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ms5611__driver__internal_gabae8b9d1a17f48b416cc3881bb954ca2}{M\+S5611\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+I\+ME}~10\hypertarget{group__ms5611__driver__internal_gabae8b9d1a17f48b416cc3881bb954ca2}{}\label{group__ms5611__driver__internal_gabae8b9d1a17f48b416cc3881bb954ca2}
+
+\begin{DoxyCompactList}\small\item\em 芯片的转换时间，单位为ms \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{枚举类型说明}
+\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}!M\+S5611\+\_\+\+S\+T\+A\+TE@{M\+S5611\+\_\+\+S\+T\+A\+TE}}
+\index{M\+S5611\+\_\+\+S\+T\+A\+TE@{M\+S5611\+\_\+\+S\+T\+A\+TE}!M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}
+\subsubsection[{\texorpdfstring{M\+S5611\+\_\+\+S\+T\+A\+TE}{MS5611_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf M\+S5611\+\_\+\+S\+T\+A\+TE}}\hypertarget{group__ms5611__driver__internal_ga87a0c5ca64ec1e29ddc31ab17c5f5022}{}\label{group__ms5611__driver__internal_ga87a0c5ca64ec1e29ddc31ab17c5f5022}
+读取过程的状态标志 \begin{Desc}
+\item[枚举值]\par
+\begin{description}
+\index{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE@{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE}!M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}!M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE@{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE}}\item[{\em 
+M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE\hypertarget{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a6d4551647d3829b1242a8969b23fb734}{}\label{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a6d4551647d3829b1242a8969b23fb734}
+}]上电之后，默认处于本状态 \index{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D1@{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D1}!M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}!M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D1@{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D1}}\item[{\em 
+M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D1\hypertarget{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a4db01813fd057df7b345979e2edc8065}{}\label{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a4db01813fd057df7b345979e2edc8065}
+}]等待气压转换操作 \index{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D2@{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D2}!M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}!M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D2@{M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D2}}\item[{\em 
+M\+S5611\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+D2\hypertarget{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a570e87eedddd77822a83145040fc920c}{}\label{group__ms5611__driver__internal_gga87a0c5ca64ec1e29ddc31ab17c5f5022a570e87eedddd77822a83145040fc920c}
+}]等待温度转换操作 \end{description}
+\end{Desc}
+
+
+\subsection{函数说明}
+\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}!M\+S5611\+\_\+\+Init@{M\+S5611\+\_\+\+Init}}
+\index{M\+S5611\+\_\+\+Init@{M\+S5611\+\_\+\+Init}!M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}
+\subsubsection[{\texorpdfstring{M\+S5611\+\_\+\+Init(void)}{MS5611_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} M\+S5611\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ms5611__driver__internal_gad95cb9e2dfcda543ebc7ea207c652517}{}\label{group__ms5611__driver__internal_gad95cb9e2dfcda543ebc7ea207c652517}
+
+
+M\+S5611\+\_\+\+Init 初始化传感器，并读取出厂预设值，为计算做准备 
+
+\begin{DoxyReturn}{返回}
+如果初始化成功，返回true 
+\end{DoxyReturn}
+\index{M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}!M\+S5611\+\_\+\+Update@{M\+S5611\+\_\+\+Update}}
+\index{M\+S5611\+\_\+\+Update@{M\+S5611\+\_\+\+Update}!M\+S5611 驱动内部私有数据@{M\+S5611 驱动内部私有数据}}
+\subsubsection[{\texorpdfstring{M\+S5611\+\_\+\+Update(float $\ast$\+Pressure, float $\ast$\+Temperature)}{MS5611_Update(float *Pressure, float *Temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}bool M\+S5611\+\_\+\+Update (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{Pressure, }
+\item[{float $\ast$}]{Temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ms5611__driver__internal_ga776a0112261b15cd6d234c77152b384a}{}\label{group__ms5611__driver__internal_ga776a0112261b15cd6d234c77152b384a}
+
+
+M\+S5611\+\_\+\+Update 尝试读取最新的气压和温度数据 
+
+
+\begin{DoxyParams}{参数}
+{\em Pressure} & 气压值的指针 \\
+\hline
+{\em Temperature} & 温度值的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+仅当返回true时读取到的数据有效，请务必检查返回值 
+\end{DoxyReturn}

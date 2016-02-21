@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QBL-Pilot-STD: HMC5883驱动内部私有数据</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QBL-Pilot-STD
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">HMC5883驱动内部私有数据<div class="ingroups"><a class="el" href="group__hmc5883__driver.html">HMC5883 驱动</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="memitem:ga23d45753863d03d2e20ad4175965cb75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__qbl.html#ga41526b685f55486191108499fe91c30b">QBL_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#ga23d45753863d03d2e20ad4175965cb75">HMC5883_Init</a> (void)</td></tr>
+<tr class="memdesc:ga23d45753863d03d2e20ad4175965cb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">HMC5883_Init 初始化HMC5883L.  <a href="#ga23d45753863d03d2e20ad4175965cb75">更多...</a><br /></td></tr>
+<tr class="separator:ga23d45753863d03d2e20ad4175965cb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab380fb39719ca6cd76c4277cd0a8e1c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__qbl.html#ga41526b685f55486191108499fe91c30b">QBL_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#gab380fb39719ca6cd76c4277cd0a8e1c8">HMC5883_Update</a> (float axis[3])</td></tr>
+<tr class="memdesc:gab380fb39719ca6cd76c4277cd0a8e1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">HMC5883_Update 读取最新的传感器数据  <a href="#gab380fb39719ca6cd76c4277cd0a8e1c8">更多...</a><br /></td></tr>
+<tr class="separator:gab380fb39719ca6cd76c4277cd0a8e1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6887196e8734d548ab7410e96ef5aed4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6887196e8734d548ab7410e96ef5aed4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#ga6887196e8734d548ab7410e96ef5aed4">HMC5883_IIC_ADDRESS</a>&#160;&#160;&#160;0x3C</td></tr>
+<tr class="memdesc:ga6887196e8734d548ab7410e96ef5aed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">芯片的IIC地址，参见其数据手册 <br /></td></tr>
+<tr class="separator:ga6887196e8734d548ab7410e96ef5aed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c9589bb19e67395e4148d33fcb160e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9c9589bb19e67395e4148d33fcb160e6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#ga9c9589bb19e67395e4148d33fcb160e6">HMC5883_DATA_SENS</a>&#160;&#160;&#160;440.0f</td></tr>
+<tr class="memdesc:ga9c9589bb19e67395e4148d33fcb160e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">原始数据到真实数据的缩放比例，参见其数据手册 <br /></td></tr>
+<tr class="separator:ga9c9589bb19e67395e4148d33fcb160e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5af6f3e1f8cb12a7d074b60f6653ee24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5af6f3e1f8cb12a7d074b60f6653ee24"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#ga5af6f3e1f8cb12a7d074b60f6653ee24">HMC5883_REG_DATA_ADDR</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:ga5af6f3e1f8cb12a7d074b60f6653ee24"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据寄存器起始地址 <br /></td></tr>
+<tr class="separator:ga5af6f3e1f8cb12a7d074b60f6653ee24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8480f1a530d25b8e4996d376d51a86d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8480f1a530d25b8e4996d376d51a86d7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#ga8480f1a530d25b8e4996d376d51a86d7">HMC5883_REG_DATA_LENGTH</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:ga8480f1a530d25b8e4996d376d51a86d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取的数据量，单位为byte <br /></td></tr>
+<tr class="separator:ga8480f1a530d25b8e4996d376d51a86d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cc59a009a054a25e6b13ccaa227b4ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3cc59a009a054a25e6b13ccaa227b4ea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hmc5883__driver__private.html#ga3cc59a009a054a25e6b13ccaa227b4ea">HMC5883_REG_ADDR_WIDTH</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ga3cc59a009a054a25e6b13ccaa227b4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">寄存器地址的宽度，单位为byte <br /></td></tr>
+<tr class="separator:ga3cc59a009a054a25e6b13ccaa227b4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ga23d45753863d03d2e20ad4175965cb75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__qbl.html#ga41526b685f55486191108499fe91c30b">QBL_STATUS</a> HMC5883_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HMC5883_Init 初始化HMC5883L. </p>
+<dl class="section return"><dt>返回</dt><dd>如果初始化成功，返回true </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab380fb39719ca6cd76c4277cd0a8e1c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__qbl.html#ga41526b685f55486191108499fe91c30b">QBL_STATUS</a> HMC5883_Update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>axis</em>[3]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HMC5883_Update 读取最新的传感器数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>数组的长度为3，数组的元素0~2分别对应X,Y,Z三个轴 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果读取成功，返回true </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

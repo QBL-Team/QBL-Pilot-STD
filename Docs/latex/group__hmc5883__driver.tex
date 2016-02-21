@@ -1,0 +1,53 @@
+\hypertarget{group__hmc5883__driver}{}\section{H\+M\+C5883 驱动}
+\label{group__hmc5883__driver}\index{H\+M\+C5883 驱动@{H\+M\+C5883 驱动}}
+\subsection*{模块}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hmc5883__driver__private}{H\+M\+C5883驱动内部私有数据}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__hmc5883__driver_ga23d45753863d03d2e20ad4175965cb75}{H\+M\+C5883\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em H\+M\+C5883\+\_\+\+Init 初始化\+H\+M\+C5883L. \end{DoxyCompactList}\item 
+\hyperlink{group__qbl_ga41526b685f55486191108499fe91c30b}{Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__hmc5883__driver_gab380fb39719ca6cd76c4277cd0a8e1c8}{H\+M\+C5883\+\_\+\+Update} (float axis\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em H\+M\+C5883\+\_\+\+Update 读取最新的传感器数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+
+
+\subsection{函数说明}
+\index{H\+M\+C5883 驱动@{H\+M\+C5883 驱动}!H\+M\+C5883\+\_\+\+Init@{H\+M\+C5883\+\_\+\+Init}}
+\index{H\+M\+C5883\+\_\+\+Init@{H\+M\+C5883\+\_\+\+Init}!H\+M\+C5883 驱动@{H\+M\+C5883 驱动}}
+\subsubsection[{\texorpdfstring{H\+M\+C5883\+\_\+\+Init(void)}{HMC5883_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} H\+M\+C5883\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__hmc5883__driver_ga23d45753863d03d2e20ad4175965cb75}{}\label{group__hmc5883__driver_ga23d45753863d03d2e20ad4175965cb75}
+
+
+H\+M\+C5883\+\_\+\+Init 初始化\+H\+M\+C5883L. 
+
+\begin{DoxyReturn}{返回}
+如果初始化成功，返回true 
+\end{DoxyReturn}
+\index{H\+M\+C5883 驱动@{H\+M\+C5883 驱动}!H\+M\+C5883\+\_\+\+Update@{H\+M\+C5883\+\_\+\+Update}}
+\index{H\+M\+C5883\+\_\+\+Update@{H\+M\+C5883\+\_\+\+Update}!H\+M\+C5883 驱动@{H\+M\+C5883 驱动}}
+\subsubsection[{\texorpdfstring{H\+M\+C5883\+\_\+\+Update(float axis[3])}{HMC5883_Update(float axis[3])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+B\+L\+\_\+\+S\+T\+A\+T\+US} H\+M\+C5883\+\_\+\+Update (
+\begin{DoxyParamCaption}
+\item[{float}]{axis\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__hmc5883__driver_gab380fb39719ca6cd76c4277cd0a8e1c8}{}\label{group__hmc5883__driver_gab380fb39719ca6cd76c4277cd0a8e1c8}
+
+
+H\+M\+C5883\+\_\+\+Update 读取最新的传感器数据 
+
+
+\begin{DoxyParams}{参数}
+{\em axis} & 数组的长度为3，数组的元素0$\sim$2分别对应X,Y,Z三个轴 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果读取成功，返回true 
+\end{DoxyReturn}
