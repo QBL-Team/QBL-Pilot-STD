@@ -70,7 +70,7 @@ QBL_STATUS HMC5883_Update(float axis[3])
     axis[1] = ((int16_t)((tmp[4] << 8) | tmp[5])) / HMC5883_DATA_SENS;
     axis[2] = ((int16_t)((tmp[2] << 8) | tmp[3])) / HMC5883_DATA_SENS;
 
-    return true;
+    return QBL_OK;
 }
 
 /*!
