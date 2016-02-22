@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>QBL-Pilot-STD: MS5611 驱动内部私有数据</title>
+<title>QBL-Pilot-STD: MS5611 驱动私有数据</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <div class="summary">
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle">
-<div class="title">MS5611 驱动内部私有数据<div class="ingroups"><a class="el" href="group__ms5611__driver.html">MS5611 驱动</a></div></div>  </div>
+<div class="title">MS5611 驱动私有数据<div class="ingroups"><a class="el" href="group__ms5611__driver.html">MS5611 驱动</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -136,11 +136,11 @@ const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memdesc:ga27544c59b693ee1160b49dd80577fedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取出厂预设值C6 <br /></td></tr>
 <tr class="separator:ga27544c59b693ee1160b49dd80577fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga290d6db5c529c90aa2dc855623f55b78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga290d6db5c529c90aa2dc855623f55b78"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ms5611__driver__internal.html#ga290d6db5c529c90aa2dc855623f55b78">MS5611_CS_On</a>()&#160;&#160;&#160;GPIO_WriteBit(GPIOE, GPIO_Pin_9, Bit_RESET)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ms5611__driver__internal.html#ga290d6db5c529c90aa2dc855623f55b78">MS5611_CS_On</a>()&#160;&#160;&#160;GPIO_ResetBits(GPIOE, GPIO_Pin_9)</td></tr>
 <tr class="memdesc:ga290d6db5c529c90aa2dc855623f55b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启芯片片选 <br /></td></tr>
 <tr class="separator:ga290d6db5c529c90aa2dc855623f55b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga132d44bdafc80a7ef5259734dc4547c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga132d44bdafc80a7ef5259734dc4547c2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ms5611__driver__internal.html#ga132d44bdafc80a7ef5259734dc4547c2">MS5611_CS_Off</a>()&#160;&#160;&#160;GPIO_WriteBit(GPIOE, GPIO_Pin_9, Bit_SET)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ms5611__driver__internal.html#ga132d44bdafc80a7ef5259734dc4547c2">MS5611_CS_Off</a>()&#160;&#160;&#160;GPIO_SetBits(GPIOE, GPIO_Pin_9)</td></tr>
 <tr class="memdesc:ga132d44bdafc80a7ef5259734dc4547c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭芯片片选 <br /></td></tr>
 <tr class="separator:ga132d44bdafc80a7ef5259734dc4547c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabae8b9d1a17f48b416cc3881bb954ca2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabae8b9d1a17f48b416cc3881bb954ca2"></a>

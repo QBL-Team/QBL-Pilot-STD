@@ -19,7 +19,7 @@ QBL_STATUS QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uint8_t* T
             SPI_I2S_SendData(TOINSTANCE(QBL_SPI_Base), *Trans++);
         }
         else {
-            SPI_I2S_SendData(TOINSTANCE(QBL_SPI_Base), 0x55);
+            SPI_I2S_SendData(TOINSTANCE(QBL_SPI_Base), 0xFF);
         }
 
         while (RESET == SPI_I2S_GetFlagStatus(TOINSTANCE(QBL_SPI_Base), SPI_I2S_FLAG_TXE)) {
@@ -27,6 +27,7 @@ QBL_STATUS QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uint8_t* T
                 return QBL_WRITE_FAILED;
             }
         }
+
         while (RESET == SPI_I2S_GetFlagStatus(TOINSTANCE(QBL_SPI_Base), SPI_I2S_FLAG_RXNE)) {
             if (QBL_GetTick() > max_time) {
                 return QBL_RECEIVE_FAILED;
@@ -35,6 +36,9 @@ QBL_STATUS QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uint8_t* T
 
         if (NULL != Rece) {
             *Rece++ = SPI_I2S_ReceiveData(TOINSTANCE(QBL_SPI_Base));
+        }
+        else {
+            SPI_I2S_ReceiveData(TOINSTANCE(QBL_SPI_Base));
         }
         Length--;
     }

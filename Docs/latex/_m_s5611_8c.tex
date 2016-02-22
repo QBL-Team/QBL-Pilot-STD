@@ -12,9 +12,9 @@ bool \hyperlink{group__ms5611__driver__internal_ga776a0112261b15cd6d234c77152b38
 \begin{DoxyCompactList}\small\item\em M\+S5611\+\_\+\+Update 尝试读取最新的气压和温度数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{group__ms5611__driver__internal_ga290d6db5c529c90aa2dc855623f55b78}{M\+S5611\+\_\+\+C\+S\+\_\+\+On}()~G\+P\+I\+O\+\_\+\+Write\+Bit(G\+P\+I\+OE, G\+P\+I\+O\+\_\+\+Pin\+\_\+9, Bit\+\_\+\+R\+E\+S\+ET)
+\#define \hyperlink{group__ms5611__driver__internal_ga290d6db5c529c90aa2dc855623f55b78}{M\+S5611\+\_\+\+C\+S\+\_\+\+On}()~G\+P\+I\+O\+\_\+\+Reset\+Bits(G\+P\+I\+OE, G\+P\+I\+O\+\_\+\+Pin\+\_\+9)
 \begin{DoxyCompactList}\small\item\em 开启芯片片选 \end{DoxyCompactList}\item 
-\#define \hyperlink{group__ms5611__driver__internal_ga132d44bdafc80a7ef5259734dc4547c2}{M\+S5611\+\_\+\+C\+S\+\_\+\+Off}()~G\+P\+I\+O\+\_\+\+Write\+Bit(G\+P\+I\+OE, G\+P\+I\+O\+\_\+\+Pin\+\_\+9, Bit\+\_\+\+S\+ET)
+\#define \hyperlink{group__ms5611__driver__internal_ga132d44bdafc80a7ef5259734dc4547c2}{M\+S5611\+\_\+\+C\+S\+\_\+\+Off}()~G\+P\+I\+O\+\_\+\+Set\+Bits(G\+P\+I\+OE, G\+P\+I\+O\+\_\+\+Pin\+\_\+9)
 \begin{DoxyCompactList}\small\item\em 关闭芯片片选 \end{DoxyCompactList}\item 
 \#define \hyperlink{group__ms5611__driver__internal_gabae8b9d1a17f48b416cc3881bb954ca2}{M\+S5611\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+I\+ME}~10
 \begin{DoxyCompactList}\small\item\em 芯片的转换时间，单位为ms \end{DoxyCompactList}\item 

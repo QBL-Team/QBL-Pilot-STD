@@ -230,26 +230,26 @@ typedef struct
 #define SD_CMD_GEN_CMD ((uint8_t)56)
 #define SD_CMD_NO_CMD ((uint8_t)64)
 
-#define SD_CMD_APP_SD_SET_BUSWIDTH ((uint8_t)6) /*!< For SD Card only */
-#define SD_CMD_SD_APP_STAUS ((uint8_t)13) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SEND_NUM_WRITE_BLOCKS ((uint8_t)22) /*!< For SD Card only */
-#define SD_CMD_SD_APP_OP_COND ((uint8_t)41) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SET_CLR_CARD_DETECT ((uint8_t)42) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SEND_SCR ((uint8_t)51) /*!< For SD Card only */
-#define SD_CMD_SDIO_RW_DIRECT ((uint8_t)52) /*!< For SD I/O Card only */
-#define SD_CMD_SDIO_RW_EXTENDED ((uint8_t)53) /*!< For SD I/O Card only */
+#define SD_CMD_APP_SD_SET_BUSWIDTH ((uint8_t)6) /*!< 仅对SD卡有效 */
+#define SD_CMD_SD_APP_STAUS ((uint8_t)13) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SEND_NUM_WRITE_BLOCKS ((uint8_t)22) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_OP_COND ((uint8_t)41) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SET_CLR_CARD_DETECT ((uint8_t)42) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SEND_SCR ((uint8_t)51) /*!< 仅对SD卡有效  */
+#define SD_CMD_SDIO_RW_DIRECT ((uint8_t)52) /*!< 仅对SD卡有效  */
+#define SD_CMD_SDIO_RW_EXTENDED ((uint8_t)53) /*!<仅对SD卡有效  */
 
-#define SD_CMD_SD_APP_GET_MKB ((uint8_t)43) /*!< For SD Card only */
-#define SD_CMD_SD_APP_GET_MID ((uint8_t)44) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SET_CER_RN1 ((uint8_t)45) /*!< For SD Card only */
-#define SD_CMD_SD_APP_GET_CER_RN2 ((uint8_t)46) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SET_CER_RES2 ((uint8_t)47) /*!< For SD Card only */
-#define SD_CMD_SD_APP_GET_CER_RES1 ((uint8_t)48) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SECURE_READ_MULTIPLE_BLOCK ((uint8_t)18) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SECURE_WRITE_MULTIPLE_BLOCK ((uint8_t)25) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SECURE_ERASE ((uint8_t)38) /*!< For SD Card only */
-#define SD_CMD_SD_APP_CHANGE_SECURE_AREA ((uint8_t)49) /*!< For SD Card only */
-#define SD_CMD_SD_APP_SECURE_WRITE_MKB ((uint8_t)48) /*!< For SD Card only */
+#define SD_CMD_SD_APP_GET_MKB ((uint8_t)43) /*!<仅对SD卡有效 */
+#define SD_CMD_SD_APP_GET_MID ((uint8_t)44) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SET_CER_RN1 ((uint8_t)45) /*!<仅对SD卡有效 */
+#define SD_CMD_SD_APP_GET_CER_RN2 ((uint8_t)46) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SET_CER_RES2 ((uint8_t)47) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_GET_CER_RES1 ((uint8_t)48) /*!< 仅对SD卡有效 */
+#define SD_CMD_SD_APP_SECURE_READ_MULTIPLE_BLOCK ((uint8_t)18) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SECURE_WRITE_MULTIPLE_BLOCK ((uint8_t)25) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SECURE_ERASE ((uint8_t)38) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_CHANGE_SECURE_AREA ((uint8_t)49) /*!< 仅对SD卡有效  */
+#define SD_CMD_SD_APP_SECURE_WRITE_MKB ((uint8_t)48) /*!< 仅对SD卡有效  */
 
 /* 选择SD卡的工作模式 */
 #if !defined(SD_DMA_MODE) && !defined(SD_POLLING_MODE)
@@ -276,75 +276,218 @@ typedef struct
 #define SDIO_HIGH_CAPACITY_MMC_CARD ((uint32_t)0x00000007)
 
 /**
-  * @brief  Initializes the SD Card and put it into StandBy State (Ready for data
-  *         transfer).
-  * @param  None
-  * @retval SD_Error: SD Card Error code.
+  * @brief  初始化存储卡
+  * @retval SD_Error: 存储卡错误状态
   */
 SD_Error SD_Init(void);
+
+/**
+  * @brief  获取当前的SD卡传输状态
+  * @retval SDTransferState: 数据传输状态
+  *   This value can be:
+  *        - SD_TRANSFER_OK: 没有数据正在传输
+  *        - SD_TRANSFER_BUSY: 有数据正在传输
+  */
+
 SDTransferState SD_GetStatus(void);
+
+/**
+  * @brief  获取当前卡的状态
+  * @retval SDCardState: 存储卡错误代码
+  */
+
 SDCardState SD_GetState(void);
+
+/**
+ * @brief  检测存储卡是否在插槽中
+ * @retval 存储卡是否在插槽中
+ */
+
 uint8_t SD_Detect(void);
+
+/**
+  * @brief  查询存储卡的操作电压和时钟配置
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_PowerON(void);
+
+/**
+  * @brief  关闭SDIO输出信号
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_PowerOFF(void);
+
+/**
+  * @brief  初始化存储卡（已被 SD_Init() 内部调用）
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_InitializeCards(void);
+/**
+  * @brief  获取存储卡的信息
+  * @param  cardinfo: 存储卡信息结构体
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_GetCardInfo(SD_CardInfo* cardinfo);
+
+/**
+ * @brief SD_GetCardStatus 获取当前的存储卡状态
+ * @param cardstatus 状态缓冲
+ * @return  存储卡错误代码
+ */
+
 SD_Error SD_GetCardStatus(SD_CardStatus* cardstatus);
+
+/**
+  * @brief  如果存储卡支持的话，开启宽总线操作
+  * @param  WideMode: 具体的总线模式
+  *     本参数可以为下列值:
+  *     @arg SDIO_BusWide_8b: 8位数据模式（仅对MMC卡有效）
+  *     @arg SDIO_BusWide_4b: 4位数据模式
+  *     @arg SDIO_BusWide_1b: 1位数据模式
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_EnableWideBusOperation(uint32_t WideMode);
+
+/**
+  * @brief  选择或反选响应的存储卡
+  * @param  addr:选择的地址
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_SelectDeselect(uint64_t addr);
+
+/**
+  * @brief  读取指定块中的数据
+  * @note   本操作须要通过以下两个函数来检查DMA控制器和存储卡的状态
+  *          - SD_ReadWaitOperation(): 本函数确认DMA控制器传输完成
+  *          - SD_GetStatus(): 本函数检查SD卡内部是否完成了数据的读取操作
+  * @param  readbuff: 读取数据的缓冲
+  * @param  ReadAddr: 读取块的起始地址
+  * @param  BlockSize: 块的大小
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_ReadBlock(uint8_t* readbuff, uint64_t ReadAddr, uint16_t BlockSize);
+/**
+  * @brief  读取多个块中的数据
+  * @note   本操作须要通过以下两个函数来检查DMA控制器和存储卡的状态
+  *          - SD_ReadWaitOperation():  本函数确认DMA控制器传输完成
+  *          - SD_GetStatus(): 本函数检查SD卡内部是否完成了数据的读取操作
+  * @param  readbuff: 读取数据的缓冲
+  * @param  ReadAddr: 读取块的起始地址
+  * @param  BlockSize: 块的大小
+  * @param  NumberOfBlocks: 读取的块的数量
+  * @retval SD_Error: 存储卡错误代码
+  */
 SD_Error SD_ReadMultiBlocks(uint8_t* readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks);
+/**
+  * @brief  向卡中指定块写入数据
+  * @note   本操作须要通过以下两个函数来检查DMA控制器和存储卡的状态
+  *          - SD_WriteWaitOperation(): 本函数确认DMA控制器传输完成
+  *          - SD_GetStatus():本函数检查SD卡内部是否完成了数据的写入操作
+  * @param  writebuff: 要写入的数据缓冲
+  * @param  WriteAddr: 要写入的块地址
+  * @param  BlockSize: 块大小
+  * @retval SD_Error: 存储卡错误代码
+  */
 SD_Error SD_WriteBlock(uint8_t* writebuff, uint64_t WriteAddr, uint16_t BlockSize);
+
+/**
+  * @brief  写入多个块，但是只能在DMA模式下管理传输状态
+  *
+  * @note   本操作须要通过以下两个函数来检查DMA控制器和存储卡的状态
+  *          - SD_WriteWaitOperation(): 本函数确认DMA控制器传输完成
+  *          - SD_GetStatus(): 本函数检查SD卡内部是否完成了数据的写入操作
+  * @param  WriteAddr: 要写入的地址
+  * @param  writebuff: 要写入的数据缓冲
+  * @param  BlockSize: 块大小
+  * @param  NumberOfBlocks: 要写入的块的数量
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_WriteMultiBlocks(uint8_t* writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks);
+
+/**
+  * @brief  获取当前的传输状态
+  * @retval SDTransferState: 数据传输状态
+  *   This value can be:
+  *        - SD_TRANSFER_OK: 当前没有数据正在传输
+  *        - SD_TRANSFER_BUSY: 当前有数据正在传输
+  */
+
 SDTransferState SD_GetTransferState(void);
+
+/**
+  * @brief  终止传输
+  * @retval SD_Error:  存储卡错误代码
+  */
+
 SD_Error SD_StopTransfer(void);
+
+/**
+  * @brief  擦除存储卡上指定地址
+  * @param  startaddr: 起始地址
+  * @param  endaddr: 结束地址
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_Erase(uint64_t startaddr, uint64_t endaddr);
+
+/**
+  * @brief  发送存储卡状态
+  * @param  pcardstatus: 状态寄存器缓冲
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_SendStatus(uint32_t* pcardstatus);
+
+/**
+  * @brief  获取当前存储卡的状态
+  * @param  psdstatus: 状态寄存器缓冲
+  * @retval SD_Error: 存储卡错误代码
+  */
+
 SD_Error SD_SendSDStatus(uint32_t* psdstatus);
 
 /**
-  * @brief  Allows to process all the interrupts that are high.
-  * @param  None
-  * @retval SD_Error: SD Card Error code.
+  * @brief  处理被触发的中断
+  * @retval SD_Error: 存储卡错误代码
   */
 
 SD_Error SD_ProcessIRQSrc(void);
 
 /**
-  * @brief  This function waits until the SDIO DMA data transfer is finished.
-  * @param  None.
-  * @retval None.
+  * @brief  本函数等待SDIO的DMA传输完成
   */
 
 void SD_ProcessDMAIRQ(void);
 
 /**
-  * @brief  This function waits until the SDIO DMA data transfer is finished.
-  *         This function should be called after SDIO_ReadMultiBlocks() function
-  *         to insure that all data sent by the card are already transferred by
-  *         the DMA controller.
-  * @param  None.
-  * @retval SD_Error: SD Card Error code.
+  * @brief  本函数等待SDIO的DMA传输完成
+  *         本函数应该在 SDIO_ReadBlock() 和 SDIO_ReadMultiBlocks() 调用之后调用，以确保数据传输完成
+  * @param  无
+  * @retval SD_Error: 存储卡错误代码
   */
 SD_Error SD_WaitReadOperation(void);
 
 /**
-  * @brief  This function waits until the SDIO DMA data transfer is finished.
-  *         This function should be called after SDIO_WriteBlock() and
-  *         SDIO_WriteMultiBlocks() function to insure that all data sent by the
-  *         card are already transferred by the DMA controller.
-  * @param  None.
-  * @retval SD_Error: SD Card Error code.
+  * @brief  本函数等待SDIO的DMA传输完成
+  *         本函数应该在 SDIO_WriteBlock() 和 SDIO_WriteMultiBlocks() 调用之后调用，以确保数据传输完成
+  * @param  无
+  * @retval SD_Error: 存储卡错误代码
   */
 SD_Error SD_WaitWriteOperation(void);
 
 /**
-* @brief  Switch mode High-Speed
-* @note   This function must be used after "Transfer State"
-* @note   This operation should be followed by the configuration
-*         of PLL to have SDIOCK clock between 67 and 75 MHz
-* @param  None
-* @retval SD_Error: SD Card Error code.
+* @brief  切换到高速模式
+* @note   本操作将PLL输出到SDIO的时钟配置为67-75Mhz
+* @param  无
+* @retval SD_Error: 存储卡错误代码
 */
 SD_Error SD_HighSpeed(void);
 

@@ -238,55 +238,55 @@ enum \hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init} (void)
-\begin{DoxyCompactList}\small\item\em Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 初始化存储卡 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status} (void)
-\begin{DoxyCompactList}\small\item\em Gets the cuurent sd card data transfer status. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前的\+S\+D卡传输状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+State} \hyperlink{group__sd__card_ga1c49d266e4f9ba33b7a425361a30d227}{S\+D\+\_\+\+Get\+State} (void)
-\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前卡的状态 \end{DoxyCompactList}\item 
 uint8\+\_\+t \hyperlink{group__sd__card_gacb7415873dffa26068c5e46025efebfa}{S\+D\+\_\+\+Detect} (void)
-\begin{DoxyCompactList}\small\item\em Detect if SD card is correctly plugged in the memory slot. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 检测存储卡是否在插槽中 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga9fbd4dd6187701cbe286ddb163e9c312}{S\+D\+\_\+\+Power\+ON} (void)
-\begin{DoxyCompactList}\small\item\em Enquires cards about their operating voltage and configures clock controls. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 查询存储卡的操作电压和时钟配置 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga9f053c27018521095d7333e7df238764}{S\+D\+\_\+\+Power\+O\+FF} (void)
-\begin{DoxyCompactList}\small\item\em Turns the S\+D\+IO output signals off. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 关闭\+S\+D\+I\+O输出信号 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab39f671413ee824a13bf1bd833f724e9}{S\+D\+\_\+\+Initialize\+Cards} (void)
-\begin{DoxyCompactList}\small\item\em Intialises all cards or single card as the case may be Card(s) come into standby state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 初始化存储卡（已被 \hyperlink{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init()} 内部调用） \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga5348c3c8f17f8c704bf00f1c5e21549d}{S\+D\+\_\+\+Get\+Card\+Info} (\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} $\ast$cardinfo)
-\begin{DoxyCompactList}\small\item\em Returns information about specific card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取存储卡的信息 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga858e0742dd01b2e2f6f397d30de6428f}{S\+D\+\_\+\+Get\+Card\+Status} (\hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status} $\ast$cardstatus)
-\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em S\+D\+\_\+\+Get\+Card\+Status 获取当前的存储卡状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga6569e73a229e639d2043549942d58d11}{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation} (uint32\+\_\+t Wide\+Mode)
-\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 如果存储卡支持的话，开启宽总线操作 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga849eb0b385337453139a7567898dacb7}{S\+D\+\_\+\+Select\+Deselect} (uint64\+\_\+t addr)
-\begin{DoxyCompactList}\small\item\em Selects od Deselects the corresponding card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 选择或反选响应的存储卡 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga1b2b4c1bf25da0771325b00cd638129d}{S\+D\+\_\+\+Read\+Block} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)
-\begin{DoxyCompactList}\small\item\em Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 读取指定块中的数据 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga56b7336165f2631d9142a513ea2d0d17}{S\+D\+\_\+\+Read\+Multi\+Blocks} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
-\begin{DoxyCompactList}\small\item\em Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 读取多个块中的数据 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab1eef7c1ff23ea746db504463d301a8b}{S\+D\+\_\+\+Write\+Block} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)
-\begin{DoxyCompactList}\small\item\em Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 向卡中指定块写入数据 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga64baac72a75a2c522e837935009cbe93}{S\+D\+\_\+\+Write\+Multi\+Blocks} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
-\begin{DoxyCompactList}\small\item\em Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 写入多个块，但是只能在\+D\+M\+A模式下管理传输状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card_ga2dd79455185c28bd21964d113a38d110}{S\+D\+\_\+\+Get\+Transfer\+State} (void)
-\begin{DoxyCompactList}\small\item\em Gets the cuurent data transfer state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前的传输状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gad3dc52f076ae8145e105cb4d8a37b043}{S\+D\+\_\+\+Stop\+Transfer} (void)
-\begin{DoxyCompactList}\small\item\em Aborts an ongoing data transfer. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 终止传输 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gaca2450c63f52cd6c1d50f6de33ecfdf8}{S\+D\+\_\+\+Erase} (uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)
-\begin{DoxyCompactList}\small\item\em Allows to erase memory area specified for the given card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 擦除存储卡上指定地址 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga7de24baeb4c6a7c9e5668630b8797888}{S\+D\+\_\+\+Send\+Status} (uint32\+\_\+t $\ast$pcardstatus)
-\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 发送存储卡状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab573516bdaa3054877172415e66d0e57}{S\+D\+\_\+\+Send\+S\+D\+Status} (uint32\+\_\+t $\ast$psdstatus)
-\begin{DoxyCompactList}\small\item\em Returns the current SD card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前存储卡的状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gab21b0412e865d8cabc915dc840fa1ccc}{S\+D\+\_\+\+Process\+I\+R\+Q\+Src} (void)
-\begin{DoxyCompactList}\small\item\em Allows to process all the interrupts that are high. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 处理被触发的中断 \end{DoxyCompactList}\item 
 void \hyperlink{group__sd__card_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)
-\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga42ab410b834d74d7f3ee757dc888b8cc}{S\+D\+\_\+\+Wait\+Read\+Operation} (void)
-\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 本函数应该在 S\+D\+I\+O\+\_\+\+Read\+Block() 和 S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() 调用之后调用，以确保数据传输完成 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_gad55967ea67075f01671fb2144c7f7b0d}{S\+D\+\_\+\+Wait\+Write\+Operation} (void)
-\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 本函数应该在 S\+D\+I\+O\+\_\+\+Write\+Block() 和 S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() 调用之后调用，以确保数据传输完成 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card_ga2457c748cf09c7ad5d3c9211d11e3fab}{S\+D\+\_\+\+High\+Speed} (void)
-\begin{DoxyCompactList}\small\item\em Switch mode High-\/\+Speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 切换到高速模式 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{详细描述}

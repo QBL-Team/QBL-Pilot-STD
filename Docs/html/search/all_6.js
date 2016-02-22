@@ -32,7 +32,7 @@ var searchData=
   ['ms5611_5fcs_5foff',['MS5611_CS_Off',['../group__ms5611__driver__internal.html#ga132d44bdafc80a7ef5259734dc4547c2',1,'MS5611.c']]],
   ['ms5611_5fcs_5fon',['MS5611_CS_On',['../group__ms5611__driver__internal.html#ga290d6db5c529c90aa2dc855623f55b78',1,'MS5611.c']]],
   ['ms5611_20驱动',['MS5611 驱动',['../group__ms5611__driver.html',1,'']]],
-  ['ms5611_20驱动内部私有数据',['MS5611 驱动内部私有数据',['../group__ms5611__driver__internal.html',1,'']]],
+  ['ms5611_20驱动私有数据',['MS5611 驱动私有数据',['../group__ms5611__driver__internal.html',1,'']]],
   ['ms5611_5finit',['MS5611_Init',['../group__ms5611__driver__internal.html#gad95cb9e2dfcda543ebc7ea207c652517',1,'MS5611_Init(void):&#160;MS5611.c'],['../group__ms5611__driver.html#gad95cb9e2dfcda543ebc7ea207c652517',1,'MS5611_Init(void):&#160;MS5611.c']]],
   ['ms5611_5fstate',['MS5611_STATE',['../group__ms5611__driver__internal.html#ga87a0c5ca64ec1e29ddc31ab17c5f5022',1,'MS5611.c']]],
   ['ms5611_5fstate_5fidle',['MS5611_STATE_IDLE',['../group__ms5611__driver__internal.html#gga87a0c5ca64ec1e29ddc31ab17c5f5022a6d4551647d3829b1242a8969b23fb734',1,'MS5611.c']]],

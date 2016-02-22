@@ -178,55 +178,56 @@
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init} (void)
-\begin{DoxyCompactList}\small\item\em Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 初始化存储卡 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status} (void)
-\begin{DoxyCompactList}\small\item\em Gets the cuurent sd card data transfer status. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前的\+S\+D卡传输状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacdc2533a9bff7dc10def0945f5915398}{S\+D\+Card\+State} \hyperlink{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}{S\+D\+\_\+\+Get\+State} (void)
-\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前卡的状态 \end{DoxyCompactList}\item 
 uint8\+\_\+t \hyperlink{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}{S\+D\+\_\+\+Detect} (void)
-\begin{DoxyCompactList}\small\item\em Detect if SD card is correctly plugged in the memory slot. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 检测存储卡是否在插槽中 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}{S\+D\+\_\+\+Power\+ON} (void)
-\begin{DoxyCompactList}\small\item\em Enquires cards about their operating voltage and configures clock controls. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 查询存储卡的操作电压和时钟配置 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga9f053c27018521095d7333e7df238764}{S\+D\+\_\+\+Power\+O\+FF} (void)
-\begin{DoxyCompactList}\small\item\em Turns the S\+D\+IO output signals off. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 关闭\+S\+D\+I\+O输出信号 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}{S\+D\+\_\+\+Initialize\+Cards} (void)
-\begin{DoxyCompactList}\small\item\em Intialises all cards or single card as the case may be Card(s) come into standby state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 初始化存储卡（已被 \hyperlink{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init()} 内部调用） \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}{S\+D\+\_\+\+Get\+Card\+Info} (\hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} $\ast$cardinfo)
-\begin{DoxyCompactList}\small\item\em Returns information about specific card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取存储卡的信息 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}{S\+D\+\_\+\+Get\+Card\+Status} (\hyperlink{struct_s_d___card_status}{S\+D\+\_\+\+Card\+Status} $\ast$cardstatus)
-\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em S\+D\+\_\+\+Get\+Card\+Status 获取当前的存储卡状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation} (uint32\+\_\+t Wide\+Mode)
-\begin{DoxyCompactList}\small\item\em Enables wide bus opeartion for the requeseted card if supported by card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 如果存储卡支持的话，开启宽总线操作 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}{S\+D\+\_\+\+Select\+Deselect} (uint64\+\_\+t addr)
-\begin{DoxyCompactList}\small\item\em Selects od Deselects the corresponding card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 选择或反选响应的存储卡 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}{S\+D\+\_\+\+Read\+Block} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size)
-\begin{DoxyCompactList}\small\item\em Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 读取指定块中的数据 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}{S\+D\+\_\+\+Read\+Multi\+Blocks} (uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
-\begin{DoxyCompactList}\small\item\em Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 读取多个块中的数据 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}{S\+D\+\_\+\+Wait\+Read\+Operation} (void)
-\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 本函数应该在 S\+D\+I\+O\+\_\+\+Read\+Block() 和 S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() 调用之后调用，以确保数据传输完成 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}{S\+D\+\_\+\+Write\+Block} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size)
-\begin{DoxyCompactList}\small\item\em Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 向卡中指定块写入数据 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}{S\+D\+\_\+\+Write\+Multi\+Blocks} (uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)
-\begin{DoxyCompactList}\small\item\em Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 写入多个块，但是只能在\+D\+M\+A模式下管理传输状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}{S\+D\+\_\+\+Wait\+Write\+Operation} (void)
-\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 本函数应该在 S\+D\+I\+O\+\_\+\+Write\+Block() 和 S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() 调用之后调用，以确保数据传输完成 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gace0484a459648257c3eae8ea60f64fbf}{S\+D\+Transfer\+State} \hyperlink{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}{S\+D\+\_\+\+Get\+Transfer\+State} (void)
-\begin{DoxyCompactList}\small\item\em Gets the cuurent data transfer state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前的传输状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}{S\+D\+\_\+\+Stop\+Transfer} (void)
-\begin{DoxyCompactList}\small\item\em Aborts an ongoing data transfer. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 终止传输 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}{S\+D\+\_\+\+Erase} (uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)
-\begin{DoxyCompactList}\small\item\em Allows to erase memory area specified for the given card. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 擦除存储卡上指定地址 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}{S\+D\+\_\+\+Send\+Status} (uint32\+\_\+t $\ast$pcardstatus)
-\begin{DoxyCompactList}\small\item\em Returns the current card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 发送存储卡状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}{S\+D\+\_\+\+Send\+S\+D\+Status} (uint32\+\_\+t $\ast$psdstatus)
-\begin{DoxyCompactList}\small\item\em Returns the current SD card\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 获取当前存储卡的状态 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}{S\+D\+\_\+\+Process\+I\+R\+Q\+Src} (void)
-\begin{DoxyCompactList}\small\item\em Allows to process all the interrupts that are high. \end{DoxyCompactList}\item 
-void \hyperlink{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)
-\begin{DoxyCompactList}\small\item\em This function waits until the S\+D\+IO D\+MA data transfer is finished. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 处理被触发的中断 \end{DoxyCompactList}\item 
+void \hyperlink{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ} (void)\hypertarget{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{}\label{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}
+
+\begin{DoxyCompactList}\small\item\em 本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 \end{DoxyCompactList}\item 
 \hyperlink{group__sd__card_gacff91fa68daa1d1ee967b5b3fb3dbd8c}{S\+D\+\_\+\+Error} \hyperlink{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}{S\+D\+\_\+\+High\+Speed} (void)
-\begin{DoxyCompactList}\small\item\em Switch mode High-\/\+Speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 切换到高速模式 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{变量}
 \begin{DoxyCompactItemize}
 \item 
@@ -269,16 +270,11 @@ S\+D\+I\+O\+\_\+\+Data\+Init\+Type\+Def {\bfseries S\+D\+I\+O\+\_\+\+Data\+Init\
 )}\hypertarget{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}{}\label{group__sd__card__private_gacb7415873dffa26068c5e46025efebfa}
 
 
-Detect if SD card is correctly plugged in the memory slot. 
+检测存储卡是否在插槽中 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em Return} & if SD is detected or not \\
+{\em 存储卡是否在插槽中} & \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation@{S\+D\+\_\+\+Enable\+Wide\+Bus\+Operation}}
@@ -290,25 +286,21 @@ Detect if SD card is correctly plugged in the memory slot.
 )}\hypertarget{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}{}\label{group__sd__card__private_ga6569e73a229e639d2043549942d58d11}
 
 
-Enables wide bus opeartion for the requeseted card if supported by card. 
+如果存储卡支持的话，开启宽总线操作 
 
 
 \begin{DoxyParams}{参数}
-{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
-\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
+{\em Wide\+Mode} & 具体的总线模式 本参数可以为下列值\+: \begin{DoxyItemize}
+\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8位数据模式（仅对\+M\+M\+C卡有效） \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4位数据模式 \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1位数据模式 \end{DoxyItemize}
 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ M\+MC Card doesn\textquotesingle{}t support this feature
-
-$<$ Configure the S\+D\+IO peripheral
-
-$<$ Configure the S\+D\+IO peripheral \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}}
 \index{S\+D\+\_\+\+Erase@{S\+D\+\_\+\+Erase}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Erase(uint64\+\_\+t startaddr, uint64\+\_\+t endaddr)}{SD_Erase(uint64_t startaddr, uint64_t endaddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Erase (
 \begin{DoxyParamCaption}
@@ -318,23 +310,21 @@ $<$ Configure the S\+D\+IO peripheral \index{S\+D卡驱动私有数据@{S\+D卡�
 )}\hypertarget{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}{}\label{group__sd__card__private_gaca2450c63f52cd6c1d50f6de33ecfdf8}
 
 
-Allows to erase memory area specified for the given card. 
+擦除存储卡上指定地址 
 
 
 \begin{DoxyParams}{参数}
-{\em startaddr} & the start address. \\
+{\em startaddr} & 起始地址 \\
 \hline
-{\em endaddr} & the end address. \\
+{\em endaddr} & 结束地址 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Check if the card coomnd class supports erase command
-
-$<$ Send C\+M\+D32 S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT with argument as addr \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}}
 \index{S\+D\+\_\+\+Get\+Card\+Info@{S\+D\+\_\+\+Get\+Card\+Info}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Info(\+S\+D\+\_\+\+Card\+Info $\ast$cardinfo)}{SD_GetCardInfo(SD_CardInfo *cardinfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Get\+Card\+Info (
 \begin{DoxyParamCaption}
@@ -343,91 +333,19 @@ $<$ Send C\+M\+D32 S\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+G\+R\+P\+\_\+\+S\+T\+A\+RT w
 )}\hypertarget{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}{}\label{group__sd__card__private_ga5348c3c8f17f8c704bf00f1c5e21549d}
 
 
-Returns information about specific card. 
+获取存储卡的信息 
 
 
 \begin{DoxyParams}{参数}
-{\em cardinfo} & pointer to a \hyperlink{struct_s_d___card_info}{S\+D\+\_\+\+Card\+Info} structure that contains all SD card information. \\
+{\em cardinfo} & 存储卡信息结构体 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Byte 0
-
-$<$ Byte 1
-
-$<$ Byte 2
-
-$<$ Byte 3
-
-$<$ Byte 4
-
-$<$ Byte 5
-
-$<$ Byte 6
-
-$<$ Reserved
-
-$<$ Byte 7
-
-$<$ Byte 8
-
-$<$ Byte 9
-
-$<$ Byte 10
-
-$<$ Byte 7
-
-$<$ Byte 8
-
-$<$ Byte 9
-
-$<$ Byte 10
-
-$<$ Byte 11
-
-$<$ Byte 12
-
-$<$ Byte 13
-
-$<$ Byte 14
-
-$<$ Byte 15
-
-$<$ Byte 0
-
-$<$ Byte 1
-
-$<$ Byte 2
-
-$<$ Byte 3
-
-$<$ Byte 4
-
-$<$ Byte 5
-
-$<$ Byte 6
-
-$<$ Byte 7
-
-$<$ Byte 8
-
-$<$ Byte 9
-
-$<$ Byte 10
-
-$<$ Byte 11
-
-$<$ Byte 12
-
-$<$ Byte 13
-
-$<$ Byte 14
-
-$<$ Byte 15 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}}
 \index{S\+D\+\_\+\+Get\+Card\+Status@{S\+D\+\_\+\+Get\+Card\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+Card\+Status(\+S\+D\+\_\+\+Card\+Status $\ast$cardstatus)}{SD_GetCardStatus(SD_CardStatus *cardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Get\+Card\+Status (
 \begin{DoxyParamCaption}
@@ -436,47 +354,17 @@ $<$ Byte 15 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\
 )}\hypertarget{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}{}\label{group__sd__card__private_ga858e0742dd01b2e2f6f397d30de6428f}
 
 
-Enables wide bus opeartion for the requeseted card if supported by card. 
+S\+D\+\_\+\+Get\+Card\+Status 获取当前的存储卡状态 
 
 
 \begin{DoxyParams}{参数}
-{\em Wide\+Mode} & Specifies the SD card wide bus mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
-\item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+8b\+: 8-\/bit data transfer (Only for M\+MC) \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+4b\+: 4-\/bit data transfer \item S\+D\+I\+O\+\_\+\+Bus\+Wide\+\_\+1b\+: 1-\/bit data transfer \end{DoxyItemize}
-\\
+{\em cardstatus} & 状态缓冲 \\
 \hline
 \end{DoxyParams}
-
-\begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
-\hline
-\end{DoxyRetVals}
-$<$ Byte 0
-
-$<$ Byte 2
-
-$<$ Byte 3
-
-$<$ Byte 4
-
-$<$ Byte 5
-
-$<$ Byte 6
-
-$<$ Byte 7
-
-$<$ Byte 8
-
-$<$ Byte 9
-
-$<$ Byte 10
-
-$<$ Byte 11
-
-$<$ Byte 12
-
-$<$ Byte 13
-
-$<$ Byte 13 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}}
+\begin{DoxyReturn}{返回}
+存储卡错误代码 
+\end{DoxyReturn}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}}
 \index{S\+D\+\_\+\+Get\+State@{S\+D\+\_\+\+Get\+State}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Get\+State(void)}{SD_GetState(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+Card\+State} S\+D\+\_\+\+Get\+State (
 \begin{DoxyParamCaption}
@@ -485,16 +373,11 @@ $<$ Byte 13 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\
 )}\hypertarget{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}{}\label{group__sd__card__private_ga1c49d266e4f9ba33b7a425361a30d227}
 
 
-Returns the current card\textquotesingle{}s state. 
+获取当前卡的状态 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+Card\+State} & SD Card Error or SD Card Current State. \\
+{\em S\+D\+Card\+State} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Get\+Status@{S\+D\+\_\+\+Get\+Status}}
@@ -506,19 +389,14 @@ Returns the current card\textquotesingle{}s state.
 )}\hypertarget{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{}\label{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}
 
 
-Gets the cuurent sd card data transfer status. 
+获取当前的\+S\+D卡传输状态 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+{\em S\+D\+Transfer\+State} & 数据传输状态 This value can be\+:
 \begin{DoxyItemize}
-\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
-\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: 没有数据正在传输
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: 有数据正在传输 
 \end{DoxyItemize}\\
 \hline
 \end{DoxyRetVals}
@@ -531,19 +409,14 @@ Gets the cuurent sd card data transfer status.
 )}\hypertarget{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}{}\label{group__sd__card__private_ga2dd79455185c28bd21964d113a38d110}
 
 
-Gets the cuurent data transfer state. 
+获取当前的传输状态 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+Transfer\+State} & Data Transfer state. This value can be\+:
+{\em S\+D\+Transfer\+State} & 数据传输状态 This value can be\+:
 \begin{DoxyItemize}
-\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: No data transfer is acting
-\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: Data transfer is acting 
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+OK\+: 当前没有数据正在传输
+\item S\+D\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+U\+SY\+: 当前有数据正在传输 
 \end{DoxyItemize}\\
 \hline
 \end{DoxyRetVals}
@@ -556,26 +429,22 @@ Gets the cuurent data transfer state.
 )}\hypertarget{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}{}\label{group__sd__card__private_ga2457c748cf09c7ad5d3c9211d11e3fab}
 
 
-Switch mode High-\/\+Speed. 
+切换到高速模式 
 
 \begin{DoxyNote}{注解}
-This function must be used after \char`\"{}\+Transfer State\char`\"{} 
-
-This operation should be followed by the configuration of P\+LL to have S\+D\+I\+O\+CK clock between 67 and 75 M\+Hz 
+本操作将\+P\+L\+L输出到\+S\+D\+I\+O的时钟配置为67-\/75\+Mhz 
 \end{DoxyNote}
 
 \begin{DoxyParams}{参数}
-{\em None} & \\
+{\em 无} & \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Get S\+CR Register
-
-$<$ Send C\+M\+D6 switch mode \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}}
 \index{S\+D\+\_\+\+Init@{S\+D\+\_\+\+Init}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Init(void)}{SD_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Init (
 \begin{DoxyParamCaption}
@@ -584,25 +453,14 @@ $<$ Send C\+M\+D6 switch mode \index{S\+D卡驱动私有数据@{S\+D卡驱动私
 )}\hypertarget{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}{}\label{group__sd__card__private_ga3c927d4d98ffb6f3cc2442b09c19926c}
 
 
-Initializes the SD Card and put it into Stand\+By State (Ready for data transfer). 
+初始化存储卡 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误状态 \\
 \hline
 \end{DoxyRetVals}
-$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
-
-$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
-
-$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
-
-$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}}
 \index{S\+D\+\_\+\+Initialize\+Cards@{S\+D\+\_\+\+Initialize\+Cards}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Initialize\+Cards(void)}{SD_InitializeCards(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Initialize\+Cards (
 \begin{DoxyParamCaption}
@@ -611,27 +469,14 @@ $<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz \index{S
 )}\hypertarget{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}{}\label{group__sd__card__private_gab39f671413ee824a13bf1bd833f724e9}
 
 
-Intialises all cards or single card as the case may be Card(s) come into standby state. 
+初始化存储卡（已被 \hyperlink{group__sd__card_ga3c927d4d98ffb6f3cc2442b09c19926c}{S\+D\+\_\+\+Init()} 内部调用） 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Send C\+M\+D2 A\+L\+L\+\_\+\+S\+E\+N\+D\+\_\+\+C\+ID
-
-$<$ Send C\+M\+D3 S\+E\+T\+\_\+\+R\+E\+L\+\_\+\+A\+D\+DR with argument 0
-
-$<$ SD Card publishes its R\+CA.
-
-$<$ Send C\+M\+D9 S\+E\+N\+D\+\_\+\+C\+SD with argument as card\textquotesingle{}s R\+CA
-
-$<$ All cards get intialized \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}}
 \index{S\+D\+\_\+\+Power\+O\+FF@{S\+D\+\_\+\+Power\+O\+FF}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+F\+F(void)}{SD_PowerOFF(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Power\+O\+FF (
 \begin{DoxyParamCaption}
@@ -640,19 +485,14 @@ $<$ All cards get intialized \index{S\+D卡驱动私有数据@{S\+D卡驱动私�
 )}\hypertarget{group__sd__card__private_ga9f053c27018521095d7333e7df238764}{}\label{group__sd__card__private_ga9f053c27018521095d7333e7df238764}
 
 
-Turns the S\+D\+IO output signals off. 
+关闭\+S\+D\+I\+O输出信号 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Set Power State to O\+FF \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}}
 \index{S\+D\+\_\+\+Power\+ON@{S\+D\+\_\+\+Power\+ON}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Power\+O\+N(void)}{SD_PowerON(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Power\+ON (
 \begin{DoxyParamCaption}
@@ -661,79 +501,11 @@ $<$ Set Power State to O\+FF \index{S\+D卡驱动私有数据@{S\+D卡驱动私�
 )}\hypertarget{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}{}\label{group__sd__card__private_ga9fbd4dd6187701cbe286ddb163e9c312}
 
 
-Enquires cards about their operating voltage and configures clock controls. 
+查询存储卡的操作电压和时钟配置 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
-\hline
-\end{DoxyRetVals}
-$<$ Power ON Sequence -----------------------------------------------------
-
-$<$ Configure the S\+D\+IO peripheral
-
-$<$ S\+D\+I\+O\+\_\+\+CK = S\+D\+I\+O\+C\+LK / (S\+D\+I\+O\+\_\+\+I\+N\+I\+T\+\_\+\+C\+L\+K\+\_\+\+D\+IV + 2)
-
-$<$ on S\+T\+M32\+F4xx devices, S\+D\+I\+O\+C\+LK is fixed to 48\+M\+Hz
-
-$<$ S\+D\+I\+O\+\_\+\+CK for initialization should not exceed 400 K\+Hz
-
-$<$ Set Power State to ON
-
-$<$ Enable S\+D\+IO Clock
-
-$<$ C\+M\+D0\+: G\+O\+\_\+\+I\+D\+L\+E\+\_\+\+S\+T\+A\+TE -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---------------------------------------
-
-$<$ No C\+MD response required
-
-$<$ C\+MD Response Time\+Out (wait for C\+M\+D\+S\+E\+NT flag)
-
-$<$ Send C\+M\+D8 to verify SD card interface operating condition
-
-$<$ Argument\+: -\/ \mbox{[}31\+:12\mbox{]}\+: Reserved (shall be set to \textquotesingle{}0\textquotesingle{})
-\begin{DoxyItemize}
-\item \mbox{[}11\+:8\mbox{]}\+: Supply Voltage (V\+HS) 0x1 (Range\+: 2.\+7-\/3.\+6 V)
-\item \mbox{[}7\+:0\mbox{]}\+: Check Pattern (recommended 0x\+AA)
-\end{DoxyItemize}
-
-$<$ C\+MD Response\+: R7
-
-$<$ SD Card 2.\+0
-
-$<$ C\+M\+D55
-
-$<$ If errorstatus is Command Time\+Out, it is a M\+MC card
-
-$<$ If errorstatus is S\+D\+\_\+\+OK it is a SD card\+: SD card 2.\+0 (voltage range mismatch) or SD card 1.\+x
-
-$<$ SD C\+A\+RD
-
-$<$ Send A\+C\+M\+D41 S\+D\+\_\+\+A\+P\+P\+\_\+\+O\+P\+\_\+\+C\+O\+ND with Argument 0x80100000
-
-$<$ S\+E\+ND C\+M\+D55 A\+P\+P\+\_\+\+C\+MD with R\+CA as 0 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}}
-\index{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ@{S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
-\subsubsection[{\texorpdfstring{S\+D\+\_\+\+Process\+D\+M\+A\+I\+R\+Q(void)}{SD_ProcessDMAIRQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+D\+\_\+\+Process\+D\+M\+A\+I\+RQ (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}\hypertarget{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}{}\label{group__sd__card__private_ga52ec18498c19918549142f6680a7b21e}
-
-
-This function waits until the S\+D\+IO D\+MA data transfer is finished. 
-
-
-\begin{DoxyParams}{参数}
-{\em None.} & \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{返回值}
-{\em None.} & \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Process\+I\+R\+Q\+Src@{S\+D\+\_\+\+Process\+I\+R\+Q\+Src}}
@@ -745,16 +517,11 @@ This function waits until the S\+D\+IO D\+MA data transfer is finished.
 )}\hypertarget{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}{}\label{group__sd__card__private_gab21b0412e865d8cabc915dc840fa1ccc}
 
 
-Allows to process all the interrupts that are high. 
+处理被触发的中断 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Read\+Block@{S\+D\+\_\+\+Read\+Block}}
@@ -768,30 +535,30 @@ Allows to process all the interrupts that are high.
 )}\hypertarget{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}{}\label{group__sd__card__private_ga1b2b4c1bf25da0771325b00cd638129d}
 
 
-Allows to read one block from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+读取指定块中的数据 
 
 \begin{DoxyNote}{注解}
-This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+本操作须要通过以下两个函数来检查\+D\+M\+A控制器和存储卡的状态
 \begin{DoxyItemize}
-\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
-\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: 本函数确认\+D\+M\+A控制器传输完成
+\item \hyperlink{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: 本函数检查\+S\+D卡内部是否完成了数据的读取操作 
 \end{DoxyItemize}
 \end{DoxyNote}
 
 \begin{DoxyParams}{参数}
-{\em readbuff} & pointer to the buffer that will contain the received data \\
+{\em readbuff} & 读取数据的缓冲 \\
 \hline
-{\em Read\+Addr} & Address from where data are to be read. \\
+{\em Read\+Addr} & 读取块的起始地址 \\
 \hline
-{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+{\em Block\+Size} & 块的大小 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Send C\+M\+D17 R\+E\+A\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}}
 \index{S\+D\+\_\+\+Read\+Multi\+Blocks@{S\+D\+\_\+\+Read\+Multi\+Blocks}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Read\+Multi\+Blocks(uint8\+\_\+t $\ast$readbuff, uint64\+\_\+t Read\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_ReadMultiBlocks(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Read\+Multi\+Blocks (
 \begin{DoxyParamCaption}
@@ -803,32 +570,32 @@ $<$ Send C\+M\+D17 R\+E\+A\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+L\+O\+CK \index{
 )}\hypertarget{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}{}\label{group__sd__card__private_ga56b7336165f2631d9142a513ea2d0d17}
 
 
-Allows to read blocks from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+读取多个块中的数据 
 
 \begin{DoxyNote}{注解}
-This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+本操作须要通过以下两个函数来检查\+D\+M\+A控制器和存储卡的状态
 \begin{DoxyItemize}
-\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
-\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: 本函数确认\+D\+M\+A控制器传输完成
+\item \hyperlink{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: 本函数检查\+S\+D卡内部是否完成了数据的读取操作 
 \end{DoxyItemize}
 \end{DoxyNote}
 
 \begin{DoxyParams}{参数}
-{\em readbuff} & pointer to the buffer that will contain the received data. \\
+{\em readbuff} & 读取数据的缓冲 \\
 \hline
-{\em Read\+Addr} & Address from where data are to be read. \\
+{\em Read\+Addr} & 读取块的起始地址 \\
 \hline
-{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+{\em Block\+Size} & 块的大小 \\
 \hline
-{\em Number\+Of\+Blocks} & number of blocks to be read. \\
+{\em Number\+Of\+Blocks} & 读取的块的数量 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Send C\+M\+D18 R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK with argument data address \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}}
 \index{S\+D\+\_\+\+Select\+Deselect@{S\+D\+\_\+\+Select\+Deselect}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Select\+Deselect(uint64\+\_\+t addr)}{SD_SelectDeselect(uint64_t addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Select\+Deselect (
 \begin{DoxyParamCaption}
@@ -837,19 +604,19 @@ $<$ Send C\+M\+D18 R\+E\+A\+D\+\_\+\+M\+U\+L\+T\+\_\+\+B\+L\+O\+CK with argument
 )}\hypertarget{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}{}\label{group__sd__card__private_ga849eb0b385337453139a7567898dacb7}
 
 
-Selects od Deselects the corresponding card. 
+选择或反选响应的存储卡 
 
 
 \begin{DoxyParams}{参数}
-{\em addr} & Address of the Card to be selected. \\
+{\em addr\+:选择的地址} & \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Send C\+M\+D7 S\+D\+I\+O\+\_\+\+S\+E\+L\+\_\+\+D\+E\+S\+E\+L\+\_\+\+C\+A\+RD \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}}
 \index{S\+D\+\_\+\+Send\+S\+D\+Status@{S\+D\+\_\+\+Send\+S\+D\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+S\+D\+Status(uint32\+\_\+t $\ast$psdstatus)}{SD_SendSDStatus(uint32_t *psdstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Send\+S\+D\+Status (
 \begin{DoxyParamCaption}
@@ -858,19 +625,19 @@ $<$ Send C\+M\+D7 S\+D\+I\+O\+\_\+\+S\+E\+L\+\_\+\+D\+E\+S\+E\+L\+\_\+\+C\+A\+RD
 )}\hypertarget{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}{}\label{group__sd__card__private_gab573516bdaa3054877172415e66d0e57}
 
 
-Returns the current SD card\textquotesingle{}s status. 
+获取当前存储卡的状态 
 
 
 \begin{DoxyParams}{参数}
-{\em psdstatus} & pointer to the buffer that will contain the SD card status (SD Status register). \\
+{\em psdstatus} & 状态寄存器缓冲 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Send A\+C\+M\+D13 S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US with argument as card\textquotesingle{}s R\+CA. \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}}
 \index{S\+D\+\_\+\+Send\+Status@{S\+D\+\_\+\+Send\+Status}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Send\+Status(uint32\+\_\+t $\ast$pcardstatus)}{SD_SendStatus(uint32_t *pcardstatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Send\+Status (
 \begin{DoxyParamCaption}
@@ -879,16 +646,16 @@ $<$ Send A\+C\+M\+D13 S\+D\+\_\+\+A\+P\+P\+\_\+\+S\+T\+A\+US with argument as ca
 )}\hypertarget{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}{}\label{group__sd__card__private_ga7de24baeb4c6a7c9e5668630b8797888}
 
 
-Returns the current card\textquotesingle{}s status. 
+发送存储卡状态 
 
 
 \begin{DoxyParams}{参数}
-{\em pcardstatus} & pointer to the buffer that will contain the SD card status (Card Status register). \\
+{\em pcardstatus} & 状态寄存器缓冲 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Stop\+Transfer@{S\+D\+\_\+\+Stop\+Transfer}}
@@ -900,19 +667,14 @@ Returns the current card\textquotesingle{}s status.
 )}\hypertarget{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}{}\label{group__sd__card__private_gad3dc52f076ae8145e105cb4d8a37b043}
 
 
-Aborts an ongoing data transfer. 
+终止传输 
 
-
-\begin{DoxyParams}{参数}
-{\em None} & \\
-\hline
-\end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ Send C\+M\+D12 S\+T\+O\+P\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}}
 \index{S\+D\+\_\+\+Wait\+Read\+Operation@{S\+D\+\_\+\+Wait\+Read\+Operation}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Wait\+Read\+Operation(void)}{SD_WaitReadOperation(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Wait\+Read\+Operation (
 \begin{DoxyParamCaption}
@@ -921,16 +683,16 @@ $<$ Send C\+M\+D12 S\+T\+O\+P\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON \index{S\+
 )}\hypertarget{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}{}\label{group__sd__card__private_ga42ab410b834d74d7f3ee757dc888b8cc}
 
 
-This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 本函数应该在 S\+D\+I\+O\+\_\+\+Read\+Block() 和 S\+D\+I\+O\+\_\+\+Read\+Multi\+Blocks() 调用之后调用，以确保数据传输完成 
 
 
 \begin{DoxyParams}{参数}
-{\em None.} & \\
+{\em 无} & \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Wait\+Write\+Operation@{S\+D\+\_\+\+Wait\+Write\+Operation}}
@@ -942,16 +704,16 @@ This function waits until the S\+D\+IO D\+MA data transfer is finished. This fun
 )}\hypertarget{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}{}\label{group__sd__card__private_gad55967ea67075f01671fb2144c7f7b0d}
 
 
-This function waits until the S\+D\+IO D\+MA data transfer is finished. This function should be called after S\+D\+I\+O\+\_\+\+Write\+Block() and S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() function to insure that all data sent by the card are already transferred by the D\+MA controller. 
+本函数等待\+S\+D\+I\+O的\+D\+M\+A传输完成 本函数应该在 S\+D\+I\+O\+\_\+\+Write\+Block() 和 S\+D\+I\+O\+\_\+\+Write\+Multi\+Blocks() 调用之后调用，以确保数据传输完成 
 
 
 \begin{DoxyParams}{参数}
-{\em None.} & \\
+{\em 无} & \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
 \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Write\+Block@{S\+D\+\_\+\+Write\+Block}}
@@ -965,30 +727,30 @@ This function waits until the S\+D\+IO D\+MA data transfer is finished. This fun
 )}\hypertarget{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}{}\label{group__sd__card__private_gab1eef7c1ff23ea746db504463d301a8b}
 
 
-Allows to write one block starting from a specified address in a card. The Data transfer can be managed by D\+MA mode or Polling mode. 
+向卡中指定块写入数据 
 
 \begin{DoxyNote}{注解}
-This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+本操作须要通过以下两个函数来检查\+D\+M\+A控制器和存储卡的状态
 \begin{DoxyItemize}
-\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
-\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\item S\+D\+\_\+\+Write\+Wait\+Operation()\+: 本函数确认\+D\+M\+A控制器传输完成
+\item \hyperlink{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+:本函数检查\+S\+D卡内部是否完成了数据的写入操作 
 \end{DoxyItemize}
 \end{DoxyNote}
 
 \begin{DoxyParams}{参数}
-{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+{\em writebuff} & 要写入的数据缓冲 \\
 \hline
-{\em Write\+Addr} & Address from where data are to be read. \\
+{\em Write\+Addr} & 要写入的块地址 \\
 \hline
-{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+{\em Block\+Size} & 块大小 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}
-$<$ In case of single data block transfer no need of stop command at all \index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}}
+\index{S\+D卡驱动私有数据@{S\+D卡驱动私有数据}!S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}}
 \index{S\+D\+\_\+\+Write\+Multi\+Blocks@{S\+D\+\_\+\+Write\+Multi\+Blocks}!S\+D卡驱动私有数据@{S\+D卡驱动私有数据}}
 \subsubsection[{\texorpdfstring{S\+D\+\_\+\+Write\+Multi\+Blocks(uint8\+\_\+t $\ast$writebuff, uint64\+\_\+t Write\+Addr, uint16\+\_\+t Block\+Size, uint32\+\_\+t Number\+Of\+Blocks)}{SD_WriteMultiBlocks(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+\_\+\+Error} S\+D\+\_\+\+Write\+Multi\+Blocks (
 \begin{DoxyParamCaption}
@@ -1000,28 +762,28 @@ $<$ In case of single data block transfer no need of stop command at all \index{
 )}\hypertarget{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}{}\label{group__sd__card__private_ga64baac72a75a2c522e837935009cbe93}
 
 
-Allows to write blocks starting from a specified address in a card. The Data transfer can be managed by D\+MA mode only. 
+写入多个块，但是只能在\+D\+M\+A模式下管理传输状态 
 
 \begin{DoxyNote}{注解}
-This operation should be followed by two functions to check if the D\+MA Controller and SD Card status.
+本操作须要通过以下两个函数来检查\+D\+M\+A控制器和存储卡的状态
 \begin{DoxyItemize}
-\item S\+D\+\_\+\+Read\+Wait\+Operation()\+: this function insure that the D\+MA controller has finished all data transfer.
-\item \hyperlink{group__sd__card__private_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: to check that the SD Card has finished the data transfer and it is ready for data. 
+\item S\+D\+\_\+\+Write\+Wait\+Operation()\+: 本函数确认\+D\+M\+A控制器传输完成
+\item \hyperlink{group__sd__card_gaf3f228aaee7b2b18acc056b2f27ca3f7}{S\+D\+\_\+\+Get\+Status()}\+: 本函数检查\+S\+D卡内部是否完成了数据的写入操作 
 \end{DoxyItemize}
 \end{DoxyNote}
 
 \begin{DoxyParams}{参数}
-{\em Write\+Addr} & Address from where data are to be read. \\
+{\em Write\+Addr} & 要写入的地址 \\
 \hline
-{\em writebuff} & pointer to the buffer that contain the data to be transferred. \\
+{\em writebuff} & 要写入的数据缓冲 \\
 \hline
-{\em Block\+Size} & the SD card Data block size. The Block size should be 512. \\
+{\em Block\+Size} & 块大小 \\
 \hline
-{\em Number\+Of\+Blocks} & number of blocks to be written. \\
+{\em Number\+Of\+Blocks} & 要写入的块的数量 \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{返回值}
-{\em S\+D\+\_\+\+Error} & SD Card Error code. \\
+{\em S\+D\+\_\+\+Error} & 存储卡错误代码 \\
 \hline
 \end{DoxyRetVals}

@@ -14,12 +14,12 @@
   */
 
 /*!
- * @defgroup ms5611_driver_internal MS5611 驱动内部私有数据
+ * @defgroup ms5611_driver_internal MS5611 驱动私有数据
  * @{
  */
 
-#define MS5611_CS_On() GPIO_WriteBit(GPIOE, GPIO_Pin_9, Bit_RESET) ///< 开启芯片片选
-#define MS5611_CS_Off() GPIO_WriteBit(GPIOE, GPIO_Pin_9, Bit_SET) ///< 关闭芯片片选
+#define MS5611_CS_On() GPIO_ResetBits(GPIOE, GPIO_Pin_9) ///< 开启芯片片选
+#define MS5611_CS_Off() GPIO_SetBits(GPIOE, GPIO_Pin_9) ///< 关闭芯片片选
 #define MS5611_CONVERSION_TIME 10 ///< 芯片的转换时间，单位为ms
 
 const uint8_t MS5611_CMD_RST[] = { 0x1E }; ///< 重置芯片
@@ -139,10 +139,6 @@ QBL_STATUS MS5611_Init(void)
     //reset the state machine
     ms_state = MS5611_STATE_IDLE;
 
-    //Reset the chip
-
-    MS5611_SendCMD(MS5611_CMD_RST);
-
     //Wait for chip reset
     QBL_Delay(10);
 
@@ -194,8 +190,8 @@ bool MS5611_Update(float* Pressure, float* Temperature)
         if (QBL_GetTick() - ms_ticks >= MS5611_CONVERSION_TIME) {
             //Read adc result
             MS5611_CS_On();
-            QBL_SPI_TransmitReceive(SPI2_BASE,MS5611_CMD_READ_ADC,NULL, 1, 5);
-            QBL_SPI_TransmitReceive(SPI2_BASE,NULL, tmp, 3, 5);
+            QBL_SPI_TransmitReceive(SPI2_BASE, MS5611_CMD_READ_ADC, NULL, 1, 5);
+            QBL_SPI_TransmitReceive(SPI2_BASE, NULL, tmp, 3, 5);
             MS5611_CS_Off();
 
             //Conver to normal order
