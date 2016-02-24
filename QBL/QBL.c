@@ -68,7 +68,7 @@ static void QBL_Periph_Init(void)
         //SPI1
         RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
         SPI_DeInit(SPI1);
-        sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;
+        sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_2;
         sp.SPI_CPHA = SPI_CPHA_1Edge;
         sp.SPI_CPOL = SPI_CPOL_Low;
         sp.SPI_CRCPolynomial = 7;

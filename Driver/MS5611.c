@@ -18,6 +18,7 @@
  * @{
  */
 
+#define MS_SPI_BASE SPI2_BASE ///< 使用的SPI端口
 #define MS5611_CS_On() GPIO_ResetBits(GPIOE, GPIO_Pin_9) ///< 开启芯片片选
 #define MS5611_CS_Off() GPIO_SetBits(GPIOE, GPIO_Pin_9) ///< 关闭芯片片选
 #define MS5611_CONVERSION_TIME 10 ///< 芯片的转换时间，单位为ms
@@ -79,8 +80,8 @@ static uint16_t MS5611_ReadPROM(const uint8_t* MS5611_CMD)
     uint8_t tmp[2];
 
     MS5611_CS_On();
-    QBL_SPI_TransmitReceive(SPI2_BASE, MS5611_CMD, NULL, 1, 5);
-    QBL_SPI_TransmitReceive(SPI2_BASE, NULL, tmp, 2, 5);
+    QBL_SPI_TransmitReceive(MS_SPI_BASE, MS5611_CMD, NULL, 1, 5);
+    QBL_SPI_TransmitReceive(MS_SPI_BASE, NULL, tmp, 2, 5);
     MS5611_CS_Off();
     return (uint16_t)(tmp[0] << 8 | tmp[1]);
 }
@@ -92,7 +93,7 @@ static uint16_t MS5611_ReadPROM(const uint8_t* MS5611_CMD)
 static void MS5611_SendCMD(const uint8_t* MS5611_CMD)
 {
     MS5611_CS_On();
-    QBL_SPI_TransmitReceive(SPI2_BASE, MS5611_CMD, NULL, 1, 5);
+    QBL_SPI_TransmitReceive(MS_SPI_BASE, MS5611_CMD, NULL, 1, 5);
     MS5611_CS_Off();
 }
 /*!
@@ -171,8 +172,8 @@ bool MS5611_Update(float* Pressure, float* Temperature)
         if (QBL_GetTick() - ms_ticks >= MS5611_CONVERSION_TIME) {
             //Read adc result
             MS5611_CS_On();
-            QBL_SPI_TransmitReceive(SPI2_BASE, (void*)MS5611_CMD_READ_ADC, NULL, 1, 5);
-            QBL_SPI_TransmitReceive(SPI2_BASE, NULL, tmp, 3, 5);
+            QBL_SPI_TransmitReceive(MS_SPI_BASE, (void*)MS5611_CMD_READ_ADC, NULL, 1, 5);
+            QBL_SPI_TransmitReceive(MS_SPI_BASE, NULL, tmp, 3, 5);
             MS5611_CS_Off();
 
             //Conver to normal order
@@ -190,8 +191,8 @@ bool MS5611_Update(float* Pressure, float* Temperature)
         if (QBL_GetTick() - ms_ticks >= MS5611_CONVERSION_TIME) {
             //Read adc result
             MS5611_CS_On();
-            QBL_SPI_TransmitReceive(SPI2_BASE, MS5611_CMD_READ_ADC, NULL, 1, 5);
-            QBL_SPI_TransmitReceive(SPI2_BASE, NULL, tmp, 3, 5);
+            QBL_SPI_TransmitReceive(MS_SPI_BASE, MS5611_CMD_READ_ADC, NULL, 1, 5);
+            QBL_SPI_TransmitReceive(MS_SPI_BASE, NULL, tmp, 3, 5);
             MS5611_CS_Off();
 
             //Conver to normal order
