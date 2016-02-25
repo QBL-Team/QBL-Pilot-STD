@@ -4,6 +4,8 @@
  */
 
 #include "QBL.h"
+#include "QBL_I2C.h"
+#include "QBL_SPI.h"
 #include "SD.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
@@ -46,68 +48,18 @@ static void QBL_Clock_Init(void)
 
 static void QBL_Periph_Init(void)
 {
-    I2C_InitTypeDef ii;
-    SPI_InitTypeDef sp;
     USART_InitTypeDef ua;
 
-    //I2C 1
-    {
-        RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
-        I2C_DeInit(I2C1);
-        ii.I2C_Ack = I2C_Ack_Enable;
-        ii.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
-        ii.I2C_ClockSpeed = 400000;
-        ii.I2C_DutyCycle = I2C_DutyCycle_2;
-        ii.I2C_Mode = I2C_Mode_I2C;
-        ii.I2C_OwnAddress1 = 0xAA;
-        I2C_Init(I2C1, &ii);
-        I2C_Cmd(I2C1, ENABLE);
-    }
-
-    {
-        //SPI1
-        RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
-        SPI_DeInit(SPI1);
-        sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_2;
-        sp.SPI_CPHA = SPI_CPHA_1Edge;
-        sp.SPI_CPOL = SPI_CPOL_Low;
-        sp.SPI_CRCPolynomial = 7;
-        sp.SPI_DataSize = SPI_DataSize_8b;
-        sp.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
-        sp.SPI_FirstBit = SPI_FirstBit_MSB;
-        sp.SPI_Mode = SPI_Mode_Master;
-        sp.SPI_NSS = SPI_NSS_Soft;
-
-        SPI_Init(SPI1, &sp);
-        SPI_Cmd(SPI1, ENABLE);
-    }
-
-    {
-        //SPI2
-        RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
-
-        sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4;
-        sp.SPI_CPHA = SPI_CPHA_1Edge;
-        sp.SPI_CPOL = SPI_CPOL_Low;
-
-        SPI_Init(SPI2, &sp);
-        SPI_Cmd(SPI2, ENABLE);
-    }
-
-    {
-        //USART1
-
-        RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-        USART_DeInit(USART1);
-        ua.USART_BaudRate = 115200;
-        ua.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-        ua.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-        ua.USART_Parity = USART_Parity_No;
-        ua.USART_StopBits = USART_StopBits_1;
-        ua.USART_WordLength = USART_WordLength_8b;
-        USART_Init(USART1, &ua);
-        USART_Cmd(USART1, ENABLE);
-    }
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+    USART_DeInit(USART1);
+    ua.USART_BaudRate = 115200;
+    ua.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+    ua.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+    ua.USART_Parity = USART_Parity_No;
+    ua.USART_StopBits = USART_StopBits_1;
+    ua.USART_WordLength = USART_WordLength_8b;
+    USART_Init(USART1, &ua);
+    USART_Cmd(USART1, ENABLE);
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_SDIO, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);
@@ -116,63 +68,9 @@ static void QBL_Periph_Init(void)
 static void QBL_IO_Init(void)
 {
     GPIO_InitTypeDef io;
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
-
-    {
-        //I2C1
-        io.GPIO_Mode = GPIO_Mode_AF;
-        io.GPIO_OType = GPIO_OType_OD;
-        io.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9;
-        io.GPIO_PuPd = GPIO_PuPd_UP;
-        io.GPIO_Speed = GPIO_Speed_100MHz;
-        GPIO_Init(GPIOB, &io);
-
-        GPIO_PinAFConfig(GPIOB, GPIO_PinSource8, GPIO_AF_I2C1);
-        GPIO_PinAFConfig(GPIOB, GPIO_PinSource9, GPIO_AF_I2C1);
-    }
-
-    {
-        //SPI1
-        io.GPIO_OType = GPIO_OType_PP;
-        io.GPIO_PuPd = GPIO_PuPd_NOPULL;
-        io.GPIO_Pin = GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
-        GPIO_Init(GPIOA, &io);
-
-        GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1);
-        GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1);
-        GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1);
-    }
-
-    {
-        //SPI2
-        io.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
-        GPIO_Init(GPIOB, &io);
-
-        GPIO_PinAFConfig(GPIOB, GPIO_PinSource13, GPIO_AF_SPI2);
-        GPIO_PinAFConfig(GPIOB, GPIO_PinSource14, GPIO_AF_SPI2);
-        GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
-    }
-
-    {
-        //LED和SPI片选信号
-        io.GPIO_Mode = GPIO_Mode_OUT;
-        io.GPIO_OType = GPIO_OType_PP;
-        io.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_9 /*MS5611*/ | GPIO_Pin_10 /*W25Q16*/;
-        io.GPIO_PuPd = GPIO_PuPd_NOPULL;
-        io.GPIO_Speed = GPIO_Speed_100MHz;
-        GPIO_Init(GPIOE, &io);
-    }
-
-    {
-        //按键和拨码开关
-        io.GPIO_Mode = GPIO_Mode_IN;
-        io.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2;
-        GPIO_Init(GPIOE, &io);
-    }
 
     {
         //SDIO
@@ -228,6 +126,9 @@ void QBL_Init(void)
     QBL_Clock_Init();
     QBL_IO_Init();
     QBL_Periph_Init();
+
+    QBL_I2C_Init();
+    QBL_SPI_Init();
     SysTick_Config(SystemCoreClock / 1000);
 }
 

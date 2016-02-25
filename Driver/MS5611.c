@@ -6,6 +6,7 @@
 #include "MS5611.h"
 #include "QBL_SPI.h"
 #include "stm32f4xx_gpio.h"
+#include "stm32f4xx_rcc.h"
 
 /*!
   *
@@ -137,8 +138,23 @@ static void MS5611_Compute(void)
 QBL_STATUS MS5611_Init(void)
 {
 
+    GPIO_InitTypeDef io;
+
+    //初始化片选引脚
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
+
+    io.GPIO_Mode = GPIO_Mode_OUT;
+    io.GPIO_OType = GPIO_OType_PP;
+    io.GPIO_Pin = GPIO_Pin_9;
+    io.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    io.GPIO_Speed = GPIO_Speed_100MHz;
+    GPIO_Init(GPIOE, &io);
+
     //reset the state machine
     ms_state = MS5611_STATE_IDLE;
+
+    //Send reset command
+    MS5611_SendCMD(MS5611_CMD_RST);
 
     //Wait for chip reset
     QBL_Delay(10);

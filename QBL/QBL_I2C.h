@@ -68,9 +68,13 @@ extern QBL_STATUS QBL_I2C_Write(const uint32_t QBL_I2C_Base,const uint8_t DevAdd
  * @return 指示操作状态
  */
 
-extern QBL_STATUS QBL_I2c_Read(const uint32_t QBL_I2C_Base,const uint8_t DevAddr,uint8_t * Data,uint8_t Length,uint8_t TimeOut);
+extern QBL_STATUS QBL_I2C_Read(const uint32_t QBL_I2C_Base,const uint8_t DevAddr,uint8_t * Data,uint8_t Length,uint8_t TimeOut);
 
-
+/**
+ * @brief QBL_I2C_Init 初始化所使用到的I2C总线的硬件模块
+ * @return 初始化状态
+ */
+extern QBL_STATUS QBL_I2C_Init(void);
 /**
  * @}
  */

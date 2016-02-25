@@ -26,6 +26,7 @@ extern "C" {
 
 typedef enum {
     QBL_OK = 0, /**< 没有错误发生 */
+    QBL_FAILE, /**< 发生错误 */
     QBL_TIMEOUT, /**< 超出限定的执行时间 */
     QBL_BUSY,  /**< 模块正处于忙碌状态 */
     QBL_START_FAILED,  /**< 启动失败 */

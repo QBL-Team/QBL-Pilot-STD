@@ -12,6 +12,8 @@
 #include "MPU6050.h"
 #include "QBL_I2C.h"
 #include "stm32f4xx.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_rcc.h"
 
 #define MPU6050_IIC_ADDRESS 0xD0 ///< 芯片的IIC地址，参见其数据手册
 #define MPU6050_GYRO_SCALE 32.8f ///< 陀螺仪的数据缩放比例

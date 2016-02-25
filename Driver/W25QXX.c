@@ -6,6 +6,7 @@
 #include "W25QXX.h"
 #include "QBL_SPI.h"
 #include "stm32f4xx_gpio.h"
+#include <stdbool.h>
 
 /*!
   *
@@ -87,9 +88,21 @@ static bool W25Q_SetWriteEnable(void)
  * \param handle    挂载闪存芯片的SPI总线的句柄
  * \return 如果初始化成功，返回true
  */
-bool W25Q_Init(void)
+QBL_STATUS W25Q_Init(void)
 {
     uint8_t tmp[4];
+
+    GPIO_InitTypeDef io;
+
+    //初始化片选引脚
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
+
+    io.GPIO_Mode = GPIO_Mode_OUT;
+    io.GPIO_OType = GPIO_OType_PP;
+    io.GPIO_Pin = GPIO_Pin_10;
+    io.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    io.GPIO_Speed = GPIO_Speed_100MHz;
+    GPIO_Init(GPIOE, &io);
 
     tmp[0] = W25QXX_CMD_READ_ID;
 
@@ -98,10 +111,10 @@ bool W25Q_Init(void)
     W25QXX_CS_OFF();
 
     if (tmp[1] != W25QXX_CHIP_WINBOND_ID) {
-        return false;
+        return QBL_FAILE;
     }
 
-    return true;
+    return QBL_OK;
 }
 
 /*!
@@ -109,13 +122,13 @@ bool W25Q_Init(void)
  * \return 如果芯片处于空闲状态，返回true
  */
 
-bool W25Q_CheckForIdle(void)
+QBL_STATUS W25Q_CheckForIdle(void)
 {
     if (W25Q_GetStatus() & W25QXX_BUSY_MASK) {
-        return false;
+        return QBL_BUSY;
     }
 
-    return true;
+    return QBL_OK;
 }
 
 /*!
@@ -123,7 +136,7 @@ bool W25Q_CheckForIdle(void)
  * \return 如果指令发送成功，返回true
  */
 
-bool W25Q_EraseChip(void)
+QBL_STATUS W25Q_EraseChip(void)
 {
     uint8_t tmp = W25QXX_CMD_CHIP_EARSE;
 
@@ -131,7 +144,7 @@ bool W25Q_EraseChip(void)
     QBL_SPI_TransmitReceive(W25Q_SPI_BASE, &tmp, NULL, 1, 5);
     W25QXX_CS_OFF();
 
-    return true;
+    return QBL_OK;
 }
 
 /*!
@@ -139,7 +152,7 @@ bool W25Q_EraseChip(void)
  * \param addr  要擦除的扇区的地址
  * \return
  */
-bool W25Q_EraseSector(uint32_t addr)
+QBL_STATUS W25Q_EraseSector(uint32_t addr)
 {
     uint8_t tmp[4];
     tmp[0] = W25QXX_CMD_SECTOR_ERASE;
@@ -151,7 +164,7 @@ bool W25Q_EraseSector(uint32_t addr)
     QBL_SPI_TransmitReceive(W25Q_SPI_BASE, tmp, NULL, 4, 5);
     W25QXX_CS_OFF();
 
-    return true;
+    return QBL_OK;
 }
 /*!
  * \brief W25Q_Write 写入数据到闪存芯片中
@@ -160,7 +173,7 @@ bool W25Q_EraseSector(uint32_t addr)
  * \param length 要写入的数据的长度，最大256字节
  * \return 如果写入成功，返回true
  */
-bool W25Q_Write(uint32_t addr, uint8_t* buffer, uint16_t length)
+QBL_STATUS W25Q_Write(uint32_t addr, uint8_t* buffer, uint16_t length)
 {
     uint8_t tmp[4];
 
@@ -177,7 +190,7 @@ bool W25Q_Write(uint32_t addr, uint8_t* buffer, uint16_t length)
     QBL_SPI_TransmitReceive(W25Q_SPI_BASE, tmp, NULL, 4, 5);
     QBL_SPI_TransmitReceive(W25Q_SPI_BASE, buffer, NULL, length, 10);
     W25QXX_CS_OFF();
-    return true;
+    return QBL_OK;
 }
 
 /*!
@@ -188,7 +201,7 @@ bool W25Q_Write(uint32_t addr, uint8_t* buffer, uint16_t length)
  * \return 如果读取成功，返回true
  */
 
-bool W25Q_Read(uint32_t addr, uint8_t* buffer, uint16_t length)
+QBL_STATUS W25Q_Read(uint32_t addr, uint8_t* buffer, uint16_t length)
 {
     uint8_t tmp[4];
     tmp[0] = W25QXX_CMD_READ;
@@ -200,7 +213,7 @@ bool W25Q_Read(uint32_t addr, uint8_t* buffer, uint16_t length)
     QBL_SPI_TransmitReceive(W25Q_SPI_BASE, tmp, NULL, 4, 5);
     QBL_SPI_TransmitReceive(W25Q_SPI_BASE, NULL, buffer, length, 10);
     W25QXX_CS_OFF();
-    return true;
+    return QBL_OK;
 }
 
 /*!

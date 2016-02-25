@@ -20,6 +20,9 @@ extern "C" {
  * @{
  */
 
+
+extern QBL_STATUS QBL_SPI_Init(void);
+
 /**
  * @brief QBL_SPI_TransmitReceive 通过SPI模块交换数据
  * @param QBL_SPI_Base SPI模块的地址

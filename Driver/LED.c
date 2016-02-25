@@ -7,8 +7,6 @@
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 
-
-
 /**
  * 红色LED连接的管脚
  */
@@ -28,6 +26,17 @@
 
 void LED_Init(void)
 {
+    GPIO_InitTypeDef io;
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
+
+    //LED
+    io.GPIO_Mode = GPIO_Mode_OUT;
+    io.GPIO_OType = GPIO_OType_PP;
+    io.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5;
+    io.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    io.GPIO_Speed = GPIO_Speed_100MHz;
+    GPIO_Init(GPIOE, &io);
+
     LED_Show(LED_COLOR_OFF);
 }
 

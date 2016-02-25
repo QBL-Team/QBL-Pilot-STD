@@ -5,9 +5,82 @@
 
 #include "QBL_SPI.h"
 #include "stm32f4xx.h"
+#include "stm32f4xx_rcc.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_spi.h"
 #include <stddef.h>
 
 #define TOINSTANCE(QBL_SPI_Base) ((SPI_TypeDef*)QBL_SPI_Base) /**< 实例化模块 */
+
+QBL_STATUS QBL_SPI_Init()
+{
+
+    GPIO_InitTypeDef io;
+    SPI_InitTypeDef sp;
+
+    //SPI2用于W25Q16
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
+
+    io.GPIO_Mode = GPIO_Mode_AF;
+    io.GPIO_OType = GPIO_OType_PP;
+    io.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    io.GPIO_Speed = GPIO_Speed_100MHz;
+    io.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+    GPIO_Init(GPIOB, &io);
+
+    GPIO_PinAFConfig(GPIOB, GPIO_PinSource13, GPIO_AF_SPI2);
+    GPIO_PinAFConfig(GPIOB, GPIO_PinSource14, GPIO_AF_SPI2);
+    GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
+
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
+
+    SPI_DeInit(SPI2);
+
+    sp.SPI_CRCPolynomial = 7;
+    sp.SPI_DataSize = SPI_DataSize_8b;
+    sp.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+    sp.SPI_FirstBit = SPI_FirstBit_MSB;
+    sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4;
+    sp.SPI_CPHA = SPI_CPHA_1Edge;
+    sp.SPI_CPOL = SPI_CPOL_Low;
+    sp.SPI_NSS = SPI_NSS_Soft;
+
+    SPI_Init(SPI2, &sp);
+    SPI_Cmd(SPI2, ENABLE);
+
+
+    //SPI1 用于MS5611
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
+
+    io.GPIO_Mode = GPIO_Mode_AF;
+    io.GPIO_OType = GPIO_OType_PP;
+    io.GPIO_Speed = GPIO_Speed_100MHz;
+    io.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    io.GPIO_Pin = GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
+    GPIO_Init(GPIOA, &io);
+
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1);
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1);
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1);
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
+    SPI_DeInit(SPI1);
+    sp.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_2;
+    sp.SPI_CPHA = SPI_CPHA_1Edge;
+    sp.SPI_CPOL = SPI_CPOL_Low;
+    sp.SPI_CRCPolynomial = 7;
+    sp.SPI_DataSize = SPI_DataSize_8b;
+    sp.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+    sp.SPI_FirstBit = SPI_FirstBit_MSB;
+    sp.SPI_Mode = SPI_Mode_Master;
+    sp.SPI_NSS = SPI_NSS_Soft;
+
+    SPI_Init(SPI1, &sp);
+    SPI_Cmd(SPI1, ENABLE);
+    return QBL_OK;
+}
 
 QBL_STATUS QBL_SPI_TransmitReceive(const uint32_t QBL_SPI_Base, const uint8_t* Trans, uint8_t* Rece, uint8_t Length, uint16_t TimeOut)
 {

@@ -6,7 +6,7 @@
 #ifndef __W25QXX_H
 #define __W25QXX_H
 
-#include <stdbool.h>
+#include "QBL.h"
 #include <stddef.h>
 #include <stdint.h>
 
@@ -22,7 +22,7 @@
  * \return 如果初始化成功，返回true
  */
 
-extern bool W25Q_Init(void);
+extern QBL_STATUS W25Q_Init(void);
 
 /*!
  * \brief W25Q_CheckForIdle 检查闪存芯片是否处于空闲状态，只有空闲状态可以进行操作
@@ -30,7 +30,7 @@ extern bool W25Q_Init(void);
  */
 
 
-extern bool W25Q_CheckForIdle(void);
+extern QBL_STATUS W25Q_CheckForIdle(void);
 
 /*!
  * \brief W25Q_EraseSector 擦除制定的扇区
@@ -38,7 +38,7 @@ extern bool W25Q_CheckForIdle(void);
  * \return
  */
 
-extern bool W25Q_EraseSector(uint32_t addr);
+extern QBL_STATUS W25Q_EraseSector(uint32_t addr);
 
 /*!
  * \brief W25Q_EraseChp 擦除整个芯片
@@ -46,7 +46,7 @@ extern bool W25Q_EraseSector(uint32_t addr);
  */
 
 
-extern bool W25Q_EraseChip(void);
+extern QBL_STATUS W25Q_EraseChip(void);
 
 /*!
  * \brief W25Q_EraseSector 擦除制定的扇区
@@ -54,7 +54,7 @@ extern bool W25Q_EraseChip(void);
  * \return
  */
 
-extern bool W25Q_Write(uint32_t addr,uint8_t * buffer,uint16_t length);
+extern QBL_STATUS W25Q_Write(uint32_t addr,uint8_t * buffer,uint16_t length);
 
 /*!
  * \brief W25Q_Read 从闪存中读取数据
@@ -64,7 +64,7 @@ extern bool W25Q_Write(uint32_t addr,uint8_t * buffer,uint16_t length);
  * \return 如果读取成功，返回true
  */
 
-extern bool W25Q_Read(uint32_t addr,uint8_t * buffer,uint16_t length);
+extern QBL_STATUS W25Q_Read(uint32_t addr,uint8_t * buffer,uint16_t length);
 
 /*!
  * @}
