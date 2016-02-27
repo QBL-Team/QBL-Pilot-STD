@@ -7,6 +7,7 @@
 #include "QBL_I2C.h"
 #include "QBL_SPI.h"
 #include "SD.h"
+#include "misc.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_i2c.h"
@@ -123,7 +124,17 @@ void QBL_Delay(uint32_t ms)
 
 void QBL_Init(void)
 {
+    NVIC_InitTypeDef n;
+
     QBL_Clock_Init();
+
+    NVIC_SetPriorityGrouping(NVIC_PriorityGroup_4);
+    n.NVIC_IRQChannel = SysTick_IRQn;
+    n.NVIC_IRQChannelCmd = ENABLE;
+    n.NVIC_IRQChannelPreemptionPriority = 0;
+    n.NVIC_IRQChannelSubPriority = 0;
+    NVIC_Init(&n);
+
     QBL_IO_Init();
     QBL_Periph_Init();
 

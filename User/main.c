@@ -1,10 +1,16 @@
 #include "QBL.h"
 #include "LED.h"
+#include "PWMInput.h"
+#include "PWMOutput.h"
 
 int main(void)
 {
     QBL_Init();
+    LED_Init();
     LED_Show(LED_COLOR_OFF);
+
+    PWMInput_Init();
+    PWMOutput_Init();
 
 
     for (;;) {

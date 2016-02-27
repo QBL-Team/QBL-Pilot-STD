@@ -84,9 +84,10 @@ Product {
         prepare: {
             var args = [input.filePath];
             var cmd = new Command("arm-none-eabi-size",args);
-            cmd.description = "File size:"+FileInfo.fileName(input.filePath);
+            cmd.description = "File size:";
             cmd.highlight = "linker";
             return cmd;
         }
     }
+
 }

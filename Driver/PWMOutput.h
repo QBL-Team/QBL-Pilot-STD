@@ -18,6 +18,12 @@ extern "C" {
 #endif
 
 /**
+  *
+  * @defgroup pwm_output PWM输出
+  * @{
+  */
+
+/**
  * @brief PWMOutput_Init 初始化PWM输出所用的定时器
  * @return 初始化的状态
  */
@@ -30,6 +36,11 @@ extern QBL_STATUS PWMOutput_Init(void);
  */
 
 extern QBL_STATUS PWMOutput_Apply(uint16_t Output[8]);
+
+
+/**
+  *@}
+  */
 
 #ifdef __cplusplus
 
