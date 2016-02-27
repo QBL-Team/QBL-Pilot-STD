@@ -2,6 +2,7 @@
 #include "LED.h"
 #include "PWMInput.h"
 #include "PWMOutput.h"
+#include "mavlink.h"
 
 int main(void)
 {

@@ -12,6 +12,8 @@ CortexMProduct{
         "STD",
         "QBL",
         "Middleware/FatFS",
+        "Middleware/mavlink",
+        "Middleware/mavlink/common",
     ]
 
 
