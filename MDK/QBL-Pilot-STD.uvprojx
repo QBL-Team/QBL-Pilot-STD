@@ -620,6 +620,21 @@
               <FileType>1</FileType>
               <FilePath>..\Driver\SD.c</FilePath>
             </File>
+            <File>
+              <FileName>PWMInput.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\PWMInput.c</FilePath>
+            </File>
+            <File>
+              <FileName>PWMOutput.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\PWMOutput.c</FilePath>
+            </File>
+            <File>
+              <FileName>W25QXX.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\W25QXX.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -644,6 +659,11 @@
               <FileName>ff.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middleware\FatFS\ff.c</FilePath>
+            </File>
+            <File>
+              <FileName>cc936.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\FatFS\option\cc936.c</FilePath>
             </File>
           </Files>
         </Group>
